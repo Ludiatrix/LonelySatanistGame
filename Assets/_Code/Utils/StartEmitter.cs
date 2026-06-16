@@ -10,8 +10,8 @@ namespace LSG.Utils
     {
         public void Emit()
         {
-            Debug.Log("[StartEmitter] Firing the StartGame Event!");
-            GameEvents.StartGame?.Invoke();
+            Debug.Log("[StartEmitter] Firing the StartGame Event! This will take us to the setup phase!");
+            GameEvents.StartGame?.Invoke(Enums.GameState.SetupPhase);
         }
     }
 }
