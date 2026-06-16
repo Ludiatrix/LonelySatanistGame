@@ -7,7 +7,7 @@ namespace LSG.Interfaces
     /// </summary>
     public interface IPhaseable
     {
-        Awaitable<bool> StartPhase();
-        Awaitable<bool> EndPhase();
+        void StartPhase();
+        void EndPhase();
     }
 }

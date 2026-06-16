@@ -16,7 +16,7 @@ namespace LSG
 
         private void OnEnable()
         {
-            GameEvents.StartGame?.AddListener(GoToPhase);
+            GameEvents.StartGame.AddListener(GoToPhase);
         }
 
         /// <summary>
