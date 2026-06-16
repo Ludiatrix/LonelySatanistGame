@@ -33,14 +33,5 @@ namespace LSG.Phases
             Debug.Log("[Summoning Phase] The Pages have been read. Now let's see what the chasm of hell brings forth!");
         }
         
-        public override Awaitable<bool> StartPhase()
-        {
-            return base.StartPhase();
-        }
-
-        public override Awaitable<bool> EndPhase()
-        {
-            return base.EndPhase();
-        }
     }
 }
