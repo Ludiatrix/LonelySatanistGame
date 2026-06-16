@@ -66,3 +66,19 @@ AudioMixerSnapshotController:
   m_SnapshotID: b8d729ff671cd5c388a9ac7a095aafb0
   m_FloatValues: {}
   m_TransitionOverrides: {}
+--- !u!244 &3163533317879787966
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 0ff2301e2d88e792ebf61991fd054959
+  m_EffectName: Distortion
+  m_MixLevel: 231901d6a5cb5f0b5addf8223c36aa51
+  m_Parameters:
+  - m_ParameterName: Level
+    m_GUID: 549fadcf8ed90d1e2841cedb7ccce1bf
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
