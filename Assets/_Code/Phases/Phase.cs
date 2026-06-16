@@ -8,17 +8,12 @@ namespace LSG.Phases
     /// </summary>
     public abstract class Phase : MonoBehaviour, IPhaseable
     {
-        // Riza: We are running these async on main as we are turning on/off a bunch of things
-        public virtual async Awaitable<bool> StartPhase()
+        public virtual void StartPhase()
         {
-            await Awaitable.NextFrameAsync();
-            return true;
         }
 
-        public virtual async Awaitable<bool> EndPhase()
+        public virtual void EndPhase()
         {
-            await Awaitable.NextFrameAsync();
-            return true;
         }
     }
 }
