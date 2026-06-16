@@ -7,9 +7,12 @@ namespace LSG
     /// </summary>
     public static class GameEvents
     {
-        public static readonly UnityEvent<Enums.GameState> StartGame = new UnityEvent();
+        public static readonly UnityStateEvent StartGame = new UnityStateEvent();
+        public static readonly UnityPageReadEvent PageRead = new UnityPageReadEvent();
+        public static readonly UnityEvent TapeEarnedEvent = new UnityEvent();
     }
     
     
-    public class UnityEvent : UnityEvent<Enums.GameState> { }
+    public class UnityStateEvent : UnityEvent<Enums.GameState> { }
+    public class UnityPageReadEvent : UnityEvent { }
 }

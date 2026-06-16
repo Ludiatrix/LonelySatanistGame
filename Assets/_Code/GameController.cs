@@ -10,6 +10,7 @@ namespace LSG
     /// </summary>
     public class GameController : MonoBehaviour
     {
+        public PlayerEconomy Economy;
         public PhaseObject[] PhaseObjects;
         public Enums.GameState CurrentPhase = Enums.GameState.StartPhase;
 
