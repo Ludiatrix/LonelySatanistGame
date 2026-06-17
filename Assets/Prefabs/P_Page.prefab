@@ -9,7 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4574823397904897460}
-  - component: {fileID: 4774223092900882764}
+  - component: {fileID: 2393595002333825949}
+  - component: {fileID: 5428038719792566725}
   m_Layer: 5
   m_Name: P_Page
   m_TagString: Untagged
@@ -37,7 +38,7 @@ RectTransform:
   m_AnchoredPosition: {x: -122, y: -14}
   m_SizeDelta: {x: 1155.7979, y: 1421.006}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &4774223092900882764
+--- !u!114 &2393595002333825949
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -46,10 +47,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3114209297319874679}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 235613068450a9873b2cc9b9ebad6bc3, type: 3}
+  m_Script: {fileID: 11500000, guid: b9994cc329219c94a874f9d1a31bd98c, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: LSG::LSG.Utils.SmoothMover
-  movementCurve:
+  m_EditorClassIdentifier: LSG::LSG.Utils.SmoothRotator
+  rotationCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
@@ -73,6 +74,20 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5428038719792566725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3114209297319874679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd7e4a2bf73d4e6992917156991d7c4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: LSG::LSG.UI.PageFacade
+  economy: {fileID: 11400000, guid: da8497e8847794bfb92799f0e89ead84, type: 2}
+  pageRotator: {fileID: 2393595002333825949}
 --- !u!1 &9058398681709471340
 GameObject:
   m_ObjectHideFlags: 0

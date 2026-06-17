@@ -36,11 +36,14 @@ public class PlayerEconomy : ScriptableObject
         Milestone++;
         Power++;
         Sanity--;
-        int tapeAmount = MilestoneDataSource.Milestones[Milestone].TapeAmount;
-        if (tapeAmount > 0)
+        if (Milestone < MilestoneDataSource.Milestones.Length - 1)
         {
-            Tape = tapeAmount;
-            GameEvents.TapeEarnedEvent?.Invoke();
+            int tapeAmount = MilestoneDataSource.Milestones[Milestone].TapeAmount;
+            if (tapeAmount > 0)
+            {
+                Tape = tapeAmount;
+                GameEvents.TapeEarnedEvent?.Invoke();
+            }
         }
     }
     
@@ -53,10 +56,10 @@ public class PlayerEconomy : ScriptableObject
     {
         Tape = 0;
         Milestone = 0;
+        Page = 0;
         Power = 0;
         Sanity = 20;
         Rizz = 1;
-        PlayerDeckSource = Resources.Load<PlayerDeck>($"DefaultPlayerDeck");
-        PlayerDeckSource.Shuffle();
+        PlayerDeckSource.SetToDefault();
     }
 }
