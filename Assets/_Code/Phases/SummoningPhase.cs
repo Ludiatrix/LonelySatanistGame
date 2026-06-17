@@ -1,4 +1,6 @@
 using LSG.Core;
+using LSG.ScriptableObjects;
+using LSG.Utils;
 using UnityEngine;
 
 namespace LSG.Phases
@@ -16,11 +18,16 @@ namespace LSG.Phases
     {
         public GameObject Container;
         
+        public Transform PagesTransform;
+        public GameObject PagePrefab;
+        public Transform PageTurnDestinationTransform;
+        
         public override void StartPhase()
         {
             Debug.Log("[SummoningPhase] Starting Phase!");
             base.StartPhase();
             Container.SetActive(true);
+            TurnPage();
         }
 
         public override void EndPhase()
@@ -29,14 +36,30 @@ namespace LSG.Phases
             base.EndPhase();
             Container.SetActive(false);
         }
-
+        
         /// <summary>
-        /// Reading a Page causes the PageRead event to fire in GameEvents.cs which mainly adds to PlayerEconomy.
+        /// Turning a Page causes the PageRead event to fire in GameEvents.cs which mainly adds to PlayerEconomy.
         /// </summary>
-        public void ReadPage()
+        public void TurnPage()
         {
-            Debug.Log("[Summoning Phase] Reading Page...");
+            Debug.Log("[Summoning Phase] Turning the Page...");
+            GameObject page = GeneratePage();
+            RunPageAnimation(page.GetComponent<SmoothMover>());
             GameEvents.PageRead?.Invoke();
+        }
+
+        private GameObject GeneratePage()
+        {
+            Instantiate(PagePrefab, PagesTransform);
+            return Instantiate(PagePrefab, PagesTransform);
+        }
+        
+        private void RunPageAnimation(SmoothMover pageMover)
+        {
+            pageMover.MoveToTarget(PageTurnDestinationTransform.position, 3.0f, () =>
+            {
+                Debug.Log("[SummoningPhase] Page Turned!");
+            });
         }
 
         /// <summary>
