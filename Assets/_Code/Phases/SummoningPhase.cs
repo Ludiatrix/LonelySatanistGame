@@ -1,5 +1,4 @@
-using LSG.ScriptableObjects;
-using LSG.TapeSystem;
+using LSG.Core;
 using UnityEngine;
 
 namespace LSG.Phases
@@ -15,6 +14,22 @@ namespace LSG.Phases
     /// </summary>
     public class SummoningPhase : Phase
     {
+        public GameObject Container;
+        
+        public override void StartPhase()
+        {
+            Debug.Log("[SummoningPhase] Starting Phase!");
+            base.StartPhase();
+            Container.SetActive(true);
+        }
+
+        public override void EndPhase()
+        {
+            Debug.Log("[SummoningPhase] Ending Phase!");
+            base.EndPhase();
+            Container.SetActive(false);
+        }
+
         /// <summary>
         /// Reading a Page causes the PageRead event to fire in GameEvents.cs which mainly adds to PlayerEconomy.
         /// </summary>

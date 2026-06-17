@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace LSG
+namespace LSG.Core
 {
     public class Enums
     {
@@ -10,7 +10,7 @@ namespace LSG
         public enum GameState
         {
             // TODO: Start of Game with button that says "Let's summon a date."
-            StartPhase = 0,
+            TitlePhase = 0,
             
             // TODO: The player views their current Necronomicon pages, hears a shuffling sound effect, and is presented with the book's cover and a "Start Reading" prompt.
             SetupPhase = 1,
@@ -42,6 +42,8 @@ namespace LSG
             
             //TODO: End Phase WIP
             EndPhase = 8,
+            
+            NullPhase = 999,
         }
     }
 }

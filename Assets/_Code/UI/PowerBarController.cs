@@ -1,4 +1,5 @@
 using System;
+using LSG.Core;
 using LSG.ScriptableObjects;
 using UnityEngine;
 
