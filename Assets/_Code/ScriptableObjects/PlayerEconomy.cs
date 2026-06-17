@@ -14,6 +14,8 @@ public class PlayerEconomy : ScriptableObject
     public MilestoneData MilestoneDataSource;
     public PlayerDeck PlayerDeckSource;
 
+    public float NormalizedPower => Mathf.InverseLerp(0, 14, Power);
+
     private void OnEnable()
     {
         // Riza: ScriptableObjects are lifetime independent. So it's a good idea to reset on game start.
