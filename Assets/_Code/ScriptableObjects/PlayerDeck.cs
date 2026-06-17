@@ -8,6 +8,9 @@ namespace LSG.ScriptableObjects
     public class PlayerDeck : ScriptableObject
     {
         [SerializeField] private List<PageData> _pages = new List<PageData>();
+        private readonly List<PageData> _usedPages = new List<PageData>();
+
+        public List<PageData> UsedPages => _usedPages;
 
         public void AddPage(PageData page)
         {
@@ -23,6 +26,7 @@ namespace LSG.ScriptableObjects
                 return null;
             }
             PageData page = _pages[_pages.Count - 1]; // Riza: fun fact getting the end index is faster than the first
+            _usedPages.Add(page);
             _pages.RemoveAt(_pages.Count - 1);
             return page;
         }
