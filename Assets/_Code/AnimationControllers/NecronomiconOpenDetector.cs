@@ -8,7 +8,7 @@ namespace LSG.AnimationControllers
         public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
         {
             Debug.Log("NecronomiconOpenDetector OnStateExit");
-            GameEvents.NecronomiconOpened?.Invoke(Enums.GameState.SummoningPhase);
+            GameEvents.ChangeState?.Invoke(Enums.GameState.SummoningPhase);
         }
     }
 }

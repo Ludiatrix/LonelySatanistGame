@@ -9,10 +9,7 @@ namespace LSG.Core
         /// </summary>
         public enum GameState
         {
-            // TODO: Start of Game with button that says "Let's summon a date."
             TitlePhase = 0,
-            
-            // TODO: The player views their current Necronomicon pages, hears a shuffling sound effect, and is presented with the book's cover and a "Start Reading" prompt.
             SetupPhase = 1,
             
             /*
@@ -44,6 +41,15 @@ namespace LSG.Core
             EndPhase = 8,
             
             NullPhase = 999,
+        }
+
+        public enum Suit
+        {
+            White = 0,
+            Orange = 1,
+            Blue = 2,
+            Black = 3,
+            Red = 4,
         }
     }
 }
