@@ -3,7 +3,7 @@ using System.Linq;
 using LSG.Phases;
 using UnityEngine;
 
-namespace LSG
+namespace LSG.Core
 {
     /// <summary>
     /// Primary Controller with the ability to go to different phases of the game. It primarily listens to commands from GameEvents.cs unless explicitly told otherwise.
@@ -11,12 +11,26 @@ namespace LSG
     public class GameController : MonoBehaviour
     {
         public PlayerEconomy Economy;
+        
+        // TODO: This is bad. Make the Phases report themselves to the GameController to prevent nullreferences.
         public PhaseObject[] PhaseObjects;
-        public Enums.GameState CurrentPhase = Enums.GameState.StartPhase;
+        public Enums.GameState CurrentPhase = Enums.GameState.NullPhase;
 
         private void OnEnable()
         {
             GameEvents.StartGame.AddListener(GoToPhase);
+            GameEvents.NecronomiconOpened.AddListener(GoToPhase);
+        }
+
+        private void OnDisable()
+        {
+            GameEvents.StartGame.RemoveListener(GoToPhase);
+            GameEvents.NecronomiconOpened.RemoveListener(GoToPhase);
+        }
+
+        private void Start()
+        {
+            GoToPhase(Enums.GameState.TitlePhase);
         }
 
         /// <summary>
@@ -25,9 +39,7 @@ namespace LSG
         /// <param name="targetPhase">the phase you want to go to</param>
         public void GoToPhase(Enums.GameState targetPhase)
         {
-            if (Equals(targetPhase, CurrentPhase))
-                return;
-
+            Debug.Log($"{nameof(GoToPhase)}: {targetPhase}");
             TryEndPhase(CurrentPhase);
             TryStartPhase(targetPhase);
             CurrentPhase = targetPhase;

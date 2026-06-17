@@ -1,6 +1,6 @@
 using System;
 
-namespace LSG.TapeSystem
+namespace LSG.Classes
 {
     /// <summary>
     /// A Milestone is an arbitrary marker set on the powerbar that holds tape.

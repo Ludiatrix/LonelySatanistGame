@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace LSG
+namespace LSG.Core
 {
     /// <summary>
     /// PhaseObjects are just handy shorthand for holding state-object relationships.c

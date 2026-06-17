@@ -1,7 +1,8 @@
 using System;
+using LSG.Core;
 using UnityEngine;
 
-namespace LSG.Utils
+namespace LSG.UI
 {
     /// <summary>
     /// Signal class used by a button or other trigger used to communicate to GameEvents.cs in order to start the game.
