@@ -1,4 +1,3 @@
-using LSG;
 using LSG.Core;
 using LSG.ScriptableObjects;
 using UnityEngine;
@@ -13,6 +12,7 @@ public class PlayerEconomy : ScriptableObject
     public int Sanity = 20;
     public int Rizz = 1;
     public MilestoneData MilestoneDataSource;
+    public PlayerDeck PlayerDeckSource;
 
     private void OnEnable()
     {
@@ -21,6 +21,7 @@ public class PlayerEconomy : ScriptableObject
         // starting restarting the application.
         GameEvents.StartGame?.AddListener(_ => Reset());
         GameEvents.PageRead?.AddListener(UpdatePageRewards);
+        GameEvents.PageAdded?.AddListener(OnPageAdded);
     }
 
     private void OnDisable()
@@ -42,13 +43,20 @@ public class PlayerEconomy : ScriptableObject
             GameEvents.TapeEarnedEvent?.Invoke();
         }
     }
+    
+    private void OnPageAdded(PageData pageToAdd)
+    {
+        PlayerDeckSource.AddPage(pageToAdd);
+    }
 
-private void Reset()
+    private void Reset()
     {
         Tape = 0;
         Milestone = 0;
         Power = 0;
         Sanity = 20;
         Rizz = 1;
+        PlayerDeckSource = Resources.Load<PlayerDeck>($"DefaultPlayerDeck");
+        PlayerDeckSource.Shuffle();
     }
 }

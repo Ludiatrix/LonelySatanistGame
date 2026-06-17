@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 662f4b11d96b805b1a6b36bdfa49c5c1, type: 3}
+  m_Name: DefaultDeck
+  m_EditorClassIdentifier: LSG::LSG.ScriptableObjects.PlayerDeck
+  Pages:
+  - {fileID: 11400000, guid: b103b19d37d2967f497ea7f5f9f6746b, type: 2}
+  - {fileID: 11400000, guid: b103b19d37d2967f497ea7f5f9f6746b, type: 2}
+  - {fileID: 11400000, guid: b103b19d37d2967f497ea7f5f9f6746b, type: 2}
+  - {fileID: 11400000, guid: b103b19d37d2967f497ea7f5f9f6746b, type: 2}
+  - {fileID: 11400000, guid: 7aafff94e23e704b08acb262ff7399df, type: 2}
+  - {fileID: 11400000, guid: 7aafff94e23e704b08acb262ff7399df, type: 2}
+  - {fileID: 11400000, guid: 88c780b08ca34c568bbd0c35f0b22682, type: 2}
+  - {fileID: 11400000, guid: 11f9b138275168a6ba9fa8a76cbdc0e6, type: 2}
+  - {fileID: 11400000, guid: 49f5dba4570e0cc04ba8b2467913b3f3, type: 2}

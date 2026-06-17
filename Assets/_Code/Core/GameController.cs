@@ -10,8 +10,6 @@ namespace LSG.Core
     /// </summary>
     public class GameController : MonoBehaviour
     {
-        public PlayerEconomy Economy;
-        
         // TODO: This is bad. Make the Phases report themselves to the GameController to prevent nullreferences.
         public PhaseObject[] PhaseObjects;
         public Enums.GameState CurrentPhase = Enums.GameState.NullPhase;
@@ -19,13 +17,13 @@ namespace LSG.Core
         private void OnEnable()
         {
             GameEvents.StartGame.AddListener(GoToPhase);
-            GameEvents.NecronomiconOpened.AddListener(GoToPhase);
+            GameEvents.ChangeState.AddListener(GoToPhase);
         }
 
         private void OnDisable()
         {
             GameEvents.StartGame.RemoveListener(GoToPhase);
-            GameEvents.NecronomiconOpened.RemoveListener(GoToPhase);
+            GameEvents.ChangeState.RemoveListener(GoToPhase);
         }
 
         private void Start()
