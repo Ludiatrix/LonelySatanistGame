@@ -12,4 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04cf47e70a6c73a1a8648055f0aa7ef3, type: 3}
   m_Name: MilestoneData
   m_EditorClassIdentifier: LSG::LSG.ScriptableObjects.MilestoneData
-  Milestones: []
+  NumberOfMilestonesToGenerate: 30
+  Milestones:
+  - PowerLevel: 3
+    TapeAmount: 1
+  - PowerLevel: 5
+    TapeAmount: 1
+  - PowerLevel: 7
+    TapeAmount: 1
+  - PowerLevel: 8
+    TapeAmount: 2
+  - PowerLevel: 10
+    TapeAmount: 2
+  - PowerLevel: 12
+    TapeAmount: 2
+  - PowerLevel: 14
+    TapeAmount: 2
+  - PowerLevel: 17
+    TapeAmount: 3
+  - PowerLevel: 20
+    TapeAmount: 3
+  - PowerLevel: 23
+    TapeAmount: 4
+  - PowerLevel: 27
+    TapeAmount: 4

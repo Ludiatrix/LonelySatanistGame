@@ -1,5 +1,5 @@
 using LSG.Core;
-using LSG.ScriptableObjects;
+using LSG.UI;
 using LSG.Utils;
 using UnityEngine;
 
@@ -11,13 +11,13 @@ namespace LSG.Phases
      */
     
     /// <summary>
-    /// The Summoning Phase is governed by two primary actions: "Keep Reading" and "Stop". This is the most direct interpretation of a calculated risk!
-    /// "Keep Reading" uses the ReadPage function, which uses the current milestone and sends
+    /// The Summoning Phase is governed by two primary actions: "Keep Reading" and "Stop".
     /// </summary>
     public class SummoningPhase : Phase
     {
         public GameObject Container;
         
+        // Page Generation
         public Transform PagesTransform;
         public GameObject PagePrefab;
         public Transform PageTurnDestinationTransform;
@@ -27,7 +27,7 @@ namespace LSG.Phases
             Debug.Log("[SummoningPhase] Starting Phase!");
             base.StartPhase();
             Container.SetActive(true);
-            TurnPage();
+            TurnPage(); // Turns the first page
         }
 
         public override void EndPhase()
@@ -36,30 +36,19 @@ namespace LSG.Phases
             base.EndPhase();
             Container.SetActive(false);
         }
-        
-        /// <summary>
-        /// Turning a Page causes the PageRead event to fire in GameEvents.cs which mainly adds to PlayerEconomy.
-        /// </summary>
-        public void TurnPage()
+
+        private void TurnPage()
         {
             Debug.Log("[Summoning Phase] Turning the Page...");
-            GameObject page = GeneratePage();
-            RunPageAnimation(page.GetComponent<SmoothMover>());
+            GameObject page = Instantiate(PagePrefab, PagesTransform, false);
+            page.GetComponent<PageFacade>().Inject(PageTurnDestinationTransform);
+            Debug.Log("[SummoningPhase] Page Turned!");
             GameEvents.PageRead?.Invoke();
         }
 
-        private GameObject GeneratePage()
+        public void KeepReading()
         {
-            Instantiate(PagePrefab, PagesTransform);
-            return Instantiate(PagePrefab, PagesTransform);
-        }
-        
-        private void RunPageAnimation(SmoothMover pageMover)
-        {
-            pageMover.MoveToTarget(PageTurnDestinationTransform.position, 3.0f, () =>
-            {
-                Debug.Log("[SummoningPhase] Page Turned!");
-            });
+            TurnPage();
         }
 
         /// <summary>

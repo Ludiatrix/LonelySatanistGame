@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: PlayerEconomy
   m_EditorClassIdentifier: Assembly-CSharp::PlayerEconomy
   Tape: 0
+  Page: 0
   Milestone: 0
   Power: 0
-  Sanity: 0
-  Rizz: 0
+  Sanity: 20
+  Rizz: 1
+  MilestoneDataSource: {fileID: 11400000, guid: d262bd59722483d42b393c66d01a3855, type: 2}
+  PlayerDeckSource: {fileID: 11400000, guid: f741dc2241435d0008802f22b8d52bcc, type: 2}

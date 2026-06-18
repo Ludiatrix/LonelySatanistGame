@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 662f4b11d96b805b1a6b36bdfa49c5c1, type: 3}
-  m_Name: DefaultDeck
+  m_Name: PlayerDeck
   m_EditorClassIdentifier: LSG::LSG.ScriptableObjects.PlayerDeck
   _pages:
   - {fileID: 11400000, guid: b103b19d37d2967f497ea7f5f9f6746b, type: 2}
