@@ -1,4 +1,6 @@
+using System;
 using LSG.Core;
+using LSG.ScriptableObjects;
 using LSG.UI;
 using LSG.Utils;
 using UnityEngine;
@@ -18,10 +20,11 @@ namespace LSG.Phases
         public GameObject Container;
         
         // Page Generation
+        public PlayerEconomy PlayerEconomy;
         public Transform PagesTransform;
         public GameObject PagePrefab;
         public Transform PageTurnDestinationTransform;
-        
+
         public override void StartPhase()
         {
             Debug.Log("[SummoningPhase] Starting Phase!");
@@ -39,9 +42,10 @@ namespace LSG.Phases
 
         private void TurnPage()
         {
+            PageData data = PlayerEconomy.PlayerDeckSource.TakePage();
             Debug.Log("[Summoning Phase] Turning the Page...");
             GameObject page = Instantiate(PagePrefab, PagesTransform, false);
-            page.GetComponent<PageFacade>().Inject(PageTurnDestinationTransform);
+            page.GetComponent<PageFacade>().Inject(data, PageTurnDestinationTransform);
             Debug.Log("[SummoningPhase] Page Turned!");
             GameEvents.PageRead?.Invoke();
         }

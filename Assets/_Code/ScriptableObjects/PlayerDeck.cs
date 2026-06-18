@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using LSG.Core;
 using UnityEngine;
 
 namespace LSG.ScriptableObjects
@@ -16,6 +17,7 @@ namespace LSG.ScriptableObjects
         {
             _pages.Add(page);
             _pages.Shuffle();
+            GameEvents.PageAdded?.Invoke(page);
         }
 
         public PageData TakePage()
@@ -28,6 +30,7 @@ namespace LSG.ScriptableObjects
             PageData page = _pages[_pages.Count - 1]; // Riza: fun fact getting the end index is faster than the first
             _usedPages.Add(page);
             _pages.RemoveAt(_pages.Count - 1);
+            GameEvents.PageTaken?.Invoke(page);
             return page;
         }
         
