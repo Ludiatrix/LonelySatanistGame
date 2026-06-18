@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using LSG.ScriptableObjects;
 using UnityEngine;
 
@@ -9,6 +10,9 @@ namespace LSG
     [CreateAssetMenu(fileName = "DemonDatingPool", menuName = "LSG/Make a Demon Dating Pool")]
     public class DemonDatingPool : ScriptableObject
     {
+        public DemonData LastEncounteredDemon => _currentDemon;
+        private DemonData _currentDemon = null;
+        
         [SerializeField] private DemonData[] demons;
 
         /// <summary>
@@ -24,6 +28,7 @@ namespace LSG
             {
                 if (demons[i].minimumPowerLevel < powerLevel && demons[i].minimumPowerLevel >= 0)
                 {
+                    _currentDemon = demons[i];
                     return demons[i];
                 }
             }
