@@ -51,5 +51,15 @@ namespace LSG.Core
             Black = 3,
             Red = 4,
         }
+
+        public enum GameResource
+        {
+            Tape = 0,
+            Sanity = 1,
+            Rizz = 2,
+            WhiteSuits = 3,
+            Power = 4,
+            Page = 5,
+        }
     }
 }

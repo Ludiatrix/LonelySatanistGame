@@ -10,6 +10,7 @@ public class PlayerEconomy : ScriptableObject
     public int Power = 0;
     public int Sanity = 20;
     public int Rizz = 1;
+    public int WhiteSuitPoints = 0;
     public MilestoneData MilestoneDataSource;
     public PlayerDeck PlayerDeckSource;
 
@@ -22,7 +23,8 @@ public class PlayerEconomy : ScriptableObject
         // starting restarting the application.
         GameEvents.StartGame?.AddListener(_ => Reset());
         GameEvents.PageRead?.AddListener(UpdatePageRewards);
-        GameEvents.PageAdded?.AddListener(OnPageAdded);
+        GameEvents.PageTaken?.AddListener(OnPageTaken);
+        GameEvents.ChangeState?.AddListener(OnChangeState);
     }
 
     private void OnDisable()
@@ -39,9 +41,26 @@ public class PlayerEconomy : ScriptableObject
         GameEvents.TapeEarnedEvent?.Invoke();
     }
     
-    private void OnPageAdded(PageData pageToAdd)
+    private void OnPageTaken(PageData takenPage)
     {
-        PlayerDeckSource.AddPage(pageToAdd);
+        if (takenPage.Suit == Enums.Suit.White)
+        {
+            WhiteSuitPoints++;
+        }
+
+        if (WhiteSuitPoints > 8)
+        {
+            GameEvents.ChangeState?.Invoke(Enums.GameState.EndPhase);
+        }
+        else
+        {
+            GameEvents.WhiteSuitPointEarned?.Invoke(WhiteSuitPoints);
+        }
+    }
+    
+    private void OnChangeState(Enums.GameState newState)
+    {
+        WhiteSuitPoints = 0;
     }
 
     private void Reset()
@@ -51,6 +70,7 @@ public class PlayerEconomy : ScriptableObject
         Power = 0;
         Sanity = 20;
         Rizz = 1;
+        WhiteSuitPoints = 0;
         PlayerDeckSource.SetToDefault();
         MilestoneDataSource.Reset();
     }

@@ -9,14 +9,13 @@ namespace LSG.UI
     /// </summary>
     public class PageFacade : MonoBehaviour
     {
-        [SerializeField] private PlayerEconomy economy;
         [SerializeField] private SmoothRotator pageRotator;
 
-        private PageData _pageData;
+        private PageData _pageData = null;
         
-        public void Inject(Transform PageTurnDestinationTransform)
+        public void Inject(PageData data, Transform PageTurnDestinationTransform)
         {
-            _pageData = economy.PlayerDeckSource.TakePage();
+            _pageData = data;
             RunPageAnimation(PageTurnDestinationTransform);
         }
         
