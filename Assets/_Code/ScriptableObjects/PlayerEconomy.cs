@@ -13,9 +13,6 @@ public class PlayerEconomy : ScriptableObject
     public int Sanity = 20;
     public int Rizz = 1;
     public int WhiteSuitPoints = 0;
-    public MilestoneData MilestoneDataSource;
-    public PlayerDeck PlayerDeckSource;
-    public DemonDatingPool DemonDatingPool;
 
     public float NormalizedPower => Mathf.InverseLerp(0, 14, Power);
 
@@ -46,7 +43,7 @@ public class PlayerEconomy : ScriptableObject
     {
         Page++;
         Power++;
-        Tape = MilestoneDataSource.GetTapeAmountAtPower(Power);
+        Tape = DataManager.Instance.MilestoneDataSource.GetTapeAmountAtPower(Power);
         GameEvents.TapeEarnedEvent?.Invoke();
     }
     
@@ -72,7 +69,7 @@ public class PlayerEconomy : ScriptableObject
         WhiteSuitPoints = 0;
     }
 
-    private void Reset()
+    public void Reset()
     {
         Tape = 0;
         Page = 0;
@@ -80,7 +77,5 @@ public class PlayerEconomy : ScriptableObject
         Sanity = 20;
         Rizz = 1;
         WhiteSuitPoints = 0;
-        PlayerDeckSource.SetToDefault();
-        MilestoneDataSource.Reset();
     }
 }

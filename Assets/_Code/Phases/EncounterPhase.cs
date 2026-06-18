@@ -13,9 +13,9 @@ namespace LSG.Phases
     /// </summary>
     public class EncounterPhase : Phase
     {
-        [SerializeField] private PlayerEconomy playerEconomy;
         [SerializeField] private GameObject Container;
-
+        
+        private PlayerEconomy _economy;
         private DemonData _chosenDemonThisPhase = null;
         
         /// <summary>
@@ -48,6 +48,11 @@ namespace LSG.Phases
             GameEvents.GiveUpChosen?.RemoveListener(OnGiveUpChosen);
         }
 
+        private void Start()
+        {
+            _economy = DataManager.Instance.PlayerEconomySource;
+        }
+
         private void OnTryToDateChosen()
         {
             GoOnDate();
@@ -56,7 +61,7 @@ namespace LSG.Phases
         private void GoOnDate()
         {
             int d20Roll = Random.Range(1, 21); // The Random D20 Roll for the Date
-            if (d20Roll <= playerEconomy.Rizz)
+            if (d20Roll <= _economy.Rizz)
             {
                 SucceedDate();
             }
@@ -90,7 +95,7 @@ namespace LSG.Phases
         private void FindAHottie()
         {
             // Get a demon
-            _chosenDemonThisPhase = playerEconomy.DemonDatingPool.EncounterDemonBasedOnPower(playerEconomy.Power);
+            _chosenDemonThisPhase = DataManager.Instance.DemonDatingPoolSource.EncounterDemonBasedOnPower(_economy.Power);
             
             // This will turn on the Dialogue Window and inject the DemonData
             GameEvents.DemonEncountered?.Invoke(_chosenDemonThisPhase);

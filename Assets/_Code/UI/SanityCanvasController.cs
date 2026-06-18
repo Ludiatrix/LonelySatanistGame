@@ -9,7 +9,6 @@ namespace LSG.UI
     /// </summary>
     public class SanityCanvasController : MonoBehaviour
     {
-        [SerializeField] private PlayerEconomy playerEconomy;
         [SerializeField] private TMP_Text sanityText;
 
         private void OnEnable()
@@ -24,7 +23,7 @@ namespace LSG.UI
 
         private void OnPageRead()
         {
-            sanityText.text = $"Sanity: {playerEconomy.Sanity.ToString()}";
+            sanityText.text = $"Sanity: {DataManager.Instance.PlayerEconomySource.Sanity.ToString()}";
         }
     }
 }

@@ -12,7 +12,6 @@ namespace LSG.UI
     /// </summary>
     public class DialogueCanvasController : MonoBehaviour
     {
-        [SerializeField] private PlayerEconomy playerEconomy;
         [SerializeField] private GameObject container;
         [SerializeField] private TMP_Text namePlateText;
         [SerializeField] private TMP_Text dialogueText;
@@ -38,7 +37,7 @@ namespace LSG.UI
         private void OnSummoningPhaseStarted()
         {
             ToggleWindow(true);
-            SetNamePlate(playerEconomy.PlayerName);
+            SetNamePlate(DataManager.Instance.PlayerEconomySource.PlayerName);
             SetDialogue(string.Empty);
             ToggleSummoningButtonContainer(true);
         }

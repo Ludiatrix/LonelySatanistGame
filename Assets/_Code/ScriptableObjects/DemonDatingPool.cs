@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using LSG.ScriptableObjects;
 using UnityEngine;
@@ -34,6 +35,11 @@ namespace LSG
             }
 
             return null;
+        }
+
+        public void Reset()
+        {
+            _currentDemon = null;
         }
     }
 }

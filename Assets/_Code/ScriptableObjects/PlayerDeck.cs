@@ -39,7 +39,7 @@ namespace LSG.ScriptableObjects
             _pages.Shuffle();
         }
 
-        public void SetToDefault()
+        public void Reset()
         {
             var defaultDeck = Resources.Load<PlayerDeck>($"DefaultDeck");
             _pages = defaultDeck._pages;
