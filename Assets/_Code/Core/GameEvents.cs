@@ -43,6 +43,7 @@ namespace LSG.Core
         public static readonly UnityStringEvent SetDialogueText = new UnityStringEvent();
         public static readonly UnityBoolEvent ToggleSummoningButtons = new UnityBoolEvent();
         public static readonly UnityBoolEvent ToggleEncounterButtons = new UnityBoolEvent();
+        public static readonly UnityBoolEvent ToggleStoreButtons = new UnityBoolEvent();
         public static readonly UnityEvent DisableButtons = new UnityEvent();
     }
     

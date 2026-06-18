@@ -3919,9 +3919,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2226797193098545217, guid: 6d07e59ec3b62bf45bc685b502cabf5e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2749409562251668076, guid: 6d07e59ec3b62bf45bc685b502cabf5e, type: 3}
       propertyPath: m_Name
       value: P_DialogueCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 3795493793886535195, guid: 6d07e59ec3b62bf45bc685b502cabf5e, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3795493793886535195, guid: 6d07e59ec3b62bf45bc685b502cabf5e, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3795493793886535195, guid: 6d07e59ec3b62bf45bc685b502cabf5e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1360
+      objectReference: {fileID: 0}
+    - target: {fileID: 3795493793886535195, guid: 6d07e59ec3b62bf45bc685b502cabf5e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 67
+      objectReference: {fileID: 0}
+    - target: {fileID: 3795493793886535195, guid: 6d07e59ec3b62bf45bc685b502cabf5e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 700
+      objectReference: {fileID: 0}
+    - target: {fileID: 3795493793886535195, guid: 6d07e59ec3b62bf45bc685b502cabf5e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -43.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7375838356877363557, guid: 6d07e59ec3b62bf45bc685b502cabf5e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
