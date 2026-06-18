@@ -1,8 +1,6 @@
-using System;
 using LSG.Core;
 using LSG.ScriptableObjects;
 using LSG.UI;
-using LSG.Utils;
 using UnityEngine;
 
 namespace LSG.Phases
@@ -36,8 +34,8 @@ namespace LSG.Phases
             Debug.Log("[SummoningPhase] Starting Phase!");
             base.StartPhase();
             Container.SetActive(true);
-            GameEvents.SummoningPhaseStarted?.Invoke();
             TurnPage(); // Turns the first page
+            PhaseEvents.SummoningPhaseStarted?.Invoke();
         }
 
         public override void EndPhase()
@@ -45,6 +43,7 @@ namespace LSG.Phases
             Debug.Log("[SummoningPhase] Ending Phase!");
             base.EndPhase();
             Container.SetActive(false);
+            PhaseEvents.SummoningPhaseEnded?.Invoke();
         }
 
         private void TurnPage()

@@ -27,6 +27,7 @@ namespace LSG.Phases
             base.StartPhase();
             Container.SetActive(true);
             FindAHottie();
+            PhaseEvents.EncounterPhaseStarted?.Invoke();
         }
 
         public override void EndPhase()
@@ -34,6 +35,7 @@ namespace LSG.Phases
             Debug.Log("[EncounterPhase] Ending Phase!");
             base.EndPhase();
             Container.SetActive(false);
+            PhaseEvents.EncounterPhaseEnded?.Invoke();
         }
 
         private void OnEnable()

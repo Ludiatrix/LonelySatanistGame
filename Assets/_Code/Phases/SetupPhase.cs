@@ -38,6 +38,7 @@ namespace LSG.Phases
             base.StartPhase();
             Container.SetActive(true);
             GameEvents.NecronomiconStartSliding?.Invoke();
+            PhaseEvents.SetupPhaseStarted?.Invoke();
         }
 
         public override void EndPhase()
@@ -45,6 +46,7 @@ namespace LSG.Phases
             Debug.Log("[SetupPhase] Ending Phase!");
             base.EndPhase();
             Container.SetActive(false);
+            PhaseEvents.SetupPhaseEnded?.Invoke();
         }
 
         private void ActivateStartReadingButton()

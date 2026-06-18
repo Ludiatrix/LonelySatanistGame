@@ -30,7 +30,7 @@ namespace LSG.UI
             GameEvents.DisableButtons?.AddListener(DisableButtons);
             
             // Game-Specific Events for QoL
-            GameEvents.SummoningPhaseStarted?.AddListener(OnSummoningPhaseStarted);
+            PhaseEvents.SummoningPhaseStarted?.AddListener(OnSummoningPhaseStarted);
             GameEvents.DemonEncountered?.AddListener(OnDemonEncountered);
         }
 
