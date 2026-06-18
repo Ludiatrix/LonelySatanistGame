@@ -9,6 +9,16 @@ namespace LSG.ScriptableObjects
     {
         public Enums.Suit Suit = Enums.Suit.White;
         public Sprite PageImage;
+        [SerializeField]
+        private Sprite pageImageRipped;
+        public Sprite PageImageRipped
+        {
+            get
+            {
+                if (pageImageRipped == null) return PageImage;
+                return pageImageRipped;
+            }
+        }
         public ModifierPayload PageModifier;
     }
 }
