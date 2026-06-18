@@ -154,6 +154,54 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &141473989
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 141473991}
+  - component: {fileID: 141473990}
+  m_Layer: 0
+  m_Name: --DataManager--
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &141473990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141473989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4379295283f972f26951fc4349dcdc52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: LSG::LSG.Core.DataManager
+  PlayerEconomySource: {fileID: 11400000, guid: da8497e8847794bfb92799f0e89ead84, type: 2}
+  MilestoneDataSource: {fileID: 11400000, guid: d262bd59722483d42b393c66d01a3855, type: 2}
+  PlayerDeckSource: {fileID: 11400000, guid: f741dc2241435d0008802f22b8d52bcc, type: 2}
+  DemonDatingPoolSource: {fileID: 11400000, guid: b5d584961e4c57840a80b15724eda373, type: 2}
+--- !u!4 &141473991
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141473989}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &207199306
 GameObject:
   m_ObjectHideFlags: 0
@@ -3819,3 +3867,4 @@ SceneRoots:
   - {fileID: 1766247673}
   - {fileID: 1088802209}
   - {fileID: 404211038}
+  - {fileID: 141473991}
