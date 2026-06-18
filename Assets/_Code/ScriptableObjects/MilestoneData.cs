@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using LSG.Classes;
 using UnityEngine;
 
@@ -9,6 +11,41 @@ namespace LSG.ScriptableObjects
     [CreateAssetMenu(fileName = "MilestoneData", menuName = "LSG/Create Milestones")]
     public class MilestoneData : ScriptableObject
     {
+        public int NumberOfMilestonesToGenerate = 30;
         public Milestone[] Milestones;
+
+        public int GetTapeAmountAtPower(int powerLevel)
+        {
+            foreach (var milestone in Milestones)
+            {
+                if (milestone.PowerLevel == powerLevel && !milestone.Collected)
+                {
+                    return milestone.TapeAmount;
+                }
+            }
+
+            return 0;
+        }
+
+        public Milestone GetMilestoneAtPower(int powerLevel)
+        {
+            foreach (var milestone in Milestones)
+            {
+                if (milestone.PowerLevel == powerLevel && !milestone.Collected)
+                {
+                    return  milestone;
+                }
+            }
+
+            return null;
+        }
+        
+        public void Reset()
+        {
+            foreach (var milestone in Milestones)
+            {
+                milestone.Collected = false;
+            }
+        }
     }
 }

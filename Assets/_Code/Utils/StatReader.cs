@@ -27,7 +27,6 @@ namespace LSG.Utils
             AddToStatistics("Current Phase",GameController.CurrentPhase.ToString());
             AddToStatistics("Tape",PlayerEconomy.Tape.ToString());
             AddToStatistics("Page",PlayerEconomy.Page.ToString());
-            AddToStatistics("Milestone",PlayerEconomy.Milestone.ToString());
             AddToStatistics("Power",PlayerEconomy.Power.ToString());
             AddToStatistics("Sanity",PlayerEconomy.Sanity.ToString());
             AddToStatistics("Rizz",PlayerEconomy.Rizz.ToString());

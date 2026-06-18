@@ -7,7 +7,6 @@ public class PlayerEconomy : ScriptableObject
 {
     public int Tape = 0;
     public int Page = 0;
-    public int Milestone = 0;
     public int Power = 0;
     public int Sanity = 20;
     public int Rizz = 1;
@@ -35,18 +34,9 @@ public class PlayerEconomy : ScriptableObject
     private void UpdatePageRewards()
     {
         Page++;
-        Milestone++;
         Power++;
-        Sanity--;
-        if (Milestone < MilestoneDataSource.Milestones.Length - 1)
-        {
-            int tapeAmount = MilestoneDataSource.Milestones[Milestone].TapeAmount;
-            if (tapeAmount > 0)
-            {
-                Tape = tapeAmount;
-                GameEvents.TapeEarnedEvent?.Invoke();
-            }
-        }
+        Tape = MilestoneDataSource.GetTapeAmountAtPower(Power);
+        GameEvents.TapeEarnedEvent?.Invoke();
     }
     
     private void OnPageAdded(PageData pageToAdd)
@@ -57,11 +47,11 @@ public class PlayerEconomy : ScriptableObject
     private void Reset()
     {
         Tape = 0;
-        Milestone = 0;
         Page = 0;
         Power = 0;
         Sanity = 20;
         Rizz = 1;
         PlayerDeckSource.SetToDefault();
+        MilestoneDataSource.Reset();
     }
 }

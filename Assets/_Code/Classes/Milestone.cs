@@ -12,5 +12,6 @@ namespace LSG.Classes
     {
         public int PowerLevel = 1;
         public int TapeAmount = 1;
+        public bool Collected = false;
     }
 }

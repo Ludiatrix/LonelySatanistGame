@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 439839905376576962}
   - component: {fileID: 3584828479044466378}
   - component: {fileID: 8750223313292041828}
+  - component: {fileID: 4736710489854814779}
   m_Layer: 5
   m_Name: MilestoneContainer
   m_TagString: Untagged
@@ -33,10 +34,10 @@ RectTransform:
   - {fileID: 8300610688134512461}
   m_Father: {fileID: 5426185614254474917}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.3999939}
-  m_SizeDelta: {x: 0, y: 116.5}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1464, y: 116.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3584828479044466378
 CanvasRenderer:
@@ -72,6 +73,42 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &4736710489854814779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4214119035237395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 235613068450a9873b2cc9b9ebad6bc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: LSG::LSG.Utils.SmoothMover
+  movementCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &652374332644411765
 GameObject:
   m_ObjectHideFlags: 0
@@ -506,9 +543,9 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1119156715319319057}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.78787, y: 0.78787, z: 0.78787}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5807331870071784291}
@@ -1060,7 +1097,7 @@ GameObject:
   - component: {fileID: 6772513454979788113}
   - component: {fileID: 7434433550239241838}
   m_Layer: 5
-  m_Name: TapeIcon
+  m_Name: Tape 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1172,7 +1209,7 @@ GameObject:
   - component: {fileID: 2230462039742495362}
   - component: {fileID: 36436959241406293}
   m_Layer: 5
-  m_Name: TapeIcon
+  m_Name: Tape 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1248,7 +1285,7 @@ GameObject:
   - component: {fileID: 5700949044483175806}
   - component: {fileID: 4235714817846265163}
   m_Layer: 5
-  m_Name: TapeIcon
+  m_Name: Tape 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1460,6 +1497,7 @@ GameObject:
   - component: {fileID: 8300610688134512461}
   - component: {fileID: 1752702638581006185}
   - component: {fileID: 524162557714091939}
+  - component: {fileID: 7949582441058868491}
   m_Layer: 5
   m_Name: Template_MilestoneMarker
   m_TagString: Untagged
@@ -1526,6 +1564,25 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &7949582441058868491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7609288881146590324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaeb3969cfd020c1c96118348e345558, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: LSG::LSG.UI.MilestoneMarkerController
+  MilestoneMarkerID: 0
+  playerEconomy: {fileID: 11400000, guid: da8497e8847794bfb92799f0e89ead84, type: 2}
+  tapeIcons:
+  - {fileID: 6032765395704003905}
+  - {fileID: 6958484739274664484}
+  - {fileID: 6246783814755141973}
+  - {fileID: 8223545059928754033}
 --- !u!1 &8223545059928754033
 GameObject:
   m_ObjectHideFlags: 0
@@ -1538,7 +1595,7 @@ GameObject:
   - component: {fileID: 1196971615790985594}
   - component: {fileID: 6121427571646995272}
   m_Layer: 5
-  m_Name: TapeIcon
+  m_Name: Tape 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

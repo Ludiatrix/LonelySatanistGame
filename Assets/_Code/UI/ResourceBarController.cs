@@ -1,5 +1,7 @@
 using System;
+using System.Linq;
 using LSG.Core;
+using LSG.Utils;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -34,29 +36,18 @@ namespace LSG.UI
 
         private void GenerateMilestones()
         {
-            /*
-             * TODO: See this? This is bad. Bad!
-             * However I have a lot to do and this only runs once.
-             * We should fix it later, but probably won't.
-             * Too Bad!
-             */
-            foreach (var milestoneToGenerate in Economy.MilestoneDataSource.Milestones)
+            for (int i = 0; i < Economy.MilestoneDataSource.NumberOfMilestonesToGenerate; i++)
             {
                 GameObject go = Instantiate(templateMilestoneMarker, milestoneContainer, false);
                 go.SetActive(true);
-                var iconContainer = go.transform.Find("TapeIconContainer").gameObject;
-                go.name = $"Milestone {milestoneToGenerate.PowerLevel}";
-                for (int i = 0; i < milestoneToGenerate.TapeAmount; i++)
-                {
-                    iconContainer.transform.GetChild(i).gameObject.SetActive(true);
-                }
+                go.GetComponent<MilestoneMarkerController>().MilestoneMarkerID = (i + 1); // We start at 1
             }
         }
 
         private void UpdateBar()
         {
-            powerSlider.value = Economy.NormalizedPower;
-            
+            //powerSlider.value = Economy.NormalizedPower;
+            //milestoneContainer.GetComponent<SmoothMover>().MoveToTarget(milestoneContainer.localPosition - Vector3.left, 2.0f);
             /*
              * TODO: There is a mask on the Resource Bar as we want to pull along the Resource Bar when Milestones progress.
              * We also need to detect when we have surpassed a milestone so we can smoothly pull it to the left with SmoothMover
