@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,16 +11,47 @@ namespace LSG
     ///
     /// NOTE: the target scene must be added to the build list
     /// (File > Build Profiles > Scene List) or LoadScene will fail.
+    ///
+    /// For a fade transition, prefer SceneFader.FadeToScene (it fades then loads).
+    /// The Delayed methods here are for when the fade is triggered separately and
+    /// you just need to hold the scene change until the fade finishes.
     /// </summary>
     public class SceneSwitcher : MonoBehaviour
     {
         [Tooltip("Scene to load when LoadConfiguredScene() is called (used by the no-argument OnClick option).")]
         [SerializeField] private string sceneName;
 
+        [Tooltip("Seconds to wait before the delayed load methods change scene (give the fade-to-black time to finish).")]
+        [SerializeField] private float sceneChangeDelay = 0.7f;
+
         /// <summary>Loads the scene set in the inspector. Wire OnClick to this for the simplest setup.</summary>
         public void LoadConfiguredScene()
         {
             LoadScene(sceneName);
+        }
+
+        /// <summary>
+        /// Loads the inspector scene after 'sceneChangeDelay' seconds. Wire the close
+        /// button to this so the fade-to-black has time to play before the scene swaps.
+        /// </summary>
+        public void LoadConfiguredSceneDelayed()
+        {
+            LoadSceneDelayed(sceneName);
+        }
+
+        /// <summary>Loads a scene by name after 'sceneChangeDelay' seconds.</summary>
+        public void LoadSceneDelayed(string name)
+        {
+            StartCoroutine(LoadAfterDelay(name));
+        }
+
+        private IEnumerator LoadAfterDelay(string name)
+        {
+            // Realtime so the wait still elapses if the game is paused (timeScale 0).
+            if (sceneChangeDelay > 0f)
+                yield return new WaitForSecondsRealtime(sceneChangeDelay);
+
+            LoadScene(name);
         }
 
         /// <summary>Loads a scene by name. OnClick can pass the name as a string argument.</summary>
