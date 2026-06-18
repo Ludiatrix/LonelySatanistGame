@@ -18,6 +18,7 @@ namespace LSG.Core
         public static readonly UnityEvent StartReading = new UnityEvent();
         
         // Summoning Phase Events
+        public static readonly UnityEvent SummoningPhaseStarted = new UnityEvent();
         public static readonly UnityPageReadEvent PageRead = new UnityPageReadEvent();
         public static readonly UnityEvent TapeEarnedEvent = new UnityEvent();
         public static readonly UnityIntEvent WhiteSuitPointEarned = new UnityIntEvent();
@@ -43,6 +44,7 @@ namespace LSG.Core
         public static readonly UnityStringEvent SetDialogueText = new UnityStringEvent();
         public static readonly UnityBoolEvent ToggleSummoningButtons = new UnityBoolEvent();
         public static readonly UnityBoolEvent ToggleEncounterButtons = new UnityBoolEvent();
+        public static readonly UnityBoolEvent ToggleStoreButtons = new UnityBoolEvent();
         public static readonly UnityEvent DisableButtons = new UnityEvent();
     }
     

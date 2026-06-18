@@ -11,10 +11,15 @@ namespace LSG.Utils
     public class StatReader : MonoBehaviour
     {
         public GameController GameController;
-        public PlayerEconomy PlayerEconomy;
+        private PlayerEconomy _economy;
         public TMP_Text StatText;
 
         private string _statisticsMessage = String.Empty;
+
+        private void Start()
+        {
+            _economy = DataManager.Instance.PlayerEconomySource;
+        }
 
         private void Update()
         {
@@ -25,11 +30,11 @@ namespace LSG.Utils
         {
             StartStatisticsMessage();
             AddToStatistics("Current Phase",GameController.CurrentPhase.ToString());
-            AddToStatistics("Tape",PlayerEconomy.Tape.ToString());
-            AddToStatistics("Page",PlayerEconomy.Page.ToString());
-            AddToStatistics("Power",PlayerEconomy.Power.ToString());
-            AddToStatistics("Sanity",PlayerEconomy.Sanity.ToString());
-            AddToStatistics("Rizz",PlayerEconomy.Rizz.ToString());
+            AddToStatistics("Tape",_economy.Tape.ToString());
+            AddToStatistics("Page",_economy.Page.ToString());
+            AddToStatistics("Power",_economy.Power.ToString());
+            AddToStatistics("Sanity",_economy.Sanity.ToString());
+            AddToStatistics("Rizz",_economy.Rizz.ToString());
 
             StatText.text = _statisticsMessage;
         }

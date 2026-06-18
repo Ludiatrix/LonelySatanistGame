@@ -15,7 +15,6 @@ namespace LSG.Phases
         public GameObject Container;
         
         // Page Generation
-        public PlayerEconomy PlayerEconomy;
         public Transform PagesTransform;
         public GameObject PagePrefab;
         public Transform PageTurnDestinationTransform;
@@ -37,8 +36,7 @@ namespace LSG.Phases
             Debug.Log("[SummoningPhase] Starting Phase!");
             base.StartPhase();
             Container.SetActive(true);
-            GameEvents.ToggleDialogueWindow?.Invoke(true);
-            GameEvents.ToggleSummoningButtons?.Invoke(true);
+            GameEvents.SummoningPhaseStarted?.Invoke();
             TurnPage(); // Turns the first page
         }
 
@@ -51,7 +49,7 @@ namespace LSG.Phases
 
         private void TurnPage()
         {
-            PageData data = PlayerEconomy.PlayerDeckSource.TakePage();
+            PageData data = DataManager.Instance.PlayerDeckSource.TakePage();
             Debug.Log("[Summoning Phase] Turning the Page...");
             GameObject page = Instantiate(PagePrefab, PagesTransform, false);
             page.GetComponent<PageFacade>().Inject(data, PageTurnDestinationTransform);

@@ -13,7 +13,7 @@ namespace LSG.UI
     /// </summary>
     public class ResourceBarController : MonoBehaviour
     {
-        public PlayerEconomy Economy;
+        private PlayerEconomy _economy;
 
         [SerializeField] private Slider powerSlider;
         [SerializeField] private GameObject templateMilestoneMarker;
@@ -31,12 +31,13 @@ namespace LSG.UI
 
         private void Start()
         {
+            _economy = DataManager.Instance.PlayerEconomySource;
             GenerateMilestones();
         }
 
         private void GenerateMilestones()
         {
-            for (int i = 0; i < Economy.MilestoneDataSource.NumberOfMilestonesToGenerate; i++)
+            for (int i = 0; i < DataManager.Instance.MilestoneDataSource.NumberOfMilestonesToGenerate; i++)
             {
                 GameObject go = Instantiate(templateMilestoneMarker, milestoneContainer, false);
                 go.SetActive(true);
@@ -46,7 +47,7 @@ namespace LSG.UI
 
         private void UpdateBar()
         {
-            //powerSlider.value = Economy.NormalizedPower;
+            //powerSlider.value = _economy.NormalizedPower;
             //milestoneContainer.GetComponent<SmoothMover>().MoveToTarget(milestoneContainer.localPosition - Vector3.left, 2.0f);
             /*
              * TODO: There is a mask on the Resource Bar as we want to pull along the Resource Bar when Milestones progress.

@@ -1,5 +1,7 @@
 using System;
+using JetBrains.Annotations;
 using LSG.Core;
+using LSG.ScriptableObjects;
 using TMPro;
 using UnityEngine;
 
@@ -15,6 +17,7 @@ namespace LSG.UI
         [SerializeField] private TMP_Text dialogueText;
         [SerializeField] private GameObject summoningButtonContainer;
         [SerializeField] private GameObject encounterButtonContainer;
+        [SerializeField] private GameObject storeButtonContainer;
 
         private void OnEnable()
         {
@@ -23,7 +26,28 @@ namespace LSG.UI
             GameEvents.SetDialogueText?.AddListener(SetDialogue);
             GameEvents.ToggleSummoningButtons?.AddListener(ToggleSummoningButtonContainer);
             GameEvents.ToggleEncounterButtons?.AddListener(ToggleEncounterButtonContainer);
+            GameEvents.ToggleStoreButtons?.AddListener(ToggleEncounterButtonContainer);
             GameEvents.DisableButtons?.AddListener(DisableButtons);
+            
+            // Game-Specific Events for QoL
+            GameEvents.SummoningPhaseStarted?.AddListener(OnSummoningPhaseStarted);
+            GameEvents.DemonEncountered?.AddListener(OnDemonEncountered);
+        }
+
+        private void OnSummoningPhaseStarted()
+        {
+            ToggleWindow(true);
+            SetNamePlate(DataManager.Instance.PlayerEconomySource.PlayerName);
+            SetDialogue(string.Empty);
+            ToggleSummoningButtonContainer(true);
+        }
+
+        private void OnDemonEncountered([CanBeNull] DemonData demonData)
+        {
+            SetNamePlate(demonData?.demonName);
+            SetDialogue(demonData?.concept);
+            ToggleWindow(true);
+            ToggleEncounterButtonContainer(true);
         }
 
         private void ToggleWindow(bool toggle)
@@ -31,12 +55,12 @@ namespace LSG.UI
             container.SetActive(toggle);
         }
         
-        public void SetNamePlate(string text)
+        private void SetNamePlate(string text)
         {
             namePlateText.text = text;
         }
         
-        public void SetDialogue(string text)
+        private void SetDialogue(string text)
         {
             dialogueText.text = text;
         }
@@ -45,15 +69,24 @@ namespace LSG.UI
         {
             summoningButtonContainer.SetActive(toggle);
             encounterButtonContainer.SetActive(!toggle);
+            storeButtonContainer.SetActive(!toggle);
         }
         
         private void ToggleEncounterButtonContainer(bool toggle)
         {
-            encounterButtonContainer.SetActive(toggle);
             summoningButtonContainer.SetActive(!toggle);
+            encounterButtonContainer.SetActive(toggle);
+            storeButtonContainer.SetActive(!toggle);
+        }
+        
+        private void ToggleStoreButtonContainer(bool toggle)
+        {
+            summoningButtonContainer.SetActive(!toggle);
+            encounterButtonContainer.SetActive(!toggle);
+            storeButtonContainer.SetActive(toggle);
         }
 
-        public void DisableButtons()
+        private void DisableButtons()
         {
             summoningButtonContainer.SetActive(false);
             encounterButtonContainer.SetActive(false);

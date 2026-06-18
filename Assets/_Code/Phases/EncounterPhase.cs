@@ -13,8 +13,28 @@ namespace LSG.Phases
     /// </summary>
     public class EncounterPhase : Phase
     {
-        [SerializeField] private PlayerEconomy playerEconomy;
         [SerializeField] private GameObject Container;
+        
+        private PlayerEconomy _economy;
+        private DemonData _chosenDemonThisPhase = null;
+        
+        /// <summary>
+        /// Start the Phase and Find a DemonData based on Power in the DemonDatingPool.
+        /// </summary>
+        public override void StartPhase()
+        {
+            Debug.Log("[EncounterPhase] Starting Phase!");
+            base.StartPhase();
+            Container.SetActive(true);
+            FindAHottie();
+        }
+
+        public override void EndPhase()
+        {
+            Debug.Log("[EncounterPhase] Ending Phase!");
+            base.EndPhase();
+            Container.SetActive(false);
+        }
 
         private void OnEnable()
         {
@@ -28,6 +48,11 @@ namespace LSG.Phases
             GameEvents.GiveUpChosen?.RemoveListener(OnGiveUpChosen);
         }
 
+        private void Start()
+        {
+            _economy = DataManager.Instance.PlayerEconomySource;
+        }
+
         private void OnTryToDateChosen()
         {
             GoOnDate();
@@ -36,33 +61,44 @@ namespace LSG.Phases
         private void GoOnDate()
         {
             int d20Roll = Random.Range(1, 21); // The Random D20 Roll for the Date
-            if (d20Roll <= playerEconomy.Rizz)
+            if (d20Roll <= _economy.Rizz)
             {
-                
+                SucceedDate();
+            }
+            else
+            {
+                FailDate();
             }
         }
 
         private void OnGiveUpChosen()
         {
-            
+            FailDate();
         }
 
-        public override void StartPhase()
+        private void SucceedDate()
         {
-            Debug.Log("[EncounterPhase] Starting Phase!");
-            base.StartPhase();
-            Container.SetActive(true);
-            FindAHottie();
+            // Date Succeeds!
+            GameEvents.ToggleEncounterButtons?.Invoke(false);
+            GameEvents.SetDialogueText?.Invoke(_chosenDemonThisPhase?.dateOutcome);
         }
 
+        private void FailDate()
+        {
+            // Give the Boon and Bane Effects and Dialogue
+            GameEvents.ToggleEncounterButtons?.Invoke(false);
+            GameEvents.SetDialogueText?.Invoke(_chosenDemonThisPhase?.boonBaneDialogue);
+            // TODO: Set Boon and Bane Effect Here
+        }
+
+        // Sends the
         private void FindAHottie()
         {
-            DemonData chosenDemon = playerEconomy.DemonDatingPool.EncounterDemonBasedOnPower(playerEconomy.Power);
-            GameEvents.DemonEncountered?.Invoke(chosenDemon);
-            GameEvents.SetNamePlateText?.Invoke(chosenDemon.demonName);
-            GameEvents.SetDialogueText?.Invoke(chosenDemon.concept);
-            GameEvents.ToggleDialogueWindow?.Invoke(true);
-            GameEvents.ToggleEncounterButtons?.Invoke(true);
+            // Get a demon
+            _chosenDemonThisPhase = DataManager.Instance.DemonDatingPoolSource.EncounterDemonBasedOnPower(_economy.Power);
+            
+            // This will turn on the Dialogue Window and inject the DemonData
+            GameEvents.DemonEncountered?.Invoke(_chosenDemonThisPhase);
         }
     }
 }
