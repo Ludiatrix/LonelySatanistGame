@@ -1,5 +1,6 @@
 using System;
 using LSG.Core;
+using LSG.ScriptableObjects;
 using TMPro;
 using UnityEngine;
 
@@ -24,6 +25,17 @@ namespace LSG.UI
             GameEvents.ToggleSummoningButtons?.AddListener(ToggleSummoningButtonContainer);
             GameEvents.ToggleEncounterButtons?.AddListener(ToggleEncounterButtonContainer);
             GameEvents.DisableButtons?.AddListener(DisableButtons);
+            
+            // Game-Specific Events for QoL
+            GameEvents.DemonEncountered?.AddListener(OnDemonEncountered);
+        }
+
+        private void OnDemonEncountered(DemonData demonData)
+        {
+            SetNamePlate(demonData.demonName);
+            SetDialogue(demonData.concept);
+            ToggleWindow(true);
+            ToggleEncounterButtonContainer(true);
         }
 
         private void ToggleWindow(bool toggle)
@@ -31,12 +43,12 @@ namespace LSG.UI
             container.SetActive(toggle);
         }
         
-        public void SetNamePlate(string text)
+        private void SetNamePlate(string text)
         {
             namePlateText.text = text;
         }
         
-        public void SetDialogue(string text)
+        private void SetDialogue(string text)
         {
             dialogueText.text = text;
         }
@@ -53,7 +65,7 @@ namespace LSG.UI
             summoningButtonContainer.SetActive(!toggle);
         }
 
-        public void DisableButtons()
+        private void DisableButtons()
         {
             summoningButtonContainer.SetActive(false);
             encounterButtonContainer.SetActive(false);

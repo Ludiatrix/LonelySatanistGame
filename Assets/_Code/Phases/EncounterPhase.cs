@@ -55,14 +55,14 @@ namespace LSG.Phases
             FindAHottie();
         }
 
+        // Sends the
         private void FindAHottie()
         {
+            // Get a demon
             DemonData chosenDemon = playerEconomy.DemonDatingPool.EncounterDemonBasedOnPower(playerEconomy.Power);
+            
+            // This will turn on the Dialogue Window and inject the DemonData
             GameEvents.DemonEncountered?.Invoke(chosenDemon);
-            GameEvents.SetNamePlateText?.Invoke(chosenDemon.demonName);
-            GameEvents.SetDialogueText?.Invoke(chosenDemon.concept);
-            GameEvents.ToggleDialogueWindow?.Invoke(true);
-            GameEvents.ToggleEncounterButtons?.Invoke(true);
         }
     }
 }
