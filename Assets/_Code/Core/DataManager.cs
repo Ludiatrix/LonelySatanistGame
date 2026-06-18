@@ -29,5 +29,13 @@ namespace LSG.Core
             Instance = this;
             DontDestroyOnLoad(this);
         }
+
+        public void ResetData()
+        {
+            PlayerEconomySource.Reset();
+            MilestoneDataSource.Reset();
+            PlayerDeckSource.Reset();
+            DemonDatingPoolSource.Reset();
+        }
     }
 }

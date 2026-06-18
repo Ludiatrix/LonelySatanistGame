@@ -9,7 +9,6 @@ namespace LSG.UI
     /// </summary>
     public class TapeCountCanvasController : MonoBehaviour
     {
-        [SerializeField] private PlayerEconomy playerEconomy;
         [SerializeField] private TMP_Text tapeCountText;
 
         private void OnEnable()
@@ -24,7 +23,7 @@ namespace LSG.UI
 
         private void OnPageRead()
         {
-            tapeCountText.text = $"Tape: {playerEconomy.Tape.ToString()}";
+            tapeCountText.text = $"Tape: {DataManager.Instance.PlayerEconomySource.Tape.ToString()}";
         }
     }
 }

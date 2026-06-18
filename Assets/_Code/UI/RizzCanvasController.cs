@@ -9,9 +9,8 @@ namespace LSG.UI
     /// </summary>
     public class RizzCanvasController : MonoBehaviour
     {
-        [SerializeField] private PlayerEconomy playerEconomy;
         [SerializeField] private TMP_Text rizzText;
-
+        
         private void OnEnable()
         {
             GameEvents.PageRead?.AddListener(OnPageRead);
@@ -24,7 +23,7 @@ namespace LSG.UI
 
         private void OnPageRead()
         {
-            rizzText.text = $"Rizz: {playerEconomy.Rizz.ToString()}";
+            rizzText.text = $"Rizz: {DataManager.Instance.PlayerEconomySource.Rizz.ToString()}";
         }
     }
 }

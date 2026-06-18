@@ -13,7 +13,6 @@ namespace LSG.UI
     {
         public int MilestoneMarkerID = 0;
         
-        [SerializeField] private PlayerEconomy playerEconomy;
         [SerializeField] private GameObject[] tapeIcons;
 
         private void OnEnable()
@@ -38,7 +37,7 @@ namespace LSG.UI
 
         private void CheckMilestoneMarkerForTape()
         {
-            Milestone myMilestone = playerEconomy.MilestoneDataSource.GetMilestoneAtPower(MilestoneMarkerID);
+            Milestone myMilestone = DataManager.Instance.MilestoneDataSource.GetMilestoneAtPower(MilestoneMarkerID);
 
             if (myMilestone is null)
             {
