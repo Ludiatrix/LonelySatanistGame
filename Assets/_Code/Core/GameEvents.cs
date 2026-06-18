@@ -18,6 +18,7 @@ namespace LSG.Core
         public static readonly UnityEvent StartReading = new UnityEvent();
         
         // Summoning Phase Events
+        public static readonly UnityEvent SummoningPhaseStarted = new UnityEvent();
         public static readonly UnityPageReadEvent PageRead = new UnityPageReadEvent();
         public static readonly UnityEvent TapeEarnedEvent = new UnityEvent();
         public static readonly UnityIntEvent WhiteSuitPointEarned = new UnityIntEvent();

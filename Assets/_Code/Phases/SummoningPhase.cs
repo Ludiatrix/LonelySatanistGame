@@ -37,8 +37,7 @@ namespace LSG.Phases
             Debug.Log("[SummoningPhase] Starting Phase!");
             base.StartPhase();
             Container.SetActive(true);
-            GameEvents.ToggleDialogueWindow?.Invoke(true);
-            GameEvents.ToggleSummoningButtons?.Invoke(true);
+            GameEvents.SummoningPhaseStarted?.Invoke();
             TurnPage(); // Turns the first page
         }
 

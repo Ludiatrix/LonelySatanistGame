@@ -83,6 +83,7 @@ namespace LSG.Phases
             // Give the Boon and Bane Effects and Dialogue
             GameEvents.ToggleEncounterButtons?.Invoke(false);
             GameEvents.SetDialogueText?.Invoke(_chosenDemonThisPhase?.boonBaneDialogue);
+            // TODO: Set Boon and Bane Effect Here
         }
 
         // Sends the

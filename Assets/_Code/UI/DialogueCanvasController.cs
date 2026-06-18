@@ -12,6 +12,7 @@ namespace LSG.UI
     /// </summary>
     public class DialogueCanvasController : MonoBehaviour
     {
+        [SerializeField] private PlayerEconomy playerEconomy;
         [SerializeField] private GameObject container;
         [SerializeField] private TMP_Text namePlateText;
         [SerializeField] private TMP_Text dialogueText;
@@ -30,7 +31,16 @@ namespace LSG.UI
             GameEvents.DisableButtons?.AddListener(DisableButtons);
             
             // Game-Specific Events for QoL
+            GameEvents.SummoningPhaseStarted?.AddListener(OnSummoningPhaseStarted);
             GameEvents.DemonEncountered?.AddListener(OnDemonEncountered);
+        }
+
+        private void OnSummoningPhaseStarted()
+        {
+            ToggleWindow(true);
+            SetNamePlate(playerEconomy.PlayerName);
+            SetDialogue(string.Empty);
+            ToggleSummoningButtonContainer(true);
         }
 
         private void OnDemonEncountered([CanBeNull] DemonData demonData)

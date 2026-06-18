@@ -6,6 +6,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "PlayerEconomy", menuName = "LSG/Create Player Economy")]
 public class PlayerEconomy : ScriptableObject
 {
+    public string PlayerName = "Smol";
     public int Tape = 0;
     public int Page = 0;
     public int Power = 0;
