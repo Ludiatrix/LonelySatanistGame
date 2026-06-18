@@ -1,4 +1,5 @@
 using System;
+using JetBrains.Annotations;
 using LSG.Core;
 using LSG.ScriptableObjects;
 using TMPro;
@@ -32,10 +33,10 @@ namespace LSG.UI
             GameEvents.DemonEncountered?.AddListener(OnDemonEncountered);
         }
 
-        private void OnDemonEncountered(DemonData demonData)
+        private void OnDemonEncountered([CanBeNull] DemonData demonData)
         {
-            SetNamePlate(demonData.demonName);
-            SetDialogue(demonData.concept);
+            SetNamePlate(demonData?.demonName);
+            SetDialogue(demonData?.concept);
             ToggleWindow(true);
             ToggleEncounterButtonContainer(true);
         }
