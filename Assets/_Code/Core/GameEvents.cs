@@ -21,22 +21,39 @@ namespace LSG.Core
         public static readonly UnityPageReadEvent PageRead = new UnityPageReadEvent();
         public static readonly UnityEvent TapeEarnedEvent = new UnityEvent();
         public static readonly UnityIntEvent WhiteSuitPointEarned = new UnityIntEvent();
-        
+        public static readonly UnityEvent KeepReadingChosen = new UnityEvent();
+        public static readonly UnityEvent StopChosen = new UnityEvent();
         
         // Store Phase Events
         public static readonly UnityPageDataEvent PageAdded = new UnityPageDataEvent();
         public static readonly UnityPageDataEvent PageTaken = new UnityPageDataEvent();
         
+        // Encounter Phase Events
+        public static readonly UnityDemonDataEvent DemonEncountered = new UnityDemonDataEvent();
+        public static readonly UnityEvent TryToDateChosen = new UnityEvent();
+        public static readonly UnityEvent GiveUpChosen = new UnityEvent();
+        
         // Utility Events
         public static readonly UnityStateEvent ChangeState = new UnityStateEvent();
         public static readonly UnitySfxEvent PlaySoundSfx = new UnitySfxEvent();
+        
+        // UI Events
+        public static readonly UnityBoolEvent ToggleDialogueWindow = new UnityBoolEvent();
+        public static readonly UnityStringEvent SetNamePlateText = new UnityStringEvent();
+        public static readonly UnityStringEvent SetDialogueText = new UnityStringEvent();
+        public static readonly UnityBoolEvent ToggleSummoningButtons = new UnityBoolEvent();
+        public static readonly UnityBoolEvent ToggleEncounterButtons = new UnityBoolEvent();
+        public static readonly UnityEvent DisableButtons = new UnityEvent();
     }
     
     
     public class UnityStateEvent : UnityEvent<Enums.GameState> { }
     public class UnityPageReadEvent : UnityEvent { }
     public class UnityPageDataEvent : UnityEvent<PageData> { }
+    public class UnityDemonDataEvent : UnityEvent<DemonData> { }
     public class UnityIntEvent : UnityEvent<int> { }
+    public class UnityBoolEvent : UnityEvent<bool> { }
+    public class UnityStringEvent : UnityEvent<string> { }
     
     
     /// <summary>

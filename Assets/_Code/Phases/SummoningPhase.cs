@@ -7,11 +7,6 @@ using UnityEngine;
 
 namespace LSG.Phases
 {
-    /*
-     * TODO: Pages are drawn one by one. The player chooses to "Keep Reading" to gain more power/tape milestones or "Stop" to lock in their power meter.
-     * If they exceed the safe threshold of the White suit, their summoning attempt calls the dog and the player gets dragged to Hell (bad ending).
-     */
-    
     /// <summary>
     /// The Summoning Phase is governed by two primary actions: "Keep Reading" and "Stop".
     /// </summary>
@@ -25,11 +20,25 @@ namespace LSG.Phases
         public GameObject PagePrefab;
         public Transform PageTurnDestinationTransform;
 
+        private void OnEnable()
+        {
+            GameEvents.KeepReadingChosen?.AddListener(OnKeepReadingChosen);
+            GameEvents.StopChosen?.AddListener(OnStopChosen);
+        }
+
+        private void OnDisable()
+        {
+            GameEvents.KeepReadingChosen?.RemoveListener(OnKeepReadingChosen);
+            GameEvents.StopChosen?.RemoveListener(OnStopChosen);
+        }
+
         public override void StartPhase()
         {
             Debug.Log("[SummoningPhase] Starting Phase!");
             base.StartPhase();
             Container.SetActive(true);
+            GameEvents.ToggleDialogueWindow?.Invoke(true);
+            GameEvents.ToggleSummoningButtons?.Invoke(true);
             TurnPage(); // Turns the first page
         }
 
@@ -50,18 +59,17 @@ namespace LSG.Phases
             GameEvents.PageRead?.Invoke();
         }
 
-        public void KeepReading()
+        private void OnKeepReadingChosen()
         {
             TurnPage();
         }
-
-        /// <summary>
-        /// Stopping locks in the Power meter and performs the act of Summoning.
-        /// TODO: Conduct Summoning!
-        /// </summary>
-        public void StopReading()
+        
+        private void OnStopChosen()
         {
             Debug.Log("[Summoning Phase] The Pages have been read. Now let's see what the chasm of hell brings forth!");
+            GameEvents.DisableButtons?.Invoke();
+            GameEvents.ToggleDialogueWindow?.Invoke(false);
+            GameEvents.ChangeState?.Invoke(Enums.GameState.EncounterPhase);
         }
         
     }

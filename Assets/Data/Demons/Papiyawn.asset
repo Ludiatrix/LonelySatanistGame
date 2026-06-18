@@ -10,5 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 538408133697076ddaeb0aff172675e9, type: 3}
-  m_Name: DemonData
+  m_Name: Papiyawn
   m_EditorClassIdentifier: Assembly-CSharp::LSG.ScriptableObjects.DemonData
+  demonName: Papiyawn
+  concept: An adorable fluffy white dog that is the guardian to the gates of hell
+  minimumPowerLevel: 8
+  maximumPowerLevel: 100000
+  outcome: You get pulled into a rift in reality Your dating life woes are ended
+  boon: 
+  bane: Game Over
+  dateOutcome: 

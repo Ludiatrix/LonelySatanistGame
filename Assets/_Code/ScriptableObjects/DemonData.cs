@@ -7,12 +7,13 @@ namespace LSG.ScriptableObjects
     public class DemonData : ScriptableObject
     {
         public string demonName;
-        public string concept;
+        [TextArea(5,10)]public string concept;
         public float minimumPowerLevel;
         public float maximumPowerLevel;
-        public string outcome;
-        public string boon;
-        public string bane;
-        public string dateOutcome;
+        [TextArea(5,10)] public string outcome;
+        [TextArea(5,10)] public string boon;
+        [TextArea(5,10)] public string bane;
+        [TextArea(5,10)] public string boonBaneDialogue;
+        [TextArea(5,10)] public string dateOutcome;
     }
 }

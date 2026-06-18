@@ -1,0 +1,910 @@
+fileFormatVersion: 2
+guid: d77938134130a7b5fb6dd39aa58e990f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1894022496679678888
+    second: tears_tape_suits_0
+  - first:
+      213: 7869837438719321398
+    second: tears_tape_suits_1
+  - first:
+      213: 8982851810431051325
+    second: tears_tape_suits_2
+  - first:
+      213: -214755228953438683
+    second: tears_tape_suits_3
+  - first:
+      213: -8746568150022624642
+    second: tears_tape_suits_4
+  - first:
+      213: 5283775310904306721
+    second: tears_tape_suits_5
+  - first:
+      213: -3855969374178061999
+    second: tears_tape_suits_6
+  - first:
+      213: -1000569331802095935
+    second: tears_tape_suits_7
+  - first:
+      213: -9005139288827459537
+    second: tears_tape_suits_8
+  - first:
+      213: -8572745054692293922
+    second: tears_tape_suits_9
+  - first:
+      213: -2779053928210148803
+    second: tears_tape_suits_10
+  - first:
+      213: -859276518228759198
+    second: tears_tape_suits_11
+  - first:
+      213: -7060926676802047398
+    second: tears_tape_suits_12
+  - first:
+      213: 2311385898323105142
+    second: tears_tape_suits_13
+  - first:
+      213: -2241029432731856972
+    second: tears_tape_suits_14
+  - first:
+      213: -4439508387160249112
+    second: tears_tape_suits_15
+  - first:
+      213: -6514323065717231856
+    second: tears_tape_suits_16
+  - first:
+      213: -5435002495274747351
+    second: tears_tape_suits_17
+  - first:
+      213: -2739181534693987773
+    second: tears_tape_suits_18
+  - first:
+      213: 8079573119410766779
+    second: tears_tape_suits_19
+  - first:
+      213: 7899080778451836043
+    second: tears_tape_suits_20
+  - first:
+      213: 8406773950918670993
+    second: tears_tape_suits_21
+  - first:
+      213: -3893967405666673337
+    second: tears_tape_suits_22
+  - first:
+      213: -39246106649421678
+    second: tears_tape_suits_23
+  - first:
+      213: -2125090771529887324
+    second: tears_tape_suits_24
+  - first:
+      213: 5304084088172861051
+    second: tears_tape_suits_25
+  - first:
+      213: 1220270826546666503
+    second: tears_tape_suits_26
+  - first:
+      213: 9162735899374306030
+    second: tears_tape_suits_27
+  - first:
+      213: 4211169461220568918
+    second: tears_tape_suits_28
+  - first:
+      213: 3781663840052753629
+    second: tears_tape_suits_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: tears_tape_suits_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 398
+        width: 10
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a3d03ffc6be84a10800000000000000
+      internalID: 1894022496679678888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tears_tape_suits_1
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 318
+        width: 38
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6356fee4477473d60800000000000000
+      internalID: 7869837438719321398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tears_tape_suits_2
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 307
+        width: 131
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d36a7bed02089ac70800000000000000
+      internalID: 8982851810431051325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tears_tape_suits_3
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 387
+        width: 11
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5269290d149050df0800000000000000
+      internalID: -214755228953438683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tears_tape_suits_4
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 318
+        width: 36
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7ae72edb92fd9680800000000000000
+      internalID: -8746568150022624642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tears_tape_suits_5
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 362
+        width: 42
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12c2e6f86adb35940800000000000000
+      internalID: 5283775310904306721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tears_tape_suits_6
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 394
+        width: 52
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 151d453b848dc7ac0800000000000000
+      internalID: -3855969374178061999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tears_tape_suits_7
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 375
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ce39c47e734d12f0800000000000000
+      internalID: -1000569331802095935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tears_tape_suits_8
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 347
+        width: 51
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2886803781570380800000000000000
+      internalID: -9005139288827459537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tears_tape_suits_9
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 220
+        width: 31
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed244190bcd770980800000000000000
+      internalID: -8572745054692293922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tears_tape_suits_10
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 288
+        width: 14
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3251652d21de69d0800000000000000
+      internalID: -2779053928210148803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tears_tape_suits_11
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 292
+        width: 38
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26de32f2f8c3314f0800000000000000
+      internalID: -859276518228759198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tears_tape_suits_12
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 319
+        width: 87
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a52722c099c820e90800000000000000
+      internalID: -7060926676802047398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tears_tape_suits_13
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 272
+        width: 7
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67555607a31b31020800000000000000
+      internalID: 2311385898323105142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tears_tape_suits_14
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 268
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bf82daba9346e0e0800000000000000
+      internalID: -2241029432731856972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tears_tape_suits_15
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 278
+        width: 96
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ec22f5b4a2b362c0800000000000000
+      internalID: -4439508387160249112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tears_tape_suits_16
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 224
+        width: 79
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01f6ac3afa97895a0800000000000000
+      internalID: -6514323065717231856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tears_tape_suits_17
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 241
+        width: 42
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92a79c3c60ef294b0800000000000000
+      internalID: -5435002495274747351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tears_tape_suits_18
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 210
+        width: 51
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34a614138e87cf9d0800000000000000
+      internalID: -2739181534693987773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tears_tape_suits_19
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 223
+        width: 40
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb30647d1f8602070800000000000000
+      internalID: 8079573119410766779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tears_tape_suits_20
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 185
+        width: 72
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8cdcbbed1c2f9d60800000000000000
+      internalID: 7899080778451836043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tears_tape_suits_21
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 142
+        width: 53
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19ab38b0e5cdaa470800000000000000
+      internalID: 8406773950918670993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tears_tape_suits_22
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 136
+        width: 43
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74dd9429649d5f9c0800000000000000
+      internalID: -3893967405666673337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tears_tape_suits_23
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 155
+        width: 20
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 298185abfd1947ff0800000000000000
+      internalID: -39246106649421678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tears_tape_suits_24
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 133
+        width: 40
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a11087d3392282e0800000000000000
+      internalID: -2125090771529887324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tears_tape_suits_25
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 21
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b76585e3064eb9940800000000000000
+      internalID: 5304084088172861051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tears_tape_suits_26
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 21
+        width: 48
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70c161af9d54fe010800000000000000
+      internalID: 1220270826546666503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tears_tape_suits_27
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 21
+        width: 22
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee2cce411c3982f70800000000000000
+      internalID: 9162735899374306030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tears_tape_suits_28
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 21
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65f66013054117a30800000000000000
+      internalID: 4211169461220568918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tears_tape_suits_29
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 22
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd4b846f93b2b7430800000000000000
+      internalID: 3781663840052753629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      tears_tape_suits_0: 1894022496679678888
+      tears_tape_suits_1: 7869837438719321398
+      tears_tape_suits_10: -2779053928210148803
+      tears_tape_suits_11: -859276518228759198
+      tears_tape_suits_12: -7060926676802047398
+      tears_tape_suits_13: 2311385898323105142
+      tears_tape_suits_14: -2241029432731856972
+      tears_tape_suits_15: -4439508387160249112
+      tears_tape_suits_16: -6514323065717231856
+      tears_tape_suits_17: -5435002495274747351
+      tears_tape_suits_18: -2739181534693987773
+      tears_tape_suits_19: 8079573119410766779
+      tears_tape_suits_2: 8982851810431051325
+      tears_tape_suits_20: 7899080778451836043
+      tears_tape_suits_21: 8406773950918670993
+      tears_tape_suits_22: -3893967405666673337
+      tears_tape_suits_23: -39246106649421678
+      tears_tape_suits_24: -2125090771529887324
+      tears_tape_suits_25: 5304084088172861051
+      tears_tape_suits_26: 1220270826546666503
+      tears_tape_suits_27: 9162735899374306030
+      tears_tape_suits_28: 4211169461220568918
+      tears_tape_suits_29: 3781663840052753629
+      tears_tape_suits_3: -214755228953438683
+      tears_tape_suits_4: -8746568150022624642
+      tears_tape_suits_5: 5283775310904306721
+      tears_tape_suits_6: -3855969374178061999
+      tears_tape_suits_7: -1000569331802095935
+      tears_tape_suits_8: -9005139288827459537
+      tears_tape_suits_9: -8572745054692293922
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

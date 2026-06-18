@@ -11,14 +11,7 @@ namespace LSG.Core
         {
             TitlePhase = 0,
             SetupPhase = 1,
-            
-            /*
-             * TODO: Pages are drawn one by one. The player chooses to "Keep Reading" to gain more power/tape milestones or "Stop" to lock in their power meter.
-             * If they exceed the safe threshold of the White suit, their summoning attempt calls the dog and the player gets dragged to Hell (bad ending).
-             */
             SummoningPhase = 2,
-            
-            // TODO: A successful stop rolls an entry on the Demon Encounter Table matching the accumulated power range. The demon introduces themselves via a short interactive dialogue segment.
             EncounterPhase = 3,
             
             /*

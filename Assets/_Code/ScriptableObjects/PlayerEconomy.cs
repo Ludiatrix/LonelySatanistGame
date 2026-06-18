@@ -1,3 +1,4 @@
+using LSG;
 using LSG.Core;
 using LSG.ScriptableObjects;
 using UnityEngine;
@@ -13,6 +14,7 @@ public class PlayerEconomy : ScriptableObject
     public int WhiteSuitPoints = 0;
     public MilestoneData MilestoneDataSource;
     public PlayerDeck PlayerDeckSource;
+    public DemonDatingPool DemonDatingPool;
 
     public float NormalizedPower => Mathf.InverseLerp(0, 14, Power);
 
@@ -25,6 +27,12 @@ public class PlayerEconomy : ScriptableObject
         GameEvents.PageRead?.AddListener(UpdatePageRewards);
         GameEvents.PageTaken?.AddListener(OnPageTaken);
         GameEvents.ChangeState?.AddListener(OnChangeState);
+        GameEvents.DemonEncountered?.AddListener(OnDemonEncountered);
+    }
+
+    private void OnDemonEncountered(DemonData data)
+    {
+        Rizz++;
     }
 
     private void OnDisable()
