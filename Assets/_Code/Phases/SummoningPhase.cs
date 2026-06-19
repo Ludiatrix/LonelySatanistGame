@@ -64,8 +64,8 @@ namespace LSG.Phases
         private void OnStopChosen()
         {
             Debug.Log("[Summoning Phase] The Pages have been read. Now let's see what the chasm of hell brings forth!");
-            GameEvents.DisableButtons?.Invoke();
-            GameEvents.ToggleDialogueWindow?.Invoke(false);
+            UIEvents.DisableButtons?.Invoke();
+            UIEvents.ToggleDialogueWindow?.Invoke(false);
             GameEvents.ChangeState?.Invoke(Enums.GameState.EncounterPhase);
         }
         

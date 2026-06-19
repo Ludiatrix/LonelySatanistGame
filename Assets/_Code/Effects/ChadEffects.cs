@@ -32,6 +32,7 @@ namespace LSG.Effects
         private void OnSummoningPhaseStarted()
         {
             if (_boonEffectAlreadyApplied) return;
+            _boonEffectAlreadyApplied = true;
             ApplyBoon();
         }
 

@@ -13,7 +13,13 @@ namespace LSG.Effects
     /// </summary>
     public class ColdkattaEffects : MonoBehaviour, IEffectable
     {
+        [SerializeField] private ModifierPayload banePayload;
 
+        private void Start()
+        {
+            banePayload.Sanity = -2;
+        }
+        
         public void ApplyBoon()
         {
             CardEvents.AddRandomCard?.Invoke(Enums.Suit.Orange, true);
@@ -21,7 +27,7 @@ namespace LSG.Effects
 
         public void ApplyBane()
         {
-            
+            EconomyEvents.SendPayload?.Invoke(banePayload);
         }
     }
 }

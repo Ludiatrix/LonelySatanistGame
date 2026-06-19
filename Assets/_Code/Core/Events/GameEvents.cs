@@ -34,15 +34,5 @@ namespace LSG.Core
         // Utility Events
         public static readonly UnityEventExtensions.UnityStateEvent ChangeState = new UnityEventExtensions.UnityStateEvent();
         public static readonly UnityEventExtensions.UnitySfxEvent PlaySoundSfx = new UnityEventExtensions.UnitySfxEvent();
-        
-        // UI Events
-        public static readonly UnityEventExtensions.UnityBoolEvent ToggleDialogueWindow = new UnityEventExtensions.UnityBoolEvent();
-        public static readonly UnityEventExtensions.UnityStringEvent SetNamePlateText = new UnityEventExtensions.UnityStringEvent();
-        public static readonly UnityEventExtensions.UnityStringEvent SetDialogueText = new UnityEventExtensions.UnityStringEvent();
-        public static readonly UnityEventExtensions.UnityBoolEvent ToggleSummoningButtons = new UnityEventExtensions.UnityBoolEvent();
-        public static readonly UnityEventExtensions.UnityBoolEvent ToggleEncounterButtons = new UnityEventExtensions.UnityBoolEvent();
-        public static readonly UnityEventExtensions.UnityBoolEvent ToggleStoreButtons = new UnityEventExtensions.UnityBoolEvent();
-        public static readonly UnityEventExtensions.UnityBoolEvent FlipDialogueText = new UnityEventExtensions.UnityBoolEvent();
-        public static readonly UnityEvent DisableButtons = new UnityEvent();
     }
 }

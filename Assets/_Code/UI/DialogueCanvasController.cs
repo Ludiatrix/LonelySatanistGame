@@ -21,13 +21,14 @@ namespace LSG.UI
 
         private void OnEnable()
         {
-            GameEvents.ToggleDialogueWindow?.AddListener(ToggleWindow);
-            GameEvents.SetNamePlateText?.AddListener(SetNamePlate);
-            GameEvents.SetDialogueText?.AddListener(SetDialogue);
-            GameEvents.ToggleSummoningButtons?.AddListener(ToggleSummoningButtonContainer);
-            GameEvents.ToggleEncounterButtons?.AddListener(ToggleEncounterButtonContainer);
-            GameEvents.ToggleStoreButtons?.AddListener(ToggleEncounterButtonContainer);
-            GameEvents.DisableButtons?.AddListener(DisableButtons);
+            UIEvents.ToggleDialogueWindow?.AddListener(ToggleWindow);
+            UIEvents.SetNamePlateText?.AddListener(SetNamePlate);
+            UIEvents.SetDialogueText?.AddListener(SetDialogue);
+            UIEvents.ToggleSummoningButtons?.AddListener(ToggleSummoningButtonContainer);
+            UIEvents.ToggleEncounterButtons?.AddListener(ToggleEncounterButtonContainer);
+            UIEvents.ToggleStoreButtons?.AddListener(ToggleEncounterButtonContainer);
+            UIEvents.DisableButtons?.AddListener(DisableButtons);
+            UIEvents.FlipDialogueText?.AddListener(OnFlipDialogueText);
             
             // Game-Specific Events for QoL
             PhaseEvents.SummoningPhaseStarted?.AddListener(OnSummoningPhaseStarted);
@@ -90,6 +91,13 @@ namespace LSG.UI
         {
             summoningButtonContainer.SetActive(false);
             encounterButtonContainer.SetActive(false);
+        }
+        
+        private void OnFlipDialogueText(bool flipX)
+        {
+            int flipVal = flipX ? -1 : 1;
+            
+            dialogueText.GetComponent<RectTransform>().localScale = new Vector3(flipVal, 1, 1);
         }
     }
 }

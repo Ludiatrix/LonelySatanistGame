@@ -17,6 +17,18 @@ namespace LSG.Effects
 
         private bool _nextSummoningComplete = false;
 
+        private void OnEnable()
+        {
+            PhaseEvents.SummoningPhaseStarted?.AddListener(OnSummoningPhaseStarted);
+        }
+
+        private void OnSummoningPhaseStarted()
+        {
+            if (_nextSummoningComplete) return;
+            
+            ApplyBane();
+        }
+
         public void ApplyBoon()
         {
             var economy = DataManager.Instance.PlayerEconomySource;
@@ -27,7 +39,8 @@ namespace LSG.Effects
 
         public void ApplyBane()
         {
-            
+            _nextSummoningComplete = true;
+            UIEvents.FlipDialogueText?.Invoke(true);
         }
     }
 }

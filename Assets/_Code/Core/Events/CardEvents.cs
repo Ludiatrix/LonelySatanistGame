@@ -11,5 +11,6 @@ namespace LSG.Core
         public static readonly UnityEventExtensions.UnityPageDataEvent CardRepaired = new UnityEventExtensions.UnityPageDataEvent();
         public static readonly UnityEventExtensions.UnityPageDataEvent CardPlayed = new UnityEventExtensions.UnityPageDataEvent();
         public static readonly UnityEventExtensions.UnitySuitEvent AddRandomCard = new UnityEventExtensions.UnitySuitEvent();
+        public static readonly UnityEventExtensions.UnitySuitEvent RemoveRandomCard = new UnityEventExtensions.UnitySuitEvent();
     }
 }

@@ -81,15 +81,15 @@ namespace LSG.Phases
         private void SucceedDate()
         {
             // Date Succeeds!
-            GameEvents.ToggleEncounterButtons?.Invoke(false);
-            GameEvents.SetDialogueText?.Invoke(_chosenDemonThisPhase?.dateOutcome);
+            UIEvents.ToggleEncounterButtons?.Invoke(false);
+            UIEvents.SetDialogueText?.Invoke(_chosenDemonThisPhase?.dateOutcome);
         }
 
         private void FailDate()
         {
             // Give the Boon and Bane Effects and Dialogue
-            GameEvents.ToggleEncounterButtons?.Invoke(false);
-            GameEvents.SetDialogueText?.Invoke(_chosenDemonThisPhase?.boonBaneDialogue);
+            UIEvents.ToggleEncounterButtons?.Invoke(false);
+            UIEvents.SetDialogueText?.Invoke(_chosenDemonThisPhase?.boonBaneDialogue);
             _chosenDemonThisPhase?.ApplyEffect();
         }
 

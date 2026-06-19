@@ -18,6 +18,7 @@ namespace LSG.ScriptableObjects
         private void OnEnable()
         {
             CardEvents.AddRandomCard.AddListener(OnAddRandomCard);
+            CardEvents.RemoveRandomCard.AddListener(OnRemoveRandomCard);
         }
 
         /*
@@ -61,6 +62,11 @@ namespace LSG.ScriptableObjects
                     }
                 }
             }
+        }
+
+        private void OnRemoveRandomCard(Enums.Suit suitToIgnore, bool canBeBoughtAgain = false)
+        {
+            
         }
         
         public void AddCardToPlayerDeck(CardData card)
