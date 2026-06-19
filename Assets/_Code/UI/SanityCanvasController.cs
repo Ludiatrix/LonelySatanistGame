@@ -10,6 +10,8 @@ namespace LSG.UI
     public class SanityCanvasController : MonoBehaviour
     {
         [SerializeField] private TMP_Text sanityText;
+        [SerializeField] private GameObject sanityCandleFlame;
+        [SerializeField] private AnimationCurve sanityFlameSize;
 
         private void OnEnable()
         {
@@ -24,6 +26,8 @@ namespace LSG.UI
         private void OnPageRead()
         {
             sanityText.text = $"Sanity: {DataManager.Instance.PlayerEconomySource.Sanity.ToString()}";
+            float scale = sanityFlameSize.Evaluate(DataManager.Instance.PlayerEconomySource.Sanity);
+            sanityCandleFlame.transform.localScale = new Vector3(scale, scale);
         }
     }
 }
