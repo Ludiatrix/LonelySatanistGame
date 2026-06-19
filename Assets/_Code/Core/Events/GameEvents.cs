@@ -1,5 +1,3 @@
-using LSG.ScriptableObjects;
-using UnityEngine;
 using UnityEngine.Events;
 
 namespace LSG.Core
@@ -26,7 +24,7 @@ namespace LSG.Core
         
         // Store Phase Events
         public static readonly UnityEventExtensions.UnityPageDataEvent PageAdded = new UnityEventExtensions.UnityPageDataEvent();
-        public static readonly UnityEventExtensions.UnityPageDataEvent PageTaken = new UnityEventExtensions.UnityPageDataEvent();
+        public static readonly UnityEventExtensions.UnityPageDataEvent CardTaken = new UnityEventExtensions.UnityPageDataEvent();
         
         // Encounter Phase Events
         public static readonly UnityEventExtensions.UnityDemonDataEvent DemonEncountered = new UnityEventExtensions.UnityDemonDataEvent();
@@ -35,7 +33,7 @@ namespace LSG.Core
         
         // Utility Events
         public static readonly UnityEventExtensions.UnityStateEvent ChangeState = new UnityEventExtensions.UnityStateEvent();
-        public static readonly UnitySfxEvent PlaySoundSfx = new UnitySfxEvent();
+        public static readonly UnityEventExtensions.UnitySfxEvent PlaySoundSfx = new UnityEventExtensions.UnitySfxEvent();
         
         // UI Events
         public static readonly UnityEventExtensions.UnityBoolEvent ToggleDialogueWindow = new UnityEventExtensions.UnityBoolEvent();
@@ -44,15 +42,7 @@ namespace LSG.Core
         public static readonly UnityEventExtensions.UnityBoolEvent ToggleSummoningButtons = new UnityEventExtensions.UnityBoolEvent();
         public static readonly UnityEventExtensions.UnityBoolEvent ToggleEncounterButtons = new UnityEventExtensions.UnityBoolEvent();
         public static readonly UnityEventExtensions.UnityBoolEvent ToggleStoreButtons = new UnityEventExtensions.UnityBoolEvent();
+        public static readonly UnityEventExtensions.UnityBoolEvent FlipDialogueText = new UnityEventExtensions.UnityBoolEvent();
         public static readonly UnityEvent DisableButtons = new UnityEvent();
     }
-    
-    
-
-    
-    
-    /// <summary>
-    /// Sends an audioclip to the SFX engine for playing and a volume to play it at. 4.0 is the standard volume.
-    /// </summary>
-    public class UnitySfxEvent : UnityEvent<AudioClip,float> { }
 }

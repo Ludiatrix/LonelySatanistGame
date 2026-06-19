@@ -11,14 +11,21 @@ namespace LSG.UI
     {
         [SerializeField] private SmoothRotator pageRotator;
 
-        private PageData _pageData = null;
+        private CardData _cardData = null;
         
-        public void Inject(PageData data, Transform PageTurnDestinationTransform)
+        public void Inject(CardData data, Transform PageTurnDestinationTransform)
         {
-            _pageData = data;
+            _cardData = data;
+            ApplyVisuals();
             RunPageAnimation(PageTurnDestinationTransform);
         }
-        
+
+        private void ApplyVisuals()
+        {
+            // Purely because effects can screw with visuals we have a
+            
+        }
+
         private void RunPageAnimation(Transform PageTurnDestinationTransform)
         {
             pageRotator.RotateToTarget(PageTurnDestinationTransform.eulerAngles, 1.0f);

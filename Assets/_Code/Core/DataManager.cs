@@ -1,4 +1,5 @@
 using System;
+using LSG.Effects;
 using LSG.ScriptableObjects;
 using UnityEngine;
 
@@ -16,6 +17,7 @@ namespace LSG.Core
         public MilestoneData MilestoneDataSource;
         public PlayerDeck PlayerDeckSource;
         public DemonDatingPool DemonDatingPoolSource;
+        public EffectManager EffectDataSource;
         
         // Say the line, Bart.
         private void Awake()
@@ -36,6 +38,10 @@ namespace LSG.Core
             MilestoneDataSource.Reset();
             PlayerDeckSource.Reset();
             DemonDatingPoolSource.Reset();
+            
+            // it's easier to just blow away and recreate this
+            Destroy(gameObject.GetComponent<EffectManager>());
+            EffectDataSource = gameObject.AddComponent<EffectManager>();
         }
     }
 }

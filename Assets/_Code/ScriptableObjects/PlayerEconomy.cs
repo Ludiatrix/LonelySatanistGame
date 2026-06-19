@@ -23,7 +23,7 @@ public class PlayerEconomy : ScriptableObject
         // starting restarting the application.
         GameEvents.StartGame?.AddListener(_ => Reset());
         GameEvents.PageRead?.AddListener(UpdatePageRewards);
-        GameEvents.PageTaken?.AddListener(OnPageTaken);
+        GameEvents.CardTaken?.AddListener(OnPageTaken);
         GameEvents.ChangeState?.AddListener(OnChangeState);
         GameEvents.DemonEncountered?.AddListener(OnDemonEncountered);
     }
@@ -47,9 +47,9 @@ public class PlayerEconomy : ScriptableObject
         GameEvents.TapeEarnedEvent?.Invoke();
     }
     
-    private void OnPageTaken(PageData takenPage)
+    private void OnPageTaken(CardData takenCard)
     {
-        if (takenPage.Suit == Enums.Suit.White)
+        if (takenCard.Suit == Enums.Suit.White)
         {
             WhiteSuitPoints++;
         }

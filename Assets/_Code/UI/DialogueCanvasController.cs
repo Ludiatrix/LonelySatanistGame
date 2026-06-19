@@ -45,7 +45,7 @@ namespace LSG.UI
         private void OnDemonEncountered([CanBeNull] DemonData demonData)
         {
             SetNamePlate(demonData?.demonName);
-            SetDialogue(demonData?.concept);
+            SetDialogue(demonData?.introDialogue);
             ToggleWindow(true);
             ToggleEncounterButtonContainer(true);
         }

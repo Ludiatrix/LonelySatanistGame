@@ -43,6 +43,7 @@ namespace LSG.Core
             Blue = 2,
             Black = 3,
             Red = 4,
+            None = 99,
         }
 
         public enum GameResource
@@ -53,6 +54,12 @@ namespace LSG.Core
             WhiteSuits = 3,
             Power = 4,
             Page = 5,
+        }
+
+        public enum EffectState
+        {
+            UsableOnce = 0,
+            Repeatable = 1,
         }
     }
 }

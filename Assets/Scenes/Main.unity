@@ -164,6 +164,7 @@ GameObject:
   m_Component:
   - component: {fileID: 141473991}
   - component: {fileID: 141473990}
+  - component: {fileID: 141473992}
   m_Layer: 0
   m_Name: --DataManager--
   m_TagString: Untagged
@@ -187,6 +188,7 @@ MonoBehaviour:
   MilestoneDataSource: {fileID: 11400000, guid: d262bd59722483d42b393c66d01a3855, type: 2}
   PlayerDeckSource: {fileID: 11400000, guid: f741dc2241435d0008802f22b8d52bcc, type: 2}
   DemonDatingPoolSource: {fileID: 11400000, guid: b5d584961e4c57840a80b15724eda373, type: 2}
+  EffectDataSource: {fileID: 141473992}
 --- !u!4 &141473991
 Transform:
   m_ObjectHideFlags: 0
@@ -202,6 +204,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &141473992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141473989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 469ea3c302ba43818d694fc98df681f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: LSG::LSG.Effects.EffectManager
 --- !u!1 &207199306
 GameObject:
   m_ObjectHideFlags: 0
@@ -326,7 +340,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6650a8ac66646f6c98aad66d199cd18f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: LSG::LSG.Phases.StorePhase
-  playerEconomy: {fileID: 11400000, guid: da8497e8847794bfb92799f0e89ead84, type: 2}
   Container: {fileID: 1704385526}
 --- !u!1 &368639240
 GameObject:
@@ -1275,7 +1288,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: LSG::LSG.Phases.SummoningPhase
   Container: {fileID: 645256229}
-  PlayerEconomy: {fileID: 11400000, guid: da8497e8847794bfb92799f0e89ead84, type: 2}
   PagesTransform: {fileID: 1404339995}
   PagePrefab: {fileID: 3114209297319874679, guid: 58c49198668b27a7d8a6c03ba8be7d0c, type: 3}
   PageTurnDestinationTransform: {fileID: 4574823397624815722}
@@ -1743,7 +1755,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: LSG::LSG.Utils.StatReader
   GameController: {fileID: 1766247672}
-  PlayerEconomy: {fileID: 11400000, guid: da8497e8847794bfb92799f0e89ead84, type: 2}
   StatText: {fileID: 2091684603}
 --- !u!114 &1074964911
 MonoBehaviour:
@@ -1939,7 +1950,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5357cd8266b4fe199d4f6215f8ccdac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: LSG::LSG.Phases.EncounterPhase
-  playerEconomy: {fileID: 11400000, guid: da8497e8847794bfb92799f0e89ead84, type: 2}
   Container: {fileID: 22647094}
 --- !u!1 &1191855742
 GameObject:

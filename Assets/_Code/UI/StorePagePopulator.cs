@@ -10,7 +10,7 @@ namespace LSG
         public PageImageController pageImageController;
         public List<Image> tapeImages = new();
 
-        public void SetPageData(PageData data, bool owned)
+        public void SetPageData(CardData data, bool owned)
         {
             if (!owned)
             {

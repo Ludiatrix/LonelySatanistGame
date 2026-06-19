@@ -48,7 +48,7 @@ namespace LSG.Phases
 
         private void TurnPage()
         {
-            PageData data = DataManager.Instance.PlayerDeckSource.TakePage();
+            CardData data = DataManager.Instance.PlayerDeckSource.TakeCardFromPlayerDeck();
             Debug.Log("[Summoning Phase] Turning the Page...");
             GameObject page = Instantiate(PagePrefab, PagesTransform, false);
             page.GetComponent<PageFacade>().Inject(data, PageTurnDestinationTransform);

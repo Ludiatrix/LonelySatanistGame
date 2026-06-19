@@ -11,7 +11,6 @@ namespace LSG.Classes
     {
         public int Tape = 0;
         public int Page = 0;
-        public int Milestone = 0;
         public int Power = 0;
         public int Sanity = 0;
         public int Rizz = 0;

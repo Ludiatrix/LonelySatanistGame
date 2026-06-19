@@ -21,4 +21,5 @@ MonoBehaviour:
     your limbs for meat (represent that somehow mechanically)"
   boon: Add a random orange card that has not yet been purchased to the deck
   bane: For the rest of this game, you cannot flip backwards in the Necronomicon
+  boonBaneDialogue: 
   dateOutcome: 
