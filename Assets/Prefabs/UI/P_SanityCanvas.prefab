@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 127354990235343370}
+  - component: {fileID: 2777967790487591439}
   m_Layer: 0
   m_Name: Flame
   m_TagString: Untagged
@@ -36,6 +37,19 @@ RectTransform:
   m_AnchoredPosition: {x: 64, y: 64}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2777967790487591439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2862436639773528506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b81e0f72f296414e8ecd0a5f2c76ae6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: LSG::LSG.HideDuringStorePhase
+  ObjectToHide: {fileID: 2835754630813492057}
 --- !u!1 &4059413080976139782
 GameObject:
   m_ObjectHideFlags: 0
@@ -362,6 +376,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b1fa9d9218185744dbe4a1779ab40436, type: 3}
+--- !u!1 &2835754630813492057 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5703478351180613850, guid: b1fa9d9218185744dbe4a1779ab40436, type: 3}
+  m_PrefabInstance: {fileID: 7528976894881885059}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4061285568114451131 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5773853507965618488, guid: b1fa9d9218185744dbe4a1779ab40436, type: 3}

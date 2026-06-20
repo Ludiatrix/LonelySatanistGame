@@ -1,3 +1,4 @@
+using LSG.Core;
 using UnityEngine;
 
 namespace LSG.Phases
@@ -11,6 +12,7 @@ namespace LSG.Phases
             Debug.Log("[StorePhase] Starting Phase!");
             base.StartPhase();
             Container.SetActive(true);
+            PhaseEvents.StorePhaseStarted?.Invoke();
         }
 
         public override void EndPhase()
@@ -18,6 +20,7 @@ namespace LSG.Phases
             Debug.Log("[StorePhase] Ending Phase!");
             base.EndPhase();
             Container.SetActive(false);
+            PhaseEvents.StorePhaseEnded?.Invoke();
         }
     }
 }
