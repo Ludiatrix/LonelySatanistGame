@@ -31,6 +31,7 @@ public class PlayerEconomy : ScriptableObject
     private void OnDemonEncountered(DemonData data)
     {
         Rizz++;
+        Sanity--;
     }
 
     private void OnDisable()
