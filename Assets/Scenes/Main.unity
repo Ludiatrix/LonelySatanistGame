@@ -2336,14 +2336,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4794032118432905739, guid: a3b722b86248e89459b4b132e5b2a357, type: 3}
-      propertyPath: m_MaxValue
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 4794032118432905739, guid: a3b722b86248e89459b4b132e5b2a357, type: 3}
-      propertyPath: m_WholeNumbers
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3587,6 +3579,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_StoreCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 1080164225096861223, guid: 45ff07d73abd62c90b80c1a49850fffe, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1080164225096861223, guid: 45ff07d73abd62c90b80c1a49850fffe, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1080164225096861223, guid: 45ff07d73abd62c90b80c1a49850fffe, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1080164225096861223, guid: 45ff07d73abd62c90b80c1a49850fffe, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1080164225096861223, guid: 45ff07d73abd62c90b80c1a49850fffe, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1080164225096861223, guid: 45ff07d73abd62c90b80c1a49850fffe, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2485655744815899952, guid: 45ff07d73abd62c90b80c1a49850fffe, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -3774,14 +3790,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 614194984}
     m_Modifications:
-    - target: {fileID: 4373347198979497559, guid: 8c786df0dc949d0e09c22430dc6519ec, type: 3}
-      propertyPath: m_Type
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4373347198979497559, guid: 8c786df0dc949d0e09c22430dc6519ec, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -365153334667417417, guid: 04db8d63d3b5602fd9cfb447456e5939, type: 3}
     - target: {fileID: 5390912059686079223, guid: 8c786df0dc949d0e09c22430dc6519ec, type: 3}
       propertyPath: m_Name
       value: P_DangerWhiteSuitTotalPlayedCanvas
@@ -4083,38 +4091,6 @@ PrefabInstance:
     - target: {fileID: 2749409562251668076, guid: 6d07e59ec3b62bf45bc685b502cabf5e, type: 3}
       propertyPath: m_Name
       value: P_DialogueCanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 4683859364462421569, guid: 6d07e59ec3b62bf45bc685b502cabf5e, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 6e47202aba0439041aae0823f2f1efc9, type: 2}
-    - target: {fileID: 4683859364462421569, guid: 6d07e59ec3b62bf45bc685b502cabf5e, type: 3}
-      propertyPath: m_fontColor.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4683859364462421569, guid: 6d07e59ec3b62bf45bc685b502cabf5e, type: 3}
-      propertyPath: m_fontColor.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4683859364462421569, guid: 6d07e59ec3b62bf45bc685b502cabf5e, type: 3}
-      propertyPath: m_fontColor.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4683859364462421569, guid: 6d07e59ec3b62bf45bc685b502cabf5e, type: 3}
-      propertyPath: m_enableAutoSizing
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4683859364462421569, guid: 6d07e59ec3b62bf45bc685b502cabf5e, type: 3}
-      propertyPath: m_hasFontAssetChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8165887946831293608, guid: 6d07e59ec3b62bf45bc685b502cabf5e, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 6e47202aba0439041aae0823f2f1efc9, type: 2}
-    - target: {fileID: 8165887946831293608, guid: 6d07e59ec3b62bf45bc685b502cabf5e, type: 3}
-      propertyPath: m_hasFontAssetChanged
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
