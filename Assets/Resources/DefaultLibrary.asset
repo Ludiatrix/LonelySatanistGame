@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 662f4b11d96b805b1a6b36bdfa49c5c1, type: 3}
-  m_Name: PlayerDeck
-  m_EditorClassIdentifier: LSG::LSG.ScriptableObjects.PlayerDeck
-  CardLibrary:
+  m_Script: {fileID: 11500000, guid: 4ad4bd6fe7f77edada8e11c528c37eb9, type: 3}
+  m_Name: DefaultLibrary
+  m_EditorClassIdentifier: LSG::LSG.ScriptableObjects.CardList
+  Cards:
   - {fileID: 11400000, guid: 70d37f80337a7894e88de2ccf6542c47, type: 2}
   - {fileID: 11400000, guid: adeb3a9a1b99d3f4586398f3e10b515f, type: 2}
   - {fileID: 11400000, guid: 1d9cb4dc6238d5445aa786f6b5929992, type: 2}
@@ -37,16 +37,3 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7aafff94e23e704b08acb262ff7399df, type: 2}
   - {fileID: 11400000, guid: c60c5a276390ee1408b6be5e099e9f66, type: 2}
   - {fileID: 11400000, guid: 88c780b08ca34c568bbd0c35f0b22682, type: 2}
-  playerDeck:
-  - {fileID: 11400000, guid: ac7254dc4682f834581fa8ec2bcc29f8, type: 2}
-  - {fileID: 11400000, guid: acedf45ed3b610f45a78dbd02f850c20, type: 2}
-  - {fileID: 11400000, guid: 11f9b138275168a6ba9fa8a76cbdc0e6, type: 2}
-  - {fileID: 11400000, guid: 88c780b08ca34c568bbd0c35f0b22682, type: 2}
-  playedCards:
-  - {fileID: 11400000, guid: b103b19d37d2967f497ea7f5f9f6746b, type: 2}
-  - {fileID: 11400000, guid: e29ad5208f1a3c6419c548c1b934330b, type: 2}
-  - {fileID: 11400000, guid: 49f5dba4570e0cc04ba8b2467913b3f3, type: 2}
-  - {fileID: 11400000, guid: 7aafff94e23e704b08acb262ff7399df, type: 2}
-  - {fileID: 11400000, guid: c60c5a276390ee1408b6be5e099e9f66, type: 2}
-  DefaultLibrary: {fileID: 11400000, guid: 29d59f8e516a9404ab36d9924b50551a, type: 2}
-  DefaultDeck: {fileID: 11400000, guid: f5098e5ad88f25f3c83bded43247ad94, type: 2}
