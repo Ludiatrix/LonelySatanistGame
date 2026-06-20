@@ -1,5 +1,7 @@
+using System.Collections.Generic;
 using LSG.Core;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace LSG.UI
 {
@@ -9,13 +11,15 @@ namespace LSG.UI
     /// </summary>
     public class WhiteSuitCanvasController : MonoBehaviour
     {
-        [SerializeField] private GameObject[] whiteSuitWarningImages;
+        
+        [SerializeField] private Image dangerImage;
+        [Tooltip("Matching index. 0 danger = entry 0")]
+        [SerializeField] private List<Sprite> dangerSprites;
 
         private void OnEnable()
         {
             GameEvents.WhiteSuitPointEarned?.AddListener(OnWhiteSuitPointEarned);
             GameEvents.ChangeState?.AddListener(OnStateChanged);
-            ToggleImages(false); // make sure everyone is off
         }
 
         private void OnDisable()
@@ -26,23 +30,15 @@ namespace LSG.UI
         
         private void OnStateChanged(Enums.GameState state)
         {
-            ToggleImages(false);
+            dangerImage.sprite = dangerSprites[0];
         }
         
         private void OnWhiteSuitPointEarned(int whiteSuitPoints)
         {
-            for (int i = 0; i < whiteSuitPoints; i++)
-            {
-                whiteSuitWarningImages[i].SetActive(true);
-            }
-        }
-
-        private void ToggleImages(bool toggle)
-        {
-            foreach (var whiteSuitWarningImage in whiteSuitWarningImages)
-            {
-                whiteSuitWarningImage.SetActive(toggle);
-            }
+            if (whiteSuitPoints < 0) whiteSuitPoints = 0;
+            if (whiteSuitPoints >= dangerSprites.Count) whiteSuitPoints = dangerSprites.Count - 1;
+            
+            dangerImage.sprite = dangerSprites[whiteSuitPoints];
         }
     }
 }
