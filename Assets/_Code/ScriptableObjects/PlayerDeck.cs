@@ -13,6 +13,8 @@ namespace LSG.ScriptableObjects
         private readonly List<CardData> _playedCards = new List<CardData>();
         private readonly List<CardData> _cardLibrary = new List<CardData>();
 
+        public int PlayerDeckCount => _playerDeck.Count;
+        
         public List<CardData> PlayedCards => _playedCards;
 
         private void OnEnable()

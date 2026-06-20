@@ -30,6 +30,7 @@ namespace LSG.Core
 
             Instance = this;
             DontDestroyOnLoad(this);
+            ResetData();
         }
 
         public void ResetData()

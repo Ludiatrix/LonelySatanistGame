@@ -14,8 +14,6 @@ public class PlayerEconomy : ScriptableObject
     public int Rizz = 1;
     public int WhiteSuitPoints = 0;
 
-    public float NormalizedPower => Mathf.InverseLerp(0, 14, Power);
-
     private void OnEnable()
     {
         // Riza: ScriptableObjects are lifetime independent. So it's a good idea to reset on game start.
