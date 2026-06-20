@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: PlayerDeck
   m_EditorClassIdentifier: LSG::LSG.ScriptableObjects.PlayerDeck
   CardLibrary: []
+  ShopList: []
   playerDeck: []
   playedCards:
   - {fileID: 11400000, guid: b103b19d37d2967f497ea7f5f9f6746b, type: 2}
@@ -25,4 +26,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: acedf45ed3b610f45a78dbd02f850c20, type: 2}
   - {fileID: 11400000, guid: ac7254dc4682f834581fa8ec2bcc29f8, type: 2}
   DefaultLibrary: {fileID: 11400000, guid: 50e1e17947005c86786b8333ded191cb, type: 2}
+  DefaultShopList: {fileID: 11400000, guid: 07cae0ae56da991b4ae8b62a0bc1563b, type: 2}
   DefaultDeck: {fileID: 11400000, guid: f5098e5ad88f25f3c83bded43247ad94, type: 2}

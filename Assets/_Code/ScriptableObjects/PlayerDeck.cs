@@ -11,12 +11,12 @@ namespace LSG.ScriptableObjects
     {
         // All the cards in the deck
         public List<CardData> CardLibrary = new List<CardData>();
-
+        public List<CardData> ShopList = new List<CardData>();
         public List<CardData> playerDeck = new List<CardData>();
         public List<CardData> playedCards = new List<CardData>();
 
         public CardList DefaultLibrary;
-
+        public CardList DefaultShopList;
         public CardList DefaultDeck;
 
         public CardData[] PeekAheadAtLibrary(int peekAheadLength = 1)
@@ -103,6 +103,7 @@ namespace LSG.ScriptableObjects
         public void Reset()
         {
             LoadDefaultLibrary();
+            LoadDefaultShopList();
             LoadDefaultDeck();
             playedCards.Clear();
         }
@@ -113,6 +114,15 @@ namespace LSG.ScriptableObjects
             foreach (var card in DefaultLibrary.Cards)
             {
                 CardLibrary.Add(card);
+            }
+        }
+        
+        private void LoadDefaultShopList()
+        {
+            ShopList.Clear();
+            foreach (var card in DefaultShopList.Cards)
+            {
+                ShopList.Add(card);
             }
         }
 
