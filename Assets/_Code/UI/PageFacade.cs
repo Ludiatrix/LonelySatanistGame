@@ -1,6 +1,8 @@
+using LSG.Core;
 using LSG.ScriptableObjects;
 using LSG.Utils;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace LSG.UI
 {
@@ -10,7 +12,7 @@ namespace LSG.UI
     public class PageFacade : MonoBehaviour
     {
         [SerializeField] private SmoothRotator pageRotator;
-
+        [SerializeField] private Image pageImage;
         private CardData _cardData = null;
         
         public void Inject(CardData data, Transform PageTurnDestinationTransform)
@@ -22,8 +24,9 @@ namespace LSG.UI
 
         private void ApplyVisuals()
         {
-            // Purely because effects can screw with visuals we have a
-            
+            UIEvents.SetNamePlateText?.Invoke(_cardData.CardWord);
+            UIEvents.SetDialogueText?.Invoke(_cardData.CardEffect);
+            pageImage.sprite = _cardData.PageImage;
         }
 
         private void RunPageAnimation(Transform PageTurnDestinationTransform)

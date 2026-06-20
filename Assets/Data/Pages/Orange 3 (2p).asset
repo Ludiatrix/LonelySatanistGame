@@ -13,10 +13,13 @@ MonoBehaviour:
   m_Name: Orange 3 (2p)
   m_EditorClassIdentifier: LSG::LSG.PageData
   CardID: 33
+  TapeCost: 0
   CardWord: bhruss
+  CardEffect: Lose 1 Sanity
   Suit: 1
   PageImage: {fileID: 5290627579463168830, guid: 1de089a86a1e2564ab77a3b7436059a1, type: 3}
   pageImageRipped: {fileID: -5644442745348410655, guid: b376c2173e02d8b4db2cecadb2d563c7, type: 3}
+  Sound: {fileID: 0}
   PageModifier:
     Tape: 1
     Page: 0

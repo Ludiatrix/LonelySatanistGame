@@ -13,10 +13,14 @@ MonoBehaviour:
   m_Name: Red 5 (4p)
   m_EditorClassIdentifier: LSG::LSG.PageData
   CardID: 45
+  TapeCost: 0
   CardWord: kurr 'aych 'shun
+  CardEffect: 'Optional: Return a random page read this summoning to the Necronomicon
+    (shuffle in). Its power is not removed from the power meter.'
   Suit: 4
   PageImage: {fileID: -4977697792896874726, guid: 1de089a86a1e2564ab77a3b7436059a1, type: 3}
   pageImageRipped: {fileID: 3534543399447520746, guid: b376c2173e02d8b4db2cecadb2d563c7, type: 3}
+  Sound: {fileID: 0}
   PageModifier:
     Tape: 4
     Page: 0

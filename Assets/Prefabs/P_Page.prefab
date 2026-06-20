@@ -86,8 +86,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd7e4a2bf73d4e6992917156991d7c4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: LSG::LSG.UI.PageFacade
-  economy: {fileID: 11400000, guid: da8497e8847794bfb92799f0e89ead84, type: 2}
   pageRotator: {fileID: 2393595002333825949}
+  pageImage: {fileID: 404199919649408110}
 --- !u!1 &9058398681709471340
 GameObject:
   m_ObjectHideFlags: 0

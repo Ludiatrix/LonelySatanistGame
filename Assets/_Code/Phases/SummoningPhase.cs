@@ -52,6 +52,8 @@ namespace LSG.Phases
             Debug.Log("[Summoning Phase] Turning the Page...");
             GameObject page = Instantiate(PagePrefab, PagesTransform, false);
             Debug.Log($"[Summoning Phase] We have page: {data.name} with word {data.CardWord} and suit {data.Suit.ToString()}");
+            UIEvents.SetNamePlateText?.Invoke(data.CardWord);
+            UIEvents.SetDialogueText?.Invoke(data.CardEffect);
             page.GetComponent<PageFacade>().Inject(data, PageTurnDestinationTransform);
             Debug.Log("[SummoningPhase] Page Turned!");
             GameEvents.PageRead?.Invoke();

@@ -13,10 +13,13 @@ MonoBehaviour:
   m_Name: Blue 3 (2p)
   m_EditorClassIdentifier: LSG::LSG.PageData
   CardID: 23
+  TapeCost: 0
   CardWord: m' ye
+  CardEffect: Gain 1 Rizz
   Suit: 2
   PageImage: {fileID: -2791792084412452287, guid: 1de089a86a1e2564ab77a3b7436059a1, type: 3}
   pageImageRipped: {fileID: 6635685935113946777, guid: b376c2173e02d8b4db2cecadb2d563c7, type: 3}
+  Sound: {fileID: 0}
   PageModifier:
     Tape: 2
     Page: 0

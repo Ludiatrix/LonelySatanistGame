@@ -13,10 +13,14 @@ MonoBehaviour:
   m_Name: White 3 (1p)
   m_EditorClassIdentifier: LSG::LSG.PageData
   CardID: 13
+  TapeCost: 0
   CardWord: ghural
+  CardEffect: If the cummulative Power of read white pages this summoning exceeds
+    7, summon Papiyawn and get sucked into hell (game over).
   Suit: 0
   PageImage: {fileID: -856616020111227648, guid: 1de089a86a1e2564ab77a3b7436059a1, type: 3}
   pageImageRipped: {fileID: 8678633575425320004, guid: b376c2173e02d8b4db2cecadb2d563c7, type: 3}
+  Sound: {fileID: 0}
   PageModifier:
     Tape: 0
     Page: 0

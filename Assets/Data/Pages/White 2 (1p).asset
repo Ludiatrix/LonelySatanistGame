@@ -13,10 +13,14 @@ MonoBehaviour:
   m_Name: White 2 (1p)
   m_EditorClassIdentifier: LSG::LSG.PageData
   CardID: 12
+  TapeCost: 0
   CardWord: burbaree
+  CardEffect: If the cummulative Power of read white pages this summoning exceeds
+    7, summon Papiyawn and get sucked into hell (game over).
   Suit: 0
   PageImage: {fileID: -5592467819807269268, guid: 1de089a86a1e2564ab77a3b7436059a1, type: 3}
   pageImageRipped: {fileID: -3866137876830818412, guid: b376c2173e02d8b4db2cecadb2d563c7, type: 3}
+  Sound: {fileID: 0}
   PageModifier:
     Tape: 0
     Page: 0
