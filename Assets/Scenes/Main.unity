@@ -3579,6 +3579,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_StoreCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 6781041434936124132, guid: 45ff07d73abd62c90b80c1a49850fffe, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 5931429677633923132, guid: 2c25d858d30ee9d4792c9d29c38b77ca, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
