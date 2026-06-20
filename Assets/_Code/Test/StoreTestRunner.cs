@@ -17,7 +17,7 @@ namespace LSG
 
         void Start()
         {
-            storeController.SetPurchaseablePages(StorePageList, OwnedPageIndices);
+            //storeController.SetPurchaseablePages(StorePageList, OwnedPageIndices);
         }
 
     }
