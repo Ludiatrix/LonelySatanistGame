@@ -22,6 +22,11 @@ namespace LSG.Effects
             PhaseEvents.SummoningPhaseStarted?.AddListener(OnSummoningPhaseStarted);
         }
 
+        private void Start()
+        {
+            boonPayload = new ModifierPayload();
+        }
+
         private void OnSummoningPhaseStarted()
         {
             if (_nextSummoningComplete) return;

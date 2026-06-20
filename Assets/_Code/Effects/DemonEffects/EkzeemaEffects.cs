@@ -27,10 +27,15 @@ namespace LSG.Effects
 
         private void Start()
         {
-            // Satisfy the modifiers in the boon and bane
-            boonPayload.Rizz = 1;
-
-            banePayload.Sanity = -1;
+            boonPayload = new ModifierPayload
+            {
+                Rizz = 1
+            };
+            
+            banePayload = new ModifierPayload
+            {
+                Sanity = -1
+            };
         }
 
         private void OnCardRepaired(CardData repairedCard)

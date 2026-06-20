@@ -25,8 +25,15 @@ namespace LSG.Effects
 
         private void Start()
         {
-            boonPayload.Power = 3;
-            banePayload.Sanity = -1;
+            boonPayload = new ModifierPayload
+            {
+                Power = 3
+            };
+            
+            banePayload = new ModifierPayload
+            {
+                Sanity = -1
+            };
         }
 
         private void OnSummoningPhaseStarted()

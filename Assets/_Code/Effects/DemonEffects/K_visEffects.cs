@@ -31,7 +31,10 @@ namespace LSG.Effects
 
         private void Start()
         {
-            boonPayload.Rizz = 1;
+            boonPayload = new ModifierPayload
+            {
+                Rizz = 1
+            };
         }
 
         public void ApplyBoon()

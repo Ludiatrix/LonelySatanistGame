@@ -1,3 +1,4 @@
+using System;
 using LSG.Classes;
 using LSG.Core;
 using LSG.Interfaces;
@@ -14,7 +15,20 @@ namespace LSG.Effects
     {
         [SerializeField] private ModifierPayload boonPayload;
         [SerializeField] private ModifierPayload banePayload;
-        
+
+        private void Start()
+        {
+            boonPayload = new ModifierPayload
+            {
+                Tape = 1
+            };
+            
+            banePayload = new ModifierPayload
+            {
+                Sanity = -2
+            };
+        }
+
         public void ApplyBoon()
         {
             EconomyEvents.SendPayload?.Invoke(boonPayload);

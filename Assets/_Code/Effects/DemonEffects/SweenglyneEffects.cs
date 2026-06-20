@@ -28,6 +28,11 @@ namespace LSG.Effects
                 _playerEconomy = DataManager.Instance.PlayerEconomySource;
             }
             
+            boonPayload = new ModifierPayload
+            {
+                Tape = 3
+            };
+            
             //Set boon modifier
             boonPayload.Tape = 3;
             

@@ -17,7 +17,10 @@ namespace LSG.Effects
         
         private void Start()
         {
-            banePayload.Sanity = -3;
+            banePayload = new ModifierPayload
+            {
+                Sanity = -3
+            };
         }
 
         public void ApplyBoon()

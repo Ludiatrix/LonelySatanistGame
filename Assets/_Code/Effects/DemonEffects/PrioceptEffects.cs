@@ -27,8 +27,15 @@ namespace LSG.Effects
 
         private void Start()
         {
-            boonPayload.Sanity = 2;
-            banePayload.Sanity = -1;
+            boonPayload = new ModifierPayload
+            {
+                Sanity = 2
+            };
+            
+            banePayload = new ModifierPayload
+            {
+                Sanity = -1
+            };
         }
         
         private void OnCardPlayed(CardData playedCard)
