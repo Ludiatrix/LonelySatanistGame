@@ -18,6 +18,8 @@ namespace LSG.ScriptableObjects
         // Loaded from Resources
         private CardList _defaultDeck = null;
 
+        private const string LIBRARY_RESOURCE_PATH = "DefaultLibrary";
+        private const string PLAYERDECK_RESOURCE_PATH = "DefaultPlayerDeck";
 
         public CardData[] PeekAheadAtLibrary(int peekAheadLength = 1)
         {
@@ -102,8 +104,26 @@ namespace LSG.ScriptableObjects
         
         public void Reset()
         {
+            LoadDefaultLibrary();
             LoadDefaultDeck();
         }
+        
+        private void LoadDefaultLibrary()
+        {
+            /*
+             * This is some silly C# nonsense, but I need to create a new object once this gets loaded.
+             * If I don't, the default Card List gets deleted. Yikes!
+             */
+            _defaultDeck = Instantiate(Resources.Load<CardList>(LIBRARY_RESOURCE_PATH));
+            
+            foreach (var card in _defaultDeck.Cards)
+            {
+                AddCardToPlayerDeck(PullCardFromLibrary(card));
+            }
+            
+            Shuffle();
+        }
+        
 
         private void LoadDefaultDeck()
         {
@@ -111,7 +131,7 @@ namespace LSG.ScriptableObjects
              * This is some silly C# nonsense, but I need to create a new object once this gets loaded.
              * If I don't, the default Card List gets deleted. Yikes!
              */
-            _defaultDeck = Instantiate(Resources.Load<CardList>($"DefaultDeck"));
+            _defaultDeck = Instantiate(Resources.Load<CardList>(PLAYERDECK_RESOURCE_PATH));
             
             foreach (var card in _defaultDeck.Cards)
             {
