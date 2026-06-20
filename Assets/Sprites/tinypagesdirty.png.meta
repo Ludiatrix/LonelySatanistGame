@@ -1,0 +1,1027 @@
+fileFormatVersion: 2
+guid: 2db77593f2fdb8e4586f4a22a49a5259
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8793981562347068311
+    second: tinypagesdirty_0
+  - first:
+      213: 8102103520284203641
+    second: tinypagesdirty_1
+  - first:
+      213: 3758096491971623
+    second: tinypagesdirty_2
+  - first:
+      213: -6275661140135762544
+    second: tinypagesdirty_3
+  - first:
+      213: -386061244692983208
+    second: tinypagesdirty_4
+  - first:
+      213: -3973061183298256672
+    second: tinypagesdirty_5
+  - first:
+      213: -2285209293804681327
+    second: tinypagesdirty_6
+  - first:
+      213: 8664613729560320230
+    second: tinypagesdirty_7
+  - first:
+      213: -6674510347054220997
+    second: tinypagesdirty_8
+  - first:
+      213: 8879822407203311696
+    second: tinypagesdirty_9
+  - first:
+      213: -458640036050747743
+    second: tinypagesdirty_10
+  - first:
+      213: -8310562788772371380
+    second: tinypagesdirty_11
+  - first:
+      213: 2440322355771993402
+    second: tinypagesdirty_12
+  - first:
+      213: -2358412676574764015
+    second: tinypagesdirty_13
+  - first:
+      213: -1604733665795662075
+    second: tinypagesdirty_14
+  - first:
+      213: -7025611531686737446
+    second: tinypagesdirty_15
+  - first:
+      213: 5839876759617788758
+    second: tinypagesdirty_16
+  - first:
+      213: 7563220434417593028
+    second: tinypagesdirty_17
+  - first:
+      213: 731351320766382850
+    second: tinypagesdirty_18
+  - first:
+      213: -6395138553560162086
+    second: tinypagesdirty_19
+  - first:
+      213: 3107991640827030523
+    second: tinypagesdirty_20
+  - first:
+      213: -2899748770082527579
+    second: tinypagesdirty_21
+  - first:
+      213: 7007988942132190072
+    second: tinypagesdirty_22
+  - first:
+      213: 1282680658783592536
+    second: tinypagesdirty_23
+  - first:
+      213: -7424511370425878152
+    second: tinypagesdirty_24
+  - first:
+      213: 1989902070824030101
+    second: tinypagesdirty_25
+  - first:
+      213: -5126451290270914757
+    second: tinypagesdirty_26
+  - first:
+      213: -8807142891703187822
+    second: tinypagesdirty_27
+  - first:
+      213: 5757808787621108915
+    second: tinypagesdirty_28
+  - first:
+      213: 6155752086159269286
+    second: tinypagesdirty_29
+  - first:
+      213: -3572274382017219209
+    second: tinypagesdirty_30
+  - first:
+      213: -7257383639630958536
+    second: tinypagesdirty_31
+  - first:
+      213: 7235873881083822635
+    second: tinypagesdirty_32
+  - first:
+      213: -4597124682384356116
+    second: tinypagesdirty_33
+  - first:
+      213: 242682827327505111
+    second: tinypagesdirty_34
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: tinypagesdirty_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 306
+        width: 58
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79b180173af7a0a70800000000000000
+      internalID: 8793981562347068311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinypagesdirty_1
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 306
+        width: 59
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97a5bf39934707070800000000000000
+      internalID: 8102103520284203641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinypagesdirty_2
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 306
+        width: 59
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7248f6608f95d0000800000000000000
+      internalID: 3758096491971623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinypagesdirty_3
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 306
+        width: 59
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0952c73617f58e8a0800000000000000
+      internalID: -6275661140135762544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinypagesdirty_4
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 306
+        width: 60
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8529788e75f64aaf0800000000000000
+      internalID: -386061244692983208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinypagesdirty_5
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 306
+        width: 60
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e04d9a67e9dcd8c0800000000000000
+      internalID: -3973061183298256672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinypagesdirty_6
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 306
+        width: 60
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 197c95d314e4940e0800000000000000
+      internalID: -2285209293804681327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinypagesdirty_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 230
+        width: 58
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e85a6aa744ee3870800000000000000
+      internalID: 8664613729560320230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinypagesdirty_8
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 230
+        width: 59
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b39f922d3306f53a0800000000000000
+      internalID: -6674510347054220997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinypagesdirty_9
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 230
+        width: 60
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05058e99e677b3b70800000000000000
+      internalID: 8879822407203311696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinypagesdirty_10
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 230
+        width: 60
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ae3c63315592a9f0800000000000000
+      internalID: -458640036050747743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinypagesdirty_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 155
+        width: 58
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c44a4a3cc23faac80800000000000000
+      internalID: -8310562788772371380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinypagesdirty_12
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 155
+        width: 59
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3deb31d044cdd120800000000000000
+      internalID: 2440322355771993402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinypagesdirty_13
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 155
+        width: 59
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 114abf28a2c354fd0800000000000000
+      internalID: -2358412676574764015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinypagesdirty_14
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 155
+        width: 60
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50f9323bb37dab9e0800000000000000
+      internalID: -1604733665795662075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinypagesdirty_15
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 155
+        width: 60
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad98ce30983008e90800000000000000
+      internalID: -7025611531686737446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinypagesdirty_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 79
+        width: 58
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65bd31dc8f86b0150800000000000000
+      internalID: 5839876759617788758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinypagesdirty_17
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 79
+        width: 60
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4caaf67d9e4f5f860800000000000000
+      internalID: 7563220434417593028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinypagesdirty_18
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 79
+        width: 60
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2030b40c628462a00800000000000000
+      internalID: 731351320766382850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinypagesdirty_19
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 79
+        width: 60
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad024a15e57ef37a0800000000000000
+      internalID: -6395138553560162086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinypagesdirty_20
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 79
+        width: 60
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfbe0643eedc12b20800000000000000
+      internalID: 3107991640827030523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinypagesdirty_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3
+        width: 58
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a6ea5d6bd502c7d0800000000000000
+      internalID: -2899748770082527579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinypagesdirty_22
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 3
+        width: 60
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87b97ad10d0614160800000000000000
+      internalID: 7007988942132190072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinypagesdirty_23
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 3
+        width: 60
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8506f03634ffcc110800000000000000
+      internalID: 1282680658783592536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinypagesdirty_24
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 56
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 879baeece36d6f890800000000000000
+      internalID: -7424511370425878152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinypagesdirty_25
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 56
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59fc745f36d8d9b10800000000000000
+      internalID: 1989902070824030101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinypagesdirty_26
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 57
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b372f0d66bf2bd8b0800000000000000
+      internalID: -5126451290270914757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinypagesdirty_27
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 57
+        width: 9
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 296cce5c33eb6c580800000000000000
+      internalID: -8807142891703187822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinypagesdirty_28
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 57
+        width: 21
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bc57ce0698d7ef40800000000000000
+      internalID: 5757808787621108915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinypagesdirty_29
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 59
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ad94e468ef9d6550800000000000000
+      internalID: 6155752086159269286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinypagesdirty_30
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 3
+        width: 60
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 775b2a3506bbc6ec0800000000000000
+      internalID: -3572274382017219209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinypagesdirty_31
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 57
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 830b011f708984b90800000000000000
+      internalID: -7257383639630958536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinypagesdirty_32
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 39
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b22478125fcfa6460800000000000000
+      internalID: 7235873881083822635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinypagesdirty_33
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 21
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ceccc4e357bb330c0800000000000000
+      internalID: -4597124682384356116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinypagesdirty_34
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 3
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d281f3eebe2e5300800000000000000
+      internalID: 242682827327505111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      tinypagesdirty_0: 8793981562347068311
+      tinypagesdirty_1: 8102103520284203641
+      tinypagesdirty_10: -458640036050747743
+      tinypagesdirty_11: -8310562788772371380
+      tinypagesdirty_12: 2440322355771993402
+      tinypagesdirty_13: -2358412676574764015
+      tinypagesdirty_14: -1604733665795662075
+      tinypagesdirty_15: -7025611531686737446
+      tinypagesdirty_16: 5839876759617788758
+      tinypagesdirty_17: 7563220434417593028
+      tinypagesdirty_18: 731351320766382850
+      tinypagesdirty_19: -6395138553560162086
+      tinypagesdirty_2: 3758096491971623
+      tinypagesdirty_20: 3107991640827030523
+      tinypagesdirty_21: -2899748770082527579
+      tinypagesdirty_22: 7007988942132190072
+      tinypagesdirty_23: 1282680658783592536
+      tinypagesdirty_24: -7424511370425878152
+      tinypagesdirty_25: 1989902070824030101
+      tinypagesdirty_26: -5126451290270914757
+      tinypagesdirty_27: -8807142891703187822
+      tinypagesdirty_28: 5757808787621108915
+      tinypagesdirty_29: 6155752086159269286
+      tinypagesdirty_3: -6275661140135762544
+      tinypagesdirty_30: -3572274382017219209
+      tinypagesdirty_31: -7257383639630958536
+      tinypagesdirty_32: 7235873881083822635
+      tinypagesdirty_33: -4597124682384356116
+      tinypagesdirty_34: 242682827327505111
+      tinypagesdirty_4: -386061244692983208
+      tinypagesdirty_5: -3973061183298256672
+      tinypagesdirty_6: -2285209293804681327
+      tinypagesdirty_7: 8664613729560320230
+      tinypagesdirty_8: -6674510347054220997
+      tinypagesdirty_9: 8879822407203311696
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

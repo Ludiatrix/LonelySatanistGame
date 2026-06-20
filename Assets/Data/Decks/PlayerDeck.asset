@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 662f4b11d96b805b1a6b36bdfa49c5c1, type: 3}
   m_Name: PlayerDeck
   m_EditorClassIdentifier: LSG::LSG.ScriptableObjects.PlayerDeck
-  _pages:
+  _playerDeck:
   - {fileID: 11400000, guid: b103b19d37d2967f497ea7f5f9f6746b, type: 2}
-  - {fileID: 11400000, guid: b103b19d37d2967f497ea7f5f9f6746b, type: 2}
-  - {fileID: 11400000, guid: b103b19d37d2967f497ea7f5f9f6746b, type: 2}
-  - {fileID: 11400000, guid: b103b19d37d2967f497ea7f5f9f6746b, type: 2}
+  - {fileID: 11400000, guid: ac7254dc4682f834581fa8ec2bcc29f8, type: 2}
+  - {fileID: 11400000, guid: e29ad5208f1a3c6419c548c1b934330b, type: 2}
+  - {fileID: 11400000, guid: acedf45ed3b610f45a78dbd02f850c20, type: 2}
   - {fileID: 11400000, guid: 7aafff94e23e704b08acb262ff7399df, type: 2}
-  - {fileID: 11400000, guid: 7aafff94e23e704b08acb262ff7399df, type: 2}
+  - {fileID: 11400000, guid: c60c5a276390ee1408b6be5e099e9f66, type: 2}
   - {fileID: 11400000, guid: 88c780b08ca34c568bbd0c35f0b22682, type: 2}
   - {fileID: 11400000, guid: 11f9b138275168a6ba9fa8a76cbdc0e6, type: 2}
   - {fileID: 11400000, guid: 49f5dba4570e0cc04ba8b2467913b3f3, type: 2}

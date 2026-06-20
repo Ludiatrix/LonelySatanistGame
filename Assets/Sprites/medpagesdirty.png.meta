@@ -1,0 +1,741 @@
+fileFormatVersion: 2
+guid: b376c2173e02d8b4db2cecadb2d563c7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5653457360774556177
+    second: medpagesdirty_0
+  - first:
+      213: 137189941241278027
+    second: medpagesdirty_1
+  - first:
+      213: -3866137876830818412
+    second: medpagesdirty_2
+  - first:
+      213: 1120250552292729183
+    second: medpagesdirty_3
+  - first:
+      213: 8678633575425320004
+    second: medpagesdirty_4
+  - first:
+      213: 6635685935113946777
+    second: medpagesdirty_5
+  - first:
+      213: -4969754766009064518
+    second: medpagesdirty_6
+  - first:
+      213: -3523038192639159628
+    second: medpagesdirty_7
+  - first:
+      213: -2008729208490632903
+    second: medpagesdirty_8
+  - first:
+      213: -4236690842011870240
+    second: medpagesdirty_9
+  - first:
+      213: -8655540127838779090
+    second: medpagesdirty_10
+  - first:
+      213: -2633267666940046360
+    second: medpagesdirty_11
+  - first:
+      213: 8424105156814094315
+    second: medpagesdirty_12
+  - first:
+      213: -2726012581772957575
+    second: medpagesdirty_13
+  - first:
+      213: 5404680323374594912
+    second: medpagesdirty_14
+  - first:
+      213: -5644442745348410655
+    second: medpagesdirty_15
+  - first:
+      213: -8792363093436212947
+    second: medpagesdirty_16
+  - first:
+      213: 431865373331282771
+    second: medpagesdirty_17
+  - first:
+      213: 9033615214407038786
+    second: medpagesdirty_18
+  - first:
+      213: 1457974254840795392
+    second: medpagesdirty_19
+  - first:
+      213: 3534543399447520746
+    second: medpagesdirty_20
+  - first:
+      213: -4073108329962338164
+    second: medpagesdirty_21
+  - first:
+      213: -3627134200314166397
+    second: medpagesdirty_22
+  - first:
+      213: 7406569030657162978
+    second: medpagesdirty_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: medpagesdirty_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 643
+        width: 110
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11ae8cd248d157e40800000000000000
+      internalID: 5653457360774556177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: medpagesdirty_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 487
+        width: 110
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4e6172568567e100800000000000000
+      internalID: 137189941241278027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: medpagesdirty_2
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 643
+        width: 111
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49fe0dea518b85ac0800000000000000
+      internalID: -3866137876830818412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: medpagesdirty_3
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 487
+        width: 111
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f51e7d421fdeb8f00800000000000000
+      internalID: 1120250552292729183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: medpagesdirty_4
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 643
+        width: 111
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44421076143b07870800000000000000
+      internalID: 8678633575425320004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: medpagesdirty_5
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 487
+        width: 111
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 996c58b5331b61c50800000000000000
+      internalID: 6635685935113946777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: medpagesdirty_6
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 643
+        width: 111
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab3a9370f52e70bb0800000000000000
+      internalID: -4969754766009064518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: medpagesdirty_7
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 487
+        width: 111
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b2db9dfd67ab1fc0800000000000000
+      internalID: -3523038192639159628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: medpagesdirty_8
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 643
+        width: 111
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 939d6f57d6f8f14e0800000000000000
+      internalID: -2008729208490632903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: medpagesdirty_9
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 643
+        width: 111
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0eb5bba40204435c0800000000000000
+      internalID: -4236690842011870240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: medpagesdirty_10
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 643
+        width: 111
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e29c70ddc1851e780800000000000000
+      internalID: -8655540127838779090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: medpagesdirty_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 331
+        width: 110
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e354813201c47bd0800000000000000
+      internalID: -2633267666940046360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: medpagesdirty_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 175
+        width: 110
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: befb07ed10f68e470800000000000000
+      internalID: 8424105156814094315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: medpagesdirty_13
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 331
+        width: 111
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9786d2afff14b2ad0800000000000000
+      internalID: -2726012581772957575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: medpagesdirty_14
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 175
+        width: 111
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06b394f6e18410b40800000000000000
+      internalID: 5404680323374594912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: medpagesdirty_15
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 331
+        width: 111
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e23a788a39eaa1b0800000000000000
+      internalID: -5644442745348410655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: medpagesdirty_16
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 175
+        width: 111
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d29da77b9504bf580800000000000000
+      internalID: -8792363093436212947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: medpagesdirty_17
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 331
+        width: 112
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35bd338d44b4ef500800000000000000
+      internalID: 431865373331282771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: medpagesdirty_18
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 175
+        width: 111
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 247bb44ec29dd5d70800000000000000
+      internalID: 9033615214407038786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: medpagesdirty_19
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 331
+        width: 111
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 001537f2cd3cb3410800000000000000
+      internalID: 1457974254840795392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: medpagesdirty_20
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 175
+        width: 111
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae56547be783d0130800000000000000
+      internalID: 3534543399447520746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: medpagesdirty_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 19
+        width: 110
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8809ecdd896977c0800000000000000
+      internalID: -4073108329962338164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: medpagesdirty_22
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 19
+        width: 111
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3838a9589a4d9adc0800000000000000
+      internalID: -3627134200314166397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: medpagesdirty_23
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 19
+        width: 111
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2eebabcaa4b69c660800000000000000
+      internalID: 7406569030657162978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      medpagesdirty_0: 5653457360774556177
+      medpagesdirty_1: 137189941241278027
+      medpagesdirty_10: -8655540127838779090
+      medpagesdirty_11: -2633267666940046360
+      medpagesdirty_12: 8424105156814094315
+      medpagesdirty_13: -2726012581772957575
+      medpagesdirty_14: 5404680323374594912
+      medpagesdirty_15: -5644442745348410655
+      medpagesdirty_16: -8792363093436212947
+      medpagesdirty_17: 431865373331282771
+      medpagesdirty_18: 9033615214407038786
+      medpagesdirty_19: 1457974254840795392
+      medpagesdirty_2: -3866137876830818412
+      medpagesdirty_20: 3534543399447520746
+      medpagesdirty_21: -4073108329962338164
+      medpagesdirty_22: -3627134200314166397
+      medpagesdirty_23: 7406569030657162978
+      medpagesdirty_3: 1120250552292729183
+      medpagesdirty_4: 8678633575425320004
+      medpagesdirty_5: 6635685935113946777
+      medpagesdirty_6: -4969754766009064518
+      medpagesdirty_7: -3523038192639159628
+      medpagesdirty_8: -2008729208490632903
+      medpagesdirty_9: -4236690842011870240
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -10,14 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e42d5039b8964defda6b7cc7cc8fa670, type: 3}
-  m_Name: White+3
+  m_Name: Orange 4 (3p)
   m_EditorClassIdentifier: LSG::LSG.PageData
-  Suit: 0
-  PageImage: {fileID: 0}
+  CardID: 34
+  CardWord: Beep
+  Suit: 1
+  PageImage: {fileID: -564257083393553431, guid: 1de089a86a1e2564ab77a3b7436059a1, type: 3}
+  pageImageRipped: {fileID: 431865373331282771, guid: b376c2173e02d8b4db2cecadb2d563c7, type: 3}
   PageModifier:
-    Tape: 0
+    Tape: 2
     Page: 0
-    Milestone: 0
     Power: 3
-    Sanity: 0
+    Sanity: -2
     Rizz: 0

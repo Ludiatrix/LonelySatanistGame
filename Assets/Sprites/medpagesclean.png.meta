@@ -1,0 +1,741 @@
+fileFormatVersion: 2
+guid: 1de089a86a1e2564ab77a3b7436059a1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4270301216674404249
+    second: medpagesclean_0
+  - first:
+      213: 2434630521224839075
+    second: medpagesclean_1
+  - first:
+      213: -5592467819807269268
+    second: medpagesclean_2
+  - first:
+      213: 284192133224140612
+    second: medpagesclean_3
+  - first:
+      213: -856616020111227648
+    second: medpagesclean_4
+  - first:
+      213: -2791792084412452287
+    second: medpagesclean_5
+  - first:
+      213: 4519984877135793928
+    second: medpagesclean_6
+  - first:
+      213: 5268900446355375797
+    second: medpagesclean_7
+  - first:
+      213: 9209157512530920878
+    second: medpagesclean_8
+  - first:
+      213: 7265582016052868334
+    second: medpagesclean_9
+  - first:
+      213: 1289489982070179840
+    second: medpagesclean_10
+  - first:
+      213: 2816345306912049896
+    second: medpagesclean_11
+  - first:
+      213: 4727413352979517984
+    second: medpagesclean_12
+  - first:
+      213: -4720161461077410213
+    second: medpagesclean_13
+  - first:
+      213: 5862205571230641480
+    second: medpagesclean_14
+  - first:
+      213: 5290627579463168830
+    second: medpagesclean_15
+  - first:
+      213: 2163756539642419885
+    second: medpagesclean_16
+  - first:
+      213: -564257083393553431
+    second: medpagesclean_17
+  - first:
+      213: 4083250785398791712
+    second: medpagesclean_18
+  - first:
+      213: -3841868086490015231
+    second: medpagesclean_19
+  - first:
+      213: -4977697792896874726
+    second: medpagesclean_20
+  - first:
+      213: -8305331318043158564
+    second: medpagesclean_21
+  - first:
+      213: 2845080509387628534
+    second: medpagesclean_22
+  - first:
+      213: 5665520114145247524
+    second: medpagesclean_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: medpagesclean_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 643
+        width: 110
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76824302ba7dcb4c0800000000000000
+      internalID: -4270301216674404249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: medpagesclean_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 487
+        width: 110
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3af3ee05f8b89c120800000000000000
+      internalID: 2434630521224839075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: medpagesclean_2
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 643
+        width: 111
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6e9596e5209362b0800000000000000
+      internalID: -5592467819807269268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: medpagesclean_3
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 487
+        width: 111
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44f09cc4d37a1f300800000000000000
+      internalID: 284192133224140612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: medpagesclean_4
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 643
+        width: 111
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0058c5ca440bc14f0800000000000000
+      internalID: -856616020111227648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: medpagesclean_5
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 487
+        width: 111
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14239d904ef8149d0800000000000000
+      internalID: -2791792084412452287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: medpagesclean_6
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 643
+        width: 111
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80f01df3c463abe30800000000000000
+      internalID: 4519984877135793928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: medpagesclean_7
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 487
+        width: 111
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b6c8e54a05ee1940800000000000000
+      internalID: 5268900446355375797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: medpagesclean_8
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 643
+        width: 111
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea5860727ff7dcf70800000000000000
+      internalID: 9209157512530920878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: medpagesclean_9
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 643
+        width: 111
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee43c41595884d460800000000000000
+      internalID: 7265582016052868334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: medpagesclean_10
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 643
+        width: 111
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 008c7b28e4035e110800000000000000
+      internalID: 1289489982070179840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: medpagesclean_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 331
+        width: 110
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8eac45f822ba51720800000000000000
+      internalID: 2816345306912049896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: medpagesclean_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 175
+        width: 110
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02258cac5652b9140800000000000000
+      internalID: 4727413352979517984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: medpagesclean_13
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 331
+        width: 111
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5efdfdd82e9e7eb0800000000000000
+      internalID: -4720161461077410213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: medpagesclean_14
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 175
+        width: 111
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84da48168ecba5150800000000000000
+      internalID: 5862205571230641480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: medpagesclean_15
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 331
+        width: 111
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3379c8a0c51c6940800000000000000
+      internalID: 5290627579463168830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: medpagesclean_16
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 175
+        width: 111
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: daa90d5db15370e10800000000000000
+      internalID: 2163756539642419885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: medpagesclean_17
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 331
+        width: 111
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9eb44561c2b5b28f0800000000000000
+      internalID: -564257083393553431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: medpagesclean_18
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 175
+        width: 111
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02e978094fe9aa830800000000000000
+      internalID: 4083250785398791712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: medpagesclean_19
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 331
+        width: 111
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10a5ad69451feaac0800000000000000
+      internalID: -3841868086490015231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: medpagesclean_20
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 175
+        width: 111
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a17c227fa3aabeab0800000000000000
+      internalID: -4977697792896874726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: medpagesclean_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 19
+        width: 110
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd75c167b298dbc80800000000000000
+      internalID: -8305331318043158564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: medpagesclean_22
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 19
+        width: 111
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ffdf6f36a1cb7720800000000000000
+      internalID: 2845080509387628534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: medpagesclean_23
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 19
+        width: 111
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 421457fc688ff9e40800000000000000
+      internalID: 5665520114145247524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      medpagesclean_0: -4270301216674404249
+      medpagesclean_1: 2434630521224839075
+      medpagesclean_10: 1289489982070179840
+      medpagesclean_11: 2816345306912049896
+      medpagesclean_12: 4727413352979517984
+      medpagesclean_13: -4720161461077410213
+      medpagesclean_14: 5862205571230641480
+      medpagesclean_15: 5290627579463168830
+      medpagesclean_16: 2163756539642419885
+      medpagesclean_17: -564257083393553431
+      medpagesclean_18: 4083250785398791712
+      medpagesclean_19: -3841868086490015231
+      medpagesclean_2: -5592467819807269268
+      medpagesclean_20: -4977697792896874726
+      medpagesclean_21: -8305331318043158564
+      medpagesclean_22: 2845080509387628534
+      medpagesclean_23: 5665520114145247524
+      medpagesclean_3: 284192133224140612
+      medpagesclean_4: -856616020111227648
+      medpagesclean_5: -2791792084412452287
+      medpagesclean_6: 4519984877135793928
+      medpagesclean_7: 5268900446355375797
+      medpagesclean_8: 9209157512530920878
+      medpagesclean_9: 7265582016052868334
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

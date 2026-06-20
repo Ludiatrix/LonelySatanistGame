@@ -1,0 +1,1027 @@
+fileFormatVersion: 2
+guid: 2d3f984b95548ff48adb3e28467cd51b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6734533379611636356
+    second: tinypagesclean_0
+  - first:
+      213: -4588196449051994482
+    second: tinypagesclean_1
+  - first:
+      213: -743751017024400648
+    second: tinypagesclean_2
+  - first:
+      213: 3329608203823861356
+    second: tinypagesclean_3
+  - first:
+      213: -5080893550715100183
+    second: tinypagesclean_4
+  - first:
+      213: -1653751249921721851
+    second: tinypagesclean_5
+  - first:
+      213: 5434232520613096502
+    second: tinypagesclean_6
+  - first:
+      213: 7308045318883610216
+    second: tinypagesclean_7
+  - first:
+      213: -5794895652585047421
+    second: tinypagesclean_8
+  - first:
+      213: -2663671856063851302
+    second: tinypagesclean_9
+  - first:
+      213: -5375342086863199375
+    second: tinypagesclean_10
+  - first:
+      213: -557379643042473146
+    second: tinypagesclean_11
+  - first:
+      213: -8693316415064733028
+    second: tinypagesclean_12
+  - first:
+      213: 8987048242163710605
+    second: tinypagesclean_13
+  - first:
+      213: 6856312147583749012
+    second: tinypagesclean_14
+  - first:
+      213: -5194485981847969914
+    second: tinypagesclean_15
+  - first:
+      213: -7673311423564541201
+    second: tinypagesclean_16
+  - first:
+      213: 2913338182560168327
+    second: tinypagesclean_17
+  - first:
+      213: 6755002111579954706
+    second: tinypagesclean_18
+  - first:
+      213: -1915121281145899377
+    second: tinypagesclean_19
+  - first:
+      213: 730311105724418987
+    second: tinypagesclean_20
+  - first:
+      213: 7891855766090793535
+    second: tinypagesclean_21
+  - first:
+      213: 2745069107173349658
+    second: tinypagesclean_22
+  - first:
+      213: 532664096031644585
+    second: tinypagesclean_23
+  - first:
+      213: 293408105047101250
+    second: tinypagesclean_24
+  - first:
+      213: -738937558259243653
+    second: tinypagesclean_25
+  - first:
+      213: 7018106050228357377
+    second: tinypagesclean_26
+  - first:
+      213: -4788504655658390321
+    second: tinypagesclean_27
+  - first:
+      213: 4005119299492207725
+    second: tinypagesclean_28
+  - first:
+      213: -6234248805961660630
+    second: tinypagesclean_29
+  - first:
+      213: -1817730887012838784
+    second: tinypagesclean_30
+  - first:
+      213: 6407755470807476287
+    second: tinypagesclean_31
+  - first:
+      213: -1664756227094305821
+    second: tinypagesclean_32
+  - first:
+      213: -7629647642731317202
+    second: tinypagesclean_33
+  - first:
+      213: 263408873902247160
+    second: tinypagesclean_34
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: tinypagesclean_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 306
+        width: 58
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48233cb7d6ed57d50800000000000000
+      internalID: 6734533379611636356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinypagesclean_1
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 306
+        width: 59
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e861c8e83a37350c0800000000000000
+      internalID: -4588196449051994482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinypagesclean_2
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 306
+        width: 59
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f2dcecf36aada5f0800000000000000
+      internalID: -743751017024400648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinypagesclean_3
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 306
+        width: 59
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6ec5263505253e20800000000000000
+      internalID: 3329608203823861356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinypagesclean_4
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 306
+        width: 60
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e3ad004c3a0d79b0800000000000000
+      internalID: -5080893550715100183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinypagesclean_5
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 306
+        width: 60
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50abe890002bc09e0800000000000000
+      internalID: -1653751249921721851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinypagesclean_6
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 306
+        width: 60
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63ce40a8fa54a6b40800000000000000
+      internalID: 5434232520613096502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinypagesclean_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 230
+        width: 58
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86e83827f746b6560800000000000000
+      internalID: 7308045318883610216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinypagesclean_8
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 230
+        width: 59
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38a763d4b15649fa0800000000000000
+      internalID: -5794895652585047421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinypagesclean_9
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 230
+        width: 60
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad4db154f8cb80bd0800000000000000
+      internalID: -2663671856063851302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinypagesclean_10
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 230
+        width: 60
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 173ef4e0ad2f665b0800000000000000
+      internalID: -5375342086863199375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinypagesclean_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 155
+        width: 58
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64b5b63fa2ac348f0800000000000000
+      internalID: -557379643042473146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinypagesclean_12
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 155
+        width: 59
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9a8ef797c22b5780800000000000000
+      internalID: -8693316415064733028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinypagesclean_13
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 155
+        width: 59
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8a7775c2c868bc70800000000000000
+      internalID: 8987048242163710605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinypagesclean_14
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 155
+        width: 60
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49bcce96293862f50800000000000000
+      internalID: 6856312147583749012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinypagesclean_15
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 155
+        width: 60
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68f9435658a79e7b0800000000000000
+      internalID: -5194485981847969914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinypagesclean_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 79
+        width: 58
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe21d7b4aebe28590800000000000000
+      internalID: -7673311423564541201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinypagesclean_17
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 79
+        width: 60
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 789b41a34a14e6820800000000000000
+      internalID: 2913338182560168327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinypagesclean_18
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 79
+        width: 60
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21e9cb581a69ebd50800000000000000
+      internalID: 6755002111579954706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinypagesclean_19
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 79
+        width: 60
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f86f18f675f1c65e0800000000000000
+      internalID: -1915121281145899377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinypagesclean_20
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 79
+        width: 60
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bab0a30d416922a00800000000000000
+      internalID: 730311105724418987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinypagesclean_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3
+        width: 58
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f32c574a101858d60800000000000000
+      internalID: 7891855766090793535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinypagesclean_22
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 3
+        width: 60
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1957f81fc1781620800000000000000
+      internalID: 2745069107173349658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinypagesclean_23
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 3
+        width: 60
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ab12945c27646700800000000000000
+      internalID: 532664096031644585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinypagesclean_24
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 56
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24f8d83fd15621400800000000000000
+      internalID: 293408105047101250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinypagesclean_25
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 56
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7563c0b434ceb5f0800000000000000
+      internalID: -738937558259243653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinypagesclean_26
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 57
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10981e7e442556160800000000000000
+      internalID: 7018106050228357377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinypagesclean_27
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 57
+        width: 9
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcc6d22e260db8db0800000000000000
+      internalID: -4788504655658390321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinypagesclean_28
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 57
+        width: 21
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6c5b4968ca059730800000000000000
+      internalID: 4005119299492207725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinypagesclean_29
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 59
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a27804fcdbf7b79a0800000000000000
+      internalID: -6234248805961660630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinypagesclean_30
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 3
+        width: 60
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0821856936f16c6e0800000000000000
+      internalID: -1817730887012838784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinypagesclean_31
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 57
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f38ab05a6abece850800000000000000
+      internalID: 6407755470807476287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinypagesclean_32
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 39
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e3ac6e180995e8e0800000000000000
+      internalID: -1664756227094305821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinypagesclean_33
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 21
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e287a9d74eb0e1690800000000000000
+      internalID: -7629647642731317202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinypagesclean_34
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 3
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fc01a7a9f0d7a300800000000000000
+      internalID: 263408873902247160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      tinypagesclean_0: 6734533379611636356
+      tinypagesclean_1: -4588196449051994482
+      tinypagesclean_10: -5375342086863199375
+      tinypagesclean_11: -557379643042473146
+      tinypagesclean_12: -8693316415064733028
+      tinypagesclean_13: 8987048242163710605
+      tinypagesclean_14: 6856312147583749012
+      tinypagesclean_15: -5194485981847969914
+      tinypagesclean_16: -7673311423564541201
+      tinypagesclean_17: 2913338182560168327
+      tinypagesclean_18: 6755002111579954706
+      tinypagesclean_19: -1915121281145899377
+      tinypagesclean_2: -743751017024400648
+      tinypagesclean_20: 730311105724418987
+      tinypagesclean_21: 7891855766090793535
+      tinypagesclean_22: 2745069107173349658
+      tinypagesclean_23: 532664096031644585
+      tinypagesclean_24: 293408105047101250
+      tinypagesclean_25: -738937558259243653
+      tinypagesclean_26: 7018106050228357377
+      tinypagesclean_27: -4788504655658390321
+      tinypagesclean_28: 4005119299492207725
+      tinypagesclean_29: -6234248805961660630
+      tinypagesclean_3: 3329608203823861356
+      tinypagesclean_30: -1817730887012838784
+      tinypagesclean_31: 6407755470807476287
+      tinypagesclean_32: -1664756227094305821
+      tinypagesclean_33: -7629647642731317202
+      tinypagesclean_34: 263408873902247160
+      tinypagesclean_4: -5080893550715100183
+      tinypagesclean_5: -1653751249921721851
+      tinypagesclean_6: 5434232520613096502
+      tinypagesclean_7: 7308045318883610216
+      tinypagesclean_8: -5794895652585047421
+      tinypagesclean_9: -2663671856063851302
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

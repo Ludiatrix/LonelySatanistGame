@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e42d5039b8964defda6b7cc7cc8fa670, type: 3}
+  m_Name: Red 4 (3p)
+  m_EditorClassIdentifier: LSG::LSG.PageData
+  CardID: 44
+  CardWord: Beep
+  Suit: 4
+  PageImage: {fileID: 4083250785398791712, guid: 1de089a86a1e2564ab77a3b7436059a1, type: 3}
+  pageImageRipped: {fileID: 9033615214407038786, guid: b376c2173e02d8b4db2cecadb2d563c7, type: 3}
+  PageModifier:
+    Tape: 3
+    Page: 0
+    Power: 3
+    Sanity: 0
+    Rizz: 0

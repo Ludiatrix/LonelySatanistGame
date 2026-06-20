@@ -1,0 +1,585 @@
+fileFormatVersion: 2
+guid: 2c25d858d30ee9d4792c9d29c38b77ca
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3889762851131532372
+    second: nondiegetic_0
+  - first:
+      213: 4856141813203958964
+    second: nondiegetic_1
+  - first:
+      213: 5931429677633923132
+    second: nondiegetic_2
+  - first:
+      213: -964169618284733945
+    second: nondiegetic_3
+  - first:
+      213: 7294990100055575129
+    second: nondiegetic_4
+  - first:
+      213: -4607260093152935897
+    second: nondiegetic_5
+  - first:
+      213: -6360975255304356835
+    second: nondiegetic_6
+  - first:
+      213: 6636547965063023264
+    second: nondiegetic_7
+  - first:
+      213: -6279575179874455571
+    second: nondiegetic_8
+  - first:
+      213: 6632248709168602444
+    second: nondiegetic_9
+  - first:
+      213: 4567790684575113342
+    second: nondiegetic_10
+  - first:
+      213: -6399084686002732354
+    second: nondiegetic_11
+  - first:
+      213: -7525986880570681513
+    second: nondiegetic_12
+  - first:
+      213: 6796412854256259036
+    second: nondiegetic_13
+  - first:
+      213: -1184326323375409978
+    second: nondiegetic_14
+  - first:
+      213: -9049325923600218416
+    second: nondiegetic_15
+  - first:
+      213: -1983173242238064518
+    second: nondiegetic_16
+  - first:
+      213: -8844947591658588929
+    second: nondiegetic_17
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: nondiegetic_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 327
+        width: 457
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cab5bc5bb49c40ac0800000000000000
+      internalID: -3889762851131532372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nondiegetic_1
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 396
+        width: 62
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bc71fa004b746340800000000000000
+      internalID: 4856141813203958964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nondiegetic_2
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 296
+        width: 122
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c386491addba05250800000000000000
+      internalID: 5931429677633923132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nondiegetic_3
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 326
+        width: 64
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70a1aee27d49e92f0800000000000000
+      internalID: -964169618284733945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nondiegetic_4
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 279
+        width: 58
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95acdc178d20d3560800000000000000
+      internalID: 7294990100055575129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nondiegetic_5
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 233
+        width: 473
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72049c70b59bf00c0800000000000000
+      internalID: -4607260093152935897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nondiegetic_6
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 165
+        width: 465
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1cb88a05b649b7a0800000000000000
+      internalID: -6360975255304356835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nondiegetic_7
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 129
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0aa4c685631c91c50800000000000000
+      internalID: 6636547965063023264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nondiegetic_8
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 135
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: def293ff4a77ad8a0800000000000000
+      internalID: -6279575179874455571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nondiegetic_9
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 123
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4d9904df0b7a0c50800000000000000
+      internalID: 6632248709168602444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nondiegetic_10
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 135
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e70207a2d6d046f30800000000000000
+      internalID: 4567790684575113342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nondiegetic_11
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 123
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb24a23c162e137a0800000000000000
+      internalID: -6399084686002732354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nondiegetic_12
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 135
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75795577ec25e8790800000000000000
+      internalID: -7525986880570681513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nondiegetic_13
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 135
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdfc7d46b75b15e50800000000000000
+      internalID: 6796412854256259036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nondiegetic_14
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 123
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c47015db7d609fe0800000000000000
+      internalID: -1184326323375409978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nondiegetic_15
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 135
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d6431394065a6280800000000000000
+      internalID: -9049325923600218416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nondiegetic_16
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 123
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a782758817a5a74e0800000000000000
+      internalID: -1983173242238064518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nondiegetic_17
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 49
+        width: 473
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff43e36270f604580800000000000000
+      internalID: -8844947591658588929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      nondiegetic_0: -3889762851131532372
+      nondiegetic_1: 4856141813203958964
+      nondiegetic_10: 4567790684575113342
+      nondiegetic_11: -6399084686002732354
+      nondiegetic_12: -7525986880570681513
+      nondiegetic_13: 6796412854256259036
+      nondiegetic_14: -1184326323375409978
+      nondiegetic_15: -9049325923600218416
+      nondiegetic_16: -1983173242238064518
+      nondiegetic_17: -8844947591658588929
+      nondiegetic_2: 5931429677633923132
+      nondiegetic_3: -964169618284733945
+      nondiegetic_4: 7294990100055575129
+      nondiegetic_5: -4607260093152935897
+      nondiegetic_6: -6360975255304356835
+      nondiegetic_7: 6636547965063023264
+      nondiegetic_8: -6279575179874455571
+      nondiegetic_9: 6632248709168602444
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
