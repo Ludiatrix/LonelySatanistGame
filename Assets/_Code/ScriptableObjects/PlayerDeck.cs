@@ -17,14 +17,7 @@ namespace LSG.ScriptableObjects
         
         // Loaded from Resources
         private CardList _defaultDeck = null;
-        
-        public int PlayerDeckCount => playerDeck.Count;
 
-        private void OnEnable()
-        {
-            CardEvents.AddRandomCard.AddListener(OnAddRandomCard);
-            CardEvents.RemoveRandomCard.AddListener(OnRemoveRandomCard);
-        }
 
         public CardData[] PeekAheadAtLibrary(int peekAheadLength = 1)
         {
@@ -107,6 +100,11 @@ namespace LSG.ScriptableObjects
             return card;
         }
         
+        public void Reset()
+        {
+            LoadDefaultDeck();
+        }
+
         private void LoadDefaultDeck()
         {
             /*
@@ -126,6 +124,14 @@ namespace LSG.ScriptableObjects
         public void Shuffle()
         {
             playerDeck.Shuffle();
+        }
+
+        public int PlayerDeckCount => playerDeck.Count;
+
+        private void OnEnable()
+        {
+            CardEvents.AddRandomCard.AddListener(OnAddRandomCard);
+            CardEvents.RemoveRandomCard.AddListener(OnRemoveRandomCard);
         }
 
         /*
@@ -175,5 +181,9 @@ namespace LSG.ScriptableObjects
         {
             
         }
+        
+        
+
+        
     }
 }
