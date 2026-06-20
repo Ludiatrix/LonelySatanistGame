@@ -23,7 +23,7 @@ namespace LSG.UI
 
         private void OnPageRead()
         {
-            tapeCountText.text = $"Tape: {DataManager.Instance.PlayerEconomySource.Tape.ToString()}";
+            tapeCountText.text = $"{DataManager.Instance.PlayerEconomySource.Tape.ToString()}";
         }
     }
 }

@@ -42,7 +42,7 @@ public class PlayerEconomy : ScriptableObject
     {
         Page++;
         Power++;
-        Tape = DataManager.Instance.MilestoneDataSource.GetTapeAmountAtPower(Power);
+        Tape += DataManager.Instance.MilestoneDataSource.GetTapeAmountAtPower(Power);
         GameEvents.TapeEarnedEvent?.Invoke();
     }
     
