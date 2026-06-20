@@ -545,7 +545,7 @@ RectTransform:
   m_GameObject: {fileID: 1119156715319319057}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.78787, y: 0.78787, z: 0.78787}
+  m_LocalScale: {x: 0.78786993, y: 0.78786993, z: 0.78786993}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5807331870071784291}
@@ -607,7 +607,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d262c5e07b63ee5ab8c5eac1e0b526c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: LSG::LSG.UI.ResourceBarController
-  Economy: {fileID: 11400000, guid: da8497e8847794bfb92799f0e89ead84, type: 2}
   powerSlider: {fileID: 4794032118432905739}
   templateMilestoneMarker: {fileID: 7609288881146590324}
   milestoneContainer: {fileID: 439839905376576962}
@@ -1577,7 +1576,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: LSG::LSG.UI.MilestoneMarkerController
   MilestoneMarkerID: 0
-  playerEconomy: {fileID: 11400000, guid: da8497e8847794bfb92799f0e89ead84, type: 2}
   tapeIcons:
   - {fileID: 6032765395704003905}
   - {fileID: 6958484739274664484}

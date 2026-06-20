@@ -60,7 +60,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0.20000002, g: 0.08627451, b: 0.85098046, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -89,7 +89,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4b0ed0322d4b15868df0d30fa3650a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: LSG::LSG.UI.RizzCanvasController
-  playerEconomy: {fileID: 11400000, guid: da8497e8847794bfb92799f0e89ead84, type: 2}
   rizzText: {fileID: 7690844026959300998}
 --- !u!1 &6170932775439887698
 GameObject:
@@ -241,5 +240,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4b0ed0322d4b15868df0d30fa3650a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: LSG::LSG.UI.RizzCanvasController
-  playerEconomy: {fileID: 11400000, guid: da8497e8847794bfb92799f0e89ead84, type: 2}
   rizzText: {fileID: 7690844026959300998}

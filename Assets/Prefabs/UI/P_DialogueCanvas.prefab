@@ -1016,7 +1016,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 879ecf5bb923dd43c8ae69b355da8564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: LSG::LSG.UI.DialogueCanvasController
-  playerEconomy: {fileID: 11400000, guid: da8497e8847794bfb92799f0e89ead84, type: 2}
   container: {fileID: 2226797193098545217}
   namePlateText: {fileID: 8165887946831293608}
   dialogueText: {fileID: 4683859364462421569}

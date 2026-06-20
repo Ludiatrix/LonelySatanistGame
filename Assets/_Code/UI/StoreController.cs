@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using LSG.ScriptableObjects;
 using UnityEngine;
 
-namespace LSG
+namespace LSG.UI
 {
     public class StoreController : MonoBehaviour
     {

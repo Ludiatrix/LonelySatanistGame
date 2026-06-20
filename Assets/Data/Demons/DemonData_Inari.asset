@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23f63356af875a1d08c563dae60779ef, type: 3}
+  m_Name: DemonData_Inari
+  m_EditorClassIdentifier: LSG::LSG.DemonData_Inari
+  demonName: Ekzeema
+  canDateDemonMultipleTimes: 0
+  introDialogue: 
+  minimumPowerLevel: 0
+  maximumPowerLevel: 0
+  boon: 
+  bane: 
+  boonBaneDialogue: 
+  dateOutcome: 

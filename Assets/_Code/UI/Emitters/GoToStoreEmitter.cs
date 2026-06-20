@@ -13,7 +13,7 @@ namespace LSG.UI
         public void Emit()
         {
             Debug.Log("[GoToStoreEmitter] Firing the ChangeState Event!");
-            GameEvents.ChangeState?.Invoke(Enums.GameState.SummoningPhase);
+            GameEvents.ChangeState?.Invoke(Enums.GameState.StorePhase);
         }
     }
 }

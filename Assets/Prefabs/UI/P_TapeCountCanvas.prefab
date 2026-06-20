@@ -60,7 +60,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0.6862745, g: 0.6862745, b: 0.6862745, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -89,7 +89,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eab92b66871f4d16ad803aa4a83b1e47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: LSG::LSG.UI.TapeCountCanvasController
-  playerEconomy: {fileID: 11400000, guid: da8497e8847794bfb92799f0e89ead84, type: 2}
   tapeCountText: {fileID: 8433217511859563578}
 --- !u!1 &4390115892622261998
 GameObject:

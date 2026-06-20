@@ -7,6 +7,8 @@ namespace LSG.ScriptableObjects
     [CreateAssetMenu(fileName = "CardData", menuName = "LSG/Create a Page")]
     public class CardData : ScriptableObject
     {
+        public int CardID = 0;
+        public string CardWord = "Beep";
         public Enums.Suit Suit = Enums.Suit.White;
         public Sprite PageImage;
         [SerializeField]
