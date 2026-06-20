@@ -34,8 +34,9 @@ namespace LSG.Phases
             Debug.Log("[SummoningPhase] Starting Phase!");
             base.StartPhase();
             Container.SetActive(true);
-            TurnPage(); // Turns the first page
             PhaseEvents.SummoningPhaseStarted?.Invoke();
+            
+            TurnPage(); // Turns the first page
         }
 
         public override void EndPhase()
