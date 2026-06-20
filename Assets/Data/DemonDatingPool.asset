@@ -13,18 +13,18 @@ MonoBehaviour:
   m_Name: DemonDatingPool
   m_EditorClassIdentifier: LSG::LSG.DemonDatingPool
   demons:
-  - {fileID: 11400000, guid: 4bdfc572870ede3008adefe23b9024aa, type: 2}
-  - {fileID: 11400000, guid: 1ed4c2c4b06b4f846abf019e32712a7d, type: 2}
-  - {fileID: 11400000, guid: 4808f7b78a89b5f2983b57ec80356558, type: 2}
-  - {fileID: 11400000, guid: a1c2b76ef9120d476afe15ac09a865c3, type: 2}
-  - {fileID: 11400000, guid: d207371cc3fa140acaa4a64a53d8fcd1, type: 2}
-  - {fileID: 11400000, guid: 1c536776213c63ca2866619229a6d529, type: 2}
-  - {fileID: 11400000, guid: 9d3f1322c5400e296800c63ec90556aa, type: 2}
-  - {fileID: 11400000, guid: 3b06974735246e21093bf3114cbcbc62, type: 2}
-  - {fileID: 11400000, guid: 2b778ddc75e34fcef8c0e27a3cc7e24b, type: 2}
-  - {fileID: 11400000, guid: 144b090f7a4916abda09016f13a3834e, type: 2}
-  - {fileID: 11400000, guid: 04bb285be46d570cda78f07218146f3d, type: 2}
-  - {fileID: 11400000, guid: 267e72bac00b4a2adad7d7c567738b46, type: 2}
-  - {fileID: 11400000, guid: 43c854727dda17b22adacc380aa598f7, type: 2}
-  - {fileID: 11400000, guid: 99b348135e148eb8ab32e26bd4fa59f2, type: 2}
-  - {fileID: 11400000, guid: fc33fc80bc0646aa1b67cb09c00f672e, type: 2}
+  - {fileID: 11400000, guid: 3552a2581cc085fac84d88791ff9fc09, type: 2}
+  - {fileID: 11400000, guid: 4ac4e0c83fc5bfed1a8e47937c04bad3, type: 2}
+  - {fileID: 11400000, guid: ee7837e82a0b86a309a562cac7cf1ca6, type: 2}
+  - {fileID: 11400000, guid: 4df44e43e2ef7a3b9aac484c37b65c08, type: 2}
+  - {fileID: 11400000, guid: f72d315b28ab7c52aa75641651edda46, type: 2}
+  - {fileID: 11400000, guid: 3f445c50436c02560b732453ced52dea, type: 2}
+  - {fileID: 11400000, guid: 0b88ecd4fea689376932299a862a1408, type: 2}
+  - {fileID: 11400000, guid: 078e3b063b16128e09dab8ba20a5eeed, type: 2}
+  - {fileID: 11400000, guid: b5c829d8981d4060fbbf7340a08922c2, type: 2}
+  - {fileID: 11400000, guid: 4a36ef2f03df101d4a12b3c8bc4d918b, type: 2}
+  - {fileID: 11400000, guid: 9e68c1a98b50a1ac3a9ca012bc4dd6ab, type: 2}
+  - {fileID: 11400000, guid: 24cac03c7dc8315e7814c84083027912, type: 2}
+  - {fileID: 11400000, guid: 8c4bcbf5335e206e69af33fddb8cf845, type: 2}
+  - {fileID: 11400000, guid: 62ffb69eea3244168970c69fb5f3f638, type: 2}
+  - {fileID: 11400000, guid: 2f203077a3eff85489ce39f7fcde691a, type: 2}
