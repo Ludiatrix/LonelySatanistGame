@@ -9,13 +9,16 @@ namespace LSG.ScriptableObjects
     [CreateAssetMenu(fileName = "PlayerDeck", menuName = "LSG/Make a Deck")]
     public class PlayerDeck : ScriptableObject
     {
-        [SerializeField] private List<CardData> _playerDeck = new List<CardData>();
-        private readonly List<CardData> _playedCards = new List<CardData>();
-        private readonly List<CardData> _cardLibrary = new List<CardData>();
+        // All the cards in the deck
+        public List<CardData> CardLibrary = new List<CardData>();
 
-        public int PlayerDeckCount => _playerDeck.Count;
+        public List<CardData> playerDeck = new List<CardData>();
+        public List<CardData> playedCards = new List<CardData>();
         
-        public List<CardData> PlayedCards => _playedCards;
+        // Loaded from Resources
+        private CardList _defaultDeck = null;
+        
+        public int PlayerDeckCount => playerDeck.Count;
 
         private void OnEnable()
         {
@@ -23,16 +26,106 @@ namespace LSG.ScriptableObjects
             CardEvents.RemoveRandomCard.AddListener(OnRemoveRandomCard);
         }
 
-        public CardData[] PeekAhead(int peekAheadAmount = 1)
+        public CardData[] PeekAheadAtLibrary(int peekAheadLength = 1)
+        {
+            List<CardData> peekedCards = new List<CardData>();
+            
+            for (int i = 0; i < peekAheadLength; i++)
+            {
+                peekedCards.Add(CardLibrary[i]);
+            }
+
+            return peekedCards.ToArray();
+        }
+        
+        //Add a Card back to the CardLibrary
+        private void ReturnCardToLibrary(CardData cardToReturn)
+        {
+            if (CardLibrary.Contains(cardToReturn))
+            {
+                Debug.Log($"[PlayerDeck] Tried to return {cardToReturn}, but it already exists!");
+            }
+            else
+            {
+                CardLibrary.Add(cardToReturn);
+            }
+        }
+
+        // Pull a Card from the CardLibrary
+        private CardData PullCardFromLibrary(CardData wantedCard = null)
+        {
+            if (wantedCard == null)
+            {
+                var cardToPull = CardLibrary[0];
+                CardLibrary.RemoveAt(0);
+                return cardToPull;
+            }
+
+            foreach (var card in CardLibrary)
+            {
+                if (card == wantedCard)
+                {
+                    return card;
+                }
+            }
+
+            return null;
+        }
+        
+        public CardData[] PeekAheadAtPlayerDeck(int peekAheadAmount = 1)
         {
             List<CardData> peekedCards = new List<CardData>();
             
             for (int i = 0; i < peekAheadAmount; i++)
             {
-                peekedCards.Add(_playerDeck[i]);
+                peekedCards.Add(playerDeck[i]);
             }
 
             return peekedCards.ToArray();
+        }
+        
+
+        private void AddCardToPlayerDeck(CardData card)
+        {
+            playerDeck.Add(card);
+            playerDeck.Shuffle();
+            GameEvents.PageAdded?.Invoke(card);
+        }
+        
+        public CardData TakeCardFromPlayerDeck()
+        {
+            if (playerDeck.Count == 0)
+            {
+                Debug.Log($"[PlayerDeck] There are no more pages... how did you do that? Ah well, you lose!");
+                // TODO: Add lose condition here
+                return null;
+            }
+            CardData card = playerDeck[playerDeck.Count - 1]; // Riza: fun fact getting the end index is faster than the first
+            playedCards.Add(card);
+            playerDeck.RemoveAt(playerDeck.Count - 1);
+            GameEvents.CardTaken?.Invoke(card);
+            return card;
+        }
+        
+        private void LoadDefaultDeck()
+        {
+            /*
+             * This is some silly C# nonsense, but I need to create a new object once this gets loaded.
+             * If I don't, the default Card List gets deleted. Yikes!
+             */
+            _defaultDeck = Instantiate(Resources.Load<CardList>($"DefaultDeck"));
+            
+            foreach (var card in _defaultDeck.Cards)
+            {
+                AddCardToPlayerDeck(PullCardFromLibrary(card));
+            }
+            
+            Shuffle();
+        }
+        
+        public void Shuffle()
+        {
+            playerDeck.Shuffle();
         }
 
         /*
@@ -53,7 +146,7 @@ namespace LSG.ScriptableObjects
                     List<CardData> cardsOfThatSuit = new List<CardData>();
                 
                     // search player deck for suits of that color
-                    foreach (var thisCard in _playerDeck)
+                    foreach (var thisCard in playerDeck)
                     {
                         if (thisCard.Suit == suit)
                         {
@@ -61,8 +154,8 @@ namespace LSG.ScriptableObjects
                         }
                     }
                     
-                    // now with our list we can search the library for the first card that isn't in our deck of the same suit!
-                    foreach (var card in _cardLibrary)
+                    // now with our list we can search the CardLibrary for the first card that isn't in our deck of the same suit!
+                    foreach (var card in CardLibrary)
                     {
                         if (card.Suit == suit)
                         {
@@ -81,44 +174,6 @@ namespace LSG.ScriptableObjects
         private void OnRemoveRandomCard(Enums.Suit suitToIgnore, bool canBeBoughtAgain = false)
         {
             
-        }
-        
-        public void AddCardToPlayerDeck(CardData card)
-        {
-            _playerDeck.Add(card);
-            _playerDeck.Shuffle();
-            GameEvents.PageAdded?.Invoke(card);
-        }
-
-        public CardData TakeCardFromPlayerDeck()
-        {
-            if (_playerDeck.Count == 0)
-            {
-                Debug.Log($"[PlayerDeck] There are no more pages... how did you do that? Ah well, you lose!");
-                // TODO: Add lose condition here
-                return null;
-            }
-            CardData card = _playerDeck[_playerDeck.Count - 1]; // Riza: fun fact getting the end index is faster than the first
-            _playedCards.Add(card);
-            _playerDeck.RemoveAt(_playerDeck.Count - 1);
-            GameEvents.CardTaken?.Invoke(card);
-            return card;
-        }
-        
-        public void Shuffle()
-        {
-            _playerDeck.Shuffle();
-        }
-
-        public void Reset()
-        {
-            /*
-             * This is some silly C# nonsense, but I need to create a new object once this gets loaded.
-             * If I don't, the default deck gets deleted. Yikes!
-             */
-            var defaultDeck = Instantiate(Resources.Load<PlayerDeck>($"DefaultDeck"));
-            _playerDeck = defaultDeck._playerDeck;
-            Shuffle();
         }
     }
 }

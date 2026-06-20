@@ -81,6 +81,7 @@ namespace LSG.Phases
         private void SucceedDate()
         {
             // Date Succeeds!
+            Debug.Log("[TryToDateEmitter] You have succeeded the date!");
             UIEvents.ToggleEncounterButtons?.Invoke(false);
             UIEvents.SetDialogueText?.Invoke(_chosenDemonThisPhase?.dateOutcome);
         }
@@ -88,6 +89,7 @@ namespace LSG.Phases
         private void FailDate()
         {
             // Give the Boon and Bane Effects and Dialogue
+            Debug.Log("[TryToDateEmitter] You have failed the date!");
             UIEvents.ToggleEncounterButtons?.Invoke(false);
             UIEvents.SetDialogueText?.Invoke(_chosenDemonThisPhase?.boonBaneDialogue);
             _chosenDemonThisPhase?.ApplyEffect();
