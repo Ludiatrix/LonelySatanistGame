@@ -11,7 +11,6 @@ namespace LSG.ScriptableObjects
     [CreateAssetMenu(fileName = "MilestoneData", menuName = "LSG/Create Milestones")]
     public class MilestoneData : ScriptableObject
     {
-        public int NumberOfMilestonesToGenerate = 30;
         public Milestone[] Milestones;
 
         public int GetTapeAmountAtPower(int powerLevel)

@@ -11,7 +11,7 @@ namespace LSG.UI
     /// </summary>
     public class MilestoneMarkerController : MonoBehaviour
     {
-        public int MilestoneMarkerID = 0;
+        public int MilestonePower = 0;
         
         [SerializeField] private GameObject[] tapeIcons;
 
@@ -37,7 +37,7 @@ namespace LSG.UI
 
         private void CheckMilestoneMarkerForTape()
         {
-            Milestone myMilestone = DataManager.Instance.MilestoneDataSource.GetMilestoneAtPower(MilestoneMarkerID);
+            Milestone myMilestone = DataManager.Instance.MilestoneDataSource.GetMilestoneAtPower(MilestonePower);
 
             if (myMilestone is null)
             {
@@ -68,9 +68,17 @@ namespace LSG.UI
 
         private void ToggleIcons(int amount, bool toggle)
         {
-            for (int i = 0; i < amount; i++)
+
+            for (int i = 0; i < 4; i++)
             {
-                tapeIcons[i].SetActive(toggle);
+                if (i + 1 == amount)
+                {
+                    tapeIcons[i].SetActive(toggle);
+                }
+                else
+                {
+                    tapeIcons[i].SetActive(false);
+                }
             }
         }
     }

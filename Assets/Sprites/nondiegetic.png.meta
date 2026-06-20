@@ -287,12 +287,12 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 7
-        y: 165
-        width: 465
-        height: 63
+        y: 199
+        width: 462
+        height: 28
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 4, y: 4, z: 4, w: 4}
       customData: 
       outline: []
       physicsShape: []
@@ -331,9 +331,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 75
-        y: 135
+        y: 123
         width: 18
-        height: 12
+        height: 24
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -349,35 +349,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: nondiegetic_9
-      rect:
-        serializedVersion: 2
-        x: 75
-        y: 123
-        width: 18
-        height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c4d9904df0b7a0c50800000000000000
-      internalID: 6632248709168602444
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: nondiegetic_10
       rect:
         serializedVersion: 2
         x: 135
-        y: 135
-        width: 18
-        height: 12
+        y: 123
+        width: 35
+        height: 24
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -393,57 +371,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: nondiegetic_11
-      rect:
-        serializedVersion: 2
-        x: 135
-        y: 123
-        width: 18
-        height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: eb24a23c162e137a0800000000000000
-      internalID: -6399084686002732354
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: nondiegetic_12
-      rect:
-        serializedVersion: 2
-        x: 152
-        y: 135
-        width: 18
-        height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 75795577ec25e8790800000000000000
-      internalID: -7525986880570681513
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: nondiegetic_13
       rect:
         serializedVersion: 2
         x: 206
-        y: 135
-        width: 18
-        height: 12
+        y: 123
+        width: 35
+        height: 24
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -454,72 +388,6 @@ TextureImporter:
       bones: []
       spriteID: cdfc7d46b75b15e50800000000000000
       internalID: 6796412854256259036
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: nondiegetic_14
-      rect:
-        serializedVersion: 2
-        x: 206
-        y: 123
-        width: 18
-        height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6c47015db7d609fe0800000000000000
-      internalID: -1184326323375409978
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: nondiegetic_15
-      rect:
-        serializedVersion: 2
-        x: 223
-        y: 135
-        width: 18
-        height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0d6431394065a6280800000000000000
-      internalID: -9049325923600218416
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: nondiegetic_16
-      rect:
-        serializedVersion: 2
-        x: 223
-        y: 123
-        width: 18
-        height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a782758817a5a74e0800000000000000
-      internalID: -1983173242238064518
       vertices: []
       indices: 
       edges: []
@@ -542,6 +410,28 @@ TextureImporter:
       bones: []
       spriteID: ff43e36270f604580800000000000000
       internalID: -8844947591658588929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nondiegetic_18
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 166
+        width: 4
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 036c96ffe14aaab438ac7c9b51680926
+      internalID: 98642564
       vertices: []
       indices: 
       edges: []
@@ -570,6 +460,7 @@ TextureImporter:
       nondiegetic_15: -9049325923600218416
       nondiegetic_16: -1983173242238064518
       nondiegetic_17: -8844947591658588929
+      nondiegetic_18: 98642564
       nondiegetic_2: 5931429677633923132
       nondiegetic_3: -964169618284733945
       nondiegetic_4: 7294990100055575129

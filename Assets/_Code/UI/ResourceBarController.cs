@@ -18,6 +18,7 @@ namespace LSG.UI
         [SerializeField] private Slider powerSlider;
         [SerializeField] private GameObject templateMilestoneMarker;
         [SerializeField] private Transform milestoneContainer;
+        [SerializeField] private float maximum = 48f;
 
         private void OnEnable()
         {
@@ -32,19 +33,31 @@ namespace LSG.UI
         private void Start()
         {
             _economy = DataManager.Instance.PlayerEconomySource;
-            powerSlider.maxValue = DataManager.Instance.PlayerDeckSource.PlayerDeckCount;
+            powerSlider.maxValue = maximum;
             UpdateBar();
             GenerateMilestones();
         }
 
         private void GenerateMilestones()
         {
-            for (int i = 0; i < DataManager.Instance.MilestoneDataSource.NumberOfMilestonesToGenerate; i++)
+            foreach (var milestone in DataManager.Instance.MilestoneDataSource.Milestones)
             {
                 GameObject go = Instantiate(templateMilestoneMarker, milestoneContainer, false);
                 go.SetActive(true);
-                go.GetComponent<MilestoneMarkerController>().MilestoneMarkerID = (i + 1); // We start at 1
+
+                Vector3 position = go.transform.localPosition;
+                position.x = GetHorizontalOffset(milestone.PowerLevel);
+                go.transform.localPosition = position;
+
+                go.GetComponent<MilestoneMarkerController>().MilestonePower = milestone.PowerLevel;
             }
+        }
+
+        private float GetHorizontalOffset(int power)
+        {
+            float normalizedDistance = (power / maximum) - 0.5f; // positions in a rect range from -0.5 to +0.5
+            float width = ((RectTransform) milestoneContainer.transform).rect.width;
+            return width * normalizedDistance;
         }
 
         private void UpdateBar()
