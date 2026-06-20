@@ -12,12 +12,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a41b547204c34defa81f765dfe5f3d4, type: 3}
   m_Name: DemonData_Priocept
   m_EditorClassIdentifier: LSG::LSG.DemonData_Priocept
-  demonName: Ekzeema
+  demonName: Priocept
   canDateDemonMultipleTimes: 0
-  introDialogue: 
-  minimumPowerLevel: 0
-  maximumPowerLevel: 0
-  boon: 
-  bane: 
+  introDialogue: '"He gives you his phone number.   It''s missing the last digit,
+    but assures you it will work anyways.  His broad smile has too many teeth, his
+    legs have too many ankles, but he''s cute in that ''baby deer learning to walk''
+    kind of way.
+
+
+    ""I''m really doing you a favor,"" he says shyly, ""sometimes
+    there are gaps in reality, especially on stairs, it''s just my job to make you
+    forget.""
+
+    "'
+  minimumPowerLevel: 1
+  maximumPowerLevel: 15
+  outcome: You forget a childhood trauma but now you are constantly taking minor
+    damage (stubbing your toe)
+  boon: Gain 2 Sanity
+  bane: For the rest of the game, the first 1 power white card played during a summoning
+    round causes -1 Sanity loss.
   boonBaneDialogue: 
-  dateOutcome: 
+  dateOutcome: '"He helps you forget your troubles while exploring the 0th floor
+    of an abandoned factory.   You''d not considered Urbex for a first date, but
+    the sense of adventure is really quite thrilling.
+
+
+    Dinner afterwards is
+    good, although you cannot remember what you had for dessert."'

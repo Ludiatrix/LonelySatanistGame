@@ -12,12 +12,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7e92d5358a544ac83d2a0332ae4b4e5, type: 3}
   m_Name: DemonData_Shelldon
   m_EditorClassIdentifier: LSG::LSG.DemonData_Shelldon
-  demonName: Ekzeema
+  demonName: Shelldon
   canDateDemonMultipleTimes: 0
-  introDialogue: 
-  minimumPowerLevel: 0
-  maximumPowerLevel: 0
-  boon: 
+  introDialogue: '"A shell appears.  Have you done it?  Have you summoned a demon
+    goddess of beauty?
+
+
+    Nope.  It cracks open to reveal two eyes and a sumptuous
+    mustache, stands on two little legs and adjusts its tie.
+
+
+    ""Oh my,"" it
+    says in a chipper voice, ""You really should organize your files better.""
+
+    "'
+  minimumPowerLevel: 20
+  maximumPowerLevel: 25
+  outcome: 
+  boon: Gain 1 Sanity
   bane: 
   boonBaneDialogue: 
-  dateOutcome: 
+  dateOutcome: '"He''s too short for rock climbing, too small to reach the pedals
+    for a bike ride, too small to see the screen while sitting in a movie theater,
+    but none of that stops him.  He approaches every date idea with gusto and enthusiasm,
+    and tells you he''s been trying to be open to new experiences, even when he doesn''t
+    really know how to manage it.
+
+
+    Honestly, the little dude fills you with
+    inspiration."'

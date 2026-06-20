@@ -12,12 +12,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08a31708ff494388b94a36253e9e9a5c, type: 3}
   m_Name: DemonData_Beelzebabe
   m_EditorClassIdentifier: LSG::LSG.DemonData_Beelzebabe
-  demonName: Ekzeema
-  canDateDemonMultipleTimes: 0
-  introDialogue: 
-  minimumPowerLevel: 0
-  maximumPowerLevel: 0
-  boon: 
-  bane: 
-  boonBaneDialogue: 
-  dateOutcome: 
+  demonName: Beelzebabe
+  canDateDemonMultipleTimes: 1
+  introDialogue: '"Jackpot, baby!  She''s all the lover you could want, all the partner
+    you''ve dreamt about: vivacious, bodacious, and up for anything.  Her horns are
+    shiny, her eyes pierce your soul, and she''s got a knowing confidence that sends
+    a shiver through your entire being.
+
+
+    ""Well now, been a while since someone
+    knew enough to call on me..."" she says, with a voice like liquid sex, ""but
+    can you take me all the way?"""'
+  minimumPowerLevel: 20
+  maximumPowerLevel: 99
+  outcome: '*Must have repaired all pages of the Necronomicon to be able to summon
+    --you cannot chose to not try to date Beelzebabe (the button is hidden)'
+  boon: If you fail a date roll against Beelzebabe, you can try to date them again.
+  bane: Lose 3 Sanity
+  boonBaneDialogue: N/A
+  dateOutcome: '"She thought she''d wring you dry, but wasn''t counting on a master
+    of the Mystic and Dating Arts.  You''ve learned to see people (and demons) for
+    who they really are, and you know all the best date spots in town.  You could
+    work just to impress her, but you also see how hard it is to put up a front all
+    the time.
+
+
+    Your night on the town together is epic, but so is the relaxation
+    afterwards.  You take her to the most relaxing spa in town, and finish in front
+    of a cozy balefire wrapped in demon-fur robes while you mix up hot chocolate. 
+    Sinfully dark and sweet, both.
+
+
+    Maybe the real treasure was the experiences
+    gained along the way, but a gorgeous demonic partner is also a pretty phenomenal
+    result."'

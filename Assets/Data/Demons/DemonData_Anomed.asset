@@ -12,12 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00bb9ed3689d45d1b46a35c1b15e1b50, type: 3}
   m_Name: DemonData_Anomed
   m_EditorClassIdentifier: LSG::LSG.DemonData_Anomed
-  demonName: Ekzeema
+  demonName: Anomed
   canDateDemonMultipleTimes: 0
-  introDialogue: 
-  minimumPowerLevel: 0
-  maximumPowerLevel: 0
-  boon: 
-  bane: 
-  boonBaneDialogue: 
-  dateOutcome: 
+  introDialogue: "\"He, uh, She, uh, They are hard to get a bead on.  Are they facing
+    towards you or away?  Walking on feet or hands?  Where does their head go?  \n\n\"\"Oh,
+    how dull.  I would not like to see your book.\"\"\""
+  minimumPowerLevel: 15
+  maximumPowerLevel: 25
+  outcome: 
+  boon: Trade Sanity and Rizz stat scores
+  bane: The next summoning, the dialog box is flipped horizontally (so text appears
+    mirrored)
+  boonBaneDialogue: N/A
+  dateOutcome: '"You don''t take her into town, you don''t buy her dinner, you don''t
+    discover a speakeasy behind the bar.
+
+
+    They compliment your mind while brushing
+    against your face, they tell you how handsome you are while shadowy limbs drift
+    over your brain matter.  They tell you they will not see you again."'

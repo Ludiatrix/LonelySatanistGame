@@ -12,12 +12,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c20a5a1acd1eee477b10483160c3c3fe, type: 3}
   m_Name: DemonData_AdmiralFortran
   m_EditorClassIdentifier: LSG::LSG.DemonData_AdmiralFortran
-  demonName: Ekzeema
+  demonName: Admiral Fortran
   canDateDemonMultipleTimes: 0
-  introDialogue: 
-  minimumPowerLevel: 0
-  maximumPowerLevel: 0
+  introDialogue: '"His demon-leather uniform is sharp, his demon-bone combadge glitters
+    with impossible colors, his combination null-laser/dueling saber quietly cuts
+    a rift in space behind him.  ""Admiral''s Log: I seem to have been transported
+    from my voidship.  In all my years sailing the hellstars, I''ve never experience
+    such a thing.""
+
+
+    He quickly notices you and levels his weapon in your direction. 
+    ""You say it is the custom of this world to go on a ''date'' in response to such
+    a summoning?  Fascinating."""'
+  minimumPowerLevel: 10
+  maximumPowerLevel: 25
+  outcome: 
   boon: 
-  bane: 
-  boonBaneDialogue: 
-  dateOutcome: 
+  bane: Lose 1 Tape (if the player has a tape banked)
+  boonBaneDialogue: N/A
+  dateOutcome: '"He is both a gentleman and an enthusiastic participant in your strange
+    Hyu-Man culture, equally able to dazzle on the ballroom or night club dance floor. 
+    He says he merely wants to comport himself according to the local customs.
+
+
+    He''s
+    very interested in your home life, your career, your most exploitable resources,
+    but in such an earnest way that you find it cute.  You thought suggesting a hike
+    would interest him, but you underestimated just how into it he would be: all
+    his experience with planetary explorations make him really hard to keep up with,
+    although you''re getting a great view of his calves from behind."'

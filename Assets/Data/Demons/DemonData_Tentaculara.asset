@@ -12,12 +12,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6675e6d1cfc71fce8b197974b7dbea48, type: 3}
   m_Name: DemonData_Tentaculara
   m_EditorClassIdentifier: LSG::LSG.DemonData_Tentaculara
-  demonName: Ekzeema
+  demonName: Tentaculara
   canDateDemonMultipleTimes: 0
-  introDialogue: 
-  minimumPowerLevel: 0
-  maximumPowerLevel: 0
-  boon: 
-  bane: 
+  introDialogue: '"""That pox-some bother tha! Aeonslumber us!"" they screech at
+    you in Black Speech (which you took 2 semesters of at Community College).  You
+    managed to calm them down by complimenting the shimmering uncolors of their myriad
+    tentacles and offering to share a joint."'
+  minimumPowerLevel: 1
+  maximumPowerLevel: 20
+  outcome: You see through the eyes of a cuttlefish for a few minutes, revealing
+    the structures of the eldritch horrors that lurk beneath the sea, but now you
+    better understand how things stick together.
+  boon: Gain 1 Tape
+  bane: Lose 2 Sanity
   boonBaneDialogue: 
-  dateOutcome: 
+  dateOutcome: '"They''re surprisingly keen on eating calimari and octopus, a fact
+    you find only mildly distressing, but at least 70% of their tentacles seem to
+    like you.
+
+
+    They''re excited during the whale-watching tour you book, even
+    if they mostly seem to enjoy making rude gestures at the whales.
+
+
+    As you
+    curl up in front of the TV afterwards they stuff the pipe with something that
+    unaligns your chakras in 6 dimensions but also gives you a new exciting 9th one."'

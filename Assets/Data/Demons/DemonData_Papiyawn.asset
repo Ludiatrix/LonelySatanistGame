@@ -12,12 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e63742dda97229c99bb000e930444ad, type: 3}
   m_Name: DemonData_Papiyawn
   m_EditorClassIdentifier: LSG::LSG.DemonData_Papiyawn
-  demonName: Ekzeema
+  demonName: Papiyawn
   canDateDemonMultipleTimes: 0
-  introDialogue: 
-  minimumPowerLevel: 0
-  maximumPowerLevel: 0
+  introDialogue: The adorable fluffy white puppy before you yelps once...
+  minimumPowerLevel: 8
+  maximumPowerLevel: 9999999
+  outcome: Then a rift in space opens before you, revealing the gates of hell before
+    you are pulled in. Good news is that your dating woes are over...
   boon: 
-  bane: 
+  bane: Game Over
   boonBaneDialogue: 
   dateOutcome: 

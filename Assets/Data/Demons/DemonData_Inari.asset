@@ -12,12 +12,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23f63356af875a1d08c563dae60779ef, type: 3}
   m_Name: DemonData_Inari
   m_EditorClassIdentifier: LSG::LSG.DemonData_Inari
-  demonName: Ekzeema
+  demonName: Inari
   canDateDemonMultipleTimes: 0
-  introDialogue: 
-  minimumPowerLevel: 0
-  maximumPowerLevel: 0
-  boon: 
-  bane: 
+  introDialogue: '"Rice bubbles out of the summoning circle and above the pile a
+    ripple in the air becomes a whirling of tails, the figure turns around to reveal
+    a sharp-eyed woman with sharper teeth.  You wonder how it would feel for them
+    to sink into your flesh but in, like, a sexy way.
+
+
+    She wrinkles her nose
+    at the smells of your apartment, ""On your knees before this divine one, or maybe
+    I''ll see what your liver tastes like."""'
+  minimumPowerLevel: 10
+  maximumPowerLevel: 20
+  outcome: '"You get a handful of rice
+
+    You know where the nearest rice is at
+    all times        Two days hence, your sink drain is suddenly clogged with orange
+    fur"'
+  boon: For the rest of the game, you will see a warning (either in the dialog box
+    or an icon in the HUD) if the next card to be drawn is white suit.
+  bane: For the rest of the game, the first Orange card played each round causes
+    an additional -1 Sanity loss
   boonBaneDialogue: 
-  dateOutcome: 
+  dateOutcome: '"You convince her of the continued merits of her veganism after looking
+    up videos on how to make homemade tofu online.
+
+
+    Afterwards you dance among
+    fireflies that you''re pretty sure aren''t in season before finding yourself
+    in the midst of a Japanese summer festival.  You have a great time as long as
+    you don''t look too closely at any of the other attendees."'

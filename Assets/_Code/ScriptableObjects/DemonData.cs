@@ -12,6 +12,7 @@ namespace LSG.ScriptableObjects
         [TextArea(5,10)]public string introDialogue;
         public float minimumPowerLevel;
         public float maximumPowerLevel;
+        [TextArea(5,10)] public string outcome;
         [TextArea(5,10)] public string boon;
         [TextArea(5,10)] public string bane;
         [TextArea(5,10)] public string boonBaneDialogue;

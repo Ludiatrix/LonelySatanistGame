@@ -12,12 +12,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a82df9c0be154a2fb7717067f12ea6d4, type: 3}
   m_Name: DemonData_Hoa
   m_EditorClassIdentifier: LSG::LSG.DemonData_Hoa
-  demonName: Ekzeema
+  demonName: Hoa
   canDateDemonMultipleTimes: 0
-  introDialogue: 
-  minimumPowerLevel: 0
-  maximumPowerLevel: 0
+  introDialogue: '"There''s a tremendous grinding of earth and metal and stone. 
+    What rises through the portal is a rusted jalopy on cinderblocks, rimmed with
+    tall tufts of grass that aspire to being wheat.  The tall, cuddly goatess on
+    top tightens her flannel shirt and breaths out vapors of *very* freshly distilled
+    moonshine.
+
+
+    ""Well look who we have here!  You new in the neighborhood? 
+    I got some empty properties next door you could move into.""
+
+
+    "'
+  minimumPowerLevel: 10
+  maximumPowerLevel: 25
+  outcome: Between dodging distillery explosions and traversing the suburban jungle
+    that is her lawn, you're feeling much more physically fit than any reputable
+    black magician has a right to be.  About as exhausted, though.
   boon: 
-  bane: 
+  bane: One of your non-white pages is randomly removed and cannot be purchased again
+    this game.
   boonBaneDialogue: 
-  dateOutcome: 
+  dateOutcome: '"Concerts aren''t your normal go-to, but after three acts singing
+    about running from cops, murdering abusive husbands, and generally having a grand
+    hell of a time, Hoa cuddles up to you before dragging you out dancing.
+
+
+    Every
+    part of her is warm and soft, and you''ve never had a more pleasant tipsiness
+    than this very moment.
+
+
+    In the morning she is gone, but she left you a half
+    dissassembled project car and an unlabeled bottle to remember her by."'

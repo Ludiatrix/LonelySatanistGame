@@ -12,12 +12,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f62eac70c114d5c2a9d59e1ddff2c65, type: 3}
   m_Name: DemonData_K_vis
   m_EditorClassIdentifier: LSG::LSG.DemonData_K_vis
-  demonName: Ekzeema
+  demonName: K'vis
   canDateDemonMultipleTimes: 0
-  introDialogue: 
-  minimumPowerLevel: 0
-  maximumPowerLevel: 0
-  boon: 
-  bane: 
-  boonBaneDialogue: 
-  dateOutcome: 
+  introDialogue: '"Biceps'', you think as the confused figure stands up from within
+    the circle. ''Green biceps'', you think, as you stare at the mighty orc woman
+    in front of you.  One strap of her smithing apron falls off a shoulder as she
+    looks around.
+
+
+    ""What is this, my time to get reborn in another world to
+    be the hero?  %#@ that.  Pipsqueak, can''t you tell Orcs and Oni apart?""  she
+    grumbles."'
+  minimumPowerLevel: 10
+  maximumPowerLevel: 20
+  outcome: "\"She takes your kitchen knives for sharpening\n\nYou learn which symbol
+    in the complicated satanist summoning book means \"\"orc\"\", and does not, in
+    fact, mean \"\"imp\"\"\tYour knives are temporarily missing\""
+  boon: Gain 1 Rizz
+  bane: 'The next summoning, the suit images on the white cards and their power counter
+    are invisible. '
+  boonBaneDialogue: K'vis's Curse has veiled the White pages of the Necronomicon.
+  dateOutcome: '"Getting dragged to a gym wasn''t your first idea for a date, but
+    getting sweaty with K''vis is an experience you wouldn''t trade for anything. 
+    She''s a hit with the other gym-goers, and you get roped into a video with a
+    creator who went by ''leanbisonpattie''.  You have to explain that ''going viral''
+    is a good thing to the Orc, but you''re not sure she gets it.
+
+
+    Still, she
+    seemed interested by the idea of a factory tour, so maybe you can get a second
+    date out of the whole thing."'

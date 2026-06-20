@@ -12,12 +12,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3d957f2b8c24ac6a1c126dedd145284, type: 3}
   m_Name: DemonData_Yaldabaoth
   m_EditorClassIdentifier: LSG::LSG.DemonData_Yaldabaoth
-  demonName: Ekzeema
+  demonName: Yaldabaoth
   canDateDemonMultipleTimes: 0
-  introDialogue: 
-  minimumPowerLevel: 0
-  maximumPowerLevel: 0
-  boon: 
-  bane: 
-  boonBaneDialogue: 
-  dateOutcome: 
+  introDialogue: '"A host of angels announce His coming, His Throne is Glory, His
+    Three Heads Are Mighty And Terrifying.  In His Eyes You See Power, And Yet They
+    Lack Wisdom.  Could There Be More Beyond Him?
+
+
+    Also, isn''t this spell only
+    supposed to summon forces of evil?  What''s with all the angels?"'
+  minimumPowerLevel: 20
+  maximumPowerLevel: 99
+  outcome: Slightly better overall luck, but everything is shuffled
+  boon: If the next 2 cards are a black suit card and a white suit card, the black
+    suit card will move to the position of the next to be drawn.
+  bane: For the rest of the game, all pages are shuffled back into the book after
+    they are played (but power is kept)
+  boonBaneDialogue: N/A
+  dateOutcome: '"He offers to help you make a world the way someone might offer to
+    take you to a pottery class, and yet He seems desperate for approval?
+
+
+    You
+    settle for making a small pocket dimension you can keep on your mantlepiece,
+    but you still get the feeling something is missing from it.
+
+
+    You ensure
+    Him it''s you, not Him, and send him on His way."'
