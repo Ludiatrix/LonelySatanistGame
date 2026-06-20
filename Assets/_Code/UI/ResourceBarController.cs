@@ -32,6 +32,8 @@ namespace LSG.UI
         private void Start()
         {
             _economy = DataManager.Instance.PlayerEconomySource;
+            powerSlider.maxValue = DataManager.Instance.PlayerDeckSource.PlayerDeckCount;
+            UpdateBar();
             GenerateMilestones();
         }
 
@@ -47,9 +49,7 @@ namespace LSG.UI
 
         private void UpdateBar()
         {
-            powerSlider.maxValue = DataManager.Instance.PlayerDeckSource.PlayerDeckCount;
             powerSlider.value = _economy.Power;
-            //milestoneContainer.GetComponent<SmoothMover>().MoveToTarget(milestoneContainer.localPosition - Vector3.left, 2.0f);
             /*
              * TODO: There is a mask on the Resource Bar as we want to pull along the Resource Bar when Milestones progress.
              * We also need to detect when we have surpassed a milestone so we can smoothly pull it to the left with SmoothMover

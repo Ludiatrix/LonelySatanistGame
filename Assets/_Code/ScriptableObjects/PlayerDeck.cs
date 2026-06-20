@@ -112,7 +112,11 @@ namespace LSG.ScriptableObjects
 
         public void Reset()
         {
-            var defaultDeck = Resources.Load<PlayerDeck>($"DefaultDeck");
+            /*
+             * This is some silly C# nonsense, but I need to create a new object once this gets loaded.
+             * If I don't, the default deck gets deleted. Yikes!
+             */
+            var defaultDeck = Instantiate(Resources.Load<PlayerDeck>($"DefaultDeck"));
             _playerDeck = defaultDeck._playerDeck;
             Shuffle();
         }
