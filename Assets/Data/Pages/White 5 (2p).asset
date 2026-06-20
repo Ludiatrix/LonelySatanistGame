@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: White 5 (2p)
   m_EditorClassIdentifier: LSG::LSG.PageData
   CardID: 15
-  CardWord: Beep
+  CardWord: bahrbbeh
   Suit: 0
   PageImage: {fileID: 9209157512530920878, guid: 1de089a86a1e2564ab77a3b7436059a1, type: 3}
   pageImageRipped: {fileID: -2008729208490632903, guid: b376c2173e02d8b4db2cecadb2d563c7, type: 3}

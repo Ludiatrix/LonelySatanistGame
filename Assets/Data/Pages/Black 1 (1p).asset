@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Black 1 (1p)
   m_EditorClassIdentifier: LSG::LSG.PageData
   CardID: 51
-  CardWord: Beep
+  CardWord: yue
   Suit: 3
   PageImage: {fileID: -8305331318043158564, guid: 1de089a86a1e2564ab77a3b7436059a1, type: 3}
   pageImageRipped: {fileID: -4073108329962338164, guid: b376c2173e02d8b4db2cecadb2d563c7, type: 3}
