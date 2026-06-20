@@ -1,4 +1,7 @@
 using System.Collections;
+using LSG.Core;
+using LSG.ScriptableObjects;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -24,17 +27,23 @@ namespace LSG
         [Tooltip("The shared Card description box to show/hide.")]
         [SerializeField] private GameObject cardDescriptionBox;
 
+        [SerializeField] private TMP_Text cardName;
+        [SerializeField] private TMP_Text cardText;
+        
+        [Tooltip("The text field for the button")]
+        [SerializeField] private TMP_Text buttonText;
+
         [Header("Timing")]
         [Tooltip("Delay before the box is enabled, so it doesn't overlap the Card Grid while it slides up. Match the slide duration.")]
         [SerializeField] private float openDelay = 0.7f;
 
         [Header("Events (optional)")]
         [Tooltip("Fired immediately when the box opens/switches to a card (before the delay). Hook this to start the Card Grid slide-up.")]
-        public UnityEvent onOpened;
+        public UnityEvent<CardData> onOpened;
         public UnityEvent onClosed;
 
         // The card the box is currently showing for (null when closed).
-        private Object currentOwner;
+        private CardData currentOwner;
         // Intended open state — tracked separately from activeSelf because the
         // box is enabled on a delay, so activeSelf lags behind during the slide.
         private bool isOpen;
@@ -45,7 +54,7 @@ namespace LSG
         /// <summary>
         /// Called by a card when clicked. Same card again → close; different card → switch.
         /// </summary>
-        public void Toggle(Object owner)
+        public void Toggle(CardData owner)
         {
             if (cardDescriptionBox == null)
                 return;
@@ -59,8 +68,13 @@ namespace LSG
 
             // Otherwise open (or switch to) this card.
             currentOwner = owner;
+
+            cardName.text = owner.CardWord;
+            cardText.text = owner.CardEffect;
+            buttonText.text = $"Repair for {owner.TapeCost.ToString()}";
+            
             isOpen = true;
-            onOpened.Invoke();
+            onOpened.Invoke(owner);
 
             // Enable the box after the delay (unless it's already visible, e.g. switching cards).
             if (!cardDescriptionBox.activeSelf && showRoutine == null)
@@ -97,6 +111,11 @@ namespace LSG
                 cardDescriptionBox.SetActive(true);
 
             showRoutine = null;
+        }
+
+        public void RequestToBuyCurrentlyOwnedCard()
+        {
+            CardEvents.BuyCardRequest?.Invoke(currentOwner);
         }
     }
 }

@@ -23,8 +23,8 @@ namespace LSG.Core
         public static readonly UnityEvent StopChosen = new UnityEvent();
         
         // Store Phase Events
-        public static readonly UnityEventExtensions.UnityPageDataEvent PageAdded = new UnityEventExtensions.UnityPageDataEvent();
-        public static readonly UnityEventExtensions.UnityPageDataEvent CardTaken = new UnityEventExtensions.UnityPageDataEvent();
+        public static readonly UnityEventExtensions.UnityCardDataEvent CardAdded = new UnityEventExtensions.UnityCardDataEvent();
+        public static readonly UnityEventExtensions.UnityCardDataEvent CardTaken = new UnityEventExtensions.UnityCardDataEvent();
         
         // Encounter Phase Events
         public static readonly UnityEventExtensions.UnityDemonDataEvent DemonEncountered = new UnityEventExtensions.UnityDemonDataEvent();

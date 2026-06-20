@@ -1,3 +1,4 @@
+using LSG.Core;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -40,7 +41,9 @@ namespace LSG
         private void OnCardClicked()
         {
             if (panel != null)
-                panel.Toggle(this);
+                panel.Toggle(GetComponent<StorePagePopulator>().cardData);
+            
+            UIEvents.StoreButtonClicked?.Invoke();
         }
     }
 }

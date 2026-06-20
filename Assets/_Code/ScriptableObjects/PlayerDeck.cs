@@ -18,6 +18,15 @@ namespace LSG.ScriptableObjects
         public CardList DefaultLibrary;
         public CardList DefaultShopList;
         public CardList DefaultDeck;
+        
+        public int PlayerDeckCount => playerDeck.Count;
+
+        private void OnEnable()
+        {
+            CardEvents.AddRandomCard?.AddListener(OnAddRandomCard);
+            CardEvents.RemoveRandomCard?.AddListener(OnRemoveRandomCard);
+            CardEvents.BuyCardRequest?.AddListener(OnTryBuyCard);
+        }
 
         public CardData[] PeekAheadAtLibrary(int peekAheadLength = 1)
         {
@@ -82,7 +91,7 @@ namespace LSG.ScriptableObjects
         {
             playerDeck.Add(card);
             playerDeck.Shuffle();
-            GameEvents.PageAdded?.Invoke(card);
+            GameEvents.CardAdded?.Invoke(card);
         }
         
         public CardData TakeCardFromPlayerDeck()
@@ -141,13 +150,22 @@ namespace LSG.ScriptableObjects
         {
             playerDeck.Shuffle();
         }
-
-        public int PlayerDeckCount => playerDeck.Count;
-
-        private void OnEnable()
+        
+        private void OnTryBuyCard(CardData cardToTryBuying)
         {
-            CardEvents.AddRandomCard.AddListener(OnAddRandomCard);
-            CardEvents.RemoveRandomCard.AddListener(OnRemoveRandomCard);
+            /*
+             * We check two things:
+             * check if we can even afford it
+             * check if the card is already in our library
+             */
+            if (DataManager.Instance.PlayerEconomySource.Tape >= cardToTryBuying.TapeCost && !playerDeck.Contains(cardToTryBuying) || !playedCards.Contains(cardToTryBuying))
+            {
+                CardEvents.BuyCardSuccessResponse?.Invoke(cardToTryBuying);
+            }
+            else
+            {
+                CardEvents.BuyCardFailedResponse?.Invoke(cardToTryBuying);
+            }
         }
 
         /*

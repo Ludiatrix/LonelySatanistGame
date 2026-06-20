@@ -8,9 +8,12 @@ namespace LSG.Core
     /// </summary>
     public static class CardEvents
     {
-        public static readonly UnityEventExtensions.UnityPageDataEvent CardRepaired = new UnityEventExtensions.UnityPageDataEvent();
-        public static readonly UnityEventExtensions.UnityPageDataEvent CardPlayed = new UnityEventExtensions.UnityPageDataEvent();
+        public static readonly UnityEventExtensions.UnityCardDataEvent CardRepaired = new UnityEventExtensions.UnityCardDataEvent();
+        public static readonly UnityEventExtensions.UnityCardDataEvent CardPlayed = new UnityEventExtensions.UnityCardDataEvent();
         public static readonly UnityEventExtensions.UnitySuitEvent AddRandomCard = new UnityEventExtensions.UnitySuitEvent();
         public static readonly UnityEventExtensions.UnitySuitEvent RemoveRandomCard = new UnityEventExtensions.UnitySuitEvent();
+        public static readonly UnityEventExtensions.UnityCardDataEvent BuyCardRequest = new UnityEventExtensions.UnityCardDataEvent();
+        public static readonly UnityEventExtensions.UnityCardDataEvent BuyCardSuccessResponse = new UnityEventExtensions.UnityCardDataEvent();
+        public static readonly UnityEventExtensions.UnityCardDataEvent BuyCardFailedResponse = new UnityEventExtensions.UnityCardDataEvent();
     }
 }

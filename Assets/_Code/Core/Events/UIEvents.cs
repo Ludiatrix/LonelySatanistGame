@@ -13,5 +13,6 @@ namespace LSG.Core
         public static readonly UnityEventExtensions.UnityBoolEvent FlipDialogueText = new UnityEventExtensions.UnityBoolEvent();
         public static readonly UnityEvent DisableButtons = new UnityEvent();
         public static UnityEventExtensions.UnityBoolEvent TogglePageArt = new UnityEventExtensions.UnityBoolEvent();
+        public static readonly UnityEvent StoreButtonClicked = new UnityEvent();
     }
 }

@@ -11,6 +11,11 @@ namespace LSG
         {
             TargetImage.sprite = sprite;
         }
+
+        public void SetColor(Color color)
+        {
+            TargetImage.color = color;
+        }
         public void SetUnavailable(bool unavailable)
         {
             Color color = TargetImage.color;

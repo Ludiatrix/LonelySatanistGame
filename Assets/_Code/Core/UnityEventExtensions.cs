@@ -9,7 +9,7 @@ namespace LSG.Core
     {
         public class UnityStateEvent : UnityEvent<Enums.GameState> { }
         public class UnityPageReadEvent : UnityEvent { }
-        public class UnityPageDataEvent : UnityEvent<CardData> { }
+        public class UnityCardDataEvent : UnityEvent<CardData> { }
         public class UnityDemonDataEvent : UnityEvent<DemonData> { }
         public class UnityIntEvent : UnityEvent<int> { }
         public class UnityBoolEvent : UnityEvent<bool> { }

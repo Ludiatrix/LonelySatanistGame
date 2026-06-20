@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using LSG.Core;
 using LSG.ScriptableObjects;
+using LSG.Utils;
 using UnityEngine;
 
 namespace LSG.UI
@@ -11,19 +12,52 @@ namespace LSG.UI
     {
         public StorePagePopulator templateStorePageItem;
         public Transform storeGridTransform;
+        public SmoothMover frameMover;
+        public Transform moverTransformTarget;
         public StorePagePopulator previewPage;
         public CardDescriptionPanel descriptionPanel;
 
         public List<StorePagePopulator> populatedStorePageItems = new List<StorePagePopulator>();
 
+        private bool _buyablePageClicked = false;
+
         private void OnEnable()
         {
             PhaseEvents.StorePhaseStarted?.AddListener(OnStorePhaseStarted);
-            PhaseEvents.StorePhaseEnded?.AddListener(OnStorePhaseEnded);
+            UIEvents.StoreButtonClicked?.AddListener(OnStoreButtonClicked);
+            
+            CardEvents.BuyCardSuccessResponse?.AddListener(OnBuyCardSuccessResponse);
+            CardEvents.BuyCardSuccessResponse?.AddListener(OnBuyCardFailedResponse);
+        }
+
+        private void OnBuyCardSuccessResponse(CardData successfulCardData)
+        {
+            foreach (var populatedStorePageItem in populatedStorePageItems)
+            {
+                if (populatedStorePageItem.cardData == successfulCardData)
+                {
+                    populatedStorePageItem.SetPageData(successfulCardData, true);
+                    populatedStorePageItem.SuccessPulse();
+                }
+            }
+        }
+        
+        private void OnBuyCardFailedResponse(CardData failedCardData)
+        {
+            foreach (var populatedStorePageItem in populatedStorePageItems)
+            {
+                if (populatedStorePageItem.cardData == failedCardData)
+                {
+                    populatedStorePageItem.FailPulse();
+                }
+            }
         }
 
         private void OnStorePhaseStarted()
         {
+            // Make sure the store is clear first
+            ClearStoreCards();
+            
             // We want to first display the default player deck
             GenerateStoreItems(DataManager.Instance.PlayerDeckSource.DefaultDeck.Cards, true);
             
@@ -41,10 +75,11 @@ namespace LSG.UI
                 GenerateStoreItem(shopCard, ownedCards.Contains(shopCard));
             }
         }
-
-        private void OnStorePhaseEnded()
+        
+        private void OnStoreButtonClicked()
         {
-            ClearStoreCards();
+            if (_buyablePageClicked) return;
+            frameMover.MoveToTarget(moverTransformTarget.position, 2.0f);
         }
 
         private void GenerateStoreItems(CardData[] cardsToGenerate, bool owned)
