@@ -21,6 +21,18 @@ namespace LSG.ScriptableObjects
             CardEvents.RemoveRandomCard.AddListener(OnRemoveRandomCard);
         }
 
+        public CardData[] PeekAhead(int peekAheadAmount = 1)
+        {
+            List<CardData> peekedCards = new List<CardData>();
+            
+            for (int i = 0; i < peekAheadAmount; i++)
+            {
+                peekedCards.Add(_playerDeck[i]);
+            }
+
+            return peekedCards.ToArray();
+        }
+
         /*
          * Adds a random card.
          * Can set if we must search for a specific suit
