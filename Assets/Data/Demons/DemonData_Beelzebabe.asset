@@ -46,3 +46,4 @@ MonoBehaviour:
     Maybe the real treasure was the experiences
     gained along the way, but a gorgeous demonic partner is also a pretty phenomenal
     result."'
+  demonSprite: {fileID: 5912759927948260431, guid: d5e88fa6e12c4efd4896612dec4c8525, type: 3}

@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: DemonData_Ekzeema
   m_EditorClassIdentifier: LSG::LSG.DemonData_Ekzeema
   demonName: Ekzeema
+  canDateDemonMultipleTimes: 0
   introDialogue: '"You have an inkling that there''s an attractive figure in the
     summoning circle, but they''re a bit hard to make out under the cloud of dust,
     pollen, synthetic fibers, and other less-identifiable particulate swirling around
@@ -34,3 +35,4 @@ MonoBehaviour:
     You
     hold two or three of their hands while checking the pollen count before heading
     out for a nice meal of battered shellfish in soy-peanut sauce."'
+  demonSprite: {fileID: -1605223320372934923, guid: 6e32c2cd0cfb7623aa58e9e03c1daeed, type: 3}

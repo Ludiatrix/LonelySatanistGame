@@ -35,7 +35,7 @@ namespace LSG.Phases
             base.StartPhase();
             Container.SetActive(true);
             PhaseEvents.SummoningPhaseStarted?.Invoke();
-            
+            UIEvents.ToggleResourceUI?.Invoke(true);
             TurnPage(); // Turns the first page
         }
 

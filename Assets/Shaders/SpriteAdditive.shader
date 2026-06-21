@@ -64,7 +64,9 @@ Shader "LSG/SpriteAdditive"
             fixed4 frag(v2f i) : SV_Target
             {
                 fixed4 c = tex2D(_MainTex, i.uv) * i.color;
-                c.rgb *= _Brightness;         // crank for a stronger glow
+
+                // Additive blending ignores alpha, so alpha must scale brightness.
+                c.rgb *=c.a * _Brightness;         // crank for a stronger glow
                 return c;
             }
             ENDCG
