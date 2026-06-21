@@ -30,6 +30,9 @@ namespace LSG.Core
         public static readonly UnityEventExtensions.UnityDemonDataEvent DemonEncountered = new UnityEventExtensions.UnityDemonDataEvent();
         public static readonly UnityEvent TryToDateChosen = new UnityEvent();
         public static readonly UnityEvent GiveUpChosen = new UnityEvent();
+
+        public static readonly UnityEvent DiceRollRequest = new UnityEvent();
+        public static readonly UnityEventExtensions.UnityIntEvent DiceRollResult = new UnityEventExtensions.UnityIntEvent();
         
         // Utility Events
         public static readonly UnityEventExtensions.UnityStateEvent ChangeState = new UnityEventExtensions.UnityStateEvent();
