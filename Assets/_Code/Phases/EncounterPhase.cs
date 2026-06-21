@@ -42,6 +42,7 @@ namespace LSG.Phases
         {
             GameEvents.TryToDateChosen?.AddListener(OnTryToDateChosen);
             GameEvents.GiveUpChosen?.AddListener(OnGiveUpChosen);
+            GameEvents.DiceRollResult?.AddListener(OnDiceRollResult);
         }
 
         private void OnDisable()
@@ -62,8 +63,13 @@ namespace LSG.Phases
 
         private void GoOnDate()
         {
-            int d20Roll = Random.Range(1, 21); // The Random D20 Roll for the Date
-            if (d20Roll <= _economy.Rizz)
+            // Begin the DICE ROLL!
+            GameEvents.DiceRollRequest?.Invoke();
+        }
+
+        private void OnDiceRollResult(int d20RollResult)
+        {
+            if (d20RollResult <= _economy.Rizz)
             {
                 SucceedDate();
             }
