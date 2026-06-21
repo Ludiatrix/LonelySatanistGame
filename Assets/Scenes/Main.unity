@@ -2515,7 +2515,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: LSG::LSG.Phases.EncounterPhase
   Container: {fileID: 22647094}
-  demonImage: {fileID: 0}
+  demonImage: {fileID: 413037126}
 --- !u!1 &1131033384
 GameObject:
   m_ObjectHideFlags: 0
