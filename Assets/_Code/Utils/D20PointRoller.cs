@@ -226,6 +226,9 @@ namespace LSG.Utils
             Debug.Log($"D20 result: {topFace.faceNumber} | dot: {topDot:0.000}", this);
 
             GameEvents.DiceRollResult?.Invoke(int.Parse(topFace.faceNumber));
+            _rigidbody.useGravity = false;
+            _rigidbody.position = startPosition.position;
+            _rigidbody.rotation = startPosition.rotation;
         }
 
         private DiceFacePoint GetTopFace(out float bestDot)
