@@ -30,6 +30,11 @@ public class PlayerEconomy : ScriptableObject
     {
         Rizz++;
         Sanity--;
+
+        if (Sanity <= 0)
+        {
+            GameEvents.ChangeState?.Invoke(Enums.GameState.LosePhase);
+        }
     }
 
     private void OnDisable()
