@@ -40,3 +40,4 @@ MonoBehaviour:
 
     Dinner afterwards is
     good, although you cannot remember what you had for dessert."'
+  demonSprite: {fileID: -1010483063749733575, guid: b876d1097e5b75a1f8d6fcb38edbed5c, type: 3}

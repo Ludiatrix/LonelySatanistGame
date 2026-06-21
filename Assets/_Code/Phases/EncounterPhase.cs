@@ -2,6 +2,7 @@ using System;
 using LSG.Core;
 using LSG.ScriptableObjects;
 using UnityEngine;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 namespace LSG.Phases
@@ -14,6 +15,7 @@ namespace LSG.Phases
     public class EncounterPhase : Phase
     {
         [SerializeField] private GameObject Container;
+        [SerializeField] private Image demonImage;
         
         private PlayerEconomy _economy;
         private DemonData _chosenDemonThisPhase = null;
@@ -26,6 +28,7 @@ namespace LSG.Phases
             Debug.Log("[EncounterPhase] Starting Phase!");
             base.StartPhase();
             Container.SetActive(true);
+            UIEvents.ToggleResourceUI?.Invoke(false);
             FindAHottie();
             PhaseEvents.EncounterPhaseStarted?.Invoke();
         }
@@ -116,6 +119,8 @@ namespace LSG.Phases
             _chosenDemonThisPhase = DataManager.Instance.DemonDatingPoolSource.EncounterDemonBasedOnPower(_economy.Power);
             
             // This will turn on the Dialogue Window and inject the DemonData
+            demonImage.sprite = _chosenDemonThisPhase.demonSprite;
+            demonImage.SetNativeSize();
             GameEvents.DemonEncountered?.Invoke(_chosenDemonThisPhase);
         }
     }

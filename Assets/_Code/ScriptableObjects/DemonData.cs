@@ -17,6 +17,7 @@ namespace LSG.ScriptableObjects
         [TextArea(5,10)] public string bane;
         [TextArea(5,10)] public string boonBaneDialogue;
         [TextArea(5,10)] public string dateOutcome;
+        public Sprite demonSprite;
 
         public abstract void ApplyEffect();
         

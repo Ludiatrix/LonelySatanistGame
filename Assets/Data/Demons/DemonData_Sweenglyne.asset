@@ -40,3 +40,4 @@ MonoBehaviour:
     cartridges and shiny red staplers into the hellgate you draw in the middle of
     the store.  You do get a kiss before they vanish into the portal as the cops
     show up to the store."'
+  demonSprite: {fileID: 6124846179822445239, guid: d487ff2fe7649253da5acef934c3f2b0, type: 3}
