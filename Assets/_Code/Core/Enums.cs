@@ -13,26 +13,9 @@ namespace LSG.Core
             SetupPhase = 1,
             SummoningPhase = 2,
             EncounterPhase = 3,
-            
-            /*
-             * TODO:The player decides to "Try to Date" or "Give Up". Choosing to date triggers a D20 roll against their cumulative Rizz stat.
-               Success: Triggers a unique, positive single-screen Date Ending dialogue.
-               Failure: The player receives the demon's Boon and Bane including any mechanical effects, (e.g. additional Sanity loss), and advances to the Shop phase.
-             */
-            DatePhase = 4,
-            
-            // TODO: The player spends earned tape to assemble additional torn up Necronomicon pages to permanently add new pages into their deck.
             StorePhase = 5,
-            
-            // TODO: The player hits "Summon Again," shuffling the newly expanded deck to begin the cycle anew.
-            ResetPhase = 6,
-            
-            // TODO: The player hits the boss fight with "Beelzebabe" WIP
-            BossPhase = 7,
-            
-            //TODO: End Phase WIP
-            EndPhase = 8,
-            
+            WinPhase = 7,
+            LosePhase = 8,
             NullPhase = 999,
         }
 

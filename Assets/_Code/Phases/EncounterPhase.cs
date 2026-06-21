@@ -87,15 +87,23 @@ namespace LSG.Phases
         private void SucceedDate()
         {
             // Date Succeeds!
-            Debug.Log("[TryToDateEmitter] You have succeeded the date!");
+            Debug.Log("[EncounterPhase] You have succeeded the date!");
             UIEvents.ToggleEncounterButtons?.Invoke(false);
-            UIEvents.SetDialogueText?.Invoke(_chosenDemonThisPhase?.dateOutcome);
+
+            if (_chosenDemonThisPhase.demonName == "Beelzebabe")
+            {
+                // Look let's just make this easy on ourselves here
+                GameEvents.ChangeState?.Invoke(Enums.GameState.WinPhase);
+            } else
+            {
+                UIEvents.SetDialogueText?.Invoke(_chosenDemonThisPhase?.dateOutcome);
+            }
         }
 
         private void FailDate()
         {
             // Give the Boon and Bane Effects and Dialogue
-            Debug.Log("[TryToDateEmitter] You have failed the date!");
+            Debug.Log("[EncounterPhase] You have failed the date!");
             UIEvents.ToggleEncounterButtons?.Invoke(false);
             UIEvents.SetDialogueText?.Invoke(_chosenDemonThisPhase?.boonBaneDialogue);
             _chosenDemonThisPhase?.ApplyEffect();

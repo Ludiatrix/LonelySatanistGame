@@ -55,7 +55,7 @@ public class PlayerEconomy : ScriptableObject
 
         if (WhiteSuitPoints > 8)
         {
-            GameEvents.ChangeState?.Invoke(Enums.GameState.EndPhase);
+            GameEvents.ChangeState?.Invoke(Enums.GameState.LosePhase);
         }
         else
         {
