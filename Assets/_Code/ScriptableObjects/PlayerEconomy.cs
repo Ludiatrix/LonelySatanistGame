@@ -30,6 +30,11 @@ public class PlayerEconomy : ScriptableObject
     {
         Rizz++;
         Sanity--;
+
+        if (Sanity <= 0)
+        {
+            GameEvents.ChangeState?.Invoke(Enums.GameState.LosePhase);
+        }
     }
 
     private void OnDisable()
@@ -55,7 +60,7 @@ public class PlayerEconomy : ScriptableObject
 
         if (WhiteSuitPoints > 8)
         {
-            GameEvents.ChangeState?.Invoke(Enums.GameState.EndPhase);
+            GameEvents.ChangeState?.Invoke(Enums.GameState.LosePhase);
         }
         else
         {

@@ -99,7 +99,7 @@ namespace LSG.ScriptableObjects
             if (playerDeck.Count == 0)
             {
                 Debug.Log($"[PlayerDeck] There are no more pages... how did you do that? Ah well, you lose!");
-                // TODO: Add lose condition here
+                GameEvents.ChangeState?.Invoke(Enums.GameState.LosePhase);
                 return null;
             }
             CardData card = playerDeck[playerDeck.Count - 1]; // Riza: fun fact getting the end index is faster than the first
@@ -215,9 +215,5 @@ namespace LSG.ScriptableObjects
         {
             
         }
-        
-        
-
-        
     }
 }
