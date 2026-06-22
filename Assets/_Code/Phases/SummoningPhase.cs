@@ -1,7 +1,5 @@
-using System;
 using LSG.Core;
 using LSG.ScriptableObjects;
-using LSG.UI;
 using UnityEngine;
 
 namespace LSG.Phases
@@ -12,13 +10,6 @@ namespace LSG.Phases
     public class SummoningPhase : Phase
     {
         public GameObject Container;
-        
-        // Page Generation
-        public Transform PagesTransform;
-        public GameObject PagePrefab;
-        public Transform PageTurnDestinationTransform;
-
-        private PageFacade _currentPage = null;
 
         private void OnEnable()
         {
@@ -58,19 +49,11 @@ namespace LSG.Phases
             
             Debug.Log($"[Summoning Phase] We have page: {data.name} with word {data.CardWord} and suit {data.Suit.ToString()}");
 
-            DisplayPage(data);
+            UIEvents.DisplayNecronomiconPage?.Invoke(data);
             SetCardTextOnDialogueWindow(data);
             ApplyCardEffects(data);
 
             GameEvents.PageRead?.Invoke();
-        }
-
-        private void DisplayPage(CardData data)
-        {
-            GameObject page = Instantiate(PagePrefab, PagesTransform, false);
-            page.transform.SetAsFirstSibling();
-            _currentPage = page.GetComponent<PageFacade>();
-            _currentPage.Inject(data, PageTurnDestinationTransform);
         }
 
         private void SetCardTextOnDialogueWindow(CardData data)
@@ -87,7 +70,7 @@ namespace LSG.Phases
 
         private void TurnPage()
         {
-            _currentPage.TurnPage();
+            UIEvents.TurnNecronomiconPage?.Invoke();
             GeneratePage();
         }
 
@@ -97,6 +80,7 @@ namespace LSG.Phases
             base.EndPhase();
             Container.SetActive(false);
             PhaseEvents.SummoningPhaseEnded?.Invoke();
+            UIEvents.ToggleNecronomicon?.Invoke(false);
         }
 
         private void OnKeepReadingChosen()

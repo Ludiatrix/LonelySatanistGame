@@ -1,4 +1,5 @@
 using UnityEngine.Events;
+using static LSG.Core.UnityEventExtensions;
 
 namespace LSG.Core
 {
@@ -16,5 +17,8 @@ namespace LSG.Core
         public static readonly UnityEvent DisableButtons = new UnityEvent();
         public static UnityEventExtensions.UnityBoolEvent TogglePageArt = new UnityEventExtensions.UnityBoolEvent();
         public static readonly UnityEvent StoreButtonClicked = new UnityEvent();
+        public static readonly UnityCardDataEvent DisplayNecronomiconPage = new UnityCardDataEvent();
+        public static readonly UnityEvent TurnNecronomiconPage = new UnityEvent();
+        public static readonly UnityBoolEvent ToggleNecronomicon = new UnityBoolEvent();
     }
 }
