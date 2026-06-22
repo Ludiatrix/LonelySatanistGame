@@ -1,3 +1,4 @@
+using System;
 using LSG.Core;
 using LSG.ScriptableObjects;
 using LSG.UI;
@@ -16,6 +17,8 @@ namespace LSG.Phases
         public Transform PagesTransform;
         public GameObject PagePrefab;
         public Transform PageTurnDestinationTransform;
+
+        private PageFacade _currentPage = null;
 
         private void OnEnable()
         {
@@ -41,7 +44,51 @@ namespace LSG.Phases
             }
             PhaseEvents.SummoningPhaseStarted?.Invoke();
             UIEvents.ToggleResourceUI?.Invoke(true);
-            TurnPage(); // Turns the first page
+            GeneratePage();
+        }
+
+        private void GeneratePage()
+        {
+            CardData data = DataManager.Instance.PlayerDeckSource.TakeCardFromPlayerDeck();
+            GenerateSpecificPage(data);
+        }
+
+        private void GenerateSpecificPage(CardData data)
+        {
+            
+            Debug.Log($"[Summoning Phase] We have page: {data.name} with word {data.CardWord} and suit {data.Suit.ToString()}");
+
+            DisplayPage(data);
+            SetCardTextOnDialogueWindow(data);
+            ApplyCardEffects(data);
+
+            GameEvents.PageRead?.Invoke();
+        }
+
+        private void DisplayPage(CardData data)
+        {
+            GameObject page = Instantiate(PagePrefab, PagesTransform, false);
+            page.transform.SetAsFirstSibling();
+            _currentPage = page.GetComponent<PageFacade>();
+            _currentPage.Inject(data, PageTurnDestinationTransform);
+        }
+
+        private void SetCardTextOnDialogueWindow(CardData data)
+        {
+            UIEvents.SetNamePlateText?.Invoke(data.CardWord);
+            UIEvents.SetDialogueText?.Invoke(data.CardEffect);
+        }
+
+        private void ApplyCardEffects(CardData data)
+        {
+            EconomyEvents.SendPayload?.Invoke(data.PageModifier);
+            DataManager.Instance.EffectDataSource.ResolveCardEffect(data);
+        }
+
+        private void TurnPage()
+        {
+            _currentPage.TurnPage();
+            GeneratePage();
         }
 
         public override void EndPhase()
@@ -50,26 +97,6 @@ namespace LSG.Phases
             base.EndPhase();
             Container.SetActive(false);
             PhaseEvents.SummoningPhaseEnded?.Invoke();
-        }
-
-        private void TurnPage()
-        {
-            CardData data = DataManager.Instance.PlayerDeckSource.TakeCardFromPlayerDeck();
-            TurnSpecificPage(data);
-        }
-
-        private void TurnSpecificPage(CardData data)
-        {
-            Debug.Log("[Summoning Phase] Turning the Page...");
-            GameObject page = Instantiate(PagePrefab, PagesTransform, false);
-            Debug.Log($"[Summoning Phase] We have page: {data.name} with word {data.CardWord} and suit {data.Suit.ToString()}");
-            UIEvents.SetNamePlateText?.Invoke(data.CardWord);
-            UIEvents.SetDialogueText?.Invoke(data.CardEffect);
-            EconomyEvents.SendPayload?.Invoke(data.PageModifier);
-            DataManager.Instance.EffectDataSource.ResolveCardEffect(data);
-            page.GetComponent<PageFacade>().Inject(data, PageTurnDestinationTransform);
-            Debug.Log("[SummoningPhase] Page Turned!");
-            GameEvents.PageRead?.Invoke();
         }
 
         private void OnKeepReadingChosen()
@@ -84,6 +111,5 @@ namespace LSG.Phases
             UIEvents.ToggleDialogueWindow?.Invoke(false);
             GameEvents.ChangeState?.Invoke(Enums.GameState.EncounterPhase);
         }
-        
     }
 }

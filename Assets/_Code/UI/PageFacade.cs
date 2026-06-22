@@ -1,3 +1,4 @@
+using System;
 using LSG.Core;
 using LSG.ScriptableObjects;
 using LSG.Utils;
@@ -15,17 +16,13 @@ namespace LSG.UI
         [SerializeField] private Image pageImage;
         public CardData cardData = null;
         [SerializeField] private Sprite blankPageSprite;
+        private Transform _pageTurnDestinationTransform;
         
         public void Inject(CardData data, Transform PageTurnDestinationTransform = null)
         {
             cardData = data;
+            _pageTurnDestinationTransform = PageTurnDestinationTransform;
             ApplyVisuals();
-
-            if (PageTurnDestinationTransform != null)
-            {
-                RunPageAnimation(PageTurnDestinationTransform);
-            }
-            
         }
 
         private void ApplyVisuals()
@@ -43,6 +40,12 @@ namespace LSG.UI
         public void SwapToBlankPage()
         {
             pageImage.sprite = blankPageSprite;
+            transform.SetAsLastSibling();
+        }
+
+        internal void TurnPage()
+        {
+            RunPageAnimation(_pageTurnDestinationTransform);
         }
     }
 }

@@ -707,7 +707,7 @@ GameObject:
   - component: {fileID: 4539341522191057755}
   - component: {fileID: 6781041434936124132}
   - component: {fileID: 4178744097217861154}
-  - component: {fileID: 6285209028903145934}
+  - component: {fileID: 4129998958528844440}
   m_Layer: 5
   m_Name: ExitStoreEmitter
   m_TagString: Untagged
@@ -732,7 +732,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -34.400024, y: 29.599976}
+  m_AnchoredPosition: {x: -34.399902, y: 29.599976}
   m_SizeDelta: {x: 205.2, y: 40.4}
   m_Pivot: {x: 1, y: 0}
 --- !u!222 &4539341522191057755
@@ -817,8 +817,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6285209028903145934}
-        m_TargetAssemblyTypeName: LSG.UI.ExitStoreEmitter, LSG
+      - m_Target: {fileID: 4129998958528844440}
+        m_TargetAssemblyTypeName: LSG.UI.Emitters.ChangeGameStateEmitter, LSG
         m_MethodName: Emit
         m_Mode: 1
         m_Arguments:
@@ -829,7 +829,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &6285209028903145934
+--- !u!114 &4129998958528844440
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -838,9 +838,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2371733534297587258}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d13a201472c5c1268bd0164b02237700, type: 3}
+  m_Script: {fileID: 11500000, guid: 601de0b45f15e1e278e1e919ec50bc65, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: LSG::LSG.UI.ExitStoreEmitter
+  m_EditorClassIdentifier: LSG::LSG.UI.Emitters.ChangeGameStateEmitter
+  gameStateToChangeTo: 1
 --- !u!1 &2691345317544086592
 GameObject:
   m_ObjectHideFlags: 0
@@ -1920,7 +1921,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 61.599976, y: 9.299988}
+  m_AnchoredPosition: {x: 61.600098, y: 9.300049}
   m_SizeDelta: {x: -546.23, y: -130.17}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1438804455564057170
@@ -2926,11 +2927,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5205139960270529065, guid: 3653f3ce07a0445b781302691ea5644b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 107.099976
+      value: 107.1001
       objectReference: {fileID: 0}
     - target: {fileID: 5205139960270529065, guid: 3653f3ce07a0445b781302691ea5644b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -348.9
+      value: -348.90002
       objectReference: {fileID: 0}
     - target: {fileID: 5205139960270529065, guid: 3653f3ce07a0445b781302691ea5644b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
