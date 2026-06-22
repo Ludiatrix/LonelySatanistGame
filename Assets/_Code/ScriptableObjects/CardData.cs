@@ -1,6 +1,8 @@
 using LSG.Classes;
 using LSG.Core;
+using LSG.Effects;
 using UnityEngine;
+using static LSG.Core.Enums;
 
 namespace LSG.ScriptableObjects
 {
@@ -13,8 +15,9 @@ namespace LSG.ScriptableObjects
         [TextArea] public string CardEffect = "";
         public Enums.Suit Suit = Enums.Suit.White;
         public Sprite PageImage;
-        [SerializeField]
-        private Sprite pageImageRipped;
+
+        [SerializeField] private Sprite pageImageRipped;
+
         public Sprite PageImageRipped
         {
             get
@@ -26,5 +29,9 @@ namespace LSG.ScriptableObjects
 
         public AudioClip Sound;
         public ModifierPayload PageModifier;
+
+        [Header("Effects")]
+        public CardEffectType EffectType;
+        public int EffectAmount;
     }
 }

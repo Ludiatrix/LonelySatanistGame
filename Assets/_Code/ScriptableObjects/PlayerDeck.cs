@@ -87,11 +87,45 @@ namespace LSG.ScriptableObjects
         }
         
 
-        private void AddCardToPlayerDeck(CardData card)
+        public void AddCardToPlayerDeck(CardData card)
         {
             playerDeck.Add(card);
             playerDeck.Shuffle();
             GameEvents.CardAdded?.Invoke(card);
+        }
+
+        public CardData RemoveCardFromPlayedCards(bool shuffle = true, int tapeCost = -1, Enums.Suit suit = Enums.Suit.None) 
+        {
+             if (shuffle)
+             {
+                 DataManager.Instance.PlayerDeckSource.playedCards.Shuffle();
+             }
+
+             if (tapeCost != -1)
+             {
+                 foreach (var card in DataManager.Instance.PlayerDeckSource.playedCards)
+                 {
+                     if (card.TapeCost == tapeCost)
+                     {
+                         DataManager.Instance.PlayerDeckSource.playedCards.Remove(card);
+                         return card;
+                     }
+                 }
+             }
+
+             if (suit != Enums.Suit.None)
+             {
+                 foreach (var card in DataManager.Instance.PlayerDeckSource.playedCards)
+                 {
+                     if (card.Suit == suit)
+                     {
+                         DataManager.Instance.PlayerDeckSource.playedCards.Remove(card);
+                         return card;
+                     }
+                 }
+             }
+
+             return null;
         }
         
         public CardData TakeCardFromPlayerDeck()
@@ -214,6 +248,11 @@ namespace LSG.ScriptableObjects
         private void OnRemoveRandomCard(Enums.Suit suitToIgnore, bool canBeBoughtAgain = false)
         {
             
+        }
+
+        public void RemoveAll(Func<object, bool> func)
+        {
+            throw new NotImplementedException();
         }
     }
 }

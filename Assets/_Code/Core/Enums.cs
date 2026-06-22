@@ -44,5 +44,22 @@ namespace LSG.Core
             UsableOnce = 0,
             Repeatable = 1,
         }
+
+        /// <summary>
+        /// Wug plz dont hate meeee
+        /// </summary>
+        public enum CardEffectType
+        {
+            None,
+
+            GainRizz,
+            LoseSanity,
+            LoseSanityAndShuffleReadPageBackIntoDeck,
+            RemoveCardFromThisSummoningRoundWithTapeCostOne,
+            ReturnWhitePagesToDeckAndRemovePower,
+            RepairRandomCardAtNoTapeCost,
+            GainPowerForEachOrangeRead,
+            ReturnRandomCardToDeckDoNotTouchPower
+        }
     }
 }
