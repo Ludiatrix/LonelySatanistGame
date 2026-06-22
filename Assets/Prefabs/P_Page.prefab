@@ -106,7 +106,7 @@ MonoBehaviour:
   pageRotator: {fileID: 2393595002333825949}
   pageImage: {fileID: 404199919649408110}
   cardData: {fileID: 0}
-  blankPageSprite: {fileID: 326034597, guid: 1de089a86a1e2564ab77a3b7436059a1, type: 3}
+  blankPageSprite: {fileID: 47841912986757458, guid: be37db9fed5a9016982609a512a64be6, type: 3}
 --- !u!1 &9058398681709471340
 GameObject:
   m_ObjectHideFlags: 0
@@ -139,10 +139,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 4574823397904897460}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 327, y: 0}
-  m_SizeDelta: {x: -154, y: -137}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 305, y: -11}
+  m_SizeDelta: {x: 600, y: 723}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3448132989627642558
 CanvasRenderer:
