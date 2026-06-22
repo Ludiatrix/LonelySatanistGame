@@ -1,4 +1,6 @@
+using System;
 using LSG;
+using LSG.Classes;
 using LSG.Core;
 using LSG.ScriptableObjects;
 using UnityEngine;
@@ -24,6 +26,15 @@ public class PlayerEconomy : ScriptableObject
         GameEvents.CardTaken?.AddListener(OnPageTaken);
         GameEvents.ChangeState?.AddListener(OnChangeState);
         GameEvents.DemonEncountered?.AddListener(OnDemonEncountered);
+        EconomyEvents.SendPayload?.AddListener(OnSendPayload);
+    }
+
+    private void OnSendPayload(ModifierPayload payload)
+    {
+        Tape += payload.Tape;
+        Power += payload.Power;
+        Sanity += payload.Sanity;
+        Rizz += payload.Rizz;
     }
 
     private void OnDemonEncountered(DemonData data)
