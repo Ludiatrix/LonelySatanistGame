@@ -51,10 +51,7 @@ namespace LSG.Core
         public enum CardEffectType
         {
             None,
-
-            GainRizz,
-            LoseSanity,
-            LoseSanityAndShuffleReadPageBackIntoDeck,
+            ShuffleReadPageBackIntoDeck,
             RemoveCardFromThisSummoningRoundWithTapeCostOne,
             ReturnWhitePagesToDeckAndRemovePower,
             RepairRandomCardAtNoTapeCost,
