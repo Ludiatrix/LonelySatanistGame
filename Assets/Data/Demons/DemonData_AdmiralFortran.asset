@@ -26,8 +26,13 @@ MonoBehaviour:
     a summoning?  Fascinating."""'
   minimumPowerLevel: 10
   maximumPowerLevel: 25
-  outcome: 
-  boon: 
+  outcome: 'Your home is annexed by the Ceuterian Dynasty
+
+    You are entitled to
+    protection against incursions by the Talametran Corsairs, and pay a 1.6% tax
+    benefitting the Ceuterian Dynasty. Whatever that means. '
+  boon: The next time you would play 8 or more white points of cards, instead shuffle
+    the last read white card back into the deck (you get an oopsie freebie redo)
   bane: Lose 1 Tape (if the player has a tape banked)
   boonBaneDialogue: N/A
   dateOutcome: '"He is both a gentleman and an enthusiastic participant in your strange

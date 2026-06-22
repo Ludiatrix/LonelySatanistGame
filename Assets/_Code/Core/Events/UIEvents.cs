@@ -7,6 +7,7 @@ namespace LSG.Core
         public static readonly UnityEventExtensions.UnityBoolEvent ToggleDialogueWindow = new UnityEventExtensions.UnityBoolEvent();
         public static readonly UnityEventExtensions.UnityStringEvent SetNamePlateText = new UnityEventExtensions.UnityStringEvent();
         public static readonly UnityEventExtensions.UnityStringEvent SetDialogueText = new UnityEventExtensions.UnityStringEvent();
+        public static readonly UnityEventExtensions.UnityStringEvent AppendDialogueText = new UnityEventExtensions.UnityStringEvent();
         public static readonly UnityEventExtensions.UnityBoolEvent ToggleSummoningButtons = new UnityEventExtensions.UnityBoolEvent();
         public static readonly UnityEventExtensions.UnityBoolEvent ToggleEncounterButtons = new UnityEventExtensions.UnityBoolEvent();
         public static readonly UnityEventExtensions.UnityBoolEvent ToggleStoreButtons = new UnityEventExtensions.UnityBoolEvent();

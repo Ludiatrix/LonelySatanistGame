@@ -257,7 +257,7 @@ namespace LSG.ScriptableObjects
 
         private void OnRemoveRandomCard(Enums.Suit suitToIgnore, bool canBeBoughtAgain = false)
         {
-            playerDeck.Remove(playerDeck[Random.Range(0, playerDeck.Count)]);
+            CardLibrary.Remove(CardLibrary[UnityEngine.Random.Range(0, CardLibrary.Count)]);
         }
 
         public void RemoveAll(Func<object, bool> func)

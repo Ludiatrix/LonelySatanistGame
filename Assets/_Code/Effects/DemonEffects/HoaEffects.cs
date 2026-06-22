@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using LSG.Classes;
 using LSG.Core;
 using LSG.Interfaces;
+using LSG.ScriptableObjects;
 using UnityEngine;
 
 namespace LSG.Effects

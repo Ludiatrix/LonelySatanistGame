@@ -26,6 +26,7 @@ namespace LSG.UI
             UIEvents.SetDialogueText?.AddListener(SetDialogue);
             UIEvents.ToggleSummoningButtons?.AddListener(ToggleSummoningButtonContainer);
             UIEvents.ToggleEncounterButtons?.AddListener(ToggleEncounterButtonContainer);
+            UIEvents.AppendDialogueText?.AddListener(AppendDialogue);
             UIEvents.ToggleStoreButtons?.AddListener(ToggleEncounterButtonContainer);
             UIEvents.DisableButtons?.AddListener(DisableButtons);
             UIEvents.FlipDialogueText?.AddListener(OnFlipDialogueText);
@@ -65,6 +66,11 @@ namespace LSG.UI
         {
             dialogueText.text = text;
         }
+
+		private void AppendDialogue(string text)
+		{
+			dialogueText.text = dialogueText.text + "\n" + text;
+		}
 
         private void ToggleSummoningButtonContainer(bool toggle)
         {
