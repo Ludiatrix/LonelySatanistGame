@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8270ffd9a996cfa2bca0df66e852826, type: 3}
+  m_Name: DemonData_TheBook
+  m_EditorClassIdentifier: LSG::LSG.ScriptableObjects.DemonData_TheBook
+  demonName: Ekzeema
+  canDateDemonMultipleTimes: 0
+  introDialogue: "Your mind, like paper, tears to shreds.\n\nAnd yet, such a perspective
+    you now have, the book, in pieces, matches you.  You are wrapped in its fractured
+    words, paper strips entwine you like loving arms. \n\nThe book never needed to
+    be fixed, it was you who was broken all along.  The glimmering words sooth your
+    ears, seep into the folds of your brain.  From your skull, your eyes look out,
+    new eyes look in.\n\nThe moon is a shattered fractal mirror in the sky.\n\nHow
+    beautiful."
+  minimumPowerLevel: 0
+  maximumPowerLevel: 0
+  outcome: The game is over, and you found... love? You're alive, at least.
+  boon: 
+  bane: 
+  boonBaneDialogue: 
+  dateOutcome: 
+  demonSprite: {fileID: 0}

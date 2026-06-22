@@ -14,25 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: LSG::LSG.DemonData_Ekzeema
   demonName: Ekzeema
   canDateDemonMultipleTimes: 0
-  introDialogue: '"You have an inkling that there''s an attractive figure in the
-    summoning circle, but they''re a bit hard to make out under the cloud of dust,
-    pollen, synthetic fibers, and other less-identifiable particulate swirling around
-    them.
+  introDialogue: 'You have an inkling that there''s an attractive figure in the summoning
+    circle, but they''re a bit hard to make out under the cloud of dust, pollen,
+    synthetic fibers, and other less-identifiable particulate swirling around them.
 
 
-    They scratch awkwardly at their neck, belly, upper thigh, and side
-    of their face simultaneously while staring at you in shock."'
+    They
+    scratch awkwardly at their neck, belly, upper thigh, and side of their face simultaneously
+    while staring at you in shock.'
   minimumPowerLevel: 1
   maximumPowerLevel: 10
-  outcome: 
+  outcome: You sneeze and fumble the pages of the Necronomicon. Ekzeema looks at
+    you disdainfully as you juggle the book in one hand while wiping your nose with
+    the other. "Try holding that book with composure. You'll do better." With that,
+    the demon disappears into a haze that stings your eyes. As the cloud dissipates,
+    you notice a yellow dust clinging to the Roses on the table.
   boon: Gain 1 Rizz the first time you buy a card (repair a page) each round
   bane: For the rest of the game, Lose 1 Sanity each time you play a blue card
-  boonBaneDialogue: Ekzeema's Curse caused Sanity loss upon reading this Blue page
-  dateOutcome: '"You spend a lovely evening shopping for hypoallergenic skincare
-    products that help both of you feel more comfortable being close to each other.
+  boonBaneDialogue: Ekzeema's Curse caused Sanity loss upon reading this Rose page.
+  dateOutcome: 'You spend a lovely evening shopping for hypoallergenic skincare products
+    that help both of you feel more comfortable being close to each other.
 
 
     You
     hold two or three of their hands while checking the pollen count before heading
-    out for a nice meal of battered shellfish in soy-peanut sauce."'
+    out for a nice meal of battered shellfish in soy-peanut sauce.'
   demonSprite: {fileID: -1605223320372934923, guid: 6e32c2cd0cfb7623aa58e9e03c1daeed, type: 3}

@@ -14,23 +14,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: LSG::LSG.DemonData_Chad
   demonName: Chad
   canDateDemonMultipleTimes: 0
-  introDialogue: '"With blond hair like a reverse shark fin, a 2-D body bulging with
+  introDialogue: 'With blond hair like a reverse shark fin, a 2-D body bulging with
     muscles, and a baleful eye that sees right through you, there''s only one being
     it could be: Chad Thundercock.
 
 
-    ""You remind me of a good friend, how can
-    I help?""
-
-    "'
+    "You remind me of a good friend, how can
+    I help?"'
   minimumPowerLevel: 15
   maximumPowerLevel: 20
-  outcome: Chad is willing to help, but now you're both deeply confused why he's
-    here
+  outcome: Chad gives you a massive, bone-crushing high five that leaves your hand
+    throbbing but fills your veins with an overwhelming, unearned surge of pure gym-bro
+    confidence. "I don't know why I'm here, brah, but we're gonna find you a date!"
+    Chad declares before wafting away in a body spray-scented cloud.
   boon: Next summoning round begins at +3 Power
   bane: Lose 1 Sanity
-  boonBaneDialogue: N/A
-  dateOutcome: '"You''ve never been on a date with a celebrity before, but even when
+  boonBaneDialogue: Chad's Blessing is helping you with confidence with this attempt
+    to summon a date.
+  dateOutcome: 'You''ve never been on a date with a celebrity before, but even when
     people gather around he always makes you feel like the center of his attention. 
     He could be downright unbeatable at laser tag, but always turns sideways to give
     you a fighting chance.  He compliments you on coming up with a fun way to get
@@ -38,5 +39,5 @@ MonoBehaviour:
 
 
     You spend the rest of the evening mixing up viral protein shake
-    recipes while he works on correcting your posture."'
+    recipes while he works on correcting your posture.'
   demonSprite: {fileID: 2458917243557503670, guid: eb22c7cfd1bf1750ebeec446d4826a0f, type: 3}

@@ -146,7 +146,7 @@ namespace LSG.Effects
             foreach (var whiteCard in whiteCards)
             {
                 DataManager.Instance.PlayerEconomySource.Power -= whiteCard.PageModifier.Power;
-                DataManager.Instance.PlayerEconomySource.WhiteSuitPoints -= 1;
+                DataManager.Instance.PlayerEconomySource.WhiteSuitPoints -= whiteCard.PageModifier.Power;
             }
 
             DataManager.Instance.PlayerDeckSource.playedCards.RemoveAll(card => card.Suit == Enums.Suit.White);
@@ -180,8 +180,8 @@ namespace LSG.Effects
         public void GetOnePowerForEachOrangeCardReadThisSummoningRound()
         {
             int orangeCardCount = DataManager.Instance.PlayerDeckSource.playedCards.Count(t => t.Suit == Enums.Suit.Orange);
-
-            DataManager.Instance.PlayerEconomySource.Power += orangeCardCount;
+            
+            DataManager.Instance.PlayerEconomySource.ModifyPower(orangeCardCount);
         }
 
         // Optional: Return a random page read this summoning to the Necronomicon (shuffle in). Its power is not removed from the power meter.

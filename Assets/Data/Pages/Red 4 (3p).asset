@@ -15,7 +15,7 @@ MonoBehaviour:
   CardID: 44
   TapeCost: 3
   CardWord: yehr
-  CardEffect: Gain +1 Power for each Orange read so far this summoning
+  CardEffect: Gain +1 Power for each Flames page read so far this summoning
   Suit: 4
   PageImage: {fileID: 4083250785398791712, guid: 1de089a86a1e2564ab77a3b7436059a1, type: 3}
   pageImageRipped: {fileID: 9033615214407038786, guid: b376c2173e02d8b4db2cecadb2d563c7, type: 3}

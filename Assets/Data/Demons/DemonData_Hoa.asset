@@ -14,28 +14,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: LSG::LSG.DemonData_Hoa
   demonName: Hoa
   canDateDemonMultipleTimes: 0
-  introDialogue: '"There''s a tremendous grinding of earth and metal and stone. 
-    What rises through the portal is a rusted jalopy on cinderblocks, rimmed with
-    tall tufts of grass that aspire to being wheat.  The tall, cuddly goatess on
-    top tightens her flannel shirt and breaths out vapors of *very* freshly distilled
-    moonshine.
+  introDialogue: 'There''s a tremendous grinding of earth and metal and stone.  What
+    rises through the portal is a rusted jalopy on cinderblocks, rimmed with tall
+    tufts of grass that aspire to being wheat.  The tall, cuddly goatess on top tightens
+    her flannel shirt and breaths out vapors of *very* freshly distilled moonshine.
 
 
-    ""Well look who we have here!  You new in the neighborhood? 
-    I got some empty properties next door you could move into.""
-
-
-    "'
+    "Well
+    look who we have here!  You new in the neighborhood?  I got some empty properties
+    next door you could move into."'
   minimumPowerLevel: 10
   maximumPowerLevel: 25
   outcome: Between dodging distillery explosions and traversing the suburban jungle
     that is her lawn, you're feeling much more physically fit than any reputable
     black magician has a right to be.  About as exhausted, though.
-  boon: 
+  boon: All [orange suit] pages are +1 power for the rest of this game.
   bane: One of your non-white pages is randomly removed and cannot be purchased again
     this game.
-  boonBaneDialogue: 
-  dateOutcome: '"Concerts aren''t your normal go-to, but after three acts singing
+  boonBaneDialogue: Hoa's blessing has increased the power of your Star pages!
+  dateOutcome: 'Concerts aren''t your normal go-to, but after three acts singing
     about running from cops, murdering abusive husbands, and generally having a grand
     hell of a time, Hoa cuddles up to you before dragging you out dancing.
 
@@ -46,5 +43,5 @@ MonoBehaviour:
 
 
     In the morning she is gone, but she left you a half
-    dissassembled project car and an unlabeled bottle to remember her by."'
+    dissassembled project car and an unlabeled bottle to remember her by.'
   demonSprite: {fileID: -1213846126277244026, guid: beae46368f0c2fc699babb694c4175e1, type: 3}

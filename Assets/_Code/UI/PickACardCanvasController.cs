@@ -15,7 +15,9 @@ namespace LSG.UI
         public GameObject pagePrefab;
         public GameObject pickButton;
         public GameObject closeButton;
-        public RectTransform SetAsideArea;
+
+        // Dirty hack to turn the necronomicon on/off for our purposes
+        public GameObject SummoningContainer;
 
         private PickACardPayload _pickACardPayload = null;
 
@@ -38,6 +40,8 @@ namespace LSG.UI
             UIEvents.ToggleResourceUI?.Invoke(false);
             UIEvents.SetNamePlateText?.Invoke("Smol");
             UIEvents.SetDialogueText?.Invoke(payload.Reason);
+            UIEvents.DisableButtons?.Invoke();
+            SummoningContainer.SetActive(false);
 
             foreach (var card in payload.Cards)
             {
@@ -48,10 +52,9 @@ namespace LSG.UI
         private void GeneratePickablePage(CardData card)
         {
             var page = Instantiate(pagePrefab, horizontalContainer.transform);
+
             page.GetComponent<PageFacade>().Inject(card);
-            var btn = page.AddComponent<Button>();
-            btn.targetGraphic = page.GetComponent<Image>();
-            btn.onClick.AddListener(() => LoadCardDescription(card));
+            page.GetComponent<Button>().onClick.AddListener(() => LoadCardDescription(card));
             pickablePages.Add(page);
         }
 
@@ -103,6 +106,9 @@ namespace LSG.UI
             }
             pickablePages.Clear();
             container.SetActive(false);
+            closeButton.SetActive(false);
+            UIEvents.ToggleSummoningButtons?.Invoke(true);
+            SummoningContainer.SetActive(true);
         }
 
         private void ResolveAfterEffects(Enums.PickACardAfterEffectState stateAfterChoice)

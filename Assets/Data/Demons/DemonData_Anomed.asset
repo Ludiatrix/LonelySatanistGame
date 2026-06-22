@@ -14,21 +14,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: LSG::LSG.DemonData_Anomed
   demonName: Anomed
   canDateDemonMultipleTimes: 0
-  introDialogue: "\"He, uh, She, uh, They are hard to get a bead on.  Are they facing
-    towards you or away?  Walking on feet or hands?  Where does their head go?  \n\n\"\"Oh,
-    how dull.  I would not like to see your book.\"\"\""
+  introDialogue: "He, uh, She, uh, They are hard to get a bead on.  Are they facing
+    towards you or away?  Walking on feet or hands?  Where does their head go?  \n\n\"Oh,
+    how dull.  I would not like to see your book.\""
   minimumPowerLevel: 15
   maximumPowerLevel: 25
-  outcome: 
+  outcome: In a terrifyingly silent flash of anti-logic, the entity twists reality
+    entirely on its head, leaving you standing in a space where everything feels
+    fundamentally inverted. Your understanding of the world and confidence to keep
+    going are all mixed up, forcing you to think with your charm and flirt with existential
+    dread.
   boon: Trade Sanity and Rizz stat scores
   bane: The next summoning, the dialog box is flipped horizontally (so text appears
     mirrored)
-  boonBaneDialogue: N/A
-  dateOutcome: '"You don''t take her into town, you don''t buy her dinner, you don''t
+  boonBaneDialogue: Anomed's Curse writes on the mirror.
+  dateOutcome: 'You don''t take her into town, you don''t buy her dinner, you don''t
     discover a speakeasy behind the bar.
 
 
     They compliment your mind while brushing
     against your face, they tell you how handsome you are while shadowy limbs drift
-    over your brain matter.  They tell you they will not see you again."'
+    over your brain matter.  They tell you they will not see you again.'
   demonSprite: {fileID: 8359241750133010459, guid: 6221fdd04f84ee7c9a700cd01b1f34f9, type: 3}

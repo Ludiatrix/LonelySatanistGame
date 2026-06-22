@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using LSG.Core;
+using LSG.ScriptableObjects;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,42 +8,57 @@ using UnityEngine.UI;
 namespace LSG.UI
 {
     /// <summary>
-    /// Displays Current Amount of White Suits played this
+    /// Displays the cumulative Power of White (Daggers) pages read this
     /// Summoning Phase.
     /// </summary>
     public class WhiteSuitCanvasController : MonoBehaviour
     {
-        
+
         [SerializeField] private Image dangerImage;
         [Tooltip("Matching index. 0 danger = entry 0")]
         [SerializeField] private List<Sprite> dangerSprites;
 
         [SerializeField] private TMP_Text text;
 
+        private int _whitePowerRead;
+
         private void OnEnable()
         {
-            GameEvents.WhiteSuitPointEarned?.AddListener(OnWhiteSuitPointEarned);
+            GameEvents.CardTaken?.AddListener(OnCardTaken);
             GameEvents.ChangeState?.AddListener(OnStateChanged);
         }
 
         private void OnDisable()
         {
-            GameEvents.WhiteSuitPointEarned?.RemoveListener(OnWhiteSuitPointEarned);
+            GameEvents.CardTaken?.RemoveListener(OnCardTaken);
             GameEvents.ChangeState?.RemoveListener(OnStateChanged);
         }
-        
+
         private void OnStateChanged(Enums.GameState state)
         {
-            dangerImage.sprite = dangerSprites[0];
+            // White power is per-summoning; reset whenever we change phase.
+            _whitePowerRead = 0;
+            ShowDanger();
         }
-        
-        private void OnWhiteSuitPointEarned(int whiteSuitPoints)
+
+        private void OnCardTaken(CardData takenCard)
         {
-            if (whiteSuitPoints < 0) whiteSuitPoints = 0;
-            if (whiteSuitPoints >= dangerSprites.Count) whiteSuitPoints = dangerSprites.Count - 1;
-            
-            dangerImage.sprite = dangerSprites[whiteSuitPoints];
-            text.text = $"White Pages Turned: {whiteSuitPoints.ToString()}";
+            if (takenCard == null) return;
+            if (takenCard.Suit != Enums.Suit.White) return;
+
+            if (takenCard.PageModifier != null)
+            {
+                _whitePowerRead += takenCard.PageModifier.Power;
+            }
+
+            ShowDanger();
+        }
+
+        private void ShowDanger()
+        {
+            int spriteIndex = Mathf.Clamp(_whitePowerRead, 0, dangerSprites.Count - 1);
+            dangerImage.sprite = dangerSprites[spriteIndex];
+            text.text = $"Daggers Read: {_whitePowerRead.ToString()}";
         }
     }
 }

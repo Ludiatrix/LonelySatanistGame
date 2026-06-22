@@ -415,6 +415,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: LSG::LSG.UI.ResourceBarController
   powerSlider: {fileID: 4794032118432905739}
+  powerText: {fileID: 1089914234769529252}
   templateMilestoneMarker: {fileID: 7609288881146590324}
   milestoneContainer: {fileID: 439839905376576962}
   maximum: 30
@@ -833,10 +834,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Power
+  m_text: Power 0
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6e47202aba0439041aae0823f2f1efc9, type: 2}
-  m_sharedMaterial: {fileID: -9196604358379513130, guid: 6e47202aba0439041aae0823f2f1efc9, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 66af7cbdd9e525b428b4fd1f7b769842, type: 2}
+  m_sharedMaterial: {fileID: 7198656019263021574, guid: 66af7cbdd9e525b428b4fd1f7b769842, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -860,8 +861,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 42
-  m_fontSizeBase: 42
+  m_fontSize: 48
+  m_fontSizeBase: 48
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
