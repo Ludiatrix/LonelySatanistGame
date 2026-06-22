@@ -14,28 +14,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: LSG::LSG.DemonData_AdmiralFortran
   demonName: Admiral Fortran
   canDateDemonMultipleTimes: 0
-  introDialogue: '"His demon-leather uniform is sharp, his demon-bone combadge glitters
+  introDialogue: 'His demon-leather uniform is sharp, his demon-bone combadge glitters
     with impossible colors, his combination null-laser/dueling saber quietly cuts
-    a rift in space behind him.  ""Admiral''s Log: I seem to have been transported
-    from my voidship.  In all my years sailing the hellstars, I''ve never experience
-    such a thing.""
+    a rift in space behind him.  "Admiral''s Log: I seem to have been transported
+    from my voidship.  In all my years sailing the hellstars, I''ve never experienced
+    such a thing."
 
 
     He quickly notices you and levels his weapon in your direction. 
-    ""You say it is the custom of this world to go on a ''date'' in response to such
-    a summoning?  Fascinating."""'
+    "You say it is the custom of this world to go on a ''date'' in response to such
+    a summoning?  Fascinating."
+
+'
   minimumPowerLevel: 10
   maximumPowerLevel: 25
-  outcome: 'Your home is annexed by the Ceuterian Dynasty
-
-    You are entitled to
-    protection against incursions by the Talametran Corsairs, and pay a 1.6% tax
-    benefitting the Ceuterian Dynasty. Whatever that means. '
+  outcome: '"We shall follow the customs of my world, instead. As such, your home
+    is now annexed by the Ceuterian Dynasty.  However, you are entitled to protection
+    against incursions by the Talametran Corsairs, in exchange for a 1.6% tax benefitting
+    the Ceuterian Dynasty. You will be satisfied by this deal," the handsome Admiral
+    states matter-of-factly before fading away in a silhouette of swirling glittering
+    stars.'
   boon: The next time you would play 8 or more white points of cards, instead shuffle
     the last read white card back into the deck (you get an oopsie freebie redo)
   bane: Lose 1 Tape (if the player has a tape banked)
-  boonBaneDialogue: N/A
-  dateOutcome: '"He is both a gentleman and an enthusiastic participant in your strange
+  boonBaneDialogue: "Admiral Fortran's Blessing has prevented an incursion by the
+    Talametran Corsairs, whoever they are, and this dagger is left unread. \n\nAdmiral
+    Fortran's Curse has taxed away one of your Tape for the Ceuterian Dynasty."
+  dateOutcome: 'He is both a gentleman and an enthusiastic participant in your strange
     Hyu-Man culture, equally able to dazzle on the ballroom or night club dance floor. 
     He says he merely wants to comport himself according to the local customs.
 
@@ -45,5 +50,5 @@ MonoBehaviour:
     but in such an earnest way that you find it cute.  You thought suggesting a hike
     would interest him, but you underestimated just how into it he would be: all
     his experience with planetary explorations make him really hard to keep up with,
-    although you''re getting a great view of his calves from behind."'
+    although you''re getting a great view of his calves from behind.'
   demonSprite: {fileID: 4865967287530129530, guid: c885b2bc9c8edb5239b2ebb3606d1ac9, type: 3}

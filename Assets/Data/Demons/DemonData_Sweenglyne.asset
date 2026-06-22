@@ -14,22 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: LSG::LSG.DemonData_Sweenglyne
   demonName: Sweenglyne
   canDateDemonMultipleTimes: 0
-  introDialogue: '"You''re worried it didn''t work until a tidal wave of paperclips
+  introDialogue: 'You''re worried it didn''t work until a tidal wave of paperclips
     crashes through your door.  Office paper fountains out of the flow into a tsunami
     above you that hovers yet doesn''t crash down.  The top of a copy machine opens
     like a seashell revealing a figure with ink-black skin, a shirt of post-its,
     and a pencil skirt made of, well, pencils.  They take a sip from a toner cartridge
     while stapling you to the floor with their gaze.
 
-    ""You''re going to need
-    to offer something better than the keys to the supply closet to keep my interest."""'
+    "You''re going to need
+    to offer something better than the keys to the supply closet to keep my interest."'
   minimumPowerLevel: 1
   maximumPowerLevel: 10
-  outcome: Gives a bunch of Tape        but a bunch of stuff in your desk goes missing
+  outcome: Sweenglyne clicks her tongue and shakes her head disapprovingly before
+    melting away in a shower of toner ink. While cleaning the splatters from your
+    desk, you realize your stapler, the charge cord for your phone, and half a sleeve
+    of crackers are missing. But there is a roll of high-grade tape left in its place
+    that crackles with a hellish energy. You're left with a great resource for your
+    next summoning, but the irritating suspicion that your office supplies may be
+    embezzled away by a demonic entity.
   boon: Gain 3 Tape
   bane: Unspent Tape is lost at the beginning of each new summoning round
-  boonBaneDialogue: 
-  dateOutcome: '"You''re surprised when they invite you to dinner at a normal, mortal
+  boonBaneDialogue: Sweenglyne's Curse has caused your extra Tape to disappear from
+    your desk.
+  dateOutcome: 'You''re surprised when they invite you to dinner at a normal, mortal
     restaurant.  You''re excited when they invite you to join them in a dimly lit
     back room of said restaurant.  You''re somewhat less surprised when they pulls
     a mask over your face and reveals this restaurant abutts an office supply store.
@@ -39,5 +46,5 @@ MonoBehaviour:
     inscribe the wall-piercing rune and join them on their heist, shoving printer
     cartridges and shiny red staplers into the hellgate you draw in the middle of
     the store.  You do get a kiss before they vanish into the portal as the cops
-    show up to the store."'
+    show up to the store.'
   demonSprite: {fileID: 6124846179822445239, guid: d487ff2fe7649253da5acef934c3f2b0, type: 3}

@@ -14,25 +14,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: LSG::LSG.DemonData_K_vis
   demonName: K'vis
   canDateDemonMultipleTimes: 0
-  introDialogue: '"Biceps'', you think as the confused figure stands up from within
+  introDialogue: '''Biceps,'' you think as the confused figure stands up from within
     the circle. ''Green biceps'', you think, as you stare at the mighty orc woman
     in front of you.  One strap of her smithing apron falls off a shoulder as she
     looks around.
 
 
-    ""What is this, my time to get reborn in another world to
-    be the hero?  %#@ that.  Pipsqueak, can''t you tell Orcs and Oni apart?""  she
-    grumbles."'
+    "What is this, my time to get reborn in another world to
+    be the hero?  %#@ that.  Pipsqueak, can''t you tell Orcs and Oni apart?"  she
+    grumbles.'
   minimumPowerLevel: 10
   maximumPowerLevel: 20
-  outcome: "\"She takes your kitchen knives for sharpening\n\nYou learn which symbol
-    in the complicated satanist summoning book means \"\"orc\"\", and does not, in
-    fact, mean \"\"imp\"\"\tYour knives are temporarily missing\""
+  outcome: The grumpy blacksmith snatches your kitchen knives straight off the counter,
+    examining the dull edges with a grunt of absolute professional disgust before
+    walking right back out through the summoning rift. She leaves you with a much
+    deeper comprehension of ancient demonic orthography, but your knife block now
+    stands completely empty. You'll just have to trust that she'll bring them back
+    eventually, preferably sharper and slightly less cursed.
   boon: Gain 1 Rizz
   bane: 'The next summoning, the suit images on the white cards and their power counter
     are invisible. '
   boonBaneDialogue: K'vis's Curse has veiled the White pages of the Necronomicon.
-  dateOutcome: '"Getting dragged to a gym wasn''t your first idea for a date, but
+  dateOutcome: 'Getting dragged to a gym wasn''t your first idea for a date, but
     getting sweaty with K''vis is an experience you wouldn''t trade for anything. 
     She''s a hit with the other gym-goers, and you get roped into a video with a
     creator who went by ''leanbisonpattie''.  You have to explain that ''going viral''
@@ -41,5 +44,5 @@ MonoBehaviour:
 
     Still, she
     seemed interested by the idea of a factory tour, so maybe you can get a second
-    date out of the whole thing."'
+    date out of the whole thing.'
   demonSprite: {fileID: -961030558577810320, guid: 7d19c131f6bcfa8c2bde81c11aa9420d, type: 3}

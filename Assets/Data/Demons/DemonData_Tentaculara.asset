@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: LSG::LSG.DemonData_Tentaculara
   demonName: Tentaculara
   canDateDemonMultipleTimes: 0
-  introDialogue: '"""That pox-some bother tha! Aeonslumber us!"" they screech at
-    you in Black Speech (which you took 2 semesters of at Community College).  You
-    managed to calm them down by complimenting the shimmering uncolors of their myriad
-    tentacles and offering to share a joint."'
+  introDialogue: '"That pox-some bother tha! Aeonslumber us!" they screech at you
+    in Black Speech (which you took 2 semesters of at Community College).  You managed
+    to calm them down by complimenting the shimmering uncolors of their myriad tentacles
+    and offering to share a joint.'
   minimumPowerLevel: 1
   maximumPowerLevel: 20
   outcome: You see through the eyes of a cuttlefish for a few minutes, revealing
@@ -26,7 +26,7 @@ MonoBehaviour:
   boon: Gain 1 Tape
   bane: Lose 2 Sanity
   boonBaneDialogue: 
-  dateOutcome: '"They''re surprisingly keen on eating calimari and octopus, a fact
+  dateOutcome: 'They''re surprisingly keen on eating calimari and octopus, a fact
     you find only mildly distressing, but at least 70% of their tentacles seem to
     like you.
 
@@ -37,5 +37,5 @@ MonoBehaviour:
 
     As you
     curl up in front of the TV afterwards they stuff the pipe with something that
-    unaligns your chakras in 6 dimensions but also gives you a new exciting 9th one."'
+    unaligns your chakras in 6 dimensions but also gives you a new exciting 9th one.'
   demonSprite: {fileID: 2958217566653375081, guid: b701b1200fcbe7d7fb9b34780704cf5f, type: 3}

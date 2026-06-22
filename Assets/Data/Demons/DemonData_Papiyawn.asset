@@ -17,8 +17,10 @@ MonoBehaviour:
   introDialogue: The adorable fluffy white puppy before you yelps once...
   minimumPowerLevel: 8
   maximumPowerLevel: 9999999
-  outcome: Then a rift in space opens before you, revealing the gates of hell before
+  outcome: 'Then a rift in space opens before you, revealing the gates of hell before
     you are pulled in. Good news is that your dating woes are over...
+
+'
   boon: 
   bane: Game Over
   boonBaneDialogue: 

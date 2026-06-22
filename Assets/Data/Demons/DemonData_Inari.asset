@@ -14,33 +14,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: LSG::LSG.DemonData_Inari
   demonName: Inari
   canDateDemonMultipleTimes: 0
-  introDialogue: '"Rice bubbles out of the summoning circle and above the pile a
-    ripple in the air becomes a whirling of tails, the figure turns around to reveal
-    a sharp-eyed woman with sharper teeth.  You wonder how it would feel for them
-    to sink into your flesh but in, like, a sexy way.
+  introDialogue: 'Rice bubbles out of the summoning circle and above the pile a ripple
+    in the air becomes a whirling of tails, the figure turns around to reveal a sharp-eyed
+    woman with sharper teeth.  You wonder how it would feel for them to sink into
+    your flesh but in, like, a sexy way.
 
 
-    She wrinkles her nose
-    at the smells of your apartment, ""On your knees before this divine one, or maybe
-    I''ll see what your liver tastes like."""'
+    She wrinkles her nose at the smells
+    of your apartment, "On your knees before this divine one, or maybe I''ll see
+    what your liver tastes like."'
   minimumPowerLevel: 10
   maximumPowerLevel: 20
-  outcome: '"You get a handful of rice
-
-    You know where the nearest rice is at
-    all times        Two days hence, your sink drain is suddenly clogged with orange
-    fur"'
+  outcome: Inari trickles the grains of a single, pristine handful of uncooked short
+    grain sushi rice into your hands before vanishing in a flash of orange sparks
+    and fur. You immediately gain the telepathic sense of every store of rice within
+    a 3 mile radius. But when you go to wash the divine rice, you find your sink
+    is disgustingly clogged with moldy orange fur that takes half an hour of scraping
+    with a declogging tool to pull out.
   boon: For the rest of the game, you will see a warning (either in the dialog box
     or an icon in the HUD) if the next card to be drawn is white suit.
   bane: For the rest of the game, the first Orange card played each round causes
     an additional -1 Sanity loss
-  boonBaneDialogue: 
-  dateOutcome: '"You convince her of the continued merits of her veganism after looking
+  boonBaneDialogue: 'Inari''s Blessing tells you the next page is a dagger.
+
+
+    Inari''s
+    Curse causes the flash of Stars to ring loudly in your mind.'
+  dateOutcome: 'You convince her of the continued merits of her veganism after looking
     up videos on how to make homemade tofu online.
 
 
     Afterwards you dance among
     fireflies that you''re pretty sure aren''t in season before finding yourself
     in the midst of a Japanese summer festival.  You have a great time as long as
-    you don''t look too closely at any of the other attendees."'
+    you don''t look too closely at any of the other attendees.'
   demonSprite: {fileID: -7644301153613201921, guid: 756902a5be86f20a49cf78be41420dd4, type: 3}
