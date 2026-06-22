@@ -64,6 +64,9 @@ namespace LSG.UI
             // We want to first display the default player deck
             GenerateStoreItems(DataManager.Instance.PlayerDeckSource.DefaultDeck.Cards, true);
             
+            // And space it out enough to reach the next row
+            CreateNullStoreItem();
+
             // Now we want to get our default shop list
             var shopArr = (CardData[])DataManager.Instance.PlayerDeckSource.DefaultShopList.Cards.Clone();
 
@@ -98,6 +101,15 @@ namespace LSG.UI
             var storeItem = Instantiate(templateStorePageItem, storeGridTransform);
             storeItem.gameObject.SetActive(true);
             storeItem.SetPageData(cardToGenerate, owned);
+            populatedStorePageItems.Add(storeItem);
+        }
+
+        private void CreateNullStoreItem()
+        {
+            var gameObject = new GameObject("spacer");
+            gameObject.AddComponent<RectTransform>();
+            var storeItem = gameObject.AddComponent<StorePagePopulator>();
+            storeItem.transform.parent = storeGridTransform;
             populatedStorePageItems.Add(storeItem);
         }
 
