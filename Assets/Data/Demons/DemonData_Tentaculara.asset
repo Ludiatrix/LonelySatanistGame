@@ -25,7 +25,8 @@ MonoBehaviour:
     better understand how things stick together.
   boon: Gain 1 Tape
   bane: Lose 2 Sanity
-  boonBaneDialogue: 
+  boonBaneDialogue: Tentaculara's Curse has caused some of your Sanity to precipitate
+    into a roll of Tape.
   dateOutcome: 'They''re surprisingly keen on eating calimari and octopus, a fact
     you find only mildly distressing, but at least 70% of their tentacles seem to
     like you.
