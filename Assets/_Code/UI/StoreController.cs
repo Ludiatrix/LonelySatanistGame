@@ -95,6 +95,7 @@ namespace LSG.UI
             var storeItem = Instantiate(templateStorePageItem, storeGridTransform);
             storeItem.gameObject.SetActive(true);
             storeItem.SetPageData(cardToGenerate, owned);
+            populatedStorePageItems.Add(storeItem);
         }
 
         private void ClearStoreCards()
