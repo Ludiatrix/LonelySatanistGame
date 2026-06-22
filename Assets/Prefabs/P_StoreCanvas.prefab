@@ -130,8 +130,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: LSG::LSG.StorePagePopulator
   growAmount: {x: 1.1, y: 1.1, z: 1.1}
   pageImageController: {fileID: 8518659954309285591}
-  successColor: {r: 0, g: 0, b: 0, a: 0}
-  failColor: {r: 0, g: 0, b: 0, a: 0}
+  successColor: {r: 0.7877358, g: 1, b: 0.8251942, a: 1}
+  failColor: {r: 1, g: 0.7216981, b: 0.7216981, a: 1}
   tapeImages:
   - {fileID: 5750120879236187668}
   - {fileID: 6777990310944409159}
@@ -173,10 +173,10 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 1, g: 0.581555, b: 0, a: 1}
+    m_NormalColor: {r: 0.7830189, g: 0.7830189, b: 0.7830189, a: 1}
+    m_HighlightedColor: {r: 0.8113208, g: 0.8113208, b: 0.8113208, a: 1}
+    m_PressedColor: {r: 0.6226415, g: 0.6226415, b: 0.6226415, a: 1}
+    m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1

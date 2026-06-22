@@ -51,6 +51,17 @@ namespace LSG
 
         public bool IsOpen => isOpen;
 
+        private bool delayNextOpen = false;
+
+        /// <summary>
+        /// Sets up to delay the next open by long enough for the store slide animation to complete.
+        /// This should only happen once per store visit.
+        /// </summary>
+        public void DelayNextOpen()
+        {
+            delayNextOpen = true;
+        }
+
         /// <summary>
         /// Called by a card when clicked. Same card again → close; different card → switch.
         /// </summary>
@@ -76,9 +87,30 @@ namespace LSG
             isOpen = true;
             onOpened.Invoke(owner);
 
-            // Enable the box after the delay (unless it's already visible, e.g. switching cards).
-            if (!cardDescriptionBox.activeSelf && showRoutine == null)
-                showRoutine = StartCoroutine(ShowAfterDelay());
+            // Decide when to enable the box
+            if (cardDescriptionBox.activeSelf)
+            {
+                // Already enabled. Don't do anything.
+            }
+            else if (showRoutine == null)
+            {
+                // Not enabled, not animating...
+                if (delayNextOpen)
+                {
+                    //... but we want to animate. Set up the coroutine.
+                    showRoutine = StartCoroutine(ShowAfterDelay());
+                    delayNextOpen = false;
+                }
+                else
+                {
+                    //... and we don't want to animate. Open instantly.
+                    cardDescriptionBox.SetActive(true);
+                }
+            }
+            else
+            {
+                // Not enabled, is animating. Don't do anything.
+            }
         }
 
         /// <summary>

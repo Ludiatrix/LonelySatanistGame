@@ -11,8 +11,25 @@ namespace LSG.Utils
     {
         // Easing Curve to make the movement feel nice.
         public AnimationCurve movementCurve = AnimationCurve.EaseInOut(0f, 0f, 1f, 1f);
+
+        private Vector3 startPosition = Vector3.zero;
+        private bool initialized = false;
     
         private Coroutine _co = null;
+
+        public void Awake()
+        {
+            startPosition = transform.position;
+            initialized = true;
+        }
+
+        public void ResetPosition()
+        {
+            if (initialized)
+            {
+                transform.position = startPosition;
+            }
+        }
 
         /// <summary>
         /// Public method to safely trigger the smooth movement.
