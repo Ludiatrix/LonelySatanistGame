@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: DemonData_Yaldabaoth
   m_EditorClassIdentifier: LSG::LSG.DemonData_Yaldabaoth
   demonName: Yaldabaoth
-  canDateDemonMultipleTimes: 1
+  canDateDemonMultipleTimes: 0
   introDialogue: '"A host of angels announce His coming, His Throne is Glory, His
     Three Heads Are Mighty And Terrifying.  In His Eyes You See Power, And Yet They
     Lack Wisdom.  Could There Be More Beyond Him?
