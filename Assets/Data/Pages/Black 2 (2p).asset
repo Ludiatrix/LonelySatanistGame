@@ -19,6 +19,7 @@ MonoBehaviour:
     Any of the 2 pages not read are set aside and do not shuffle back into the Necronomicon
     until the next summoning.'
   Suit: 3
+  SummoningPage: {fileID: -4613149194220840174, guid: 4101cc3e21ee66940a76f3c70f2f9b8b, type: 3}
   PageImage: {fileID: 2845080509387628534, guid: 1de089a86a1e2564ab77a3b7436059a1, type: 3}
   pageImageRipped: {fileID: -3627134200314166397, guid: b376c2173e02d8b4db2cecadb2d563c7, type: 3}
   Sound: {fileID: 0}

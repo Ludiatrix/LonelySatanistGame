@@ -18,6 +18,7 @@ MonoBehaviour:
   CardEffect: Lose 2 Sanity and a random page already read this summoning is shuffled
     back into the book.
   Suit: 1
+  SummoningPage: {fileID: 115069014340169278, guid: 4101cc3e21ee66940a76f3c70f2f9b8b, type: 3}
   PageImage: {fileID: -3841868086490015231, guid: 1de089a86a1e2564ab77a3b7436059a1, type: 3}
   pageImageRipped: {fileID: 1457974254840795392, guid: b376c2173e02d8b4db2cecadb2d563c7, type: 3}
   Sound: {fileID: 0}

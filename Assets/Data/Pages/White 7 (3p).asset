@@ -18,6 +18,7 @@ MonoBehaviour:
   CardEffect: If the cummulative Power of Daggers read this summoning exceeds 7,
     summon Papiyawn.
   Suit: 0
+  SummoningPage: {fileID: 902746041063898795, guid: 4101cc3e21ee66940a76f3c70f2f9b8b, type: 3}
   PageImage: {fileID: 1289489982070179840, guid: 1de089a86a1e2564ab77a3b7436059a1, type: 3}
   pageImageRipped: {fileID: -8655540127838779090, guid: b376c2173e02d8b4db2cecadb2d563c7, type: 3}
   Sound: {fileID: 0}

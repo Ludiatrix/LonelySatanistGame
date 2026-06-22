@@ -17,6 +17,7 @@ MonoBehaviour:
   CardWord: puhraskick
   CardEffect: Lose 1 Sanity
   Suit: 1
+  SummoningPage: {fileID: 1617103341637644158, guid: 4101cc3e21ee66940a76f3c70f2f9b8b, type: 3}
   PageImage: {fileID: 2816345306912049896, guid: 1de089a86a1e2564ab77a3b7436059a1, type: 3}
   pageImageRipped: {fileID: -2633267666940046360, guid: b376c2173e02d8b4db2cecadb2d563c7, type: 3}
   Sound: {fileID: 0}
@@ -26,3 +27,5 @@ MonoBehaviour:
     Power: 2
     Sanity: -1
     Rizz: 0
+  EffectType: 0
+  EffectAmount: 0
