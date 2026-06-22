@@ -52,6 +52,7 @@ namespace LSG.UI
         private void GeneratePickablePage(CardData card)
         {
             var page = Instantiate(pagePrefab, horizontalContainer.transform);
+
             page.GetComponent<PageFacade>().Inject(card);
             page.GetComponent<Button>().onClick.AddListener(() => LoadCardDescription(card));
             pickablePages.Add(page);
@@ -105,6 +106,7 @@ namespace LSG.UI
             }
             pickablePages.Clear();
             container.SetActive(false);
+            closeButton.SetActive(false);
             UIEvents.ToggleSummoningButtons?.Invoke(true);
             SummoningContainer.SetActive(true);
         }
