@@ -60,7 +60,7 @@ namespace LSG.Effects
 
             if (economy.WhiteSuitPoints > 0)
             {
-                economy.WhiteSuitPoints--;
+                economy.WhiteSuitPoints-= takenCard.PageModifier.Power;
             }	
             Debug.Log("[AdmiralFortranEffects] Redo triggered: white card returned to deck.");
         }

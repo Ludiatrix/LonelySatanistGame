@@ -36,11 +36,10 @@ public class PlayerEconomy : ScriptableObject
                   $"Sanity: {payload.Sanity}" +
                   $"Rizz: {payload.Rizz}" +
                   $"Tape: {payload.Tape}");
-
-        Tape += payload.Tape;
-        Power += payload.Power;
         Sanity += payload.Sanity;
         Rizz += payload.Rizz;
+        ModifyPower(payload.Power);
+        Tape += payload.Tape;
     }
 
     private void OnDemonEncountered(DemonData data)
@@ -63,8 +62,7 @@ public class PlayerEconomy : ScriptableObject
     private void UpdatePageRewards()
     {
         Page++;
-        Power++;
-        Tape += DataManager.Instance.MilestoneDataSource.GetTapeAmountAtPower(Power);
+        ModifyPower(1);
         GameEvents.TapeEarnedEvent?.Invoke();
     }
     
@@ -72,7 +70,7 @@ public class PlayerEconomy : ScriptableObject
     {
         if (takenCard.Suit == Enums.Suit.White)
         {
-            WhiteSuitPoints++;
+            WhiteSuitPoints+= takenCard.PageModifier.Power;
         }
 
         if (WhiteSuitPoints > 8)
@@ -88,6 +86,12 @@ public class PlayerEconomy : ScriptableObject
     private void OnChangeState(Enums.GameState newState)
     {
         WhiteSuitPoints = 0;
+    }
+
+    public void ModifyPower(int amountToChange)
+    {
+        Power += amountToChange;
+        Tape += DataManager.Instance.MilestoneDataSource.GetTapeAmountAtPower(Power);
     }
 
     public void Reset()
