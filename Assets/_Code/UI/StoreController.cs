@@ -55,8 +55,11 @@ namespace LSG.UI
 
         private void OnStorePhaseStarted()
         {
-            // Make sure the store is clear first
+            // Make sure the store is reset first
             ClearStoreCards();
+            frameMover.ResetPosition();
+            descriptionPanel.Close();
+            descriptionPanel.DelayNextOpen();
             
             // We want to first display the default player deck
             GenerateStoreItems(DataManager.Instance.PlayerDeckSource.DefaultDeck.Cards, true);
