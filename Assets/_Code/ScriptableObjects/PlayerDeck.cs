@@ -198,9 +198,11 @@ namespace LSG.ScriptableObjects
              * check if we can even afford it
              * check if the card is already in our library
              */
-            if (DataManager.Instance.PlayerEconomySource.Tape >= cardToTryBuying.TapeCost && !playerDeck.Contains(cardToTryBuying) || !playedCards.Contains(cardToTryBuying))
+            if ((DataManager.Instance.PlayerEconomySource.Tape >= cardToTryBuying.TapeCost) && !playerDeck.Contains(cardToTryBuying) && !playedCards.Contains(cardToTryBuying))
             {
                 Debug.Log("Bought card: "+cardToTryBuying.name);
+                DataManager.Instance.PlayerEconomySource.Tape -= cardToTryBuying.TapeCost;
+                AddCardToPlayerDeck(PullCardFromLibrary(cardToTryBuying));
                 CardEvents.BuyCardSuccessResponse?.Invoke(cardToTryBuying);
             }
             else
