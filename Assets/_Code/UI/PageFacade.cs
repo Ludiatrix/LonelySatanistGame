@@ -26,7 +26,7 @@ namespace LSG.UI
         {
             UIEvents.SetNamePlateText?.Invoke(cardData.CardWord);
             UIEvents.SetDialogueText?.Invoke(cardData.CardEffect);
-            pageImage.sprite = cardData.PageImage;
+            pageImage.sprite = cardData.SummoningPage;
         }
 
         private void RunPageAnimation(Transform PageTurnDestinationTransform)

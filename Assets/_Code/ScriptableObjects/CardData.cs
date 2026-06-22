@@ -14,6 +14,8 @@ namespace LSG.ScriptableObjects
         public string CardWord = "Beep";
         [TextArea] public string CardEffect = "";
         public Enums.Suit Suit = Enums.Suit.White;
+		public Sprite SummoningPage;
+		//this is the store image. i didnt change the name becuase i didnt want to deal with it <3
         public Sprite PageImage;
 
         [SerializeField] private Sprite pageImageRipped;
