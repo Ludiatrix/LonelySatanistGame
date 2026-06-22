@@ -16,6 +16,7 @@ namespace LSG.Core
         public class UnityStringEvent : UnityEvent<string> { }
         public class UnityModifierPayloadEvent : UnityEvent<ModifierPayload> { }
         public class UnitySuitEvent : UnityEvent<Enums.Suit,bool> { }
+        public class UnityPickACardEvent : UnityEvent<PickACardPayload> { }
         /// <summary>
         /// Sends an audioclip to the SFX engine for playing and a volume to play it at. 4.0 is the standard volume.
         /// </summary>

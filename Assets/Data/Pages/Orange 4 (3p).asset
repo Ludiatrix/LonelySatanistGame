@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Orange 4 (3p)
   m_EditorClassIdentifier: LSG::LSG.PageData
   CardID: 34
-  TapeCost: 0
+  TapeCost: 2
   CardWord: hurr
   CardEffect: 'Lose 2 Sanity '
   Suit: 1
@@ -26,3 +26,5 @@ MonoBehaviour:
     Power: 3
     Sanity: -2
     Rizz: 0
+  EffectType: 0
+  EffectAmount: 0

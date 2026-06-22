@@ -59,7 +59,17 @@ namespace LSG.Core
             ReturnWhitePagesToDeckAndRemovePower,
             RepairRandomCardAtNoTapeCost,
             GainPowerForEachOrangeRead,
-            ReturnRandomCardToDeckDoNotTouchPower
+            ReturnRandomCardToDeckDoNotTouchPower,
+            PeekAtTwoReadOneAndShuffleTheRest,
+            PeekAtTwoReadOneAndLeaveOneAsideUntilNextSummoningRound,
+            PeekAtTwoReadUpToTwoShuffleAnyNotReadToBottomOfDeck,
+        }
+
+        public enum PickACardAfterEffectState
+        {
+            ShuffleRestIntoDeck = 0,
+            SetAsideTheRest = 1,
+            PutOnBottom = 2,
         }
     }
 }

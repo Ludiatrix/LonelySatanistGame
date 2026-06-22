@@ -26,3 +26,5 @@ MonoBehaviour:
     Power: 1
     Sanity: 0
     Rizz: 1
+  EffectType: 0
+  EffectAmount: 0

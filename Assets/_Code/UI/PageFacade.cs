@@ -13,20 +13,20 @@ namespace LSG.UI
     {
         [SerializeField] private SmoothRotator pageRotator;
         [SerializeField] private Image pageImage;
-        private CardData _cardData = null;
+        public CardData cardData = null;
         
-        public void Inject(CardData data, Transform PageTurnDestinationTransform)
+        public void Inject(CardData data, Transform PageTurnDestinationTransform = null)
         {
-            _cardData = data;
+            cardData = data;
             ApplyVisuals();
             RunPageAnimation(PageTurnDestinationTransform);
         }
 
         private void ApplyVisuals()
         {
-            UIEvents.SetNamePlateText?.Invoke(_cardData.CardWord);
-            UIEvents.SetDialogueText?.Invoke(_cardData.CardEffect);
-            pageImage.sprite = _cardData.PageImage;
+            UIEvents.SetNamePlateText?.Invoke(cardData.CardWord);
+            UIEvents.SetDialogueText?.Invoke(cardData.CardEffect);
+            pageImage.sprite = cardData.PageImage;
         }
 
         private void RunPageAnimation(Transform PageTurnDestinationTransform)
