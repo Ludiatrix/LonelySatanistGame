@@ -15,8 +15,8 @@ MonoBehaviour:
   CardID: 16
   TapeCost: 0
   CardWord: wuhrlehd
-  CardEffect: If the cummulative Power of read white pages this summoning exceeds
-    7, summon Papiyawn and get sucked into hell (game over).
+  CardEffect: If the cummulative Power of Daggers read this summoning exceeds 7,
+    summon Papiyawn.
   Suit: 0
   PageImage: {fileID: 7265582016052868334, guid: 1de089a86a1e2564ab77a3b7436059a1, type: 3}
   pageImageRipped: {fileID: 7265582016052868334, guid: 1de089a86a1e2564ab77a3b7436059a1, type: 3}
@@ -27,3 +27,5 @@ MonoBehaviour:
     Power: 2
     Sanity: 0
     Rizz: 0
+  EffectType: 0
+  EffectAmount: 0

@@ -14,6 +14,7 @@ namespace LSG.UI
         [SerializeField] private SmoothRotator pageRotator;
         [SerializeField] private Image pageImage;
         public CardData cardData = null;
+        [SerializeField] private Sprite blankPageSprite;
         
         public void Inject(CardData data, Transform PageTurnDestinationTransform = null)
         {
@@ -36,7 +37,12 @@ namespace LSG.UI
 
         private void RunPageAnimation(Transform PageTurnDestinationTransform)
         {
-            pageRotator.RotateToTarget(PageTurnDestinationTransform.eulerAngles, 1.0f);
+            pageRotator.RotateToTarget(PageTurnDestinationTransform.eulerAngles, 1.0f, SwapToBlankPage);
+        }
+
+        public void SwapToBlankPage()
+        {
+            pageImage.sprite = blankPageSprite;
         }
     }
 }

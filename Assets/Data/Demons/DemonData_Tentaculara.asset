@@ -25,7 +25,7 @@ MonoBehaviour:
     better understand how things stick together.
   boon: Gain 1 Tape
   bane: Lose 2 Sanity
-  boonBaneDialogue: 
+  boonBaneDialogue: Some of your sanity has precipitated into a roll of tape.
   dateOutcome: 'They''re surprisingly keen on eating calimari and octopus, a fact
     you find only mildly distressing, but at least 70% of their tentacles seem to
     like you.

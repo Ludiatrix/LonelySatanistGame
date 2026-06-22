@@ -125,8 +125,8 @@ MonoBehaviour:
     faceTransform: {fileID: 1269449908508915745}
   startPosition: {fileID: 6325097506708533033}
   boardTransform: {fileID: 6831978119697460390}
-  upwardImpulse: 4
-  rightImpulse: 6
+  upwardImpulse: 3
+  rightImpulse: 8
   forwardVariance: 0.6
   torqueImpulseRange: {x: 5, y: 12}
   minimumRollTime: 0.75
@@ -2348,7 +2348,7 @@ Transform:
   m_GameObject: {fileID: 8911071981239458637}
   serializedVersion: 2
   m_LocalRotation: {x: -0.9994823, y: -0, z: -0, w: -0.03217549}
-  m_LocalPosition: {x: -14.66, y: 0.67, z: -9.839996}
+  m_LocalPosition: {x: -20.14, y: 0.59, z: -11.08}
   m_LocalScale: {x: 1.75, y: 1.7499999, z: 1.7499999}
   m_ConstrainProportionsScale: 0
   m_Children: []
