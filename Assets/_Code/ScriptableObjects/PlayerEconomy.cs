@@ -70,7 +70,7 @@ public class PlayerEconomy : ScriptableObject
     {
         if (takenCard.Suit == Enums.Suit.White)
         {
-            WhiteSuitPoints++;
+            WhiteSuitPoints+= takenCard.PageModifier.Power;
         }
 
         if (WhiteSuitPoints > 8)

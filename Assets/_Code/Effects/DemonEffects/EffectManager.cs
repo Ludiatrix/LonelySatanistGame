@@ -146,7 +146,7 @@ namespace LSG.Effects
             foreach (var whiteCard in whiteCards)
             {
                 DataManager.Instance.PlayerEconomySource.Power -= whiteCard.PageModifier.Power;
-                DataManager.Instance.PlayerEconomySource.WhiteSuitPoints -= 1;
+                DataManager.Instance.PlayerEconomySource.WhiteSuitPoints -= whiteCard.PageModifier.Power;
             }
 
             DataManager.Instance.PlayerDeckSource.playedCards.RemoveAll(card => card.Suit == Enums.Suit.White);
