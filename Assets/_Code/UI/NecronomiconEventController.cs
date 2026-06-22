@@ -52,7 +52,10 @@ namespace LSG.UI
             {
                 image.enabled = toggle;
             }
-
+            foreach (var page in populatedPages)
+            {
+                page.SetActive(toggle);
+            }
         }
 
         private void ResetNecronomicon()

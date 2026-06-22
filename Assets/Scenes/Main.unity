@@ -3800,7 +3800,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: LSG::LSG.UI.TitleIntroSequencer
   background: {fileID: 529720299}
   backgroundFadeSeconds: 1.5
-  fadeBlackCanvas: {fileID: 0}
+  onBackgroundFadedOut:
+    m_PersistentCalls:
+      m_Calls: []
   title:
     canvasGroup: {fileID: 0}
     text: {fileID: 1690958387}
@@ -5347,6 +5349,6 @@ SceneRoots:
   - {fileID: 1766247673}
   - {fileID: 1088802209}
   - {fileID: 404211038}
-  - {fileID: 141473991}
   - {fileID: 1504969989}
   - {fileID: 986026777782546746}
+  - {fileID: 141473991}
