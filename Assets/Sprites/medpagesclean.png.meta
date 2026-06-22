@@ -165,6 +165,58 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -173,11 +225,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 643
-        width: 110
-        height: 156
+        y: 644
+        width: 109
+        height: 154
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -195,11 +247,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 487
-        width: 110
-        height: 156
+        y: 488
+        width: 109
+        height: 154
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -216,12 +268,12 @@ TextureImporter:
       name: medpagesclean_2
       rect:
         serializedVersion: 2
-        x: 112
-        y: 643
-        width: 111
-        height: 156
+        x: 113
+        y: 644
+        width: 109
+        height: 154
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -238,12 +290,12 @@ TextureImporter:
       name: medpagesclean_3
       rect:
         serializedVersion: 2
-        x: 112
-        y: 487
-        width: 111
-        height: 156
+        x: 113
+        y: 488
+        width: 109
+        height: 154
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -260,12 +312,12 @@ TextureImporter:
       name: medpagesclean_4
       rect:
         serializedVersion: 2
-        x: 225
-        y: 643
-        width: 111
-        height: 156
+        x: 226
+        y: 644
+        width: 109
+        height: 154
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -282,12 +334,12 @@ TextureImporter:
       name: medpagesclean_5
       rect:
         serializedVersion: 2
-        x: 225
-        y: 487
-        width: 111
-        height: 156
+        x: 226
+        y: 488
+        width: 109
+        height: 154
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -304,12 +356,12 @@ TextureImporter:
       name: medpagesclean_6
       rect:
         serializedVersion: 2
-        x: 338
-        y: 643
-        width: 111
-        height: 156
+        x: 339
+        y: 644
+        width: 109
+        height: 154
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -326,12 +378,12 @@ TextureImporter:
       name: medpagesclean_7
       rect:
         serializedVersion: 2
-        x: 338
-        y: 487
-        width: 111
-        height: 156
+        x: 339
+        y: 488
+        width: 109
+        height: 154
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -348,12 +400,12 @@ TextureImporter:
       name: medpagesclean_8
       rect:
         serializedVersion: 2
-        x: 451
-        y: 643
-        width: 111
-        height: 156
+        x: 452
+        y: 644
+        width: 109
+        height: 154
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -370,12 +422,12 @@ TextureImporter:
       name: medpagesclean_9
       rect:
         serializedVersion: 2
-        x: 564
-        y: 643
-        width: 111
-        height: 156
+        x: 565
+        y: 644
+        width: 109
+        height: 154
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -392,12 +444,12 @@ TextureImporter:
       name: medpagesclean_10
       rect:
         serializedVersion: 2
-        x: 677
-        y: 643
-        width: 111
-        height: 156
+        x: 678
+        y: 644
+        width: 109
+        height: 154
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -415,11 +467,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 331
-        width: 110
-        height: 156
+        y: 332
+        width: 109
+        height: 154
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -437,11 +489,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 175
-        width: 110
-        height: 156
+        y: 176
+        width: 109
+        height: 154
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -458,12 +510,12 @@ TextureImporter:
       name: medpagesclean_13
       rect:
         serializedVersion: 2
-        x: 112
-        y: 331
-        width: 111
-        height: 156
+        x: 113
+        y: 332
+        width: 109
+        height: 154
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -480,12 +532,12 @@ TextureImporter:
       name: medpagesclean_14
       rect:
         serializedVersion: 2
-        x: 112
-        y: 175
-        width: 111
-        height: 156
+        x: 113
+        y: 176
+        width: 109
+        height: 154
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -502,12 +554,12 @@ TextureImporter:
       name: medpagesclean_15
       rect:
         serializedVersion: 2
-        x: 225
-        y: 331
-        width: 111
-        height: 156
+        x: 226
+        y: 332
+        width: 109
+        height: 154
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -524,12 +576,12 @@ TextureImporter:
       name: medpagesclean_16
       rect:
         serializedVersion: 2
-        x: 225
-        y: 175
-        width: 111
-        height: 156
+        x: 226
+        y: 176
+        width: 109
+        height: 154
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -546,12 +598,12 @@ TextureImporter:
       name: medpagesclean_17
       rect:
         serializedVersion: 2
-        x: 338
-        y: 331
-        width: 111
-        height: 156
+        x: 339
+        y: 332
+        width: 109
+        height: 154
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -568,12 +620,12 @@ TextureImporter:
       name: medpagesclean_18
       rect:
         serializedVersion: 2
-        x: 338
-        y: 175
-        width: 111
-        height: 156
+        x: 339
+        y: 176
+        width: 109
+        height: 154
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -590,12 +642,12 @@ TextureImporter:
       name: medpagesclean_19
       rect:
         serializedVersion: 2
-        x: 451
-        y: 331
-        width: 111
-        height: 156
+        x: 452
+        y: 332
+        width: 109
+        height: 154
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -612,12 +664,12 @@ TextureImporter:
       name: medpagesclean_20
       rect:
         serializedVersion: 2
-        x: 451
-        y: 175
-        width: 111
-        height: 156
+        x: 452
+        y: 176
+        width: 109
+        height: 154
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -635,11 +687,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 19
-        width: 110
-        height: 156
+        y: 20
+        width: 109
+        height: 154
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -656,12 +708,12 @@ TextureImporter:
       name: medpagesclean_22
       rect:
         serializedVersion: 2
-        x: 112
-        y: 19
-        width: 111
-        height: 156
+        x: 113
+        y: 20
+        width: 109
+        height: 154
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -678,12 +730,12 @@ TextureImporter:
       name: medpagesclean_23
       rect:
         serializedVersion: 2
-        x: 225
-        y: 19
-        width: 111
-        height: 156
+        x: 226
+        y: 20
+        width: 109
+        height: 154
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -696,11 +748,33 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: medpagesclean_24
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 20
+        width: 109
+        height: 154
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c392f911271e1fe4b9c1cb23cf29faa5
+      internalID: 326034597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 32e5756900a2af84899abbdaddf8b0a8
     internalID: 0
     vertices: []
     indices: 
@@ -708,7 +782,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":1,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       medpagesclean_0: -4270301216674404249
       medpagesclean_1: 2434630521224839075
@@ -727,6 +803,7 @@ TextureImporter:
       medpagesclean_21: -8305331318043158564
       medpagesclean_22: 2845080509387628534
       medpagesclean_23: 5665520114145247524
+      medpagesclean_24: 326034597
       medpagesclean_3: 284192133224140612
       medpagesclean_4: -856616020111227648
       medpagesclean_5: -2791792084412452287
