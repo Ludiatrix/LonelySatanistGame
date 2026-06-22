@@ -1,4 +1,5 @@
 using UnityEngine.Events;
+using static LSG.Core.UnityEventExtensions;
 
 namespace LSG.Core
 {
@@ -16,11 +17,13 @@ namespace LSG.Core
         public static readonly UnityEvent StartReading = new UnityEvent();
         
         // Summoning Phase Events
-        public static readonly UnityEventExtensions.UnityPageReadEvent PageRead = new UnityEventExtensions.UnityPageReadEvent();
+        public static readonly UnityPageReadEvent PageRead = new UnityEventExtensions.UnityPageReadEvent();
         public static readonly UnityEvent TapeEarnedEvent = new UnityEvent();
         public static readonly UnityEventExtensions.UnityIntEvent WhiteSuitPointEarned = new UnityEventExtensions.UnityIntEvent();
         public static readonly UnityEvent KeepReadingChosen = new UnityEvent();
         public static readonly UnityEvent StopChosen = new UnityEvent();
+        public static readonly UnityPickACardEvent PickACard = new UnityPickACardEvent();
+        public static readonly UnityCardDataEvent PlaceCardsInSetAsideArea = new UnityCardDataEvent();
         
         // Store Phase Events
         public static readonly UnityEventExtensions.UnityCardDataEvent CardAdded = new UnityEventExtensions.UnityCardDataEvent();

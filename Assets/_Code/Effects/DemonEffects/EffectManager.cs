@@ -22,7 +22,7 @@ namespace LSG.Effects
             T effect = gameObject.AddComponent<T>();
             _demonEffects.Add(effect);
         }
-        
+
         public void ResolveCardEffect(CardData card)
         {
             if (card == null)
@@ -32,39 +32,39 @@ namespace LSG.Effects
             {
                 case CardEffectType.None:
                     break;
-
                 case CardEffectType.GainRizz:
                     GainRizz(card.EffectAmount);
                     break;
-
                 case CardEffectType.LoseSanity:
                     LoseSanity(card.EffectAmount);
                     break;
-
                 case CardEffectType.LoseSanityAndShuffleReadPageBackIntoDeck:
                     LoseSanityAndShuffleReadPageThisSummoningRoundBackIntoDeck();
                     break;
-
                 case CardEffectType.RemoveCardFromThisSummoningRoundWithTapeCostOne:
                     RemoveCardFromThisSummoningRoundWithTapeCostOfOneAndAddBackToStoreDoNotTouchPower();
                     break;
-
                 case CardEffectType.ReturnWhitePagesToDeckAndRemovePower:
                     ReturnWhitePagesToDeckAndShuffleAndRemovePowerFromBar();
                     break;
-
                 case CardEffectType.RepairRandomCardAtNoTapeCost:
                     RepairRandomCardAtNoTapeCost();
                     break;
-
                 case CardEffectType.GainPowerForEachOrangeRead:
                     GetOnePowerForEachOrangeCardReadThisSummoningRound();
                     break;
-
                 case CardEffectType.ReturnRandomCardToDeckDoNotTouchPower:
                     ReturnRandomCardToDeckAndShuffleDoNotTouchPower();
                     break;
-
+                case CardEffectType.PeekAtTwoReadOneAndShuffleTheRest:
+                    PeekAtTwoReadOneAndShuffleTheRest();
+                    break;
+                case CardEffectType.PeekAtTwoReadOneAndLeaveOneAsideUntilNextSummoningRound:
+                    PeekAtTwoReadOneAndLeaveOneAsideUntilNextSummoningRound();
+                    break;
+                case CardEffectType.PeekAtTwoReadUpToTwoShuffleAnyNotReadToBottomOfDeck:
+                    PeekAtTwoReadUpToTwoShuffleAnyNotReadToBottomOfDeck();
+                    break;
                 default:
                     Debug.LogWarning($"Unhandled card effect type: {card.EffectType}");
                     break;
@@ -75,18 +75,34 @@ namespace LSG.Effects
         public void PeekAtTwoReadOneAndShuffleTheRest()
         {
             CardData[] cards = DataManager.Instance.PlayerDeckSource.PeekAheadAtPlayerDeck(2);
+
+            PickACardPayload payload = new PickACardPayload(
+                "Peek at the next 2 pages. You may choose one page to read and shuffle any you choose not to read back into the book.",
+                cards.ToList(), 1, PickACardAfterEffectState.ShuffleRestIntoDeck);
+
+            GameEvents.PickACard?.Invoke(payload);
         }
 
         // Optional: Peek at the next 2 pages. You may choose one page to read. Any of the 2 pages not read are set aside and do not shuffle back into the Necronomicon until the next summoning.
         public void PeekAtTwoReadOneAndLeaveOneAsideUntilNextSummoningRound()
         {
             CardData[] cards = DataManager.Instance.PlayerDeckSource.PeekAheadAtPlayerDeck(2);
+
+            PickACardPayload payload = new PickACardPayload("Optional: Peek at the next 2 pages. You may choose one page to read. Any of the 2 pages not read are set aside and do not shuffle back into the Necronomicon until the next summoning.",
+                cards.ToList(), 1, PickACardAfterEffectState.SetAsideTheRest);
+
+            GameEvents.PickACard?.Invoke(payload);
         }
 
         // Optional: Peek at the next 2 pages. You may choose up to two pages to read. Any pages not read are put on the back of the book (bottom of the deck)
         public void PeekAtTwoReadUpToTwoShuffleAnyNotReadToBottomOfDeck()
         {
             CardData[] cards = DataManager.Instance.PlayerDeckSource.PeekAheadAtPlayerDeck(2);
+
+            PickACardPayload payload = new PickACardPayload("Peek at the next 2 pages. You may choose up to two pages to read. Any pages not read are put on the back of the book (bottom of the deck).",
+                cards.ToList(), 2, PickACardAfterEffectState.PutOnBottom);
+
+            GameEvents.PickACard?.Invoke(payload);
         }
 
         public void GainRizz(int rizzAmount)
@@ -96,7 +112,7 @@ namespace LSG.Effects
 
         public void LoseSanity(int sanityAmount)
         {
-            DataManager.Instance.PlayerEconomySource.Rizz -= sanityAmount;
+            DataManager.Instance.PlayerEconomySource.Sanity -= sanityAmount;
         }
 
         // Lose 2 Sanity and shuffle a random page already read this summoning back into the book
@@ -111,7 +127,7 @@ namespace LSG.Effects
         // Optional: Tear up (remove) a random page you've read this summoning from the Necronomicon, maximum Tape cost 1. That page's power is not removed from the Power meter.
         public void RemoveCardFromThisSummoningRoundWithTapeCostOfOneAndAddBackToStoreDoNotTouchPower()
         {
-            var card = DataManager.Instance.PlayerDeckSource.RemoveCardFromPlayedCards(true,1);
+            DataManager.Instance.PlayerDeckSource.RemoveCardFromPlayedCards(true,1);
         }
 
         // Optional: Return all white pages previously read this summoning to the Necronomicon (shuffle in). Their power is removed from the power meter.
@@ -153,8 +169,9 @@ namespace LSG.Effects
             {
                 if (!ownedCards.Contains(shopCard))
                 {
-                    // If the shop has it and the Player doesn't, then repair and add to book. This isn't a perma buy
-
+                    // If the shop has it and the Player doesn't, then repair and add to book. This is a perma buy
+                    DataManager.Instance.PlayerDeckSource.AddCardToPlayerDeck(shopCard);
+                    return;
                 }
             }
         }

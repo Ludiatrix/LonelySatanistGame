@@ -87,7 +87,7 @@ namespace LSG.ScriptableObjects
         }
         
 
-        public void AddCardToPlayerDeck(CardData card)
+        public void AddCardToPlayerDeck(CardData card, bool shuffle = true)
         {
             playerDeck.Add(card);
             playerDeck.Shuffle();
@@ -183,6 +183,12 @@ namespace LSG.ScriptableObjects
         public void Shuffle()
         {
             playerDeck.Shuffle();
+        }
+
+        public void ReshufflePlayedCardsToPlayerDeck()
+        {
+            playerDeck.AddRange(playedCards);
+            playedCards.Clear();
         }
         
         private void OnTryBuyCard(CardData cardToTryBuying)

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Red 3 (2p)
   m_EditorClassIdentifier: LSG::LSG.PageData
   CardID: 43
-  TapeCost: 0
+  TapeCost: 2
   CardWord: iv 'ree 'wahr
   CardEffect: 'Optional: Repair a random page of the Necronomicon and add it to the
     book. This does not cost any Tape.'
@@ -27,3 +27,5 @@ MonoBehaviour:
     Power: 2
     Sanity: 0
     Rizz: 0
+  EffectType: 6
+  EffectAmount: 0

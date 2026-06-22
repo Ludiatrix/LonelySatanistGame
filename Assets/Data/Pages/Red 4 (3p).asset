@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Red 4 (3p)
   m_EditorClassIdentifier: LSG::LSG.PageData
   CardID: 44
-  TapeCost: 0
+  TapeCost: 3
   CardWord: yehr
   CardEffect: Gain +1 Power for each Orange read so far this summoning
   Suit: 4
@@ -26,3 +26,5 @@ MonoBehaviour:
     Power: 3
     Sanity: 0
     Rizz: 0
+  EffectType: 7
+  EffectAmount: 0

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Red 1 (1p)
   m_EditorClassIdentifier: LSG::LSG.PageData
   CardID: 41
-  TapeCost: 0
+  TapeCost: 1
   CardWord: kun
   CardEffect: 'Optional: Tear up (remove) a random page you''ve read this summoning
     from the Necronomicon, maximum Tape cost 1. That page''s power is not removed
@@ -28,3 +28,5 @@ MonoBehaviour:
     Power: 1
     Sanity: 0
     Rizz: 0
+  EffectType: 4
+  EffectAmount: 0

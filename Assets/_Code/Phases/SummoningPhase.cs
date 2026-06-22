@@ -34,6 +34,10 @@ namespace LSG.Phases
             Debug.Log("[SummoningPhase] Starting Phase!");
             base.StartPhase();
             Container.SetActive(true);
+            if (DataManager.Instance.PlayerDeckSource.playedCards.Count > 0)
+            {
+                DataManager.Instance.PlayerDeckSource.ReshufflePlayedCardsToPlayerDeck();
+            }
             PhaseEvents.SummoningPhaseStarted?.Invoke();
             UIEvents.ToggleResourceUI?.Invoke(true);
             TurnPage(); // Turns the first page

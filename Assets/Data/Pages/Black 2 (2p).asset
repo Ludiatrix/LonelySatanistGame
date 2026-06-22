@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e42d5039b8964defda6b7cc7cc8fa670, type: 3}
   m_Name: Black 2 (2p)
   m_EditorClassIdentifier: LSG::LSG.PageData
-  CardID: 52
-  TapeCost: 0
+  CardID: 17
+  TapeCost: 2
   CardWord: uhndirresh
   CardEffect: 'Optional: Peek at the next 2 pages. You may choose one page to read.
     Any of the 2 pages not read are set aside and do not shuffle back into the Necronomicon
@@ -28,3 +28,5 @@ MonoBehaviour:
     Power: 2
     Sanity: 0
     Rizz: 0
+  EffectType: 10
+  EffectAmount: 0

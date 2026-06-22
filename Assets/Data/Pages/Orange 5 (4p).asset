@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Orange 5 (4p)
   m_EditorClassIdentifier: LSG::LSG.PageData
   CardID: 35
-  TapeCost: 0
+  TapeCost: 3
   CardWord: yyphe
   CardEffect: 'Lose 2 Sanity and shuffle a random page already read this summoning
     back into the book '
@@ -25,5 +25,7 @@ MonoBehaviour:
     Tape: 3
     Page: 0
     Power: 4
-    Sanity: -2
+    Sanity: 0
     Rizz: 0
+  EffectType: 3
+  EffectAmount: 0

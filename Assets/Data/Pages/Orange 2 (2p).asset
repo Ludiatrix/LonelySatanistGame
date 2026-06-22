@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Orange 2 (2p)
   m_EditorClassIdentifier: LSG::LSG.PageData
   CardID: 32
-  TapeCost: 0
+  TapeCost: 1
   CardWord: phuntu 'zdik
   CardEffect: Lose 1 Sanity
   Suit: 1
@@ -26,3 +26,5 @@ MonoBehaviour:
     Power: 2
     Sanity: -1
     Rizz: 0
+  EffectType: 0
+  EffectAmount: 0
