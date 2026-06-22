@@ -14,9 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: LSG::LSG.PageData
   CardID: 22
   TapeCost: 3
-  CardWord: esh
-  CardEffect: 'Optional: Peek at the next 2 pages. You may choose up to two pages
-    to read. Any pages not read are put in the back of the book.'
+  CardWord: "esh"
+  CardEffect: "Optional: Peek at the next 2 pages. You may choose up to two pages to read. Any pages not read are put in the back of the book."
   Suit: 3
   SummoningPage: {fileID: -4613149194220840174, guid: 4101cc3e21ee66940a76f3c70f2f9b8b, type: 3}
   PageImage: {fileID: 5665520114145247524, guid: 1de089a86a1e2564ab77a3b7436059a1, type: 3}

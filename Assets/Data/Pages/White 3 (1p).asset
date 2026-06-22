@@ -12,11 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e42d5039b8964defda6b7cc7cc8fa670, type: 3}
   m_Name: White 3 (1p)
   m_EditorClassIdentifier: LSG::LSG.PageData
-  CardID: 13
+  CardID: 3
   TapeCost: 0
-  CardWord: ghural
-  CardEffect: If the cummulative Power of Daggers read this summoning exceeds 7,
-    summon Papiyawn.
+  CardWord: "ghural"
+  CardEffect: "If the cummulative Power of Daggers read this summoning exceeds 7, summon Papiyawn."
   Suit: 0
   SummoningPage: {fileID: -1890355142808060487, guid: 4101cc3e21ee66940a76f3c70f2f9b8b, type: 3}
   PageImage: {fileID: -856616020111227648, guid: 1de089a86a1e2564ab77a3b7436059a1, type: 3}

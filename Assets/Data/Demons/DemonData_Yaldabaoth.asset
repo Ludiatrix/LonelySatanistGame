@@ -14,35 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: LSG::LSG.DemonData_Yaldabaoth
   demonName: Yaldabaoth
   canDateDemonMultipleTimes: 1
-  introDialogue: 'A host of angels announce His coming, His Throne is Glory, His
-    Three Heads Are Mighty And Terrifying.  In His Eyes You See Power, And Yet They
-    Lack Wisdom.  Could There Be More Beyond Him?
-
-
-    Also, isn''t this spell only
-    supposed to summon forces of evil?  What''s with all the angels?'
+  introDialogue: "A host of angels announce His coming, His Throne is Glory, His Three Heads Are Mighty And Terrifying.  In His Eyes You See Power, And Yet They Lack Wisdom.  Could There Be More Beyond Him?\n\nAlso, isn't this spell only supposed to summon forces of evil?  What's with all the angels?"
   minimumPowerLevel: 20
   maximumPowerLevel: 99
-  outcome: The Grand Demiurge extends the wings of its power and a wave of nausea
-    hits you as the fabric of reality swirls. A hurrican of fate and  the winds of
-    change whip violently for a few seconds before the pieces of the room settle
-    back into place. "The scales of fate have been tilted in your favor," Yaldaboth
-    declared in a booming voice before disappearing.
-  boon: If the next 2 cards are a black suit card and a white suit card, the black
-    suit card will move to the position of the next to be drawn.
-  bane: For the rest of the game, all pages are shuffled back into the book after
-    they are played (but power is kept)
-  boonBaneDialogue: "Yaldabaoth's Blessing has moved an Eye closer. \n\nYaldaboth's
-    Curse means this page may be read again this summoning."
-  dateOutcome: 'He offers to help you make a world the way someone might offer to
-    take you to a pottery class, and yet He seems desperate for approval?
-
-
-    You
-    settle for making a small pocket dimension you can keep on your mantlepiece,
-    but you still get the feeling something is missing from it.
-
-
-    You ensure
-    Him it''s you, not Him, and send him on His way.'
+  outcome: "The Grand Demiurge extends the wings of its power and a wave of nausea hits you as the fabric of reality swirls. A hurrican of fate and  the winds of change whip violently for a few seconds before the pieces of the room settle back into place. \"The scales of fate have been tilted in your favor,\" Yaldaboth declared in a booming voice before disappearing."
+  boon: "If the next 2 cards are a black suit card and a white suit card, the black suit card will move to the position of the next to be drawn."
+  bane: "For the rest of the game, all pages are shuffled back into the book after they are played (but power is kept)"
+  boonBaneDialogue: "Yaldabaoth's Blessing has moved an Eye closer. \n\nYaldaboth's Curse means this page may be read again this summoning."
+  dateOutcome: "He offers to help you make a world the way someone might offer to take you to a pottery class, and yet He seems desperate for approval?\n\nYou settle for making a small pocket dimension you can keep on your mantlepiece, but you still get the feeling something is missing from it.\n\nYou ensure Him it's you, not Him, and send him on His way."
   demonSprite: {fileID: 3793566990545667391, guid: c7e0ebf274eafa7ac8779bd3b0f415a2, type: 3}

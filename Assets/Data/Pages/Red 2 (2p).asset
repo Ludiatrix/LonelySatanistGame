@@ -12,11 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e42d5039b8964defda6b7cc7cc8fa670, type: 3}
   m_Name: Red 2 (2p)
   m_EditorClassIdentifier: LSG::LSG.PageData
-  CardID: 42
+  CardID: 18
   TapeCost: 2
-  CardWord: nmii
-  CardEffect: 'Optional: Return all white pages previously read this summoning to
-    the Necronomicon. Their power is removed from the power meter.'
+  CardWord: "nmii"
+  CardEffect: "Optional: Return all white pages previously read this summoning to the Necronomicon. Their power is removed from the power meter."
   Suit: 4
   SummoningPage: {fileID: -350387768891985831, guid: 4101cc3e21ee66940a76f3c70f2f9b8b, type: 3}
   PageImage: {fileID: 5862205571230641480, guid: 1de089a86a1e2564ab77a3b7436059a1, type: 3}

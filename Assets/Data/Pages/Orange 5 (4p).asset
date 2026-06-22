@@ -12,11 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e42d5039b8964defda6b7cc7cc8fa670, type: 3}
   m_Name: Orange 5 (4p)
   m_EditorClassIdentifier: LSG::LSG.PageData
-  CardID: 35
+  CardID: 21
   TapeCost: 3
-  CardWord: yyphe
-  CardEffect: Lose 2 Sanity and a random page already read this summoning is shuffled
-    back into the book.
+  CardWord: "yyphe"
+  CardEffect: "Lose 2 Sanity and a random page already read this summoning is shuffled back into the book."
   Suit: 1
   SummoningPage: {fileID: 115069014340169278, guid: 4101cc3e21ee66940a76f3c70f2f9b8b, type: 3}
   PageImage: {fileID: -3841868086490015231, guid: 1de089a86a1e2564ab77a3b7436059a1, type: 3}

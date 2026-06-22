@@ -23,9 +23,7 @@ MonoBehaviour:
 
     He quickly notices you and levels his weapon in your direction. 
     "You say it is the custom of this world to go on a ''date'' in response to such
-    a summoning?  Fascinating."
-
-'
+    a summoning?  Fascinating."'
   minimumPowerLevel: 10
   maximumPowerLevel: 25
   outcome: '"We shall follow the customs of my world, instead. As such, your home

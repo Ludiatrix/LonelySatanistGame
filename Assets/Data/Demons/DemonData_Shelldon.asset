@@ -14,36 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: LSG::LSG.DemonData_Shelldon
   demonName: Shelldon
   canDateDemonMultipleTimes: 0
-  introDialogue: 'A shell appears.  Have you done it?  Have you summoned a demon
-    goddess of beauty?
-
-
-    Nope.  It cracks open to reveal two eyes and a sumptuous
-    mustache, stands up adjusts its tie.
-
-
-    "Oh my," it says in a chipper voice,
-    "You really should organize your files better."'
+  introDialogue: "A shell appears.  Have you done it?  Have you summoned a demon goddess of beauty?\n\nNope.  It cracks open to reveal two eyes and a sumptuous mustache, stands up adjusts its tie.\n\n\"Oh my,\" it says in a chipper voice, \"You really should organize your files better.\""
   minimumPowerLevel: 20
   maximumPowerLevel: 25
-  outcome: The tiny shell man skuttles across your desk, inspecting everything from
-    the pages of the Necronomicon to the construction minutia of your desk. "Ah,
-    a half-blind dovetail joint. Nice," sqeaks Shelldon. "Is it okay if I sit here
-    and watch? I'm trying to get out more." You nod in agreement and feel more grounded,
-    running your finger over the grain of the wood that Shelldon just traversed.
-    But it's kinda weird feeling watched now.
-  boon: Gain 1 Sanity
-  bane: For the next summoning, all Eye pages (black suit) effects are disabled (no
-    peek, but still get power for the page)
-  boonBaneDialogue: Shelldon's Curse makes you nervous when the pages are looking
-    at you.
-  dateOutcome: 'He''s too short for rock climbing, too small to reach the pedals
-    for a bike ride, too small to see the screen while sitting in a movie theater,
-    but none of that stops him.  He approaches every date idea with gusto and enthusiasm,
-    and tells you he''s been trying to be open to new experiences, even when he doesn''t
-    really know how to manage it.
-
-
-    Honestly, the little dude fills you with
-    inspiration.'
+  outcome: "The tiny shell man skuttles across your desk, inspecting everything from the pages of the Necronomicon to the construction minutia of your desk. \"Ah, a half-blind dovetail joint. Nice,\" sqeaks Shelldon. \"Is it okay if I sit here and watch? I'm trying to get out more.\" You nod in agreement and feel more grounded, running your finger over the grain of the wood that Shelldon just traversed. But it's kinda weird feeling watched now."
+  boon: "Gain 1 Sanity"
+  bane: "For the next summoning, all Eye pages (black suit) effects are disabled (no peek, but still get power for the page)"
+  boonBaneDialogue: "Shelldon's Curse makes you nervous when the pages are looking at you."
+  dateOutcome: "He's too short for rock climbing, too small to reach the pedals for a bike ride, too small to see the screen while sitting in a movie theater, but none of that stops him.  He approaches every date idea with gusto and enthusiasm, and tells you he's been trying to be open to new experiences, even when he doesn't really know how to manage it.\n\nHonestly, the little dude fills you with inspiration."
   demonSprite: {fileID: -8701811446106945198, guid: 7ebb48ebd59dbd91cba6e395e0daf396, type: 3}

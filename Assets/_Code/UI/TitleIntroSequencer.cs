@@ -4,6 +4,7 @@ using LSG.Core;
 using LSG.Utils;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 namespace LSG.UI
@@ -58,11 +59,12 @@ namespace LSG.UI
             }
         }
 
-        [Header("Background (black overlay, fades out to transparent)")]
+        [Header("Background (FadeBlack overlay, fades out to transparent)")]
         [SerializeField] private Image background;
         [SerializeField] private float backgroundFadeSeconds = 1.5f;
-        [Tooltip("Disabled once the fade finishes so it stops blocking clicks. Defaults to the background's GameObject.")]
-        [SerializeField] private GameObject fadeBlackCanvas;
+        [Tooltip("Invoked after FadeBlack has finished fading out. Wire this to start the game " +
+                 "(e.g. StartEmitter.Emit) so the phase change doesn't cut the fade off.")]
+        [SerializeField] private UnityEvent onBackgroundFadedOut;
 
         [Header("Title")]
         [SerializeField] private FadeTarget title;
@@ -101,10 +103,16 @@ namespace LSG.UI
             introNarrative?.Hide();
             titleButton?.Hide();
 
-            // Start fully black, then fade out to transparent.
+            // Game start: (re)enable the black overlay and make it fully opaque. It stays
+            // black until the title button is clicked (FadeOutBackground disables it).
+            GameObject fadeBlack = FadeBlackObject;
+            if (fadeBlack != null) fadeBlack.SetActive(true);
             if (background != null)
                 background.color = new Color(0f, 0f, 0f, 1f);
         }
+
+        /// <summary>The FadeBlack overlay object to toggle (the background Image's GameObject).</summary>
+        private GameObject FadeBlackObject => background != null ? background.gameObject : null;
 
         private void PlayIntro()
         {
@@ -114,11 +122,8 @@ namespace LSG.UI
 
         private IEnumerator IntroSequence()
         {
-            // Black overlay fades out to transparent alongside the rest of the intro.
-            if (background != null)
-            {
-                StartCoroutine(FadeBackgroundOut());
-            }
+            // The black overlay stays fully opaque through the intro; it only fades out
+            // when the title button is clicked (wire OnClick -> FadeOutBackground()).
 
             yield return FadeIn(title);
             yield return Pause();
@@ -153,15 +158,27 @@ namespace LSG.UI
             titleButton?.SetInteractable(true);
         }
 
+        /// <summary>
+        /// Fades the black overlay out to transparent, then disables it. Hook this to the
+        /// title button's OnClick so the screen stays black until the player clicks.
+        /// </summary>
+        public void FadeOutBackground()
+        {
+            if (background != null) StartCoroutine(FadeBackgroundOut());
+        }
+
         private IEnumerator FadeBackgroundOut()
         {
             Color from = new Color(0f, 0f, 0f, 1f);
             Color to = new Color(0f, 0f, 0f, 0f);
             yield return Lerp(backgroundFadeSeconds, t => background.color = Color.LerpUnclamped(from, to, t));
 
-            // Disable it once transparent so it stops blocking clicks (e.g. the title button).
-            GameObject toDisable = fadeBlackCanvas != null ? fadeBlackCanvas : background.gameObject;
-            toDisable.SetActive(false);
+            // Disable it once transparent so nothing is left covering the screen.
+            GameObject fadeBlack = FadeBlackObject;
+            if (fadeBlack != null) fadeBlack.SetActive(false);
+
+            // Now that the fade is done, hand off (e.g. start the game / change phase).
+            onBackgroundFadedOut?.Invoke();
         }
 
         private IEnumerator Pause()

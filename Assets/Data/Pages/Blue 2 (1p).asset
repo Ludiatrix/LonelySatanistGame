@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e42d5039b8964defda6b7cc7cc8fa670, type: 3}
   m_Name: Blue 2 (1p)
   m_EditorClassIdentifier: LSG::LSG.PageData
-  CardID: 22
+  CardID: 10
   TapeCost: 1
   CardWord: eez
   CardEffect: Gain 1 Rizz
@@ -27,5 +27,5 @@ MonoBehaviour:
     Power: 1
     Sanity: 0
     Rizz: 1
-  EffectType: 0
-  EffectAmount: 0
+  EffectType: 1
+  EffectAmount: 1

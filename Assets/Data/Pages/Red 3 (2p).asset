@@ -12,11 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e42d5039b8964defda6b7cc7cc8fa670, type: 3}
   m_Name: Red 3 (2p)
   m_EditorClassIdentifier: LSG::LSG.PageData
-  CardID: 43
+  CardID: 19
   TapeCost: 2
-  CardWord: iv 'ree 'wahr
-  CardEffect: 'Optional: Repair a random page of the Necronomicon and add it to the
-    book. This does not cost any Tape.'
+  CardWord: "iv 'ree 'wahr"
+  CardEffect: "Optional: Repair a random page of the Necronomicon and add it to the book. This does not cost any Tape."
   Suit: 4
   SummoningPage: {fileID: 6687185045045636971, guid: 4101cc3e21ee66940a76f3c70f2f9b8b, type: 3}
   PageImage: {fileID: 2163756539642419885, guid: 1de089a86a1e2564ab77a3b7436059a1, type: 3}

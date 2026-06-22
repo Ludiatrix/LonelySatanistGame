@@ -12,11 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e42d5039b8964defda6b7cc7cc8fa670, type: 3}
   m_Name: White 1 (1p)
   m_EditorClassIdentifier: LSG::LSG.PageData
-  CardID: 11
+  CardID: 1
   TapeCost: 0
-  CardWord: eema
-  CardEffect: If the cummulative Power of Daggers read this summoning exceeds 7,
-    summon Papiyawn.
+  CardWord: "eema"
+  CardEffect: "If the cummulative Power of Daggers read this summoning exceeds 7, summon Papiyawn."
   Suit: 0
   SummoningPage: {fileID: -3195090373404028535, guid: 4101cc3e21ee66940a76f3c70f2f9b8b, type: 3}
   PageImage: {fileID: -4270301216674404249, guid: 1de089a86a1e2564ab77a3b7436059a1, type: 3}

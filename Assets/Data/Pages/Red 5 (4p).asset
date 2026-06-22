@@ -12,11 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e42d5039b8964defda6b7cc7cc8fa670, type: 3}
   m_Name: Red 5 (4p)
   m_EditorClassIdentifier: LSG::LSG.PageData
-  CardID: 45
+  CardID: 24
   TapeCost: 4
-  CardWord: kurr 'aych 'shun
-  CardEffect: 'Optional: Return a random page read this summoning to the Necronomicon.
-    Its power is not removed from the power meter.'
+  CardWord: "kurr 'aych 'shun"
+  CardEffect: "Optional: Return a random page read this summoning to the Necronomicon. Its power is not removed from the power meter."
   Suit: 4
   SummoningPage: {fileID: -1069700003256313634, guid: 4101cc3e21ee66940a76f3c70f2f9b8b, type: 3}
   PageImage: {fileID: -4977697792896874726, guid: 1de089a86a1e2564ab77a3b7436059a1, type: 3}
