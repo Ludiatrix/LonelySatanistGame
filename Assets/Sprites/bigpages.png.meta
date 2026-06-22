@@ -1,0 +1,754 @@
+fileFormatVersion: 2
+guid: 4101cc3e21ee66940a76f3c70f2f9b8b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3195090373404028535
+    second: bigpages_0
+  - first:
+      213: -8070070713402599637
+    second: bigpages_1
+  - first:
+      213: -3460658031297554349
+    second: bigpages_2
+  - first:
+      213: 7763165029315705313
+    second: bigpages_3
+  - first:
+      213: -1890355142808060487
+    second: bigpages_4
+  - first:
+      213: -250620498574982642
+    second: bigpages_5
+  - first:
+      213: -3690850739549441585
+    second: bigpages_6
+  - first:
+      213: 5272052572695857541
+    second: bigpages_7
+  - first:
+      213: -5788345927421995136
+    second: bigpages_8
+  - first:
+      213: 330714920866190492
+    second: bigpages_9
+  - first:
+      213: 902746041063898795
+    second: bigpages_10
+  - first:
+      213: 1617103341637644158
+    second: bigpages_11
+  - first:
+      213: 284004665056607853
+    second: bigpages_12
+  - first:
+      213: -2185220088906094537
+    second: bigpages_13
+  - first:
+      213: -350387768891985831
+    second: bigpages_14
+  - first:
+      213: 3905697918590883492
+    second: bigpages_15
+  - first:
+      213: 6687185045045636971
+    second: bigpages_16
+  - first:
+      213: -5306215599530509667
+    second: bigpages_17
+  - first:
+      213: -2549871477615538249
+    second: bigpages_18
+  - first:
+      213: 115069014340169278
+    second: bigpages_19
+  - first:
+      213: -1069700003256313634
+    second: bigpages_20
+  - first:
+      213: 5376998459409760464
+    second: bigpages_21
+  - first:
+      213: -4613149194220840174
+    second: bigpages_22
+  - first:
+      213: 7585829633955156655
+    second: bigpages_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bigpages_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1208
+        width: 225
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9819bf3db32c8a3d0800000000000000
+      internalID: -3195090373404028535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigpages_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 906
+        width: 225
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b27da577179510090800000000000000
+      internalID: -8070070713402599637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigpages_2
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 1208
+        width: 225
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 358186b1bd549ffc0800000000000000
+      internalID: -3460658031297554349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigpages_3
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 906
+        width: 225
+        height: 303
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e9f811967d4cbb60800000000000000
+      internalID: 7763165029315705313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigpages_4
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 1208
+        width: 225
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bdb79d530c14c5e0800000000000000
+      internalID: -1890355142808060487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigpages_5
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 906
+        width: 225
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e02c1010cfd958cf0800000000000000
+      internalID: -250620498574982642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigpages_6
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 1208
+        width: 225
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc1fa2eaec677ccc0800000000000000
+      internalID: -3690850739549441585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigpages_7
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 906
+        width: 225
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58988b0e1e71a2940800000000000000
+      internalID: 5272052572695857541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigpages_8
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 1208
+        width: 225
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 087dee60c0aabafa0800000000000000
+      internalID: -5788345927421995136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigpages_9
+      rect:
+        serializedVersion: 2
+        x: 1125
+        y: 1208
+        width: 225
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c949624e77fe69400800000000000000
+      internalID: 330714920866190492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigpages_10
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 1208
+        width: 225
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: baef00ccdb2378c00800000000000000
+      internalID: 902746041063898795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigpages_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 604
+        width: 225
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7fa863ebea117610800000000000000
+      internalID: 1617103341637644158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigpages_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 302
+        width: 225
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6eb047fcbcf0f300800000000000000
+      internalID: 284004665056607853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigpages_13
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 604
+        width: 225
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73864bc28e98ca1e0800000000000000
+      internalID: -2185220088906094537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigpages_14
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 302
+        width: 225
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9503d8d3e2c232bf0800000000000000
+      internalID: -350387768891985831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigpages_15
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 604
+        width: 225
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a6979d4093d33630800000000000000
+      internalID: 3905697918590883492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigpages_16
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 302
+        width: 225
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6fef354e57adcc50800000000000000
+      internalID: 6687185045045636971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigpages_17
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 604
+        width: 225
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9af85896098c56b0800000000000000
+      internalID: -5306215599530509667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigpages_18
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 302
+        width: 225
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bf43d1a6690d9cd0800000000000000
+      internalID: -2549871477615538249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigpages_19
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 604
+        width: 225
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3e666ca8aec89100800000000000000
+      internalID: 115069014340169278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigpages_20
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 302
+        width: 225
+        height: 303
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed85ca9b389a721f0800000000000000
+      internalID: -1069700003256313634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigpages_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 225
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d001fa3c9fee9a40800000000000000
+      internalID: 5376998459409760464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigpages_22
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 0
+        width: 225
+        height: 303
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21b5696df3dcaffb0800000000000000
+      internalID: -4613149194220840174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigpages_23
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 0
+        width: 225
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa257825cd7464960800000000000000
+      internalID: 7585829633955156655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      bigpages_0: -3195090373404028535
+      bigpages_1: -8070070713402599637
+      bigpages_10: 902746041063898795
+      bigpages_11: 1617103341637644158
+      bigpages_12: 284004665056607853
+      bigpages_13: -2185220088906094537
+      bigpages_14: -350387768891985831
+      bigpages_15: 3905697918590883492
+      bigpages_16: 6687185045045636971
+      bigpages_17: -5306215599530509667
+      bigpages_18: -2549871477615538249
+      bigpages_19: 115069014340169278
+      bigpages_2: -3460658031297554349
+      bigpages_20: -1069700003256313634
+      bigpages_21: 5376998459409760464
+      bigpages_22: -4613149194220840174
+      bigpages_23: 7585829633955156655
+      bigpages_3: 7763165029315705313
+      bigpages_4: -1890355142808060487
+      bigpages_5: -250620498574982642
+      bigpages_6: -3690850739549441585
+      bigpages_7: 5272052572695857541
+      bigpages_8: -5788345927421995136
+      bigpages_9: 330714920866190492
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

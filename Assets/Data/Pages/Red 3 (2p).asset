@@ -17,6 +17,7 @@ MonoBehaviour:
   CardWord: "iv 'ree 'wahr"
   CardEffect: "Optional: Repair a random page of the Necronomicon and add it to the book. This does not cost any Tape."
   Suit: 4
+  SummoningPage: {fileID: 6687185045045636971, guid: 4101cc3e21ee66940a76f3c70f2f9b8b, type: 3}
   PageImage: {fileID: 2163756539642419885, guid: 1de089a86a1e2564ab77a3b7436059a1, type: 3}
   pageImageRipped: {fileID: -8792363093436212947, guid: b376c2173e02d8b4db2cecadb2d563c7, type: 3}
   Sound: {fileID: 0}

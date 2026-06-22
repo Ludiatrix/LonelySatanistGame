@@ -37,7 +37,6 @@ namespace LSG.Phases
             Debug.Log("[SetupPhase] Starting Phase!");
             base.StartPhase();
             Container.SetActive(true);
-            GameEvents.NecronomiconStartSliding?.Invoke();
             PhaseEvents.SetupPhaseStarted?.Invoke();
         }
 

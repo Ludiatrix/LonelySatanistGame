@@ -17,6 +17,7 @@ MonoBehaviour:
   CardWord: un
   CardEffect: Gain 1 Rizz
   Suit: 2
+  SummoningPage: {fileID: -8070070713402599637, guid: 4101cc3e21ee66940a76f3c70f2f9b8b, type: 3}
   PageImage: {fileID: 2434630521224839075, guid: 1de089a86a1e2564ab77a3b7436059a1, type: 3}
   pageImageRipped: {fileID: 137189941241278027, guid: b376c2173e02d8b4db2cecadb2d563c7, type: 3}
   Sound: {fileID: 0}
