@@ -19,7 +19,12 @@ namespace LSG.UI
         {
             cardData = data;
             ApplyVisuals();
-            RunPageAnimation(PageTurnDestinationTransform);
+
+            if (PageTurnDestinationTransform != null)
+            {
+                RunPageAnimation(PageTurnDestinationTransform);
+            }
+            
         }
 
         private void ApplyVisuals()
