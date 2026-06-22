@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using LSG.Core;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,6 +16,8 @@ namespace LSG.UI
         [SerializeField] private Image dangerImage;
         [Tooltip("Matching index. 0 danger = entry 0")]
         [SerializeField] private List<Sprite> dangerSprites;
+
+        [SerializeField] private TMP_Text text;
 
         private void OnEnable()
         {
@@ -39,6 +42,7 @@ namespace LSG.UI
             if (whiteSuitPoints >= dangerSprites.Count) whiteSuitPoints = dangerSprites.Count - 1;
             
             dangerImage.sprite = dangerSprites[whiteSuitPoints];
+            text.text = $"White Pages Turned: {whiteSuitPoints.ToString()}";
         }
     }
 }
