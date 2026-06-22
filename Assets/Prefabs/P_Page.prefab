@@ -74,6 +74,23 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  rotationEvents:
+  - normalizedTime: 0.5
+    onReached:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 5428038719792566725}
+          m_TargetAssemblyTypeName: LSG.UI.PageFacade, LSG
+          m_MethodName: SwapToBlankPage
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &5428038719792566725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -88,6 +105,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: LSG::LSG.UI.PageFacade
   pageRotator: {fileID: 2393595002333825949}
   pageImage: {fileID: 404199919649408110}
+  cardData: {fileID: 0}
+  blankPageSprite: {fileID: 326034597, guid: 1de089a86a1e2564ab77a3b7436059a1, type: 3}
 --- !u!1 &9058398681709471340
 GameObject:
   m_ObjectHideFlags: 0
