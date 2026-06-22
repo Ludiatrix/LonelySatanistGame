@@ -66,6 +66,7 @@ namespace LSG.Phases
             UIEvents.SetNamePlateText?.Invoke(data.CardWord);
             UIEvents.SetDialogueText?.Invoke(data.CardEffect);
             EconomyEvents.SendPayload?.Invoke(data.PageModifier);
+            DataManager.Instance.EffectDataSource.ResolveCardEffect(data);
             page.GetComponent<PageFacade>().Inject(data, PageTurnDestinationTransform);
             Debug.Log("[SummoningPhase] Page Turned!");
             GameEvents.PageRead?.Invoke();
