@@ -14,18 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: LSG::LSG.PageData
   CardID: 13
   TapeCost: 1
-  CardWord: "kun"
-  CardEffect: "Optional: Tear up a random page you've read this summoning from the Necronomicon, maximum Tape cost 1. That page's power is not removed from the Power meter."
+  CardWord: kun
+  CardEffect: 'Optional: Tear up a random page you''ve read this summoning from the
+    Necronomicon, maximum Tape cost 1. That page''s power is not removed from the
+    Power meter.'
   Suit: 4
   SummoningPage: {fileID: 284004665056607853, guid: 4101cc3e21ee66940a76f3c70f2f9b8b, type: 3}
   PageImage: {fileID: 4727413352979517984, guid: 1de089a86a1e2564ab77a3b7436059a1, type: 3}
   pageImageRipped: {fileID: 8424105156814094315, guid: b376c2173e02d8b4db2cecadb2d563c7, type: 3}
   Sound: {fileID: 0}
   PageModifier:
-    Tape: 1
+    Tape: 0
     Page: 0
     Power: 1
     Sanity: 0
     Rizz: 0
-  EffectType: 4
-  EffectAmount: 0
+  EffectType: 2

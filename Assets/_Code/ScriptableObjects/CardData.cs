@@ -34,6 +34,5 @@ namespace LSG.ScriptableObjects
 
         [Header("Effects")]
         public CardEffectType EffectType;
-        public int EffectAmount;
     }
 }
