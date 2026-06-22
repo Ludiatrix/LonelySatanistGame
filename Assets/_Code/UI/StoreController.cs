@@ -27,7 +27,7 @@ namespace LSG.UI
             UIEvents.StoreButtonClicked?.AddListener(OnStoreButtonClicked);
             
             CardEvents.BuyCardSuccessResponse?.AddListener(OnBuyCardSuccessResponse);
-            CardEvents.BuyCardSuccessResponse?.AddListener(OnBuyCardFailedResponse);
+            CardEvents.BuyCardFailedResponse?.AddListener(OnBuyCardFailedResponse);
         }
 
         private void OnBuyCardSuccessResponse(CardData successfulCardData)

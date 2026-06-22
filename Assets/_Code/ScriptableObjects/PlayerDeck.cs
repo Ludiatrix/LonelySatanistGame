@@ -200,10 +200,12 @@ namespace LSG.ScriptableObjects
              */
             if (DataManager.Instance.PlayerEconomySource.Tape >= cardToTryBuying.TapeCost && !playerDeck.Contains(cardToTryBuying) || !playedCards.Contains(cardToTryBuying))
             {
+                Debug.Log("Bought card: "+cardToTryBuying.name);
                 CardEvents.BuyCardSuccessResponse?.Invoke(cardToTryBuying);
             }
             else
             {
+                Debug.Log("Failed to buy card: "+cardToTryBuying);
                 CardEvents.BuyCardFailedResponse?.Invoke(cardToTryBuying);
             }
         }
