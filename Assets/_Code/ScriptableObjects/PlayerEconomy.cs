@@ -31,6 +31,12 @@ public class PlayerEconomy : ScriptableObject
 
     private void OnSendPayload(ModifierPayload payload)
     {
+        Debug.Log($"Received Payload of the following: \n" +
+                  $"Power: {payload.Power}" +
+                  $"Sanity: {payload.Sanity}" +
+                  $"Rizz: {payload.Rizz}" +
+                  $"Tape: {payload.Tape}");
+
         Tape += payload.Tape;
         Power += payload.Power;
         Sanity += payload.Sanity;
