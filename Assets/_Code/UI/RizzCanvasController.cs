@@ -14,7 +14,9 @@ namespace LSG.UI
         [SerializeField] private TMP_Text rizzText;
 
         [SerializeField] private List<GameObject> flowers;
-        
+
+        public int rizz = 1;
+
         private void OnEnable()
         {
             GameEvents.PageRead?.AddListener(OnPageRead);
@@ -25,10 +27,14 @@ namespace LSG.UI
             GameEvents.PageRead?.RemoveListener(OnPageRead);
         }
 
+        private void LateUpdate()
+        {
+            rizz = DataManager.Instance.PlayerEconomySource.Rizz;
+            rizzText.text = $"Rizz: {rizz}";
+        }
+
         private void OnPageRead()
         {
-            int rizz = DataManager.Instance.PlayerEconomySource.Rizz;
-            rizzText.text = $"Rizz: {rizz}";
 
             int visibleFlowerCount = Mathf.Clamp(rizz, 0, flowers.Count);
 

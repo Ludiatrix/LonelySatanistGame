@@ -16,6 +16,11 @@ namespace LSG
         
         [SerializeField] private DemonData[] demons;
 
+        public DemonData[] Demons => (DemonData[]) demons.Clone();
+
+        public List<DemonData> AvailableDemons = new List<DemonData>();
+
+
         /// <summary>
         /// Summon a demon! It's not very safe.
         /// </summary>
@@ -23,13 +28,19 @@ namespace LSG
         /// <returns>A demon. I thought that was clear.</returns>
         public DemonData EncounterDemonBasedOnPower(int powerLevel)
         {
-            demons.Shuffle(); //SHUFFLE THE DEMONS!
+            AvailableDemons.Shuffle(); //SHUFFLE THE DEMONS!
             
-            for (int i = 0; i < demons.Length; i++)
+            for (int i = 0; i < AvailableDemons.Count; i++)
             {
                 if (demons[i].minimumPowerLevel < powerLevel && demons[i].minimumPowerLevel >= 0)
                 {
                     _currentDemon = demons[i];
+
+                    if (!_currentDemon.canDateDemonMultipleTimes)
+                    {
+                        AvailableDemons.Remove(_currentDemon);
+                    }
+
                     return demons[i];
                 }
             }
@@ -40,6 +51,8 @@ namespace LSG
         public void Reset()
         {
             _currentDemon = null;
+            AvailableDemons.Clear();
+            AvailableDemons.AddRange(Demons);
         }
     }
 }
