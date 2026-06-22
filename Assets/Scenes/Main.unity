@@ -4122,14 +4122,14 @@ MonoBehaviour:
   title:
     canvasGroup: {fileID: 0}
     text: {fileID: 1690958387}
-    fadeSeconds: 2.5
+    fadeSeconds: 2
   introNarrative:
     canvasGroup: {fileID: 0}
     text: {fileID: 2056624572}
     fadeSeconds: 4
   introNarrativeMover: {fileID: 1885164878}
-  introNarrativeRiseDistance: 4.5
-  introNarrativeRiseDuration: 5
+  introNarrativeRiseDistance: 4.75
+  introNarrativeRiseDuration: 4
   titleButton:
     canvasGroup: {fileID: 0}
     text: {fileID: 0}
