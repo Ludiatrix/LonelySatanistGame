@@ -72,7 +72,7 @@ public class PlayerEconomy : ScriptableObject
             WhiteSuitPoints+= takenCard.PageModifier.Power;
         }
 
-        if (WhiteSuitPoints > 8)
+        if (WhiteSuitPoints > 7)
         {
             GameEvents.ChangeState?.Invoke(Enums.GameState.LosePhase);
         }

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8270ffd9a996cfa2bca0df66e852826, type: 3}
   m_Name: DemonData_TheBook
   m_EditorClassIdentifier: LSG::LSG.ScriptableObjects.DemonData_TheBook
-  demonName: Ekzeema
+  demonName: The Book
   canDateDemonMultipleTimes: 0
   introDialogue: "Your mind, like paper, tears to shreds.\n\nAnd yet, such a perspective
     you now have, the book, in pieces, matches you.  You are wrapped in its fractured
@@ -28,4 +28,4 @@ MonoBehaviour:
   bane: 
   boonBaneDialogue: 
   dateOutcome: 
-  demonSprite: {fileID: 0}
+  demonSprite: {fileID: 1302723820812287101, guid: 4935186140bd11c28a3b0ae03c17a3e7, type: 3}

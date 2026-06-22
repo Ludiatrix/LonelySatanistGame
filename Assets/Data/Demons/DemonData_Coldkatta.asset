@@ -14,22 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: LSG::LSG.DemonData_Coldkatta
   demonName: Coldkatta
   canDateDemonMultipleTimes: 0
-  introDialogue: The sweet customer service smile on this girl doesn't reach her
-    eyes. "So you were hoping to get a piece of me?" she asks, smoothing out a wrinkle
-    on her crisp, white apron. A fresh smear of blood follows the trail of her hand.
+  introDialogue: "The sweet customer service smile on this girl doesn't reach her eyes. \"So you were hoping to get a piece of me?\" she asks, smoothing out a wrinkle on her crisp, white apron. A fresh smear of blood follows the trail of her hand."
   minimumPowerLevel: 1
   maximumPowerLevel: 15
-  outcome: '"How about I take a piece of you, instead?" she smiles even wider as
-    the knife plunges through your wrist. The sandwich she serves you wrapped in
-    a freshly-repaired page of the Necronomicon is genuinely delicious. But you really
-    will miss that hand.'
-  boon: Add a random orange card that has not yet been purchased to the deck.
-  bane: For the rest of this game, you cannot choose to read the left page for the
-    Optional peek effect of [Black suit] pages. (disable the "Read Left Page" button
-    for black card effects)
-  boonBaneDialogue: Coldkatta's Curse prevents using a left hand page in your summoning.
-  dateOutcome: The 4-H livestock competition was more fun than you expected it to
-    be. You both got to pet the cows and the kids were so loving and enthusiastic
-    about the animals they raised. Coldkatta offered to buy a black calf from a 12
-    year old in pigtails. "Have any plans for dinner later?" she asked sweetly.
+  outcome: "\"How about I take a piece of you, instead?\" she smiles even wider as the knife plunges through your wrist. The sandwich she serves you wrapped in a freshly-repaired page of the Necronomicon is genuinely delicious. But you really will miss that hand."
+  boon: "Add a random orange card that has not yet been purchased to the deck."
+  bane: "For the rest of this game, you cannot choose to read the left page for the Optional peek effect of [Black suit] pages. (disable the \"Read Left Page\" button for black card effects)"
+  boonBaneDialogue: "Coldkatta's Curse prevents using a left hand page in your summoning."
+  dateOutcome: "The 4-H livestock competition was more fun than you expected it to be. You both got to pet the cows and the kids were so loving and enthusiastic about the animals they raised. Coldkatta offered to buy a black calf from a 12 year old in pigtails. \"Have any plans for dinner later?\" she asked sweetly."
   demonSprite: {fileID: -3789970895654960073, guid: 53d82dde18a21f76f910bc46b49aee5a, type: 3}
