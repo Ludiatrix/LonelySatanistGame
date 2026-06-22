@@ -14,10 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: LSG::LSG.PageData
   CardID: 17
   TapeCost: 2
-  CardWord: uhndirresh
-  CardEffect: 'Optional: Peek at the next 2 pages. You may choose one page to read.
-    Any of the 2 pages not read are set aside and do not shuffle back into the Necronomicon
-    until the next summoning.'
+  CardWord: "uhndirresh"
+  CardEffect: "Optional: Peek at the next 2 pages. You may choose one page to read. Any of the 2 pages not read are set aside and do not shuffle back into the Necronomicon until the next summoning."
   Suit: 3
   PageImage: {fileID: 2845080509387628534, guid: 1de089a86a1e2564ab77a3b7436059a1, type: 3}
   pageImageRipped: {fileID: -3627134200314166397, guid: b376c2173e02d8b4db2cecadb2d563c7, type: 3}
