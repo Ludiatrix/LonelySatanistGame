@@ -34,6 +34,7 @@ namespace LSG.Phases
             Debug.Log("[SummoningPhase] Starting Phase!");
             base.StartPhase();
             Container.SetActive(true);
+            DataManager.Instance.PlayerEconomySource.Power = 0;
             if (DataManager.Instance.PlayerDeckSource.playedCards.Count > 0)
             {
                 DataManager.Instance.PlayerDeckSource.ReshufflePlayedCardsToPlayerDeck();
@@ -65,6 +66,7 @@ namespace LSG.Phases
             UIEvents.SetNamePlateText?.Invoke(data.CardWord);
             UIEvents.SetDialogueText?.Invoke(data.CardEffect);
             EconomyEvents.SendPayload?.Invoke(data.PageModifier);
+            DataManager.Instance.EffectDataSource.ResolveCardEffect(data);
             page.GetComponent<PageFacade>().Inject(data, PageTurnDestinationTransform);
             Debug.Log("[SummoningPhase] Page Turned!");
             GameEvents.PageRead?.Invoke();

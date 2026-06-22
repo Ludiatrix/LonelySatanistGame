@@ -10,6 +10,7 @@ namespace LSG.UI
     public class PickACardCanvasController : MonoBehaviour
     {
         public GameObject container;
+        public GameObject horizontalContainer;
         public List<GameObject> pickablePages = new List<GameObject>();
         public GameObject pagePrefab;
         public GameObject pickButton;
@@ -46,7 +47,7 @@ namespace LSG.UI
 
         private void GeneratePickablePage(CardData card)
         {
-            var page = Instantiate(pagePrefab, transform);
+            var page = Instantiate(pagePrefab, horizontalContainer.transform);
             page.GetComponent<PageFacade>().Inject(card);
             var btn = page.AddComponent<Button>();
             btn.targetGraphic = page.GetComponent<Image>();
