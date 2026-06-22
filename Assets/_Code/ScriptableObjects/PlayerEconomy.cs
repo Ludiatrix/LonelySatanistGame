@@ -62,7 +62,6 @@ public class PlayerEconomy : ScriptableObject
     private void UpdatePageRewards()
     {
         Page++;
-        ModifyPower(1);
         GameEvents.TapeEarnedEvent?.Invoke();
     }
     
