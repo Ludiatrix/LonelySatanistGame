@@ -40,6 +40,7 @@ namespace LSG.UI
             UIEvents.ToggleResourceUI?.Invoke(false);
             UIEvents.SetNamePlateText?.Invoke("Smol");
             UIEvents.SetDialogueText?.Invoke(payload.Reason);
+            UIEvents.DisableButtons?.Invoke();
             SummoningContainer.SetActive(false);
 
             foreach (var card in payload.Cards)
@@ -104,6 +105,7 @@ namespace LSG.UI
             }
             pickablePages.Clear();
             container.SetActive(false);
+            UIEvents.ToggleSummoningButtons?.Invoke(true);
             SummoningContainer.SetActive(true);
         }
 

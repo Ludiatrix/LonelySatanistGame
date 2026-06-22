@@ -28,20 +28,23 @@ namespace LSG
         /// <returns>A demon. I thought that was clear.</returns>
         public DemonData EncounterDemonBasedOnPower(int powerLevel)
         {
-            AvailableDemons.Shuffle(); //SHUFFLE THE DEMONS!
-            
+            AvailableDemons.Shuffle();
+
             for (int i = 0; i < AvailableDemons.Count; i++)
             {
-                if (demons[i].minimumPowerLevel < powerLevel && demons[i].minimumPowerLevel >= 0)
-                {
-                    _currentDemon = demons[i];
+                DemonData demon = AvailableDemons[i];
 
-                    if (!_currentDemon.canDateDemonMultipleTimes)
+                if (demon.minimumPowerLevel <= powerLevel && demon.minimumPowerLevel >= 0)
+                {
+                    _currentDemon = demon;
+
+                    if (!demon.canDateDemonMultipleTimes)
                     {
-                        AvailableDemons.Remove(_currentDemon);
+                        AvailableDemons.RemoveAt(i);
+                        Debug.Log($"Found the Demon {demon}");
                     }
 
-                    return demons[i];
+                    return demon;
                 }
             }
 
