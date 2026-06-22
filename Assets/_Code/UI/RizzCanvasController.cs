@@ -29,11 +29,12 @@ namespace LSG.UI
         {
             int rizz = DataManager.Instance.PlayerEconomySource.Rizz;
             rizzText.text = $"Rizz: {rizz}";
-            for (var i = 0; i < 8; i++)
+
+            int visibleFlowerCount = Mathf.Clamp(rizz, 0, flowers.Count);
+
+            for (var i = 0; i < flowers.Count; i++)
             {
-                // I know we can bake the conditional into the call, but that's often harder to read
-                if (i >= rizz) flowers[i].SetActive(false);
-                else flowers[i].SetActive(true);
+                flowers[i].SetActive(i < visibleFlowerCount);
             }
         }
     }

@@ -20,21 +20,10 @@ namespace LSG.UI
         [SerializeField] private Transform milestoneContainer;
         [SerializeField] private float maximum = 48f;
 
-        private void OnEnable()
-        {
-            GameEvents.TapeEarnedEvent?.AddListener(UpdateBar);
-        }
-
-        private void OnDisable()
-        {
-            GameEvents.TapeEarnedEvent?.RemoveListener(UpdateBar);
-        }
-
         private void Start()
         {
             _economy = DataManager.Instance.PlayerEconomySource;
             powerSlider.maxValue = maximum;
-            UpdateBar();
             GenerateMilestones();
         }
 
@@ -60,15 +49,9 @@ namespace LSG.UI
             return width * normalizedDistance;
         }
 
-        private void UpdateBar()
+        private void LateUpdate()
         {
             powerSlider.value = _economy.Power;
-            /*
-             * TODO: There is a mask on the Resource Bar as we want to pull along the Resource Bar when Milestones progress.
-             * We also need to detect when we have surpassed a milestone so we can smoothly pull it to the left with SmoothMover
-             * as well as make the TapeIcons disappear.
-             * 
-             */
         }
     }
 }

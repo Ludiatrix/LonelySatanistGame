@@ -34,6 +34,7 @@ namespace LSG.Phases
             Debug.Log("[SummoningPhase] Starting Phase!");
             base.StartPhase();
             Container.SetActive(true);
+            DataManager.Instance.PlayerEconomySource.Power = 0;
             if (DataManager.Instance.PlayerDeckSource.playedCards.Count > 0)
             {
                 DataManager.Instance.PlayerDeckSource.ReshufflePlayedCardsToPlayerDeck();
