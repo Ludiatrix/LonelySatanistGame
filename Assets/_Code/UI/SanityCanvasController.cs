@@ -44,7 +44,12 @@ namespace LSG.UI
         {
             sanityText.text = $"Sanity: {sanity}";
 
-            float scale = sanityFlameSize.Evaluate(sanity);
+            // Flip the flame size so it grows as sanity drops, peaking at Sanity = 1.
+            // Map sanity [1..max] onto the curve's [max..min] domain (max sanity == candleSprites.Count),
+            // so Sanity 1 hits the top of the curve and full sanity hits the bottom.
+            int maxSanity = candleSprites.Count;
+            int clampedSanity = Mathf.Clamp(sanity, 1, maxSanity);
+            float scale = sanityFlameSize.Evaluate(maxSanity + 1 - clampedSanity);
             sanityCandleFlame.transform.localScale = new Vector3(scale, scale);
 
             Vector3 flamePosition = sanityCandleFlame.transform.localPosition;
