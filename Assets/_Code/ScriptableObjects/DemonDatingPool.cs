@@ -13,12 +13,34 @@ namespace LSG
     {
         public DemonData LastEncounteredDemon => _currentDemon;
         private DemonData _currentDemon = null;
-        
+
         [SerializeField] private DemonData[] demons;
 
+        [Header("Forced encounter demons (not part of the random pool)")]
+        [SerializeField] private DemonData papiyawn;
+        [SerializeField] private DemonData theBook;
+
+        // When set, the next encounter will be this demon regardless of power.
+        private DemonData _forcedDemon = null;
+
         public DemonData[] Demons => (DemonData[]) demons.Clone();
+        public DemonData Papiyawn => papiyawn;
+        public DemonData TheBook => theBook;
 
         public List<DemonData> AvailableDemons = new List<DemonData>();
+
+        /// <summary>
+        /// Forces the next encounter to be the given demon (e.g. a lose-condition
+        /// demon). Cleared once it has been handed out.
+        /// </summary>
+        public void QueueForcedEncounter(DemonData demon) => _forcedDemon = demon;
+
+        /// <summary>
+        /// True if the demon is one of the forced lose-condition encounters. These
+        /// should not tick the normal per-encounter stat changes.
+        /// </summary>
+        public bool IsForcedEncounterDemon(DemonData demon) =>
+            demon != null && (demon == papiyawn || demon == theBook);
 
 
         /// <summary>
@@ -28,6 +50,14 @@ namespace LSG
         /// <returns>A demon. I thought that was clear.</returns>
         public DemonData EncounterDemonBasedOnPower(int powerLevel)
         {
+            // A forced encounter (e.g. a lose condition) overrides power-based selection.
+            if (_forcedDemon != null)
+            {
+                _currentDemon = _forcedDemon;
+                _forcedDemon = null;
+                return _currentDemon;
+            }
+
             AvailableDemons.Shuffle();
 
             for (int i = 0; i < AvailableDemons.Count; i++)
@@ -54,6 +84,7 @@ namespace LSG
         public void Reset()
         {
             _currentDemon = null;
+            _forcedDemon = null;
             AvailableDemons.Clear();
             AvailableDemons.AddRange(Demons);
         }

@@ -14,6 +14,11 @@ namespace LSG.Core
         public PhaseObject[] PhaseObjects;
         public Enums.GameState CurrentPhase = Enums.GameState.NullPhase;
 
+        // Guards against re-entrant phase changes (e.g. a phase change requested from
+        // inside StartPhase, like a lose condition firing during an encounter).
+        private bool _isTransitioning;
+        private Enums.GameState? _queuedPhase;
+
         private void OnEnable()
         {
             GameEvents.StartGame.AddListener(GoToPhase);
@@ -37,10 +42,28 @@ namespace LSG.Core
         /// <param name="targetPhase">the phase you want to go to</param>
         public void GoToPhase(Enums.GameState targetPhase)
         {
+            // If a phase change is requested while we're already mid-transition,
+            // queue it and run it once the current transition completes.
+            if (_isTransitioning)
+            {
+                _queuedPhase = targetPhase;
+                return;
+            }
+
             Debug.Log($"{nameof(GoToPhase)}: {targetPhase}");
+
+            _isTransitioning = true;
             TryEndPhase(CurrentPhase);
             TryStartPhase(targetPhase);
             CurrentPhase = targetPhase;
+            _isTransitioning = false;
+
+            if (_queuedPhase.HasValue)
+            {
+                Enums.GameState next = _queuedPhase.Value;
+                _queuedPhase = null;
+                GoToPhase(next);
+            }
         }
 
         private void TryEndPhase(Enums.GameState phaseToEnd)

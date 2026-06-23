@@ -13,7 +13,7 @@ public class PlayerEconomy : ScriptableObject
     public int Page = 0;
     public int Power = 0;
     public int Sanity = 20;
-    public int Rizz = 1;
+    public int Rizz = 0;
     public int WhiteSuitPoints = 0;
 
     private void OnEnable()
@@ -21,13 +21,15 @@ public class PlayerEconomy : ScriptableObject
         // Riza: ScriptableObjects are lifetime independent. So it's a good idea to reset on game start.
         // Also, I recommend not on start of application just in case we have a case where Player starts game without
         // starting restarting the application.
-        GameEvents.StartGame?.AddListener(_ => Reset());
+        GameEvents.StartGame?.AddListener(OnStartGame);
         GameEvents.PageRead?.AddListener(UpdatePageRewards);
         GameEvents.CardTaken?.AddListener(OnPageTaken);
         GameEvents.ChangeState?.AddListener(OnChangeState);
         GameEvents.DemonEncountered?.AddListener(OnDemonEncountered);
         EconomyEvents.SendPayload?.AddListener(OnSendPayload);
     }
+
+    private void OnStartGame(Enums.GameState _) => Reset();
 
     private void OnSendPayload(ModifierPayload payload)
     {
@@ -40,23 +42,55 @@ public class PlayerEconomy : ScriptableObject
         Rizz += payload.Rizz;
         ModifyPower(payload.Power);
         Tape += payload.Tape;
+
+        // A card read can drain Sanity to 0 or below; summon The Book if so.
+        TriggerTheBookIfOutOfSanity();
+    }
+
+    /// <summary>
+    /// When Sanity hits 0 or lower, summon The Book instead of showing the lose screen.
+    /// </summary>
+    private void TriggerTheBookIfOutOfSanity()
+    {
+        if (Sanity > 0)
+        {
+            return;
+        }
+
+        var pool = DataManager.Instance.DemonDatingPoolSource;
+        pool.QueueForcedEncounter(pool.TheBook);
+        GameEvents.ChangeState?.Invoke(Enums.GameState.EncounterPhase);
     }
 
     private void OnDemonEncountered(DemonData data)
     {
+        var pool = DataManager.Instance.DemonDatingPoolSource;
+
+        // Papiyawn / The Book are forced lose-condition encounters; they must not
+        // tick the normal per-encounter stat changes (and must not re-trigger).
+        if (pool.IsForcedEncounterDemon(data))
+        {
+            return;
+        }
+
         Rizz++;
         Sanity--;
 
-        if (Sanity <= 0)
-        {
-            GameEvents.ChangeState?.Invoke(Enums.GameState.LosePhase);
-        }
+        // The per-encounter Sanity hit can take us to 0 or below; summon The Book if so.
+        TriggerTheBookIfOutOfSanity();
     }
 
     private void OnDisable()
     {
-        GameEvents.StartGame?.RemoveListener(_ => Reset());
+        // Must mirror OnEnable exactly. This is a ScriptableObject, so OnEnable/OnDisable
+        // fire across play-mode entries and domain reloads; any listener left subscribed
+        // accumulates and gets applied multiple times (e.g. a card's payload counted twice).
+        GameEvents.StartGame?.RemoveListener(OnStartGame);
         GameEvents.PageRead?.RemoveListener(UpdatePageRewards);
+        GameEvents.CardTaken?.RemoveListener(OnPageTaken);
+        GameEvents.ChangeState?.RemoveListener(OnChangeState);
+        GameEvents.DemonEncountered?.RemoveListener(OnDemonEncountered);
+        EconomyEvents.SendPayload?.RemoveListener(OnSendPayload);
     }
 
     private void UpdatePageRewards()
@@ -74,7 +108,10 @@ public class PlayerEconomy : ScriptableObject
 
         if (WhiteSuitPoints > 7)
         {
-            GameEvents.ChangeState?.Invoke(Enums.GameState.LosePhase);
+            // Too many Daggers read: summon Papiyawn instead of the lose screen.
+            var pool = DataManager.Instance.DemonDatingPoolSource;
+            pool.QueueForcedEncounter(pool.Papiyawn);
+            GameEvents.ChangeState?.Invoke(Enums.GameState.EncounterPhase);
         }
         else
         {
@@ -99,7 +136,7 @@ public class PlayerEconomy : ScriptableObject
         Page = 0;
         Power = 0;
         Sanity = 20;
-        Rizz = 1;
+        Rizz = 0;
         WhiteSuitPoints = 0;
     }
 }
