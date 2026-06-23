@@ -19,6 +19,7 @@ namespace LSG.UI
         [SerializeField] private GameObject summoningButtonContainer;
         [SerializeField] private GameObject encounterButtonContainer;
         [SerializeField] private GameObject storeButtonContainer;
+		[SerializeField] private AudioClip click;
 
         [Header("Terminal (lose) encounter UI")]
         [SerializeField] private GameObject endgameButtonContainer;
@@ -132,6 +133,11 @@ namespace LSG.UI
             storeButtonContainer.SetActive(!toggle);
             SetEndgameContainerActive(false);
         }
+		
+		private void PlayClickSound()
+		{
+			GameEvents.PlaySoundSfx?.Invoke(click, 4.0f);
+		}
 
         private void ToggleEncounterButtonContainer(bool toggle)
         {
