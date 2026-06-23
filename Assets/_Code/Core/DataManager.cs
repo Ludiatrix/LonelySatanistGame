@@ -34,6 +34,24 @@ namespace LSG.Core
             ResetData();
         }
 
+        private void OnEnable()
+        {
+            GameEvents.StartGame?.AddListener(OnStartGame);
+        }
+
+        private void OnDisable()
+        {
+            GameEvents.StartGame?.RemoveListener(OnStartGame);
+        }
+
+        // A new game/run resets the per-game data. Milestones are a "once per game"
+        // unlock economy, so their collected flags must clear so tape can be earned
+        // again (and their bar markers re-show).
+        private void OnStartGame(Enums.GameState _)
+        {
+            MilestoneDataSource.Reset();
+        }
+
         public void ResetData()
         {
             PlayerEconomySource.Reset();

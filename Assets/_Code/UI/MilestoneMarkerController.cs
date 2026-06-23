@@ -12,17 +12,21 @@ namespace LSG.UI
     public class MilestoneMarkerController : MonoBehaviour
     {
         public int MilestonePower = 0;
-        
+
+        [Tooltip("The vertical bar/tick drawn on the slider. Hidden along with the tape icons once the milestone is reached.")]
+        [SerializeField] private GameObject markerBar;
         [SerializeField] private GameObject[] tapeIcons;
 
         private void OnEnable()
         {
             GameEvents.TapeEarnedEvent?.AddListener(OnTapeEarnedEvent);
+            PhaseEvents.SummoningPhaseStarted?.AddListener(CheckMilestoneMarkerForTape);
         }
 
         private void OnDisable()
         {
             GameEvents.TapeEarnedEvent?.RemoveListener(OnTapeEarnedEvent);
+            PhaseEvents.SummoningPhaseStarted?.RemoveListener(CheckMilestoneMarkerForTape);
         }
 
         private void Start()
@@ -37,48 +41,22 @@ namespace LSG.UI
 
         private void CheckMilestoneMarkerForTape()
         {
-            Milestone myMilestone = DataManager.Instance.MilestoneDataSource.GetMilestoneAtPower(MilestonePower);
+            Milestone myMilestone = DataManager.Instance.MilestoneDataSource.GetMilestoneByPowerLevel(MilestonePower);
 
-            if (myMilestone is null)
-            {
-                return;
-            }
-            
-            int tapeAmount = 0;
-            bool toggle = false;
-            
-            if (myMilestone.Collected)
-            {
-                tapeAmount = 4;
-                
-                // Remove the listener at this point
-                GameEvents.TapeEarnedEvent?.RemoveListener(OnTapeEarnedEvent);
-            }
-            else
-            {
-                if (myMilestone.TapeAmount > 0)
-                {
-                    tapeAmount = myMilestone.TapeAmount;
-                    toggle = true;
-                }
-            }
-            
-            ToggleIcons(tapeAmount, toggle);
+            // The whole marker (bar + tape icons) is only shown while this milestone is
+            // still up for grabs. Once it's been reached (Collected) this game, hide it.
+            bool visible = myMilestone != null && !myMilestone.Collected;
+
+            if (markerBar != null) markerBar.SetActive(visible);
+            ShowTapeIcon(visible ? myMilestone.TapeAmount : 0);
         }
 
-        private void ToggleIcons(int amount, bool toggle)
+        /// <summary>Shows the single tape icon for the given amount (0 hides them all).</summary>
+        private void ShowTapeIcon(int amount)
         {
-
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < tapeIcons.Length; i++)
             {
-                if (i + 1 == amount)
-                {
-                    tapeIcons[i].SetActive(toggle);
-                }
-                else
-                {
-                    tapeIcons[i].SetActive(false);
-                }
+                tapeIcons[i].SetActive(i + 1 == amount);
             }
         }
     }

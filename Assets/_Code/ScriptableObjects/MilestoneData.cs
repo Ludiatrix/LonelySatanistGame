@@ -41,6 +41,24 @@ namespace LSG.ScriptableObjects
 
             return null;
         }
+
+        /// <summary>
+        /// Returns the milestone sitting exactly at this power level, regardless of
+        /// whether it's been collected. Used by the per-marker UI so each marker can
+        /// track its own milestone (collected or not).
+        /// </summary>
+        public Milestone GetMilestoneByPowerLevel(int powerLevel)
+        {
+            foreach (var milestone in Milestones)
+            {
+                if (milestone.PowerLevel == powerLevel)
+                {
+                    return milestone;
+                }
+            }
+
+            return null;
+        }
         
         public void Reset()
         {
