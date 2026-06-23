@@ -189,6 +189,7 @@ namespace LSG.ScriptableObjects
         {
             playerDeck.AddRange(playedCards);
             playedCards.Clear();
+            playerDeck.Shuffle();
         }
         
         private void OnTryBuyCard(CardData cardToTryBuying)
