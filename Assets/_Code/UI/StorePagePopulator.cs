@@ -26,7 +26,7 @@ namespace LSG
                 pageImageController.SetImage(data.PageImageRipped);
                 for (var i = 0; i < tapeImages.Count; i++)
                 {
-                    tapeImages[i].gameObject.SetActive(i < data.PageModifier.Tape);
+                    tapeImages[i].gameObject.SetActive(i < data.TapeCost);
                 }
             } else
             {
