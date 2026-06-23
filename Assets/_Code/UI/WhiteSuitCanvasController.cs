@@ -25,18 +25,20 @@ namespace LSG.UI
         private void OnEnable()
         {
             GameEvents.CardTaken?.AddListener(OnCardTaken);
-            GameEvents.ChangeState?.AddListener(OnStateChanged);
+            PhaseEvents.SummoningPhaseStarted?.AddListener(OnSummoningPhaseStarted);
         }
 
         private void OnDisable()
         {
             GameEvents.CardTaken?.RemoveListener(OnCardTaken);
-            GameEvents.ChangeState?.RemoveListener(OnStateChanged);
+            PhaseEvents.SummoningPhaseStarted?.RemoveListener(OnSummoningPhaseStarted);
         }
 
-        private void OnStateChanged(Enums.GameState state)
+        private void OnSummoningPhaseStarted()
         {
-            // White power is per-summoning; reset whenever we change phase.
+            // Dagger power is per-summoning; reset at the start of the round, before
+            // the first page is drawn. Resetting on a generic phase change would fire
+            // after the first card was already counted and wipe it.
             _whitePowerRead = 0;
             ShowDanger();
         }

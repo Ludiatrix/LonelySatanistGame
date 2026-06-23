@@ -46,6 +46,7 @@ namespace LSG.UI
             UIEvents.ToggleEncounterButtons?.AddListener(ToggleEncounterButtonContainer);
             UIEvents.AppendDialogueText?.AddListener(AppendDialogue);
             UIEvents.ToggleStoreButtons?.AddListener(ToggleEncounterButtonContainer);
+            UIEvents.ToggleEndgameButtons?.AddListener(ToggleEndgameButtonContainer);
             UIEvents.DisableButtons?.AddListener(DisableButtons);
             UIEvents.FlipDialogueText?.AddListener(OnFlipDialogueText);
             
@@ -151,6 +152,14 @@ namespace LSG.UI
             encounterButtonContainer.SetActive(!toggle);
             storeButtonContainer.SetActive(toggle);
             SetEndgameContainerActive(false);
+        }
+
+        private void ToggleEndgameButtonContainer(bool toggle)
+        {
+            summoningButtonContainer.SetActive(!toggle);
+            encounterButtonContainer.SetActive(!toggle);
+            storeButtonContainer.SetActive(!toggle);
+            SetEndgameContainerActive(toggle);
         }
 
         private void SetEndgameContainerActive(bool active)

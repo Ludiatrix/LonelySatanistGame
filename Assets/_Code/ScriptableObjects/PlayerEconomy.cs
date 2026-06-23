@@ -24,7 +24,7 @@ public class PlayerEconomy : ScriptableObject
         GameEvents.StartGame?.AddListener(OnStartGame);
         GameEvents.PageRead?.AddListener(UpdatePageRewards);
         GameEvents.CardTaken?.AddListener(OnPageTaken);
-        GameEvents.ChangeState?.AddListener(OnChangeState);
+        PhaseEvents.SummoningPhaseStarted?.AddListener(OnSummoningPhaseStarted);
         GameEvents.DemonEncountered?.AddListener(OnDemonEncountered);
         EconomyEvents.SendPayload?.AddListener(OnSendPayload);
     }
@@ -73,7 +73,8 @@ public class PlayerEconomy : ScriptableObject
             return;
         }
 
-        Rizz++;
+        // NOTE: the longshot Rizz bonus is granted after a failed date roll
+        // (see EncounterPhase.OnDiceRollResult), not on encounter.
         Sanity--;
 
         // The per-encounter Sanity hit can take us to 0 or below; summon The Book if so.
@@ -88,7 +89,7 @@ public class PlayerEconomy : ScriptableObject
         GameEvents.StartGame?.RemoveListener(OnStartGame);
         GameEvents.PageRead?.RemoveListener(UpdatePageRewards);
         GameEvents.CardTaken?.RemoveListener(OnPageTaken);
-        GameEvents.ChangeState?.RemoveListener(OnChangeState);
+        PhaseEvents.SummoningPhaseStarted?.RemoveListener(OnSummoningPhaseStarted);
         GameEvents.DemonEncountered?.RemoveListener(OnDemonEncountered);
         EconomyEvents.SendPayload?.RemoveListener(OnSendPayload);
     }
@@ -119,8 +120,11 @@ public class PlayerEconomy : ScriptableObject
         }
     }
     
-    private void OnChangeState(Enums.GameState newState)
+    private void OnSummoningPhaseStarted()
     {
+        // Dagger power is per-summoning. Reset at the start of each summoning round
+        // (which fires before the first page is drawn) rather than on every phase
+        // change — otherwise the first card of the round gets counted and then wiped.
         WhiteSuitPoints = 0;
     }
 
