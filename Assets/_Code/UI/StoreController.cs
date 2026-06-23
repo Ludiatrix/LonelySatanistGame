@@ -21,8 +21,22 @@ namespace LSG.UI
 
         private bool _buyablePageClicked = false;
 
+        private bool initialized = false;
+
+        private void Start()
+        {
+            Initialize();
+        }
+
         private void OnEnable()
         {
+            Initialize();
+        }
+
+        private void Initialize()
+        {
+            if (initialized) return;
+            initialized = true;
             PhaseEvents.StorePhaseStarted?.AddListener(OnStorePhaseStarted);
             UIEvents.StoreButtonClicked?.AddListener(OnStoreButtonClicked);
             

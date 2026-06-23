@@ -22,6 +22,11 @@ namespace LSG.Effects
             PhaseEvents.SummoningPhaseStarted?.AddListener(OnSummoningPhaseStarted);
         }
 
+        private void OnDisable()
+        {
+            PhaseEvents.SummoningPhaseStarted?.RemoveListener(OnSummoningPhaseStarted);
+        }
+
         private void OnSummoningPhaseStarted()
         {
             if (_alreadyAppliedEffect) return;

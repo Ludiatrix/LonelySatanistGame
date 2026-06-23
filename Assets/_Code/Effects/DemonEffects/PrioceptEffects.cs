@@ -22,7 +22,18 @@ namespace LSG.Effects
         private void OnEnable()
         {
             CardEvents.CardPlayed?.AddListener(OnCardPlayed);
-            PhaseEvents.SummoningPhaseEnded?.AddListener(() => { _firstWhiteSuitPlayed = false;});
+            PhaseEvents.SummoningPhaseEnded?.AddListener(OnSummoningPhaseEnded);
+        }
+
+        private void OnDisable()
+        {
+            CardEvents.CardPlayed?.RemoveListener(OnCardPlayed);
+            PhaseEvents.SummoningPhaseEnded?.RemoveListener(OnSummoningPhaseEnded);
+        }
+
+        private void OnSummoningPhaseEnded()
+        {
+            _firstWhiteSuitPlayed = false;
         }
 
         private void Start()

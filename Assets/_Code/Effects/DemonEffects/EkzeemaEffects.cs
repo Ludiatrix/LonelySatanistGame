@@ -25,6 +25,13 @@ namespace LSG.Effects
             PhaseEvents.StorePhaseEnded?.AddListener(OnStorePhaseEnded);
         }
 
+        private void OnDisable()
+        {
+            CardEvents.CardPlayed?.RemoveListener(OnCardPlayed);
+            CardEvents.CardRepaired?.RemoveListener(OnCardRepaired);
+            PhaseEvents.StorePhaseEnded?.RemoveListener(OnStorePhaseEnded);
+        }
+
         private void Start()
         {
             boonPayload = new ModifierPayload
