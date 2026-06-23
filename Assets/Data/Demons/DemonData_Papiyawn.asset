@@ -14,15 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: LSG::LSG.DemonData_Papiyawn
   demonName: Papiyawn
   canDateDemonMultipleTimes: 0
-  introDialogue: The adorable fluffy white puppy before you yelps once...
+  introDialogue: "The adorable fluffy white puppy before you yelps once..."
   minimumPowerLevel: 8
   maximumPowerLevel: 9999999
-  outcome: 'Then a rift in space opens before you, revealing the gates of hell before
-    you are pulled in. Good news is that your dating woes are over...
-
-'
-  boon: 
-  bane: Game Over
-  boonBaneDialogue: 
-  dateOutcome: 
+  outcome: "Then a rift in space opens before you, revealing the gates of hell before you are pulled in. Good news is that your dating woes are over..."
+  boon:
+  bane: "Game over"
+  boonBaneDialogue:
+  dateOutcome:
   demonSprite: {fileID: -7425643202553535140, guid: b5b31472f68730190826daa46e808aeb, type: 3}

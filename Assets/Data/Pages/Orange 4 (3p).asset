@@ -12,20 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e42d5039b8964defda6b7cc7cc8fa670, type: 3}
   m_Name: Orange 4 (3p)
   m_EditorClassIdentifier: LSG::LSG.PageData
-  CardID: 34
+  CardID: 16
   TapeCost: 2
   CardWord: hurr
-  CardEffect: 'Lose 2 Sanity '
+  CardEffect: Lose 2 Sanity
   Suit: 1
   SummoningPage: {fileID: -5306215599530509667, guid: 4101cc3e21ee66940a76f3c70f2f9b8b, type: 3}
   PageImage: {fileID: -564257083393553431, guid: 1de089a86a1e2564ab77a3b7436059a1, type: 3}
   pageImageRipped: {fileID: 431865373331282771, guid: b376c2173e02d8b4db2cecadb2d563c7, type: 3}
   Sound: {fileID: 0}
   PageModifier:
-    Tape: 2
+    Tape: 0
     Page: 0
     Power: 3
     Sanity: -2
     Rizz: 0
   EffectType: 0
-  EffectAmount: 0

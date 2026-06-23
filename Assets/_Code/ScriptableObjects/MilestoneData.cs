@@ -16,27 +16,26 @@ namespace LSG.ScriptableObjects
         public int GetTapeAmountAtPower(int powerLevel)
         {
             int tapeCollected = 0;
+
             foreach (var milestone in Milestones)
             {
-                if (milestone.PowerLevel > powerLevel && !milestone.Collected)
+                if (milestone.PowerLevel <= powerLevel && !milestone.Collected)
                 {
-                    Debug.Log($"[MilestoneData] Player has reached Milestone {milestone.PowerLevel} and will be awarded {milestone.TapeAmount} Tape!");
-                    tapeCollected += milestone.TapeAmount; // Just making sure we snag anyone possibly left behind
+                    tapeCollected += milestone.TapeAmount;
                     milestone.Collected = true;
-                    return tapeCollected;
                 }
             }
 
-            return 0;
+            return tapeCollected;
         }
 
         public Milestone GetMilestoneAtPower(int powerLevel)
         {
             foreach (var milestone in Milestones)
             {
-                if (milestone.PowerLevel == powerLevel && !milestone.Collected)
+                if (milestone.PowerLevel <= powerLevel && !milestone.Collected)
                 {
-                    return  milestone;
+                    return milestone;
                 }
             }
 

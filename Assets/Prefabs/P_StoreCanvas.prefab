@@ -19,7 +19,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1080164225096861223
 RectTransform:
   m_ObjectHideFlags: 0
@@ -36,10 +36,10 @@ RectTransform:
   - {fileID: 7795274211649984524}
   m_Father: {fileID: 9031798673231707999}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 496.49005, y: -81.5}
+  m_SizeDelta: {x: 116, y: 163}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &5458269610830686092
 MonoBehaviour:
@@ -733,7 +733,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: -34.399902, y: 29.599976}
-  m_SizeDelta: {x: 205.2, y: 40.4}
+  m_SizeDelta: {x: 350.8, y: 75.4}
   m_Pivot: {x: 1, y: 0}
 --- !u!222 &4539341522191057755
 CanvasRenderer:
@@ -1195,7 +1195,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -748.91, y: 353.53}
+  m_AnchoredPosition: {x: -748.8902, y: 362.64008}
   m_SizeDelta: {x: -1672.8, y: -836.85}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9220802558186340058
@@ -1921,8 +1921,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 61.600098, y: 9.300049}
-  m_SizeDelta: {x: -546.23, y: -130.17}
+  m_AnchoredPosition: {x: 44.8, y: 9.300049}
+  m_SizeDelta: {x: -927.02, y: -130.17}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1438804455564057170
 MonoBehaviour:
@@ -2052,8 +2052,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 36
+  m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2627,6 +2627,10 @@ PrefabInstance:
     - target: {fileID: 3114209297319874679, guid: f5f8a97451ecb9440b7edd050282a0e2, type: 3}
       propertyPath: m_Name
       value: P_PageBase
+      objectReference: {fileID: 0}
+    - target: {fileID: 3114209297319874679, guid: f5f8a97451ecb9440b7edd050282a0e2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4574823397904897460, guid: f5f8a97451ecb9440b7edd050282a0e2, type: 3}
       propertyPath: m_Pivot.x

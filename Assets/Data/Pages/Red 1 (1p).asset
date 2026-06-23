@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e42d5039b8964defda6b7cc7cc8fa670, type: 3}
   m_Name: Red 1 (1p)
   m_EditorClassIdentifier: LSG::LSG.PageData
-  CardID: 41
+  CardID: 13
   TapeCost: 1
   CardWord: kun
   CardEffect: 'Optional: Tear up a random page you''ve read this summoning from the
@@ -24,10 +24,9 @@ MonoBehaviour:
   pageImageRipped: {fileID: 8424105156814094315, guid: b376c2173e02d8b4db2cecadb2d563c7, type: 3}
   Sound: {fileID: 0}
   PageModifier:
-    Tape: 1
+    Tape: 0
     Page: 0
     Power: 1
     Sanity: 0
     Rizz: 0
-  EffectType: 4
-  EffectAmount: 0
+  EffectType: 2

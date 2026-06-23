@@ -23,10 +23,9 @@ MonoBehaviour:
   pageImageRipped: {fileID: -4073108329962338164, guid: b376c2173e02d8b4db2cecadb2d563c7, type: 3}
   Sound: {fileID: 0}
   PageModifier:
-    Tape: 1
+    Tape: 0
     Page: 0
     Power: 1
     Sanity: 0
     Rizz: 0
-  EffectType: 9
-  EffectAmount: 0
+  EffectType: 7

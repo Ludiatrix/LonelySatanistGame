@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e42d5039b8964defda6b7cc7cc8fa670, type: 3}
   m_Name: Red 4 (3p)
   m_EditorClassIdentifier: LSG::LSG.PageData
-  CardID: 44
+  CardID: 23
   TapeCost: 3
   CardWord: yehr
   CardEffect: Gain +1 Power for each Flames page read so far this summoning
@@ -22,10 +22,9 @@ MonoBehaviour:
   pageImageRipped: {fileID: 9033615214407038786, guid: b376c2173e02d8b4db2cecadb2d563c7, type: 3}
   Sound: {fileID: 0}
   PageModifier:
-    Tape: 3
+    Tape: 0
     Page: 0
     Power: 3
     Sanity: 0
     Rizz: 0
-  EffectType: 7
-  EffectAmount: 0
+  EffectType: 5

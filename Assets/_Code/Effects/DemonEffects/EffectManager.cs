@@ -32,14 +32,8 @@ namespace LSG.Effects
             {
                 case CardEffectType.None:
                     break;
-                case CardEffectType.GainRizz:
-                    GainRizz(card.EffectAmount);
-                    break;
-                case CardEffectType.LoseSanity:
-                    LoseSanity(card.EffectAmount);
-                    break;
-                case CardEffectType.LoseSanityAndShuffleReadPageBackIntoDeck:
-                    LoseSanityAndShuffleReadPageThisSummoningRoundBackIntoDeck();
+                case CardEffectType.ShuffleReadPageBackIntoDeck:
+                    ShuffleReadPageThisSummoningRoundBackIntoDeck();
                     break;
                 case CardEffectType.RemoveCardFromThisSummoningRoundWithTapeCostOne:
                     RemoveCardFromThisSummoningRoundWithTapeCostOfOneAndAddBackToStoreDoNotTouchPower();
@@ -105,21 +99,9 @@ namespace LSG.Effects
             GameEvents.PickACard?.Invoke(payload);
         }
 
-        public void GainRizz(int rizzAmount)
-        {
-            DataManager.Instance.PlayerEconomySource.Rizz += rizzAmount;
-        }
-
-        public void LoseSanity(int sanityAmount)
-        {
-            DataManager.Instance.PlayerEconomySource.Sanity -= sanityAmount;
-        }
-
         // Lose 2 Sanity and shuffle a random page already read this summoning back into the book
-        public void LoseSanityAndShuffleReadPageThisSummoningRoundBackIntoDeck()
+        public void ShuffleReadPageThisSummoningRoundBackIntoDeck()
         {
-            DataManager.Instance.PlayerEconomySource.Sanity -= 2;
-
             var card = DataManager.Instance.PlayerDeckSource.RemoveCardFromPlayedCards();
             DataManager.Instance.PlayerDeckSource.AddCardToPlayerDeck(card);
         }

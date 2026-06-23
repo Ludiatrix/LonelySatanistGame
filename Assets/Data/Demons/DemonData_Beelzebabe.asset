@@ -14,39 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: LSG::LSG.DemonData_Beelzebabe
   demonName: Beelzebabe
   canDateDemonMultipleTimes: 1
-  introDialogue: 'Jackpot, baby!  She''s all the lover you could want, all the partner
-    you''ve dreamt about: vivacious, bodacious, and up for anything.  Her horns are
-    shiny, her eyes pierce your soul, and she''s got a knowing confidence that sends
-    a shiver through your entire being.
-
-
-    "Well now, been a while since someone
-    knew enough to call on me..." she says, with a voice like liquid sex, "but can
-    you take me all the way?"'
+  introDialogue: "Jackpot, baby!  She's all the lover you could want, all the partner you've dreamt about: vivacious, bodacious, and up for anything.  Her horns are shiny, her eyes pierce your soul, and she's got a knowing confidence that sends a shiver through your entire being.\n\n\"Well now, been a while since someone knew enough to call on me...\" she says, with a voice like liquid sex, \"but can you take me all the way?\""
   minimumPowerLevel: 20
   maximumPowerLevel: 99
-  outcome: Her smile sends shockwaves of goosebumps down your spine as she traces
-    a sultry, perfectly-manicured finger along the spine of your complete Necronomicon
-    and awaits your answer. You couldn't possibly give up your chance to date this
-    stunning creature. Like, you literally can't stop trying.
-  boon: If you fail a date roll against Beelzebabe, you can try to date them again.
-  bane: Lose 3 Sanity
-  boonBaneDialogue: 'Beelzebabe''s Blessing is that you get another chance. And no,
-    you don''t have a choice. '
-  dateOutcome: 'She thought she''d wring you dry, but wasn''t counting on a master
-    of the Mystic and Dating Arts.  You''ve learned to see people (and demons) for
-    who they really are, and you know all the best date spots in town.  You could
-    work just to impress her, but you also see how hard it is to put up a front all
-    the time.
-
-
-    Your night on the town together is epic, but so is the relaxation
-    afterwards.  You take her to the most relaxing spa in town, and finish in front
-    of a cozy balefire wrapped in demon-fur robes while you mix up hot chocolate. 
-    Sinfully dark and sweet, both.
-
-
-    Maybe the real treasure was the experiences
-    gained along the way, but a gorgeous demonic partner is also a pretty phenomenal
-    result.'
+  outcome: "Her smile sends shockwaves of goosebumps down your spine as she traces a sultry, perfectly-manicured finger along the spine of your complete Necronomicon and awaits your answer. You couldn't possibly give up your chance to date this stunning creature. Like, you literally can't stop trying."
+  boon: "If you fail a date roll against Beelzebabe, you can try to date them again."
+  bane: "Lose 3 Sanity"
+  boonBaneDialogue: "Beelzebabe's Blessing is that you get another chance. And no, you don't have a choice."
+  dateOutcome: "She thought she'd wring you dry, but wasn't counting on a master of the Mystic and Dating Arts.  You've learned to see people (and demons) for who they really are, and you know all the best date spots in town.  You could work just to impress her, but you also see how hard it is to put up a front all the time.\n\nYour night on the town together is epic, but so is the relaxation afterwards.  You take her to the most relaxing spa in town, and finish in front of a cozy balefire wrapped in demon-fur robes while you mix up hot chocolate.  Sinfully dark and sweet, both.\n\nMaybe the real treasure was the experiences gained along the way, but a gorgeous demonic partner is also a pretty phenomenal result."
   demonSprite: {fileID: 5912759927948260431, guid: d5e88fa6e12c4efd4896612dec4c8525, type: 3}
