@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e63742dda97229c99bb000e930444ad, type: 3}
+  m_Name: DemonData_Papiyawn1
+  m_EditorClassIdentifier: LSG::LSG.DemonData_Papiyawn
+  demonName: Papiyawn
+  canDateDemonMultipleTimes: 0
+  introDialogue: The adorable fluffy white puppy before you yelps once...
+  minimumPowerLevel: 8
+  maximumPowerLevel: 9999999
+  outcome: 'You''re really bad at this. You try to re-read pages, looking for new
+    hotties to summon...
+
+
+    Then a rift in space opens before you, revealing the
+    gates of hell before you are pulled in. Good news is that your dating woes are
+    over...'
+  boon: 
+  bane: Game over
+  boonBaneDialogue: 
+  dateOutcome: 
+  demonSprite: {fileID: -7425643202553535140, guid: b5b31472f68730190826daa46e808aeb, type: 3}
