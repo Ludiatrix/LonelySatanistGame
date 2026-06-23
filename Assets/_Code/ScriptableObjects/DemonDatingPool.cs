@@ -18,6 +18,7 @@ namespace LSG
 
         [Header("Forced encounter demons (not part of the random pool)")]
         [SerializeField] private DemonData papiyawn;
+        [SerializeField] private DemonData exhaustedSummons;
         [SerializeField] private DemonData theBook;
 
         // When set, the next encounter will be this demon regardless of power.
@@ -25,6 +26,7 @@ namespace LSG
 
         public DemonData[] Demons => (DemonData[]) demons.Clone();
         public DemonData Papiyawn => papiyawn;
+        public DemonData ExhaustedSummons => exhaustedSummons;
         public DemonData TheBook => theBook;
 
         public List<DemonData> AvailableDemons = new List<DemonData>();
@@ -40,7 +42,7 @@ namespace LSG
         /// should not tick the normal per-encounter stat changes.
         /// </summary>
         public bool IsForcedEncounterDemon(DemonData demon) =>
-            demon != null && (demon == papiyawn || demon == theBook);
+            demon != null && (demon == papiyawn || demon == theBook || demon == exhaustedSummons);
 
 
         /// <summary>
@@ -78,7 +80,7 @@ namespace LSG
                 }
             }
 
-            return null;
+            return ExhaustedSummons;
         }
 
         public void Reset()
