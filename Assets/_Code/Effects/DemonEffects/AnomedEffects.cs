@@ -30,8 +30,10 @@ namespace LSG.Effects
         private void OnSummoningPhaseStarted()
         {
             if (_nextSummoningComplete)
+			{
             	UIEvents.FlipDialogueText?.Invoke(false); 
-				return
+				return;
+			}
             
             ApplyBane();
         }
