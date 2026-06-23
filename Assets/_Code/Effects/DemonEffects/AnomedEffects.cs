@@ -23,6 +23,12 @@ namespace LSG.Effects
 			PhaseEvents.SummoningPhaseEnded?.AddListener(OnSummoningPhaseEnded);
         }
 
+        private void OnDisable()
+        {
+            PhaseEvents.SummoningPhaseStarted?.RemoveListener(OnSummoningPhaseStarted);
+			PhaseEvents.SummoningPhaseEnded?.RemoveListener(OnSummoningPhaseEnded);
+        }
+
         private void Start()
         {
             boonPayload = new ModifierPayload();

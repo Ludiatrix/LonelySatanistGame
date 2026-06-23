@@ -21,6 +21,11 @@ namespace LSG.Effects
             PhaseEvents.SummoningPhaseStarted?.AddListener(OnSummoningPhaseStarted);
         }
 
+        private void OnDisable()
+        {
+            PhaseEvents.SummoningPhaseStarted?.RemoveListener(OnSummoningPhaseStarted);
+        }
+
         private void Start()
         {
             if (_playerEconomy == null)

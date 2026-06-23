@@ -1,5 +1,6 @@
 using System;
 using LSG.Effects;
+using LSG.Interfaces;
 using LSG.ScriptableObjects;
 using UnityEngine;
 
@@ -43,6 +44,11 @@ namespace LSG.Core
             // it's easier to just blow away and recreate this
             Destroy(gameObject.GetComponent<EffectManager>());
             EffectDataSource = gameObject.AddComponent<EffectManager>();
+
+            foreach(IEffectable demonEffectComponent in gameObject.GetComponents<IEffectable>())
+            {
+                Destroy((UnityEngine.Object) demonEffectComponent);
+            }
         }
     }
 }
