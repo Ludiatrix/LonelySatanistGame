@@ -35,7 +35,12 @@ namespace LSG.Effects
 
         private void OnSummoningPhaseStarted()
         {
-            if (!BaneEnabled) return;
+            if (!BaneEnabled){
+				//this was somehow persisting even through summoning phase ended
+				//assuming there was some issue with the event busses and just throwing it here too. 
+				UIEvents.FlipDialogueText?.Invoke(false);
+				return;
+			}
             ApplyBane();
         }
 
