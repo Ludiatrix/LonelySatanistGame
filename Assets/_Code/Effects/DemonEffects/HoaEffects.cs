@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using LSG.Classes;
 using LSG.Core;
 using LSG.Interfaces;
@@ -14,9 +13,12 @@ namespace LSG.Effects
     /// </summary>
     public class HoaEffects : MonoBehaviour, IEffectable
     {
-        [SerializeField] private ModifierPayload boonPayload;
         [SerializeField] private ModifierPayload banePayload;
-        private readonly HashSet<CardData> _boostedOrangeCards = new HashSet<CardData>();
+
+        // Applied each time an orange page is read. Must NOT mutate the page's CardData
+        // asset: those are shared ScriptableObjects and edits persist across summonings
+        // and even across editor play sessions, permanently corrupting the card's power.
+        private readonly ModifierPayload _orangeBoost = new ModifierPayload { Power = 1 };
 
         private void OnEnable()
         {
@@ -30,7 +32,6 @@ namespace LSG.Effects
 
         private void Start()
         {
-            boonPayload = new ModifierPayload();
             banePayload = new ModifierPayload();
         }
 
@@ -38,10 +39,9 @@ namespace LSG.Effects
         {
             if (takenCard == null) return;
             if (takenCard.Suit != Enums.Suit.Orange) return;
-            if (_boostedOrangeCards.Contains(takenCard)) return;
 
-            takenCard.PageModifier.Power += 1;
-            _boostedOrangeCards.Add(takenCard);
+            // Grant +1 power transiently via a payload rather than editing the asset.
+            EconomyEvents.SendPayload?.Invoke(_orangeBoost);
         }
 
         public void ApplyBoon()

@@ -18,11 +18,13 @@ namespace LSG.UI
         private void OnEnable()
         {
             GameEvents.TapeEarnedEvent?.AddListener(OnTapeEarnedEvent);
+            PhaseEvents.SummoningPhaseStarted?.AddListener(CheckMilestoneMarkerForTape);
         }
 
         private void OnDisable()
         {
             GameEvents.TapeEarnedEvent?.RemoveListener(OnTapeEarnedEvent);
+            PhaseEvents.SummoningPhaseStarted?.RemoveListener(CheckMilestoneMarkerForTape);
         }
 
         private void Start()
@@ -37,48 +39,25 @@ namespace LSG.UI
 
         private void CheckMilestoneMarkerForTape()
         {
-            Milestone myMilestone = DataManager.Instance.MilestoneDataSource.GetMilestoneAtPower(MilestonePower);
+            Milestone myMilestone = DataManager.Instance.MilestoneDataSource.GetMilestoneByPowerLevel(MilestonePower);
 
-            if (myMilestone is null)
+            // The tape indicator is only shown while this milestone is still up for grabs.
+            // Once it's been reached (Collected) this game, hide it. (No milestone => hide.)
+            if (myMilestone is null || myMilestone.Collected)
             {
+                ShowTapeIcon(0);
                 return;
             }
-            
-            int tapeAmount = 0;
-            bool toggle = false;
-            
-            if (myMilestone.Collected)
-            {
-                tapeAmount = 4;
-                
-                // Remove the listener at this point
-                GameEvents.TapeEarnedEvent?.RemoveListener(OnTapeEarnedEvent);
-            }
-            else
-            {
-                if (myMilestone.TapeAmount > 0)
-                {
-                    tapeAmount = myMilestone.TapeAmount;
-                    toggle = true;
-                }
-            }
-            
-            ToggleIcons(tapeAmount, toggle);
+
+            ShowTapeIcon(myMilestone.TapeAmount);
         }
 
-        private void ToggleIcons(int amount, bool toggle)
+        /// <summary>Shows the single tape icon for the given amount (0 hides them all).</summary>
+        private void ShowTapeIcon(int amount)
         {
-
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < tapeIcons.Length; i++)
             {
-                if (i + 1 == amount)
-                {
-                    tapeIcons[i].SetActive(toggle);
-                }
-                else
-                {
-                    tapeIcons[i].SetActive(false);
-                }
+                tapeIcons[i].SetActive(i + 1 == amount);
             }
         }
     }
