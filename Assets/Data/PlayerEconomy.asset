@@ -16,7 +16,7 @@ MonoBehaviour:
   Page: 1
   Power: 1
   Sanity: 20
-  Rizz: 1
+  Rizz: 0
   WhiteSuitPoints: 0
   MilestoneDataSource: {fileID: 11400000, guid: d262bd59722483d42b393c66d01a3855, type: 2}
   PlayerDeckSource: {fileID: 11400000, guid: f741dc2241435d0008802f22b8d52bcc, type: 2}

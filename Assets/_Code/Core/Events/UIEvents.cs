@@ -12,6 +12,7 @@ namespace LSG.Core
         public static readonly UnityEventExtensions.UnityBoolEvent ToggleSummoningButtons = new UnityEventExtensions.UnityBoolEvent();
         public static readonly UnityEventExtensions.UnityBoolEvent ToggleEncounterButtons = new UnityEventExtensions.UnityBoolEvent();
         public static readonly UnityEventExtensions.UnityBoolEvent ToggleStoreButtons = new UnityEventExtensions.UnityBoolEvent();
+        public static readonly UnityEventExtensions.UnityBoolEvent ToggleEndgameButtons = new UnityEventExtensions.UnityBoolEvent();
         public static readonly UnityEventExtensions.UnityBoolEvent FlipDialogueText = new UnityEventExtensions.UnityBoolEvent();
         public static readonly UnityEventExtensions.UnityBoolEvent ToggleResourceUI = new UnityEventExtensions.UnityBoolEvent();
         public static readonly UnityEvent DisableButtons = new UnityEvent();

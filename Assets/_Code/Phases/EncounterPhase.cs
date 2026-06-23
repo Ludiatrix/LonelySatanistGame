@@ -78,6 +78,8 @@ namespace LSG.Phases
             }
             else
             {
+                // Longshot consolation: gain Rizz only after a failed date roll.
+                _economy.Rizz++;
                 FailDate();
             }
         }
@@ -91,24 +93,28 @@ namespace LSG.Phases
         {
             // Date Succeeds!
             Debug.Log("[EncounterPhase] You have succeeded the date!");
-            UIEvents.ToggleEncounterButtons?.Invoke(false);
 
             if (_chosenDemonThisPhase.demonName == "Beelzebabe")
             {
                 // Look let's just make this easy on ourselves here
+                UIEvents.ToggleEncounterButtons?.Invoke(false);
                 GameEvents.ChangeState?.Invoke(Enums.GameState.WinPhase);
             } else
             {
                 UIEvents.SetDialogueText?.Invoke(_chosenDemonThisPhase?.dateOutcome);
+                // Winning a date ends the game: show the End Game button instead of Store.
+                UIEvents.ToggleEndgameButtons?.Invoke(true);
             }
         }
 
         private void FailDate()
         {
-            // Give the Boon and Bane Effects and Dialogue
+            // Show the narrative outcome of the failed date and apply the boon/bane
+            // effects. (The boonBaneDialogue is shown later, when an effect actually
+            // fires during play — not here.)
             Debug.Log("[EncounterPhase] You have failed the date!");
             UIEvents.ToggleEncounterButtons?.Invoke(false);
-            UIEvents.SetDialogueText?.Invoke(_chosenDemonThisPhase?.boonBaneDialogue);
+            UIEvents.SetDialogueText?.Invoke(_chosenDemonThisPhase?.outcome);
             _chosenDemonThisPhase?.ApplyEffect();
         }
 
