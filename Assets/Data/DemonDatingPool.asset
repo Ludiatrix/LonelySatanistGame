@@ -28,5 +28,20 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 62ffb69eea3244168970c69fb5f3f638, type: 2}
   - {fileID: 11400000, guid: 2f203077a3eff85489ce39f7fcde691a, type: 2}
   papiyawn: {fileID: 11400000, guid: 4a36ef2f03df101d4a12b3c8bc4d918b, type: 2}
+  exhaustedSummons: {fileID: 11400000, guid: e93bea307e225f84fbba6d4fe3694782, type: 2}
   theBook: {fileID: 11400000, guid: 7244b5d270fc7b94c94e0cb3ece2fb5b, type: 2}
-  AvailableDemons: []
+  AvailableDemons:
+  - {fileID: 11400000, guid: 3552a2581cc085fac84d88791ff9fc09, type: 2}
+  - {fileID: 11400000, guid: 4ac4e0c83fc5bfed1a8e47937c04bad3, type: 2}
+  - {fileID: 11400000, guid: ee7837e82a0b86a309a562cac7cf1ca6, type: 2}
+  - {fileID: 11400000, guid: 4df44e43e2ef7a3b9aac484c37b65c08, type: 2}
+  - {fileID: 11400000, guid: f72d315b28ab7c52aa75641651edda46, type: 2}
+  - {fileID: 11400000, guid: 3f445c50436c02560b732453ced52dea, type: 2}
+  - {fileID: 11400000, guid: 0b88ecd4fea689376932299a862a1408, type: 2}
+  - {fileID: 11400000, guid: 078e3b063b16128e09dab8ba20a5eeed, type: 2}
+  - {fileID: 11400000, guid: b5c829d8981d4060fbbf7340a08922c2, type: 2}
+  - {fileID: 11400000, guid: 9e68c1a98b50a1ac3a9ca012bc4dd6ab, type: 2}
+  - {fileID: 11400000, guid: 24cac03c7dc8315e7814c84083027912, type: 2}
+  - {fileID: 11400000, guid: 8c4bcbf5335e206e69af33fddb8cf845, type: 2}
+  - {fileID: 11400000, guid: 62ffb69eea3244168970c69fb5f3f638, type: 2}
+  - {fileID: 11400000, guid: 2f203077a3eff85489ce39f7fcde691a, type: 2}
