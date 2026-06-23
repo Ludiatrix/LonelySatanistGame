@@ -1413,6 +1413,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6653746851873655311, guid: 1674c35b587031b7592e5a0d84eb79bc, type: 3}
   m_PrefabInstance: {fileID: 2183544531344506545}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &799564456 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4542307394454818301, guid: a3b722b86248e89459b4b132e5b2a357, type: 3}
+  m_PrefabInstance: {fileID: 1419847195}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &803198487
 GameObject:
   m_ObjectHideFlags: 0
@@ -2798,6 +2803,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_ResourceBarCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 1119156715319319057, guid: a3b722b86248e89459b4b132e5b2a357, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4543383511813098202, guid: a3b722b86248e89459b4b132e5b2a357, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2864,7 +2873,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4543383511813098202, guid: a3b722b86248e89459b4b132e5b2a357, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -2.7000122
+      value: -43
       objectReference: {fileID: 0}
     - target: {fileID: 4543383511813098202, guid: a3b722b86248e89459b4b132e5b2a357, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2882,6 +2891,14 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7609288881146590324, guid: a3b722b86248e89459b4b132e5b2a357, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7949582441058868491, guid: a3b722b86248e89459b4b132e5b2a357, type: 3}
+      propertyPath: markerBar
+      value: 
+      objectReference: {fileID: 799564456}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3867,6 +3884,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   SummoningPhase: {fileID: 8300000, guid: 9001d67492ae2d54496e0b9de8187b05, type: 3}
   EncounterPhase: {fileID: 8300000, guid: a3918ed08d88da3469e95243dac67e68, type: 3}
+  Lose: {fileID: 0}
 --- !u!82 &1770465559
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5342,7 +5360,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6603471190342029715, guid: 8c786df0dc949d0e09c22430dc6519ec, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 209
+      value: 147.5
       objectReference: {fileID: 0}
     - target: {fileID: 6603471190342029715, guid: 8c786df0dc949d0e09c22430dc6519ec, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5444,7 +5462,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5205139960270529065, guid: 3653f3ce07a0445b781302691ea5644b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -7
+      value: -64
       objectReference: {fileID: 0}
     - target: {fileID: 5205139960270529065, guid: 3653f3ce07a0445b781302691ea5644b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

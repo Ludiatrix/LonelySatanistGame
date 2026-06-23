@@ -12,7 +12,9 @@ namespace LSG.UI
     public class MilestoneMarkerController : MonoBehaviour
     {
         public int MilestonePower = 0;
-        
+
+        [Tooltip("The vertical bar/tick drawn on the slider. Hidden along with the tape icons once the milestone is reached.")]
+        [SerializeField] private GameObject markerBar;
         [SerializeField] private GameObject[] tapeIcons;
 
         private void OnEnable()
@@ -41,15 +43,12 @@ namespace LSG.UI
         {
             Milestone myMilestone = DataManager.Instance.MilestoneDataSource.GetMilestoneByPowerLevel(MilestonePower);
 
-            // The tape indicator is only shown while this milestone is still up for grabs.
-            // Once it's been reached (Collected) this game, hide it. (No milestone => hide.)
-            if (myMilestone is null || myMilestone.Collected)
-            {
-                ShowTapeIcon(0);
-                return;
-            }
+            // The whole marker (bar + tape icons) is only shown while this milestone is
+            // still up for grabs. Once it's been reached (Collected) this game, hide it.
+            bool visible = myMilestone != null && !myMilestone.Collected;
 
-            ShowTapeIcon(myMilestone.TapeAmount);
+            if (markerBar != null) markerBar.SetActive(visible);
+            ShowTapeIcon(visible ? myMilestone.TapeAmount : 0);
         }
 
         /// <summary>Shows the single tape icon for the given amount (0 hides them all).</summary>
