@@ -52,6 +52,17 @@ namespace LSG.UI
                 canvasGroup.blocksRaycasts = value;
             }
 
+            /// <summary>
+            /// Activates/deactivates the owning GameObject. Needed for elements that start
+            /// inactive in the scene (e.g. Credits): fading only changes alpha, which does
+            /// nothing while the GameObject is inactive and therefore not rendered.
+            /// </summary>
+            public void SetActiveOwner(bool value)
+            {
+                GameObject owner = Owner;
+                if (owner != null) owner.SetActive(value);
+            }
+
             public void Hide()
             {
                 SetAlpha(0f);
@@ -76,6 +87,11 @@ namespace LSG.UI
         [SerializeField] private float introNarrativeRiseDistance = 100f;
         [SerializeField] private float introNarrativeRiseDuration = 1f;
 
+        [Header("Credits")]
+        [Tooltip("Shown in place of the Intro Narrative on every Title screen after the " +
+                 "player has won a game (succeeded a date with a demon) this session.")]
+        [SerializeField] private FadeTarget credits;
+
         [Header("Title Button")]
         [SerializeField] private FadeTarget titleButton;
 
@@ -83,6 +99,26 @@ namespace LSG.UI
         [SerializeField] private float delayBetween = 0.1f;
 
         private Coroutine _routine;
+
+        // True once the player has won a game this session (succeeded a date with a demon).
+        // After that, the Title screen shows the credits instead of the intro narrative.
+        // Static so it survives the scene reload that "Play Again" / End Game triggers
+        // (EndGameEmitter reloads the scene, which would reset an instance field). It resets
+        // on app restart / exiting Play mode, which matches "during a game".
+        private static bool _hasWonThisSession;
+
+        private void Awake()
+        {
+            // Listen for the win from Awake/OnDestroy rather than OnEnable/OnDisable: the Title
+            // container is disabled while the date happens, so OnEnable-scoped listeners would
+            // miss it. The C# instance still receives the event while the GameObject is inactive.
+            GameEvents.DateSucceeded?.AddListener(OnWin);
+        }
+
+        private void OnDestroy()
+        {
+            GameEvents.DateSucceeded?.RemoveListener(OnWin);
+        }
 
         private void OnEnable()
         {
@@ -96,11 +132,20 @@ namespace LSG.UI
             if (_routine != null) StopCoroutine(_routine);
         }
 
+        private static void OnWin() => _hasWonThisSession = true;
+
+        /// <summary>
+        /// The narrative shown on the Title screen: the intro narrative on the first run,
+        /// the credits on every run after a win this session.
+        /// </summary>
+        private FadeTarget ActiveNarrative => _hasWonThisSession ? credits : introNarrative;
+
         /// <summary>Hide everything up front so nothing flashes before the fades run.</summary>
         private void ResetToHidden()
         {
             title?.Hide();
             introNarrative?.Hide();
+            credits?.Hide();
             titleButton?.Hide();
 
             // Game start: (re)enable the black overlay and make it fully opaque. It stays
@@ -132,11 +177,18 @@ namespace LSG.UI
             // doesn't reflow and jump the intro narrative.
             yield return FadeOut(title);
 
-            // Intro narrative fades in next.
-            yield return FadeIn(introNarrative);
+            // The narrative fades in next: intro narrative on the first run, credits after a win.
+            FadeTarget narrative = ActiveNarrative;
+
+            // Activate the one we're showing and deactivate the other. Credits starts inactive
+            // in the scene, so without this its alpha fade would never actually render.
+            introNarrative?.SetActiveOwner(narrative == introNarrative);
+            credits?.SetActiveOwner(narrative == credits);
+
+            yield return FadeIn(narrative);
 
             // Then slide it up into place, waiting until it's done before continuing.
-            SmoothMover mover = ResolveNarrativeMover();
+            SmoothMover mover = ResolveNarrativeMover(narrative);
             if (mover != null)
             {
                 Vector3 target = mover.transform.position + Vector3.up * introNarrativeRiseDistance;
@@ -187,15 +239,16 @@ namespace LSG.UI
         }
 
         /// <summary>
-        /// Uses the explicitly assigned mover, falling back to a SmoothMover on the
-        /// intro narrative object so the button still waits even if the field is unset.
+        /// Resolves the mover for the narrative being shown. Uses the explicitly assigned
+        /// intro mover (only meaningful for the intro narrative), otherwise falls back to a
+        /// SmoothMover on the narrative object so the button still waits even if unset.
         /// </summary>
-        private SmoothMover ResolveNarrativeMover()
+        private SmoothMover ResolveNarrativeMover(FadeTarget narrative)
         {
-            if (introNarrativeMover != null) return introNarrativeMover;
-            if (introNarrative?.Owner != null)
-                introNarrativeMover = introNarrative.Owner.GetComponentInParent<SmoothMover>();
-            return introNarrativeMover;
+            if (narrative == introNarrative && introNarrativeMover != null) return introNarrativeMover;
+            if (narrative?.Owner != null)
+                return narrative.Owner.GetComponentInParent<SmoothMover>();
+            return null;
         }
 
         private IEnumerator FadeIn(FadeTarget target)

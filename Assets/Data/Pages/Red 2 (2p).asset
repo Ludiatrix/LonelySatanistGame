@@ -15,7 +15,7 @@ MonoBehaviour:
   CardID: 18
   TapeCost: 2
   CardWord: nmii
-  CardEffect: 'Optional: Return all white pages previously read this summoning to
+  CardEffect: 'Optional: Return all Dagger pages previously read this summoning to
     the Necronomicon. Their power is removed from the power meter.'
   Suit: 4
   SummoningPage: {fileID: -350387768891985831, guid: 4101cc3e21ee66940a76f3c70f2f9b8b, type: 3}

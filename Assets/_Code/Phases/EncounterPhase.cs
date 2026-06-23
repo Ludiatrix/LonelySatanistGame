@@ -94,6 +94,9 @@ namespace LSG.Phases
             // Date Succeeds!
             Debug.Log("[EncounterPhase] You have succeeded the date!");
 
+            // The win condition: from now on the Title screen shows credits, not the intro.
+            GameEvents.DateSucceeded?.Invoke();
+
             if (_chosenDemonThisPhase.demonName == "Beelzebabe")
             {
                 // Look let's just make this easy on ourselves here
