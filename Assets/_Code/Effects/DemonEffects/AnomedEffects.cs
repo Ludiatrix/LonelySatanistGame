@@ -15,11 +15,12 @@ namespace LSG.Effects
     {
         [SerializeField] private ModifierPayload boonPayload;
 
-        private bool _nextSummoningComplete = false;
+        private bool BaneEnabled = true;
 
         private void OnEnable()
         {
             PhaseEvents.SummoningPhaseStarted?.AddListener(OnSummoningPhaseStarted);
+			PhaseEvents.SummoningPhaseEnded?.AddListener(OnSummoningPhaseEnded);
         }
 
         private void Start()
@@ -27,14 +28,14 @@ namespace LSG.Effects
             boonPayload = new ModifierPayload();
         }
 
+		private void OnSummoningPhaseEnded()
+		{
+			UIEvents.FlipDialogueText?.Invoke(false);
+		}
+
         private void OnSummoningPhaseStarted()
         {
-            if (_nextSummoningComplete)
-			{
-            	UIEvents.FlipDialogueText?.Invoke(false); 
-				return;
-			}
-            
+            if (!BaneEnabled) return;
             ApplyBane();
         }
 
@@ -48,7 +49,7 @@ namespace LSG.Effects
 
         public void ApplyBane()
         {
-            _nextSummoningComplete = true;
+            BaneEnabled = false;
             UIEvents.FlipDialogueText?.Invoke(true);
         }
     }
