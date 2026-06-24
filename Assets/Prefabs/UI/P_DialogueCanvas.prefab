@@ -281,7 +281,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3a7e9b1c4d5f60718293a4b5c6d7e8f9, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: LSG::LSG.UI.EndGameEmitter
 --- !u!1 &1231737543901204063
 GameObject:
@@ -1116,6 +1116,8 @@ GameObject:
   - component: {fileID: 968123915249221483}
   - component: {fileID: 5379854282360194564}
   - component: {fileID: 2726006120373788137}
+  - component: {fileID: 6331999211122135258}
+  - component: {fileID: 7386249634835708265}
   m_Layer: 5
   m_Name: P_DialogueCanvas
   m_TagString: Untagged
@@ -1169,9 +1171,51 @@ MonoBehaviour:
   summoningButtonContainer: {fileID: 8807288411549193200}
   encounterButtonContainer: {fileID: 9010757812480746776}
   storeButtonContainer: {fileID: 7375838356877363557}
+  click: {fileID: 0}
   endgameButtonContainer: {fileID: 5719600474129500323}
   tryToDateButton: {fileID: 4865702914161499228}
   giveUpText: {fileID: 518067403945613105}
+--- !u!223 &6331999211122135258
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2749409562251668076}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_UseReflectionProbes: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 2
+  m_TargetDisplay: 0
+--- !u!114 &7386249634835708265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2749409562251668076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.GraphicRaycaster
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!1 &3505321004574226236
 GameObject:
   m_ObjectHideFlags: 0
