@@ -70,6 +70,12 @@ namespace LSG.Phases
         /// </summary>
         private IEnumerator PortalIntro()
         {
+            // Hide any dialogue left over from the previous phase (e.g. the card-effect text
+            // shown during Summoning). It's re-shown for the demon once the summon finishes,
+            // when DemonEncountered fires. Forced encounters (Papiyawn / The Book) reach here
+            // without the player clicking "Stop", so Summoning never hid it on its way out.
+            UIEvents.ToggleDialogueWindow?.Invoke(false);
+
             if (demonImage != null) demonImage.enabled = false;
             if (portalAnimatedSprite != null) portalAnimatedSprite.SetActive(false);
 
@@ -116,6 +122,7 @@ namespace LSG.Phases
         {
             GameEvents.TryToDateChosen?.RemoveListener(OnTryToDateChosen);
             GameEvents.GiveUpChosen?.RemoveListener(OnGiveUpChosen);
+            GameEvents.DiceRollResult?.RemoveListener(OnDiceRollResult);
         }
 
         private void Start()

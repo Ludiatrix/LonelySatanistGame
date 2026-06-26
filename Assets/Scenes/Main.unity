@@ -762,7 +762,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!1 &529720298
 GameObject:
@@ -781,7 +781,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &529720299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2319,8 +2319,9 @@ MonoBehaviour:
   demonImage: {fileID: 413037126}
   portalAnimatedSprite: {fileID: 2032756792}
   portalAnimator: {fileID: 43132436596718752, guid: 395cc1ad668bdde4d9e1c43f0c2029a8, type: 3}
-  portalIntroDelay: 1.5
+  portalIntroDelay: 1
   portalFallbackDuration: 1
+  dialogueDelay: 1.5
 --- !u!1 &1131033384
 GameObject:
   m_ObjectHideFlags: 0
@@ -5433,7 +5434,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4214752344598202925, guid: dcc599b987b50fa478c1cb6443e99a7b, type: 3}
       propertyPath: m_SortingOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7092116845692550626, guid: dcc599b987b50fa478c1cb6443e99a7b, type: 3}
       propertyPath: m_Name
@@ -5465,7 +5466,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7853527708092097245, guid: dcc599b987b50fa478c1cb6443e99a7b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5131.9956
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7853527708092097245, guid: dcc599b987b50fa478c1cb6443e99a7b, type: 3}
       propertyPath: m_LocalRotation.w
