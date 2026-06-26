@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using LSG.Core;
 using LSG.ScriptableObjects;
 using UnityEngine;
@@ -16,9 +17,24 @@ namespace LSG.Phases
     {
         [SerializeField] private GameObject Container;
         [SerializeField] private Image demonImage;
-        
+
+        [Header("Portal Intro")]
+        [Tooltip("The Portal_Animated_Sprite shown before the demon appears. Toggled on/off by this phase.")]
+        [SerializeField] private GameObject portalAnimatedSprite;
+        [Tooltip("Animator on the portal sprite, used to (re)start and time its animation. " +
+                 "Optional — if unset we fall back to 'Portal Fallback Duration'.")]
+        [SerializeField] private Animator portalAnimator;
+        [Tooltip("Beat before the portal opens.")]
+        [SerializeField] private float portalIntroDelay = 1.5f;
+        [Tooltip("Used only if the portal animation length can't be read from the Animator.")]
+        [SerializeField] private float portalFallbackDuration = 1f;
+        [Tooltip("How long the summoned demon is shown before the dialogue window appears, " +
+                 "so the player sees the demon get summoned before the dialogue starts.")]
+        [SerializeField] private float dialogueDelay = 3f;
+
         private PlayerEconomy _economy;
         private DemonData _chosenDemonThisPhase = null;
+        private Coroutine _introRoutine;
         
         /// <summary>
         /// Start the Phase and Find a DemonData based on Power in the DemonDatingPool.
@@ -31,14 +47,68 @@ namespace LSG.Phases
             UIEvents.ToggleResourceUI?.Invoke(false);
             FindAHottie();
             PhaseEvents.EncounterPhaseStarted?.Invoke();
+
+            // Play the portal intro, which reveals the demon image when it finishes.
+            if (_introRoutine != null) StopCoroutine(_introRoutine);
+            _introRoutine = StartCoroutine(PortalIntro());
         }
 
         public override void EndPhase()
         {
             Debug.Log("[EncounterPhase] Ending Phase!");
             base.EndPhase();
+            if (_introRoutine != null) StopCoroutine(_introRoutine);
             Container.SetActive(false);
             PhaseEvents.EncounterPhaseEnded?.Invoke();
+        }
+
+        /// <summary>
+        /// The summon sequence: beat, open the portal, play its animation once, reveal the
+        /// demon, then after a pause fire DemonEncountered to start the dialogue. The demon
+        /// and portal are hidden up front so nothing shows until the portal opens, and the
+        /// dialogue is held back so the player sees the demon summoned before it starts.
+        /// </summary>
+        private IEnumerator PortalIntro()
+        {
+            // Hide any dialogue left over from the previous phase (e.g. the card-effect text
+            // shown during Summoning). It's re-shown for the demon once the summon finishes,
+            // when DemonEncountered fires. Forced encounters (Papiyawn / The Book) reach here
+            // without the player clicking "Stop", so Summoning never hid it on its way out.
+            UIEvents.ToggleDialogueWindow?.Invoke(false);
+
+            if (demonImage != null) demonImage.enabled = false;
+            if (portalAnimatedSprite != null) portalAnimatedSprite.SetActive(false);
+
+            yield return new WaitForSeconds(portalIntroDelay);
+
+            // Open the portal. Re-activating the object auto-plays the Animator's default
+            // (non-looping) state from frame 0, so no explicit Play() call is needed.
+            if (portalAnimatedSprite != null) portalAnimatedSprite.SetActive(true);
+
+            // Wait for the animation to finish. We time it by the clip's own length rather
+            // than polling Animator.normalizedTime, which can hang if the state never reports
+            // exactly >= 1. WaitForSeconds always terminates, so the demon reveal always runs.
+            float wait = portalFallbackDuration;
+            if (portalAnimator != null)
+            {
+                yield return null; // let the Animator enter its state so the clip length is valid
+                AnimatorStateInfo state = portalAnimator.GetCurrentAnimatorStateInfo(0);
+                float speed = Mathf.Abs(portalAnimator.speed);
+                if (state.length > 0f && speed > 0f) wait = state.length / speed;
+            }
+            yield return new WaitForSeconds(wait);
+
+            // Close the portal and reveal the demon.
+            if (portalAnimatedSprite != null) portalAnimatedSprite.SetActive(false);
+            if (demonImage != null) demonImage.enabled = true;
+
+            // Let the player take in the summoned demon, then start the dialogue. Firing
+            // DemonEncountered here (rather than in FindAHottie) is what opens the dialogue
+            // window and its encounter buttons.
+            yield return new WaitForSeconds(dialogueDelay);
+            GameEvents.DemonEncountered?.Invoke(_chosenDemonThisPhase);
+
+            _introRoutine = null;
         }
 
         private void OnEnable()
@@ -52,6 +122,7 @@ namespace LSG.Phases
         {
             GameEvents.TryToDateChosen?.RemoveListener(OnTryToDateChosen);
             GameEvents.GiveUpChosen?.RemoveListener(OnGiveUpChosen);
+            GameEvents.DiceRollResult?.RemoveListener(OnDiceRollResult);
         }
 
         private void Start()
@@ -127,10 +198,10 @@ namespace LSG.Phases
             // Get a demon
             _chosenDemonThisPhase = DataManager.Instance.DemonDatingPoolSource.EncounterDemonBasedOnPower(_economy.Power);
             
-            // This will turn on the Dialogue Window and inject the DemonData
+            // Set up the demon visual. The Dialogue Window (and the DemonEncountered event that
+            // drives it) is held back until the summon sequence finishes — see PortalIntro.
             demonImage.sprite = _chosenDemonThisPhase.demonSprite;
             demonImage.SetNativeSize();
-            GameEvents.DemonEncountered?.Invoke(_chosenDemonThisPhase);
         }
     }
 }
