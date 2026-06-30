@@ -16,6 +16,8 @@ namespace LSG.UI
         private static readonly int SlideRight = Animator.StringToHash("SlideRight");
         public AudioClip PaperShufflingSFX,MoveBookSFX, click;
 
+        public GameObject howToPlayButton;
+
         // Page Generation
         public Transform PagesTransform;
         public GameObject PagePrefab;
@@ -97,6 +99,7 @@ namespace LSG.UI
         {
             _animator.SetTrigger(SlideRight);
 			GameEvents.PlaySoundSfx?.Invoke(click, 4.0f);
+            howToPlayButton.SetActive(false);
         }
 
         public void PlayPapersShufflingSfx()
