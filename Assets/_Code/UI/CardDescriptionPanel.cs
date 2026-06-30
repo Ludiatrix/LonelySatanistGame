@@ -4,6 +4,7 @@ using LSG.ScriptableObjects;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 namespace LSG
 {
@@ -30,6 +31,9 @@ namespace LSG
         [SerializeField] private TMP_Text cardName;
         [SerializeField] private TMP_Text cardText;
         
+        [Tooltip("The KeepReading/purchase button. Disabled when the player can't afford the card.")]
+        [SerializeField] private Button purchaseButton;
+
         [Tooltip("The text field for the button")]
         [SerializeField] private TMP_Text buttonText;
 
@@ -82,8 +86,45 @@ namespace LSG
 
             cardName.text = owner.CardWord;
             cardText.text = owner.CardEffect;
-            buttonText.text = $"Repair for {owner.TapeCost.ToString()}";
-            
+
+            // Purchase button has three states for the previewed card:
+            //   owned                    -> invisible + unclickable (nothing to buy)
+            //   not owned, can't afford  -> "Insufficient Tape", disabled, 50% alpha
+            //   buyable                  -> normal interactive button
+            var deck = DataManager.Instance.PlayerDeckSource;
+            bool owned = deck.playerDeck.Contains(owner) || deck.playedCards.Contains(owner);
+            bool canAfford = DataManager.Instance.PlayerEconomySource.Tape >= owner.TapeCost;
+
+            CanvasGroup group = null;
+            if (purchaseButton != null)
+            {
+                group = purchaseButton.GetComponent<CanvasGroup>();
+                if (group == null)
+                    group = purchaseButton.gameObject.AddComponent<CanvasGroup>();
+            }
+
+            if (owned)
+            {
+                // Invisible + unclickable.
+                buttonText.text = string.Empty;
+                if (purchaseButton != null) purchaseButton.interactable = false;
+                if (group != null) { group.alpha = 0f; group.blocksRaycasts = false; }
+            }
+            else if (!canAfford)
+            {
+                // Visible but disabled at 50% alpha, with an explanatory label.
+                buttonText.text = "Insufficient Tape";
+                if (purchaseButton != null) purchaseButton.interactable = false;
+                if (group != null) { group.alpha = 0.3f; group.blocksRaycasts = false; }
+            }
+            else
+            {
+                // Normal, interactive purchase button.
+                buttonText.text = $"Repair for {owner.TapeCost.ToString()}";
+                if (purchaseButton != null) purchaseButton.interactable = true;
+                if (group != null) { group.alpha = 1f; group.blocksRaycasts = true; }
+            }
+
             isOpen = true;
             onOpened.Invoke(owner);
 

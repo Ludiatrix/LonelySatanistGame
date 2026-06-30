@@ -39,9 +39,12 @@ namespace LSG
                 
             }
 
+            // Keep every card clickable — owned/unaffordable cards can still be
+            // previewed in the Card Description Box (the box hides its purchase
+            // button for them). Ownership is shown via the card art (SetUnavailable).
             if (gameObject.TryGetComponent(out Button btn))
             {
-                btn.interactable = !owned;
+                btn.interactable = true;
             }
         }
 

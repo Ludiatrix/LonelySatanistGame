@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using LSG.Core;
 using LSG.ScriptableObjects;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
@@ -32,9 +33,17 @@ namespace LSG.Phases
                  "so the player sees the demon get summoned before the dialogue starts.")]
         [SerializeField] private float dialogueDelay = 3f;
 
+        [Header("Outcome Text")]
+        [Tooltip("OutcomeText on the OutcomeTextCanvas. Faded in when the dice roll resolves.")]
+        [SerializeField] private TMP_Text outcomeText;
+        [SerializeField] private float outcomeFadeDuration = 0.5f;
+        [SerializeField] private string acceptedText = "Date Accepted!";
+        [SerializeField] private string rejectedText = "Rejected...";
+
         private PlayerEconomy _economy;
         private DemonData _chosenDemonThisPhase = null;
         private Coroutine _introRoutine;
+        private Coroutine _outcomeRoutine;
         
         /// <summary>
         /// Start the Phase and Find a DemonData based on Power in the DemonDatingPool.
@@ -58,6 +67,7 @@ namespace LSG.Phases
             Debug.Log("[EncounterPhase] Ending Phase!");
             base.EndPhase();
             if (_introRoutine != null) StopCoroutine(_introRoutine);
+            if (_outcomeRoutine != null) StopCoroutine(_outcomeRoutine);
             Container.SetActive(false);
             PhaseEvents.EncounterPhaseEnded?.Invoke();
         }
@@ -75,6 +85,9 @@ namespace LSG.Phases
             // when DemonEncountered fires. Forced encounters (Papiyawn / The Book) reach here
             // without the player clicking "Stop", so Summoning never hid it on its way out.
             UIEvents.ToggleDialogueWindow?.Invoke(false);
+
+            // The outcome text stays hidden until this encounter's dice roll resolves.
+            if (outcomeText != null) outcomeText.alpha = 0f;
 
             if (demonImage != null) demonImage.enabled = false;
             if (portalAnimatedSprite != null) portalAnimatedSprite.SetActive(false);
@@ -143,7 +156,12 @@ namespace LSG.Phases
 
         private void OnDiceRollResult(int d20RollResult)
         {
-            if (d20RollResult <= _economy.Rizz)
+            bool accepted = d20RollResult <= _economy.Rizz;
+
+            // Fade in the outcome banner ("Date Accepted!" / "Rejected...").
+            ShowOutcomeText(accepted);
+
+            if (accepted)
             {
                 SucceedDate();
             }
@@ -153,6 +171,29 @@ namespace LSG.Phases
                 _economy.Rizz++;
                 FailDate();
             }
+        }
+
+        /// <summary>Sets the outcome banner text and fades it from transparent to opaque.</summary>
+        private void ShowOutcomeText(bool accepted)
+        {
+            if (outcomeText == null) return;
+            outcomeText.text = accepted ? acceptedText : rejectedText;
+            if (_outcomeRoutine != null) StopCoroutine(_outcomeRoutine);
+            _outcomeRoutine = StartCoroutine(FadeInOutcomeText());
+        }
+
+        private IEnumerator FadeInOutcomeText()
+        {
+            float elapsed = 0f;
+            outcomeText.alpha = 0f;
+            while (elapsed < outcomeFadeDuration)
+            {
+                elapsed += Time.deltaTime;
+                outcomeText.alpha = Mathf.Clamp01(elapsed / outcomeFadeDuration);
+                yield return null;
+            }
+            outcomeText.alpha = 1f;
+            _outcomeRoutine = null;
         }
 
         private void OnGiveUpChosen()
