@@ -77,54 +77,13 @@ namespace LSG.ScriptableObjects
         public CardData[] PeekAheadAtPlayerDeck(int peekAheadAmount = 1)
         {
             List<CardData> peekedCards = new List<CardData>();
-
+            
             for (int i = 0; i < peekAheadAmount; i++)
             {
                 peekedCards.Add(playerDeck[i]);
             }
 
             return peekedCards.ToArray();
-        }
-
-        /// <summary>
-        /// Returns up to <paramref name="count"/> of the cards that would be drawn next, in
-        /// draw order (next-to-draw first), optionally skipping a suit. Draw is from the end
-        /// of the list (see <see cref="TakeCardFromPlayerDeck"/>), so we walk from the back.
-        /// The cards are NOT removed — peeking only looks.
-        /// </summary>
-        public List<CardData> PeekUpcoming(int count, Enums.Suit excludeSuit = Enums.Suit.None)
-        {
-            List<CardData> upcoming = new List<CardData>();
-
-            for (int i = playerDeck.Count - 1; i >= 0 && upcoming.Count < count; i--)
-            {
-                if (excludeSuit != Enums.Suit.None && playerDeck[i].Suit == excludeSuit)
-                {
-                    continue;
-                }
-
-                upcoming.Add(playerDeck[i]);
-            }
-
-            return upcoming;
-        }
-
-        /// <summary>
-        /// Treats a peeked card as read: pulls it out of the upcoming deck and into played
-        /// cards, so it isn't drawn again and still counts toward this summoning's tallies.
-        /// </summary>
-        public void MarkCardRead(CardData card)
-        {
-            if (card == null)
-            {
-                return;
-            }
-
-            playerDeck.Remove(card);
-            if (!playedCards.Contains(card))
-            {
-                playedCards.Add(card);
-            }
         }
         
 

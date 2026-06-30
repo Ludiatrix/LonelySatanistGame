@@ -22,8 +22,6 @@ namespace LSG.Core
         public static readonly UnityEventExtensions.UnityIntEvent WhiteSuitPointEarned = new UnityEventExtensions.UnityIntEvent();
         public static readonly UnityEvent KeepReadingChosen = new UnityEvent();
         public static readonly UnityEvent StopChosen = new UnityEvent();
-        // Fired when the player chooses to use the current page's optional effect.
-        public static readonly UnityEvent OptionalChosen = new UnityEvent();
         public static readonly UnityPickACardEvent PickACard = new UnityPickACardEvent();
         public static readonly UnityCardDataEvent PlaceCardsInSetAsideArea = new UnityCardDataEvent();
         

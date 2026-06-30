@@ -17,8 +17,6 @@ namespace LSG.UI
         [SerializeField] private TMP_Text namePlateText;
         [SerializeField] private TMP_Text dialogueText;
         [SerializeField] private GameObject summoningButtonContainer;
-        [Tooltip("The \"Use Optional Power\" button. Hidden unless the current page has an optional effect.")]
-        [SerializeField] private GameObject optionalButton;
         [SerializeField] private GameObject encounterButtonContainer;
         [SerializeField] private GameObject storeButtonContainer;
 		[SerializeField] private AudioClip click;
@@ -46,7 +44,6 @@ namespace LSG.UI
             UIEvents.SetNamePlateText?.AddListener(SetNamePlate);
             UIEvents.SetDialogueText?.AddListener(SetDialogue);
             UIEvents.ToggleSummoningButtons?.AddListener(ToggleSummoningButtonContainer);
-            UIEvents.ToggleOptionalButton?.AddListener(ToggleOptionalButton);
             UIEvents.ToggleEncounterButtons?.AddListener(ToggleEncounterButtonContainer);
             UIEvents.AppendDialogueText?.AddListener(AppendDialogue);
             UIEvents.ToggleStoreButtons?.AddListener(ToggleEncounterButtonContainer);
@@ -78,10 +75,6 @@ namespace LSG.UI
             SetNamePlate(DataManager.Instance.PlayerEconomySource.PlayerName);
             SetDialogue(string.Empty);
             ToggleSummoningButtonContainer(true);
-
-            // Start each round with the Optional button hidden; GeneratePage re-enables it
-            // for the first page if that page happens to carry an optional effect.
-            ToggleOptionalButton(false);
         }
 
         private void OnDemonEncountered([CanBeNull] DemonData demonData)
@@ -146,14 +139,6 @@ namespace LSG.UI
 		{
 			dialogueText.text = dialogueText.text + "\n" + text;
 		}
-
-        private void ToggleOptionalButton(bool toggle)
-        {
-            if (optionalButton != null)
-            {
-                optionalButton.SetActive(toggle);
-            }
-        }
 
         private void ToggleSummoningButtonContainer(bool toggle)
         {

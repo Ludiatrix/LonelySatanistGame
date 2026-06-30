@@ -12,8 +12,6 @@ namespace LSG.Core
         public static readonly UnityEventExtensions.UnityBoolEvent ToggleSummoningButtons = new UnityEventExtensions.UnityBoolEvent();
         public static readonly UnityEventExtensions.UnityBoolEvent ToggleEncounterButtons = new UnityEventExtensions.UnityBoolEvent();
         public static readonly UnityEventExtensions.UnityBoolEvent ToggleStoreButtons = new UnityEventExtensions.UnityBoolEvent();
-        // Shows/hides the "Use Optional Power" button shown alongside the summoning buttons.
-        public static readonly UnityEventExtensions.UnityBoolEvent ToggleOptionalButton = new UnityEventExtensions.UnityBoolEvent();
         public static readonly UnityEventExtensions.UnityBoolEvent ToggleEndgameButtons = new UnityEventExtensions.UnityBoolEvent();
         public static readonly UnityEventExtensions.UnityBoolEvent FlipDialogueText = new UnityEventExtensions.UnityBoolEvent();
         public static readonly UnityEventExtensions.UnityBoolEvent ToggleResourceUI = new UnityEventExtensions.UnityBoolEvent();

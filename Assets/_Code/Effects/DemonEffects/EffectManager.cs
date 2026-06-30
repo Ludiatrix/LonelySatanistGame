@@ -13,27 +13,7 @@ namespace LSG.Effects
     {
         private List<IEffectable> _demonEffects = new List<IEffectable>();
 
-        // Effects flagged "Optional:" in the design don't fire when the page is read.
-        // They only resolve if the player clicks the "Use Optional Power" button, so the
-        // SummoningPhase asks IsOptional() to decide whether to auto-resolve or defer.
-        private static readonly HashSet<CardEffectType> OptionalEffects = new HashSet<CardEffectType>
-        {
-            CardEffectType.RemoveCardFromThisSummoningRoundWithTapeCostOne,
-            CardEffectType.ReturnWhitePagesToDeckAndRemovePower,
-            CardEffectType.RepairRandomCardAtNoTapeCost,
-            CardEffectType.ReturnRandomCardToDeckDoNotTouchPower,
-            CardEffectType.PeekAtTwoReadOneAndShuffleTheRest,
-            CardEffectType.PeekAtTwoReadOneAndLeaveOneAsideUntilNextSummoningRound,
-            CardEffectType.PeekAtTwoReadUpToTwoShuffleAnyNotReadToBottomOfDeck,
-        };
-
-        /// <summary>True if this card's effect is opt-in (player must use the Optional button).</summary>
-        public bool IsOptional(CardData card)
-        {
-            return card != null && OptionalEffects.Contains(card.EffectType);
-        }
-
-
+        
         public void AddEffect<T>() where T : MonoBehaviour, IEffectable
         {
             if (gameObject.TryGetComponent<T>(out _))
@@ -71,13 +51,13 @@ namespace LSG.Effects
                     ReturnRandomCardToDeckAndShuffleDoNotTouchPower();
                     break;
                 case CardEffectType.PeekAtTwoReadOneAndShuffleTheRest:
-                    PeekAtTwoReadOneAndShuffleTheRest(card);
+                    PeekAtTwoReadOneAndShuffleTheRest();
                     break;
                 case CardEffectType.PeekAtTwoReadOneAndLeaveOneAsideUntilNextSummoningRound:
-                    PeekAtTwoReadOneAndLeaveOneAsideUntilNextSummoningRound(card);
+                    PeekAtTwoReadOneAndLeaveOneAsideUntilNextSummoningRound();
                     break;
                 case CardEffectType.PeekAtTwoReadUpToTwoShuffleAnyNotReadToBottomOfDeck:
-                    PeekAtTwoReadUpToTwoShuffleAnyNotReadToBottomOfDeck(card);
+                    PeekAtTwoReadUpToTwoShuffleAnyNotReadToBottomOfDeck();
                     break;
                 default:
                     Debug.LogWarning($"Unhandled card effect type: {card.EffectType}");
@@ -86,43 +66,35 @@ namespace LSG.Effects
         }
 
         // Optional: Peek at the next 2 pages. You may choose one page to read and shuffle any you choose not to read back into the book.
-        public void PeekAtTwoReadOneAndShuffleTheRest(CardData source)
+        public void PeekAtTwoReadOneAndShuffleTheRest()
         {
-            List<CardData> cards = DataManager.Instance.PlayerDeckSource.PeekUpcoming(2, Enums.Suit.Black);
+            CardData[] cards = DataManager.Instance.PlayerDeckSource.PeekAheadAtPlayerDeck(2);
 
             PickACardPayload payload = new PickACardPayload(
-                source.CardEffect, cards, 1, PickACardAfterEffectState.ShuffleRestIntoDeck)
-            {
-                SourceCard = source
-            };
+                "Peek at the next 2 pages. You may choose one page to read and shuffle any you choose not to read back into the book.",
+                cards.ToList(), 1, PickACardAfterEffectState.ShuffleRestIntoDeck);
 
             GameEvents.PickACard?.Invoke(payload);
         }
 
         // Optional: Peek at the next 2 pages. You may choose one page to read. Any of the 2 pages not read are set aside and do not shuffle back into the Necronomicon until the next summoning.
-        public void PeekAtTwoReadOneAndLeaveOneAsideUntilNextSummoningRound(CardData source)
+        public void PeekAtTwoReadOneAndLeaveOneAsideUntilNextSummoningRound()
         {
-            List<CardData> cards = DataManager.Instance.PlayerDeckSource.PeekUpcoming(2, Enums.Suit.Black);
+            CardData[] cards = DataManager.Instance.PlayerDeckSource.PeekAheadAtPlayerDeck(2);
 
-            PickACardPayload payload = new PickACardPayload(
-                source.CardEffect, cards, 1, PickACardAfterEffectState.SetAsideTheRest)
-            {
-                SourceCard = source
-            };
+            PickACardPayload payload = new PickACardPayload("Optional: Peek at the next 2 pages. You may choose one page to read. Any of the 2 pages not read are set aside and do not shuffle back into the Necronomicon until the next summoning.",
+                cards.ToList(), 1, PickACardAfterEffectState.SetAsideTheRest);
 
             GameEvents.PickACard?.Invoke(payload);
         }
 
         // Optional: Peek at the next 2 pages. You may choose up to two pages to read. Any pages not read are put on the back of the book (bottom of the deck)
-        public void PeekAtTwoReadUpToTwoShuffleAnyNotReadToBottomOfDeck(CardData source)
+        public void PeekAtTwoReadUpToTwoShuffleAnyNotReadToBottomOfDeck()
         {
-            List<CardData> cards = DataManager.Instance.PlayerDeckSource.PeekUpcoming(2, Enums.Suit.Black);
+            CardData[] cards = DataManager.Instance.PlayerDeckSource.PeekAheadAtPlayerDeck(2);
 
-            PickACardPayload payload = new PickACardPayload(
-                source.CardEffect, cards, 2, PickACardAfterEffectState.PutOnBottom)
-            {
-                SourceCard = source
-            };
+            PickACardPayload payload = new PickACardPayload("Peek at the next 2 pages. You may choose up to two pages to read. Any pages not read are put on the back of the book (bottom of the deck).",
+                cards.ToList(), 2, PickACardAfterEffectState.PutOnBottom);
 
             GameEvents.PickACard?.Invoke(payload);
         }
@@ -186,12 +158,12 @@ namespace LSG.Effects
             }
         }
 
-        // Gain +1 Power for each Flames (Red) page read so far this summoning
+        // Gain +1 Power for each Orange read so far this summoning
         public void GetOnePowerForEachOrangeCardReadThisSummoningRound()
         {
-            int flamesCardCount = DataManager.Instance.PlayerDeckSource.playedCards.Count(t => t.Suit == Enums.Suit.Red);
-
-            DataManager.Instance.PlayerEconomySource.ModifyPower(flamesCardCount);
+            int orangeCardCount = DataManager.Instance.PlayerDeckSource.playedCards.Count(t => t.Suit == Enums.Suit.Orange);
+            
+            DataManager.Instance.PlayerEconomySource.ModifyPower(orangeCardCount);
         }
 
         // Optional: Return a random page read this summoning to the Necronomicon (shuffle in). Its power is not removed from the power meter.
