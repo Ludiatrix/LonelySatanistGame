@@ -355,6 +355,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &7019413772666235999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -519,8 +531,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c27a13d5e7928c96ea1be18472ada1f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: LSG::LSG.NecronomiconEventController
-  PaperShufflingSFX: {fileID: 8300000, guid: 89b606106d766b915b62559a0fbfe699, type: 3}
-  MoveBookSFX: {fileID: 8300000, guid: 89b606106d766b915b62559a0fbfe699, type: 3}
+  PaperShufflingSFX: {fileID: 8300000, guid: 45d09d161a825c14882a167aab033af3, type: 3}
+  MoveBookSFX: {fileID: 8300000, guid: 45d09d161a825c14882a167aab033af3, type: 3}
+  click: {fileID: 8300000, guid: 05a41fa1329017a408876004829dd4f5, type: 3}
   PagesTransform: {fileID: 7393641393826585071}
   PagePrefab: {fileID: 3114209297319874679, guid: 58c49198668b27a7d8a6c03ba8be7d0c, type: 3}
   PageTurnDestinationTransform: {fileID: 853323764716915397}

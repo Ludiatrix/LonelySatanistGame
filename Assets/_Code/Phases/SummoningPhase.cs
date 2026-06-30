@@ -1,4 +1,5 @@
 using LSG.Core;
+using LSG.Effects;
 using LSG.ScriptableObjects;
 using UnityEngine;
 
@@ -17,10 +18,16 @@ namespace LSG.Phases
         // the encounter.
         private bool _leavingPhase;
 
+        // The current page's optional effect, stashed until the player either uses it
+        // (Optional button) or moves on (Keep Reading / Stop). Null when the current
+        // page has no optional effect or it's already been resolved/dismissed.
+        private CardData _pendingOptionalCard;
+
         private void OnEnable()
         {
             GameEvents.KeepReadingChosen?.AddListener(OnKeepReadingChosen);
             GameEvents.StopChosen?.AddListener(OnStopChosen);
+            GameEvents.OptionalChosen?.AddListener(OnOptionalChosen);
             GameEvents.ChangeState?.AddListener(OnChangeStateRequested);
         }
 
@@ -28,6 +35,7 @@ namespace LSG.Phases
         {
             GameEvents.KeepReadingChosen?.RemoveListener(OnKeepReadingChosen);
             GameEvents.StopChosen?.RemoveListener(OnStopChosen);
+            GameEvents.OptionalChosen?.RemoveListener(OnOptionalChosen);
             GameEvents.ChangeState?.RemoveListener(OnChangeStateRequested);
         }
 
@@ -106,7 +114,26 @@ namespace LSG.Phases
                 return;
             }
 
-            DataManager.Instance.EffectDataSource.ResolveCardEffect(data);
+            EffectManager effects = DataManager.Instance.EffectDataSource;
+            if (effects.IsOptional(data))
+            {
+                // Optional effects are opt-in: don't resolve now. Stash the page and light
+                // up the "Use Optional Power" button. The effect only fires if the player
+                // clicks it (OnOptionalChosen); otherwise it's dropped on Keep Reading/Stop.
+                _pendingOptionalCard = data;
+                UIEvents.ToggleOptionalButton?.Invoke(true);
+            }
+            else
+            {
+                effects.ResolveCardEffect(data);
+            }
+        }
+
+        /// <summary>Forgets any pending optional effect and hides the Optional button.</summary>
+        private void ClearPendingOptional()
+        {
+            _pendingOptionalCard = null;
+            UIEvents.ToggleOptionalButton?.Invoke(false);
         }
 
         private void TurnPage()
@@ -126,11 +153,31 @@ namespace LSG.Phases
 
         private void OnKeepReadingChosen()
         {
+            // Reading on means the current page's optional effect is forgone.
+            ClearPendingOptional();
             TurnPage();
         }
-        
+
+        private void OnOptionalChosen()
+        {
+            if (_pendingOptionalCard == null)
+            {
+                return;
+            }
+
+            // Grab and clear (which also hides the button) before resolving, so the
+            // effect can't be triggered twice and a Peek effect's own UI takes over
+            // from here with the Optional button already gone.
+            CardData card = _pendingOptionalCard;
+            ClearPendingOptional();
+            DataManager.Instance.EffectDataSource.ResolveCardEffect(card);
+        }
+
         private void OnStopChosen()
         {
+            // Stopping means the current page's optional effect is forgone.
+            ClearPendingOptional();
+
             Debug.Log("[Summoning Phase] The Pages have been read. Now let's see what the chasm of hell brings forth!");
 
             // Choosing to stop has a 50% chance of costing the player 1 Sanity.
