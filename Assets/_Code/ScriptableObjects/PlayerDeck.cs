@@ -89,6 +89,15 @@ namespace LSG.ScriptableObjects
 
         public void AddCardToPlayerDeck(CardData card, bool shuffle = true)
         {
+            if (card == null)
+            {
+                // Usually means PullCardFromLibrary couldn't find the requested card
+                // (e.g. a DefaultDeck entry missing from DefaultLibrary). Don't poison
+                // the deck with a null — it crashes the store sort later.
+                Debug.LogWarning("[PlayerDeck] Tried to add a null card to the player deck; ignoring.");
+                return;
+            }
+
             playerDeck.Add(card);
             playerDeck.Shuffle();
             GameEvents.CardAdded?.Invoke(card);

@@ -37,6 +37,9 @@ namespace LSG
         /// </summary>
         public void QueueForcedEncounter(DemonData demon) => _forcedDemon = demon;
 
+        /// <summary>True if the next encounter is already locked to a forced demon.</summary>
+        public bool HasForcedEncounter => _forcedDemon != null;
+
         /// <summary>
         /// True if the demon is one of the forced lose-condition encounters. These
         /// should not tick the normal per-encounter stat changes.

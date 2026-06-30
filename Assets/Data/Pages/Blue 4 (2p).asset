@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Blue 4 (2p)
   m_EditorClassIdentifier: LSG::LSG.PageData
   CardID: 20
-  TapeCost: 3
+  TapeCost: 4
   CardWord: emme 'jynaez 'on
   CardEffect: Gain 2 Rizz
   Suit: 2

@@ -132,6 +132,23 @@ namespace LSG.Phases
         private void OnStopChosen()
         {
             Debug.Log("[Summoning Phase] The Pages have been read. Now let's see what the chasm of hell brings forth!");
+
+            // Choosing to stop has a 50% chance of costing the player 1 Sanity.
+            PlayerEconomy economy = DataManager.Instance.PlayerEconomySource;
+            if (UnityEngine.Random.value < 0.5f)
+            {
+                economy.Sanity--;
+
+                // If that drained the player's last Sanity, go straight to The Book end-game
+                // encounter instead of summoning a normal demon (which would otherwise be shown
+                // and then swapped out for The Book when its own Sanity hit drains the rest).
+                if (economy.Sanity <= 0)
+                {
+                    DemonDatingPool pool = DataManager.Instance.DemonDatingPoolSource;
+                    pool.QueueForcedEncounter(pool.TheBook);
+                }
+            }
+
             UIEvents.DisableButtons?.Invoke();
             UIEvents.ToggleDialogueWindow?.Invoke(false);
             GameEvents.ChangeState?.Invoke(Enums.GameState.EncounterPhase);

@@ -92,7 +92,7 @@ namespace LSG.UI
             ownedCards.AddRange(DataManager.Instance.PlayerDeckSource.playerDeck);
             ownedCards.AddRange(DataManager.Instance.PlayerDeckSource.playedCards);
 
-            ownedCards = ownedCards.OrderBy(n => n.Suit).OrderBy(n => n.TapeCost).ToList();
+            ownedCards = ownedCards.Where(n => n != null).OrderBy(n => n.Suit).OrderBy(n => n.TapeCost).ToList();
             
             foreach (var shopCard in shopArr)
             {

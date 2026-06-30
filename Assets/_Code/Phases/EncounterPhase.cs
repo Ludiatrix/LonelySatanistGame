@@ -167,8 +167,8 @@ namespace LSG.Phases
             }
             else
             {
-                // Longshot consolation: gain Rizz only after a failed date roll.
-                _economy.Rizz++;
+                // Rejected by the roll: always lose Sanity, and gain Rizz if it was a long shot.
+                _economy.ApplyDateRejection(d20RollResult);
                 FailDate();
             }
         }
@@ -236,9 +236,24 @@ namespace LSG.Phases
         // Sends the
         private void FindAHottie()
         {
+            var pool = DataManager.Instance.DemonDatingPoolSource;
+
+            // A normal encounter costs 1 Sanity. Apply it and the out-of-sanity check BEFORE
+            // selecting a demon, so a depleted player is sent straight to The Book rather than
+            // a normal demon being summoned and then swapped for The Book mid-encounter. Forced
+            // encounters (Papiyawn / The Book) are already locked in and don't tick the cost.
+            if (!pool.HasForcedEncounter)
+            {
+                _economy.Sanity--;
+                if (_economy.Sanity <= 0)
+                {
+                    pool.QueueForcedEncounter(pool.TheBook);
+                }
+            }
+
             // Get a demon
-            _chosenDemonThisPhase = DataManager.Instance.DemonDatingPoolSource.EncounterDemonBasedOnPower(_economy.Power);
-            
+            _chosenDemonThisPhase = pool.EncounterDemonBasedOnPower(_economy.Power);
+
             // Set up the demon visual. The Dialogue Window (and the DemonEncountered event that
             // drives it) is held back until the summon sequence finishes — see PortalIntro.
             demonImage.sprite = _chosenDemonThisPhase.demonSprite;

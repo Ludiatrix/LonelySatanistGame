@@ -25,7 +25,6 @@ public class PlayerEconomy : ScriptableObject
         GameEvents.PageRead?.AddListener(UpdatePageRewards);
         GameEvents.CardTaken?.AddListener(OnPageTaken);
         PhaseEvents.SummoningPhaseStarted?.AddListener(OnSummoningPhaseStarted);
-        GameEvents.DemonEncountered?.AddListener(OnDemonEncountered);
         EconomyEvents.SendPayload?.AddListener(OnSendPayload);
     }
 
@@ -62,23 +61,21 @@ public class PlayerEconomy : ScriptableObject
         GameEvents.ChangeState?.Invoke(Enums.GameState.EncounterPhase);
     }
 
-    private void OnDemonEncountered(DemonData data)
+    /// <summary>
+    /// Applies the cost of being rejected by a demon's date roll: always lose 1 Sanity,
+    /// and if the roll landed at 3x the player's current Rizz or higher (a real long shot),
+    /// also gain 2 Rizz as consolation.
+    /// </summary>
+    public void ApplyDateRejection(int rollResult)
     {
-        var pool = DataManager.Instance.DemonDatingPoolSource;
+        // Compare against current Rizz before any change.
+        bool longShot = rollResult >= 3 * Rizz;
 
-        // Papiyawn / The Book are forced lose-condition encounters; they must not
-        // tick the normal per-encounter stat changes (and must not re-trigger).
-        if (pool.IsForcedEncounterDemon(data))
-        {
-            return;
-        }
-
-        // NOTE: the longshot Rizz bonus is granted after a failed date roll
-        // (see EncounterPhase.OnDiceRollResult), not on encounter.
         Sanity--;
-
-        // The per-encounter Sanity hit can take us to 0 or below; summon The Book if so.
-        TriggerTheBookIfOutOfSanity();
+        if (longShot)
+        {
+            Rizz += 2;
+        }
     }
 
     private void OnDisable()
@@ -90,7 +87,6 @@ public class PlayerEconomy : ScriptableObject
         GameEvents.PageRead?.RemoveListener(UpdatePageRewards);
         GameEvents.CardTaken?.RemoveListener(OnPageTaken);
         PhaseEvents.SummoningPhaseStarted?.RemoveListener(OnSummoningPhaseStarted);
-        GameEvents.DemonEncountered?.RemoveListener(OnDemonEncountered);
         EconomyEvents.SendPayload?.RemoveListener(OnSendPayload);
     }
 
