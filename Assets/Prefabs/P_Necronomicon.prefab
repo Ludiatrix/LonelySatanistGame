@@ -532,7 +532,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: LSG::LSG.NecronomiconEventController
   PaperShufflingSFX: {fileID: 8300000, guid: 45d09d161a825c14882a167aab033af3, type: 3}
-  MoveBookSFX: {fileID: 8300000, guid: 89b606106d766b915b62559a0fbfe699, type: 3}
+  MoveBookSFX: {fileID: 8300000, guid: 45d09d161a825c14882a167aab033af3, type: 3}
   click: {fileID: 8300000, guid: 05a41fa1329017a408876004829dd4f5, type: 3}
   PagesTransform: {fileID: 7393641393826585071}
   PagePrefab: {fileID: 3114209297319874679, guid: 58c49198668b27a7d8a6c03ba8be7d0c, type: 3}
