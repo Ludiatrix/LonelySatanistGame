@@ -54,6 +54,10 @@ namespace LSG.UI
                     populatedStorePageItem.SuccessPulse();
                 }
             }
+
+            // On a successful purchase, close the description box and lower the frame.
+            descriptionPanel.Close();
+            frameMover.MoveToStart(2.0f);
         }
         
         private void OnBuyCardFailedResponse(CardData failedCardData)
@@ -88,7 +92,7 @@ namespace LSG.UI
             ownedCards.AddRange(DataManager.Instance.PlayerDeckSource.playerDeck);
             ownedCards.AddRange(DataManager.Instance.PlayerDeckSource.playedCards);
 
-            ownedCards = ownedCards.OrderBy(n => n.Suit).OrderBy(n => n.TapeCost).ToList();
+            ownedCards = ownedCards.Where(n => n != null).OrderBy(n => n.Suit).OrderBy(n => n.TapeCost).ToList();
             
             foreach (var shopCard in shopArr)
             {
@@ -99,7 +103,15 @@ namespace LSG.UI
         private void OnStoreButtonClicked()
         {
             if (_buyablePageClicked) return;
-            frameMover.MoveToTarget(moverTransformTarget.position, 2.0f);
+
+            // The card click already toggled the description panel before firing this,
+            // so its open state tells us which way to move the frame:
+            //   open (a card is selected)   -> slide up to the target
+            //   closed (card was deselected) -> slide back down to the start
+            if (descriptionPanel != null && descriptionPanel.IsOpen)
+                frameMover.MoveToTarget(moverTransformTarget.position, 2.0f);
+            else
+                frameMover.MoveToStart(2.0f);
         }
 
         private void GenerateStoreItems(CardData[] cardsToGenerate, bool owned)

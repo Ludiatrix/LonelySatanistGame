@@ -312,6 +312,7 @@ MonoBehaviour:
   cardDescriptionBox: {fileID: 7729828103892139891}
   cardName: {fileID: 3657267405042289633}
   cardText: {fileID: 4307193589859876187}
+  purchaseButton: {fileID: 0}
   buttonText: {fileID: 2626132230232836433}
   openDelay: 0.7
   onOpened:
@@ -1039,7 +1040,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.9882353}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1607,7 +1608,6 @@ GameObject:
   m_Component:
   - component: {fileID: 9031798673231707999}
   - component: {fileID: 3899754133396940144}
-  - component: {fileID: 4487045656280632272}
   m_Layer: 5
   m_Name: Card Grid
   m_TagString: Untagged
@@ -1659,22 +1659,6 @@ MonoBehaviour:
   m_Spacing: {x: 71, y: 32}
   m_Constraint: 0
   m_ConstraintCount: 2
---- !u!114 &4487045656280632272
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4963051658742329969}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbaa241d261b32a4a96ad1d0d156e017, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: LSG::SlideDownWhenSelected
-  targetButton: {fileID: 0}
-  canvasToSlide: {fileID: 9031798673231707999}
-  duration: 0.7
-  distance: 390
 --- !u!1 &5409241266868506469
 GameObject:
   m_ObjectHideFlags: 0
@@ -2243,10 +2227,10 @@ RectTransform:
   - {fileID: 3637706356708186876}
   m_Father: {fileID: 2759789344929094014}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 560.9901, y: -43.5}
+  m_SizeDelta: {x: 1081.9802, y: 67}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4396766808649325142
 CanvasRenderer:
@@ -2311,7 +2295,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.735849, g: 0.735849, b: 0.735849, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -2346,18 +2330,6 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 4487045656280632272}
-        m_TargetAssemblyTypeName: SlideDownWhenSelected, LSG
-        m_MethodName: SlideDown
-        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

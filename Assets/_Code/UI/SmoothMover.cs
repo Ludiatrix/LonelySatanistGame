@@ -32,6 +32,18 @@ namespace LSG.Utils
         }
 
         /// <summary>
+        /// Smoothly moves back to the position captured at Awake (unlike
+        /// ResetPosition, which snaps instantly). Use this to slide the frame down.
+        /// </summary>
+        public void MoveToStart(float duration, Action onComplete = null)
+        {
+            if (!initialized)
+                return;
+
+            MoveToTarget(startPosition, duration, onComplete);
+        }
+
+        /// <summary>
         /// Public method to safely trigger the smooth movement.
         /// </summary>
         public void MoveToTarget(Vector3 targetPosition, float duration, Action onComplete = null)

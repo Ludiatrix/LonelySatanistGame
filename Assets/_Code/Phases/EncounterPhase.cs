@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using LSG.Core;
 using LSG.ScriptableObjects;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
@@ -32,9 +33,17 @@ namespace LSG.Phases
                  "so the player sees the demon get summoned before the dialogue starts.")]
         [SerializeField] private float dialogueDelay = 3f;
 
+        [Header("Outcome Text")]
+        [Tooltip("OutcomeText on the OutcomeTextCanvas. Faded in when the dice roll resolves.")]
+        [SerializeField] private TMP_Text outcomeText;
+        [SerializeField] private float outcomeFadeDuration = 0.5f;
+        [SerializeField] private string acceptedText = "Date Accepted!";
+        [SerializeField] private string rejectedText = "Rejected...";
+
         private PlayerEconomy _economy;
         private DemonData _chosenDemonThisPhase = null;
         private Coroutine _introRoutine;
+        private Coroutine _outcomeRoutine;
         
         /// <summary>
         /// Start the Phase and Find a DemonData based on Power in the DemonDatingPool.
@@ -58,6 +67,7 @@ namespace LSG.Phases
             Debug.Log("[EncounterPhase] Ending Phase!");
             base.EndPhase();
             if (_introRoutine != null) StopCoroutine(_introRoutine);
+            if (_outcomeRoutine != null) StopCoroutine(_outcomeRoutine);
             Container.SetActive(false);
             PhaseEvents.EncounterPhaseEnded?.Invoke();
         }
@@ -75,6 +85,9 @@ namespace LSG.Phases
             // when DemonEncountered fires. Forced encounters (Papiyawn / The Book) reach here
             // without the player clicking "Stop", so Summoning never hid it on its way out.
             UIEvents.ToggleDialogueWindow?.Invoke(false);
+
+            // The outcome text stays hidden until this encounter's dice roll resolves.
+            if (outcomeText != null) outcomeText.alpha = 0f;
 
             if (demonImage != null) demonImage.enabled = false;
             if (portalAnimatedSprite != null) portalAnimatedSprite.SetActive(false);
@@ -143,16 +156,44 @@ namespace LSG.Phases
 
         private void OnDiceRollResult(int d20RollResult)
         {
-            if (d20RollResult <= _economy.Rizz)
+            bool accepted = d20RollResult <= _economy.Rizz;
+
+            // Fade in the outcome banner ("Date Accepted!" / "Rejected...").
+            ShowOutcomeText(accepted);
+
+            if (accepted)
             {
                 SucceedDate();
             }
             else
             {
-                // Longshot consolation: gain Rizz only after a failed date roll.
-                _economy.Rizz++;
+                // Rejected by the roll: always lose Sanity, and gain Rizz if it was a long shot.
+                _economy.ApplyDateRejection(d20RollResult);
                 FailDate();
             }
+        }
+
+        /// <summary>Sets the outcome banner text and fades it from transparent to opaque.</summary>
+        private void ShowOutcomeText(bool accepted)
+        {
+            if (outcomeText == null) return;
+            outcomeText.text = accepted ? acceptedText : rejectedText;
+            if (_outcomeRoutine != null) StopCoroutine(_outcomeRoutine);
+            _outcomeRoutine = StartCoroutine(FadeInOutcomeText());
+        }
+
+        private IEnumerator FadeInOutcomeText()
+        {
+            float elapsed = 0f;
+            outcomeText.alpha = 0f;
+            while (elapsed < outcomeFadeDuration)
+            {
+                elapsed += Time.deltaTime;
+                outcomeText.alpha = Mathf.Clamp01(elapsed / outcomeFadeDuration);
+                yield return null;
+            }
+            outcomeText.alpha = 1f;
+            _outcomeRoutine = null;
         }
 
         private void OnGiveUpChosen()
@@ -195,9 +236,24 @@ namespace LSG.Phases
         // Sends the
         private void FindAHottie()
         {
+            var pool = DataManager.Instance.DemonDatingPoolSource;
+
+            // A normal encounter costs 1 Sanity. Apply it and the out-of-sanity check BEFORE
+            // selecting a demon, so a depleted player is sent straight to The Book rather than
+            // a normal demon being summoned and then swapped for The Book mid-encounter. Forced
+            // encounters (Papiyawn / The Book) are already locked in and don't tick the cost.
+            if (!pool.HasForcedEncounter)
+            {
+                _economy.Sanity--;
+                if (_economy.Sanity <= 0)
+                {
+                    pool.QueueForcedEncounter(pool.TheBook);
+                }
+            }
+
             // Get a demon
-            _chosenDemonThisPhase = DataManager.Instance.DemonDatingPoolSource.EncounterDemonBasedOnPower(_economy.Power);
-            
+            _chosenDemonThisPhase = pool.EncounterDemonBasedOnPower(_economy.Power);
+
             // Set up the demon visual. The Dialogue Window (and the DemonEncountered event that
             // drives it) is held back until the summon sequence finishes — see PortalIntro.
             demonImage.sprite = _chosenDemonThisPhase.demonSprite;

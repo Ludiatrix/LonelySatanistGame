@@ -91,13 +91,27 @@ namespace LSG.UI
 
         /// <summary>
         /// For terminal (lose) encounters the player can't date their way out: the
-        /// "Try to Date" button is disabled and "Give Up" is the only way forward.
+        /// "Try to Date" button is fully hidden (alpha 0, not the 50% disabled tint)
+        /// and "Give Up" is the only way forward.
         /// </summary>
         private void ConfigureEncounterButtons()
         {
             if (tryToDateButton != null)
             {
                 tryToDateButton.interactable = !_terminalEncounter;
+
+                // A disabled Button only dims to its DisabledColor (~50% alpha). Use a
+                // CanvasGroup so a terminal encounter hides it completely (alpha 0) while
+                // keeping its layout slot and blocking clicks.
+                CanvasGroup tryToDateGroup = tryToDateButton.GetComponent<CanvasGroup>();
+                if (tryToDateGroup == null)
+                {
+                    tryToDateGroup = tryToDateButton.gameObject.AddComponent<CanvasGroup>();
+                }
+
+                tryToDateGroup.alpha = _terminalEncounter ? 0f : 1f;
+                tryToDateGroup.interactable = !_terminalEncounter;
+                tryToDateGroup.blocksRaycasts = !_terminalEncounter;
             }
 
             if (giveUpText != null)
